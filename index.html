@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Britt Midgette, Design Technologist</title>
+  <meta name="description" content="Britt Midgette, design technologist and systems thinker who takes work from strategy to shipped code." />
+  <meta name="theme-color" content="#000000" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Britt Midgette, Design Technologist" />
+  <meta property="og:description" content="Design technologist and systems thinker who takes work from strategy to shipped code." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ============ PASSWORD GATE ============ -->
+  <div id="gate" class="gate" aria-hidden="false">
+    <div class="gate__inner">
+      <h1 class="gate__title">Britt Midgette</h1>
+      <p class="gate__sub">This site is private. Enter the password to continue.</p>
+      <form id="gate-form" class="gate__form" autocomplete="off" novalidate>
+        <label class="sr-only" for="gate-input">Password</label>
+        <input
+          id="gate-input"
+          class="gate__input"
+          type="password"
+          placeholder="Password"
+          aria-describedby="gate-error"
+          spellcheck="false"
+        />
+        <button class="gate__btn" type="submit">Enter</button>
+      </form>
+      <p id="gate-error" class="gate__error" role="alert" hidden>Incorrect password. Try again.</p>
+    </div>
+    <p class="gate__footer">© <span class="year"></span> Britt Midgette</p>
+  </div>
+
+  <!-- ============ SITE ============ -->
+  <div id="site" class="site" hidden>
+    <span id="top" aria-hidden="true"></span>
+    <a href="#about" class="skip-link">Skip to content</a>
+
+    <!-- Header -->
+    <header class="header">
+      <a href="#top" class="header__brand" aria-label="Britt Midgette, home">
+        <img class="header__logo" src="brand%20assets/WhiteLogo.png" alt="Britt Midgette" />
+      </a>
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav" aria-label="Toggle menu">
+        <span></span><span></span>
+      </button>
+      <nav class="nav" id="nav" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#work">What I Do</a>
+        <a href="#selected">Selected Work</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section class="hero" id="hero">
+        <video
+          class="hero__video"
+          src="brand%20assets/hero_vid.mp4"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="auto"
+        ></video>
+        <div class="hero__overlay" aria-hidden="true"></div>
+        <div class="hero__content">
+          <p class="hero__eyebrow reveal">Design Technologist · Systems Thinker</p>
+          <h1 class="hero__headline reveal">Britt<br />Midgette</h1>
+          <p class="hero__lede reveal">
+            Digital strategy, UX, visual design, and design systems, paired with
+            hands-on front-end execution that turns ideas into production.
+          </p>
+          <div class="hero__actions reveal">
+            <a href="#work" class="btn">See what I do</a>
+            <a href="#contact" class="btn btn--ghost">Get in touch</a>
+          </div>
+        </div>
+        <a href="#about" class="hero__scroll" aria-label="Scroll to content">
+          <span>Scroll</span>
+          <span class="hero__scroll-arrow">↓</span>
+        </a>
+      </section>
+
+      <!-- About -->
+      <section class="section section--about" id="about">
+        <div class="section__head">
+          <span class="section__index">01</span>
+          <h2 class="section__title">About</h2>
+        </div>
+        <div class="about__grid">
+          <div class="about__body">
+            <p class="about__lead reveal">
+              I turn ideas into
+              <span class="rotator" aria-hidden="true">
+                <span class="rotator__word is-active">shipped code.</span>
+                <span class="rotator__word">design systems.</span>
+                <span class="rotator__word">real products.</span>
+                <span class="rotator__word">things people use.</span>
+              </span>
+              <span class="sr-only">shipped code, design systems, real products, and things people actually use.</span>
+            </p>
+            <p class="reveal">
+              I work at the seam between design and engineering, where good ideas
+              either become real products or quietly fall apart.
+            </p>
+            <p class="reveal">
+              My background spans digital strategy, user experience, and visual
+              design, with deep, repeated experience building and scaling design
+              systems that keep large organizations coherent. I&nbsp;don&rsquo;t hand
+              off at the mockup. I vibe the front-end code that turns a system into
+              something people actually use.
+            </p>
+            <p class="reveal">
+              That end-to-end fluency means fewer translation losses between teams,
+              faster paths from concept to production, and design decisions that hold
+              up once they meet the realities of the browser. I think in systems,
+              communicate in plain language, and ship.
+            </p>
+          </div>
+          <figure class="photo about__photo reveal" data-ph="Portrait: add Me2.png">
+            <img
+              src="brand%20assets/Me2.png"
+              alt="Britt Midgette"
+              loading="lazy"
+              onerror="this.closest('.photo').classList.add('photo--empty')"
+            />
+          </figure>
+        </div>
+      </section>
+
+      <!-- What I Do -->
+      <section class="section section--work" id="work">
+        <div class="section__head">
+          <span class="section__index">02</span>
+          <h2 class="section__title">What&nbsp;I&nbsp;Do</h2>
+        </div>
+        <ol class="capabilities">
+          <li class="cap reveal">
+            <span class="cap__num">01</span>
+            <h3 class="cap__title">Digital Strategy</h3>
+            <p class="cap__desc">
+              Translating business goals into product direction: roadmaps,
+              priorities, and the hard tradeoffs that make a vision shippable.
+            </p>
+          </li>
+          <li class="cap reveal">
+            <span class="cap__num">02</span>
+            <h3 class="cap__title">User Experience</h3>
+            <p class="cap__desc">
+              Research-informed flows, information architecture, and interaction
+              design that make complex products feel obvious.
+            </p>
+          </li>
+          <li class="cap reveal">
+            <span class="cap__num">03</span>
+            <h3 class="cap__title">Visual Design</h3>
+            <p class="cap__desc">
+              Typography, layout, and brand expression with the restraint and
+              precision that high-stakes interfaces demand.
+            </p>
+          </li>
+          <li class="cap reveal">
+            <span class="cap__num">04</span>
+            <h3 class="cap__title">Design Systems</h3>
+            <p class="cap__desc">
+              Building and scaling component libraries, tokens, and documentation
+              that keep teams consistent and fast as they grow.
+            </p>
+          </li>
+          <li class="cap reveal">
+            <span class="cap__num">05</span>
+            <h3 class="cap__title">Front-End Engineering</h3>
+            <p class="cap__desc">
+              Hands-on execution in modern HTML, CSS, and JavaScript, turning
+              designs into accessible, production-grade code.
+            </p>
+          </li>
+          <li class="cap reveal">
+            <span class="cap__num">06</span>
+            <h3 class="cap__title">Systems Thinking</h3>
+            <p class="cap__desc">
+              Seeing the whole: how strategy, design, code, and organization fit
+              together, and removing the friction between them.
+            </p>
+          </li>
+        </ol>
+      </section>
+
+      <!-- Selected Work -->
+      <section class="section section--experiments" id="selected">
+        <div class="exp-bg" aria-hidden="true"></div>
+        <div class="section__head">
+          <span class="section__index">03</span>
+          <h2 class="section__title">Selected Work</h2>
+        </div>
+        <ul class="experiments">
+          <li class="reveal">
+            <a class="glass" href="comptia.html">
+              <span class="glass__preview" data-ph="Add exp-1.png">
+                <img src="brand%20assets/exp-1.png" alt="CompTIA" loading="lazy"
+                  onerror="this.closest('.glass__preview').classList.add('glass__preview--empty')" />
+              </span>
+              <span class="glass__body">
+                <span class="glass__tag">IT Training and Certification</span>
+                <span class="glass__title">CompTIA - digital careers reimagined</span>
+                <span class="glass__desc">CompTIA is a leading online IT training and certification platform helping people build technology careers through certifications and guided learning pathways.</span>
+                <span class="glass__cta">View case study →</span>
+              </span>
+            </a>
+          </li>
+          <li class="reveal">
+            <a class="glass" href="adm.html">
+              <span class="glass__preview" data-ph="Add exp-2.png">
+                <img src="brand%20assets/exp-2.png" alt="ADM" loading="lazy"
+                  onerror="this.closest('.glass__preview').classList.add('glass__preview--empty')" />
+              </span>
+              <span class="glass__body">
+                <span class="glass__tag">Digital Transformation</span>
+                <span class="glass__title">ADM - Global nutrition. Unified.</span>
+                <span class="glass__desc">ADM is a global food and nutrition brand connecting supply chains, products and markets across six continents, operating at massive scale, with a worldwide workforce and an expansive business ecosystem.</span>
+                <span class="glass__cta">View case study →</span>
+              </span>
+            </a>
+          </li>
+          <li class="reveal">
+            <a class="glass" href="samsung.html">
+              <span class="glass__preview" data-ph="Add Sam_Comp.png">
+                <img src="brand%20assets/Sam_Comp.png" alt="Samsung" loading="lazy"
+                  onerror="this.closest('.glass__preview').classList.add('glass__preview--empty')" />
+              </span>
+              <span class="glass__body">
+                <span class="glass__tag">Digital Retail</span>
+                <span class="glass__title">Samsung - Reimagining retail with a global electronics brand.</span>
+                <span class="glass__desc">We partnered with Samsung to build an immersive AR showroom, bringing premium appliances to life through interactive in-store technology that drives engagement and informed purchases.</span>
+                <span class="glass__cta">View case study →</span>
+              </span>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Quote banner -->
+      <section class="quote" aria-label="Quote">
+        <img class="quote__bg" src="brand%20assets/Quote_BKG.png" alt="" loading="lazy" />
+        <div class="quote__overlay" aria-hidden="true"></div>
+        <blockquote class="quote__inner reveal">
+          <p class="quote__text">
+            Few ideas work on the first try.<br />
+            Iteration is the key to innovation.<br />
+            <cite class="quote__cite">~ Sebastian Thrun</cite>
+          </p>
+        </blockquote>
+      </section>
+
+      <!-- Brands -->
+      <section class="section section--brands" id="brands">
+        <div class="section__head">
+          <span class="section__index">04</span>
+          <h2 class="section__title">Some brands I&rsquo;ve worked with</h2>
+        </div>
+        <ul class="brands">
+          <li class="brand reveal"><img src="brand%20assets/ADM.png" alt="ADM" loading="lazy" /></li>
+          <li class="brand reveal"><img src="brand%20assets/CompTIA.png" alt="CompTIA" loading="lazy" /></li>
+          <li class="brand reveal"><img src="brand%20assets/LEGOLAND.png" alt="LEGOLAND" loading="lazy" /></li>
+          <li class="brand reveal"><img src="brand%20assets/Levis.png" alt="Levi&rsquo;s" loading="lazy" /></li>
+          <li class="brand reveal"><img src="brand%20assets/MAC.png" alt="MAC Cosmetics" loading="lazy" /></li>
+          <li class="brand reveal"><img src="brand%20assets/Samsung.png" alt="Samsung" loading="lazy" /></li>
+          <li class="brand reveal"><img src="brand%20assets/SHOE%20CARN.png" alt="Shoe Carnival" loading="lazy" /></li>
+          <li class="brand reveal"><img src="brand%20assets/Under.png" alt="Under Armour" loading="lazy" /></li>
+          <li class="brand reveal"><img src="brand%20assets/Bose.png" alt="Bose" loading="lazy" /></li>
+          <li class="brand reveal"><img src="brand%20assets/Loreal.png" alt="L&rsquo;Or&eacute;al" loading="lazy" /></li>
+          <li class="brand reveal"><img src="brand%20assets/Phiips.png" alt="Philips" loading="lazy" /></li>
+          <li class="brand reveal"><img src="brand%20assets/Sag.png" alt="SAG-AFTRA" loading="lazy" /></li>
+        </ul>
+      </section>
+
+      <!-- Contact -->
+      <section class="section section--contact" id="contact">
+        <div class="section__head">
+          <span class="section__index">05</span>
+          <h2 class="section__title">Contact</h2>
+        </div>
+        <div class="contact__body">
+          <p class="contact__lead reveal">
+            Have a problem that lives between design and engineering?<br />
+            Let&rsquo;s talk.
+          </p>
+          <a class="contact__email reveal" href="mailto:brisnit@gmail.com">brisnit@gmail.com</a>
+          <ul class="contact__links reveal">
+            <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+            <li><a href="brand%20assets/britt-midgette-resume3.pdf" download rel="noopener">Resume ↓</a></li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span class="footer__copy">© <span class="year"></span> Britt Midgette</span>
+      <a href="#top" class="footer__top">Back to top ↑</a>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
