@@ -63,11 +63,12 @@ a { color: inherit; text-decoration: none; }
 }
 
 .skip-link {
-  position: absolute; left: -999px; top: 0; z-index: 200;
+  position: fixed; left: 1rem; top: -100px; z-index: 1100;
   background: var(--black); color: var(--white);
   padding: 0.75rem 1.25rem; font-family: var(--mono); font-size: 0.8rem;
+  transition: top 0.2s var(--ease);
 }
-.skip-link:focus { left: 0; }
+.skip-link:focus { top: 1rem; }
 
 /* ============================================================
    PASSWORD GATE
@@ -734,14 +735,17 @@ main { display: block; }
    RESPONSIVE
    ============================================================ */
 @media (max-width: 760px) {
+  /* Full-width dropdown under the header (never goes off-screen) */
   .nav {
-    position: fixed; inset: 0 0 0 auto; width: min(78vw, 320px);
-    flex-direction: column; gap: 0; justify-content: center; align-items: flex-start;
-    padding: var(--pad); background: var(--black);
-    transform: translateX(100%); transition: transform 0.4s var(--ease);
+    position: absolute; top: 100%; left: 0; right: 0; width: 100%;
+    flex-direction: column; align-items: stretch; gap: 0;
+    padding: 0.25rem var(--pad) 1.25rem; background: var(--black);
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+    opacity: 0; transform: translateY(-10px); pointer-events: none;
+    transition: opacity 0.3s var(--ease), transform 0.3s var(--ease);
   }
-  .nav.is-open { transform: translateX(0); }
-  .nav a { color: var(--white); font-family: var(--serif); font-size: 1.8rem; padding: 0.6rem 0; }
+  .nav.is-open { opacity: 1; transform: translateY(0); pointer-events: auto; }
+  .nav a { color: var(--white); font-family: var(--display); font-size: 1.4rem; padding: 0.7rem 0; }
   .nav a::after { background: var(--white); }
 
   .nav-toggle { display: flex; z-index: 110; }
