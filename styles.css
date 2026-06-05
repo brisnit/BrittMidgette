@@ -28,7 +28,7 @@
 *::before,
 *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; scroll-padding-top: 70px; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; scroll-padding-top: 70px; overflow-x: clip; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
@@ -42,6 +42,7 @@ html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; scroll-padding-t
 body {
   background: var(--paper);
   color: var(--ink);
+  overflow-x: clip; max-width: 100%;
   font-family: var(--sans);
   font-weight: 400;
   line-height: 1.6;
@@ -354,18 +355,18 @@ main { display: block; }
 .about__body .reveal:nth-child(3) { transition-delay: 0.16s; }
 .about__body .reveal:nth-child(4) { transition-delay: 0.24s; }
 
-/* Kinetic word rotator */
+/* Kinetic word rotator (grid-stacked so hidden words can't overflow) */
 .rotator {
-  position: relative; display: inline-block; vertical-align: baseline;
-  font-size: 1.5em; line-height: 1;
+  display: inline-grid; vertical-align: bottom;
+  font-size: 1.5em; line-height: 1.05; max-width: 100%;
 }
 .rotator__word {
-  position: absolute; left: 0; bottom: 0; white-space: nowrap;
-  opacity: 0; transform: translateY(0.4em);
+  grid-area: 1 / 1;
+  opacity: 0; transform: translateY(0.35em);
   transition: opacity 0.5s var(--ease), transform 0.5s var(--ease);
   border-bottom: 4px solid var(--black); padding-bottom: 2px;
 }
-.rotator__word.is-active { position: relative; opacity: 1; transform: none; }
+.rotator__word.is-active { opacity: 1; transform: none; }
 
 /* ============================================================
    CAPABILITIES
