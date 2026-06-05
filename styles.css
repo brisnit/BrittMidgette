@@ -105,7 +105,8 @@ a { color: inherit; text-decoration: none; }
   flex: 1; min-width: 0;
   background: transparent; color: var(--white);
   border: 1px solid rgba(255,255,255,0.3); border-radius: 100px;
-  padding: 0.85rem 1.25rem; font-family: var(--mono); font-size: 0.9rem;
+  /* 16px min prevents iOS Safari from auto-zooming (and getting stuck wide) on focus */
+  padding: 0.85rem 1.25rem; font-family: var(--mono); font-size: 16px;
   transition: border-color 0.3s var(--ease);
 }
 .gate__input::placeholder { color: rgba(255,255,255,0.4); }
