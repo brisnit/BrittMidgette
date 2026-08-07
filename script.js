@@ -114,9 +114,27 @@
       }
     }
 
-    /* Transparent header while over the hero video */
+    /* Sequential highlight around the process loop (approach page) */
+    if (!reduceMotion) {
+      document.querySelectorAll(".ap-loop").forEach(function (loop) {
+        // The seed step and the infinity mark are always-on, so only the
+        // repeating steps take the travelling highlight.
+        var items = loop.querySelectorAll(
+          ".ap-loop__item:not(.ap-loop__item--seed):not(.ap-loop__item--inf)"
+        );
+        if (!items.length) return;
+        var li = -1;
+        window.setInterval(function () {
+          if (li >= 0) items[li].classList.remove("is-lit");
+          li = (li + 1) % items.length;
+          items[li].classList.add("is-lit");
+        }, 900);
+      });
+    }
+
+    /* Transparent header while over a dark hero */
     var header = document.querySelector(".header");
-    var hero = document.getElementById("hero");
+    var hero = document.getElementById("hero") || document.querySelector(".ap-hero");
     if (header && hero) {
       var ticking = false;
       function syncHeader() {

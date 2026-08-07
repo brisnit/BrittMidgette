@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SDG&amp;E, Case Study, Britt Midgette</title>
+  <meta name="description" content="A weather intelligence platform for SDG&E, turning thousands of data points into a tool teams could read at a glance in one of the most wildfire-prone regions in the US. A case study by Britt Midgette." />
+  <meta name="theme-color" content="#000000" />
+  <link rel="icon" type="image/png" href="brand-assets/Pics/favicon.png" />
+  <link rel="apple-touch-icon" href="brand-assets/Pics/favicon.png" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Seeing risk before it becomes reality" />
+  <meta property="og:description" content="A weather intelligence platform built to help SDG&E read wildfire risk at a glance." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ============ PASSWORD GATE ============ -->
+  <div id="gate" class="gate" aria-hidden="false">
+    <div class="gate__inner">
+      <h1 class="gate__title">Britt Midgette</h1>
+      <p class="gate__sub">This site is private. Enter the password to continue.</p>
+      <form id="gate-form" class="gate__form" autocomplete="off" novalidate>
+        <label class="sr-only" for="gate-input">Password</label>
+        <input id="gate-input" class="gate__input" type="password" placeholder="Password" aria-describedby="gate-error" spellcheck="false" />
+        <button class="gate__btn" type="submit">Enter</button>
+      </form>
+      <p id="gate-error" class="gate__error" role="alert" hidden>Incorrect password. Try again.</p>
+    </div>
+    <p class="gate__footer">© <span class="year"></span> Britt Midgette</p>
+  </div>
+
+  <!-- ============ SITE ============ -->
+  <div id="site" class="site" hidden>
+    <span id="top" aria-hidden="true"></span>
+    <a href="#overview" class="skip-link">Skip to content</a>
+
+    <header class="header">
+      <a href="index.html#selected" class="header__brand" aria-label="Britt Midgette, home">
+        <img class="header__logo" src="brand-assets/WhiteLogo.png" alt="Britt Midgette" />
+      </a>
+      <a href="index.html#selected" class="case-back">← All work</a>
+    </header>
+
+    <main class="case" id="overview">
+      <section class="case-hero">
+        <p class="case-eyebrow reveal">Case study &middot; Utility &amp; wildfire risk</p>
+        <h1 class="case-title reveal">Seeing risk<br />before it becomes<br />reality.</h1>
+        <p class="case-intro reveal">
+          I designed a weather intelligence platform to help SDG&amp;E make
+          faster, safer decisions in one of the most wildfire-prone regions in
+          the United States, turning thousands of data points into a tool teams
+          could read at a glance.
+        </p>
+      </section>
+
+      <dl class="case-meta reveal">
+        <div><dt>Client</dt><dd>SDG&amp;E</dd></div>
+        <div><dt>Year</dt><dd>2019</dd></div>
+        <div><dt>Scope</dt><dd>Research · Product Strategy · UX · Visual Design</dd></div>
+        <div><dt>Region</dt><dd>Southern California</dd></div>
+      </dl>
+
+      <div class="case-note reveal">
+        <p>
+          About this work: I led this in a director role at a previous agency,
+          before founding Artifact Digital. The problem, the decisions and the
+          outcomes are described as they happened.
+        </p>
+      </div>
+
+      <figure class="case-figure reveal" data-ph="Add Pics/SDGE1.png — five phone screens against a wildfire sky">
+        <img src="brand-assets/Pics/SDGE1.png" loading="lazy"
+          alt="Five phone screens showing the weather intelligence platform: fire potential index, wind and humidity maps, and power indicators, against a wildfire sky."
+          onerror="this.closest('.case-figure').classList.add('case-figure--empty')" />
+        <figcaption>
+          One operational view: fire potential, wind, humidity, and grid
+          indicators, read at a glance against the conditions they describe.
+        </figcaption>
+      </figure>
+
+      <section class="case-section reveal">
+        <p class="case-section__label">The opportunity</p>
+        <h2 class="case-h2">Read conditions. Surface risk. Decide faster.</h2>
+        <div class="case-steps">
+          <div class="case-step">
+            <span class="case-step__num">01</span>
+            <h3>Weather as operational risk</h3>
+            <p>For a utility responsible for critical infrastructure, changing conditions aren&rsquo;t a forecast. Wind, heat, humidity, and dry vegetation are operational risk, shaping where crews deploy, what equipment gets watched, and when to act.</p>
+          </div>
+          <div class="case-step">
+            <span class="case-step__num">02</span>
+            <h3>Clarity at a glance</h3>
+            <p>The challenge wasn&rsquo;t displaying weather data. It was transforming thousands of data points into a decision-making tool field teams, meteorologists, and operations leaders could understand instantly.</p>
+          </div>
+          <div class="case-step">
+            <span class="case-step__num">03</span>
+            <h3>Lower the risk</h3>
+            <p>The goal was clear: improve situational awareness and ultimately help reduce wildfire risk across the region.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ HIGHLIGHT: RESEARCH ============ -->
+      <section class="case-feature case-feature--dark" aria-labelledby="research-head">
+        <div class="case-feature__inner">
+          <p class="case-feature__flag reveal">The research</p>
+          <h2 class="case-feature__head reveal" id="research-head">I learned how weather was actually used before I designed a single screen.</h2>
+          <div class="case-feature__grid">
+            <div class="case-feature__lead reveal">
+              <p>
+                I ran in-depth interviews with the internal meteorology team to
+                understand how they interpreted models, monitored changing
+                conditions, and identified areas of concern. What I was really
+                after was <strong>which information truly influenced operational
+                decisions, and which metrics were simply background noise.</strong>
+              </p>
+              <p>
+                I also interviewed the field workers responsible for maintaining
+                infrastructure across the region. Those conversations were just
+                as valuable.
+              </p>
+            </div>
+            <ul class="case-feature__aside reveal">
+              <li>Crews needed information quickly, often outdoors under shifting conditions</li>
+              <li>They weren&rsquo;t looking for complicated dashboards or scientific reports</li>
+              <li>They needed to know where conditions were changing</li>
+              <li>Where risk was increasing, and what required attention right now</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section reveal">
+        <p class="case-section__label">Designing for action</p>
+        <h2 class="case-h2">Designed for action, not observation.</h2>
+        <div class="case-body">
+          <p>
+            Rather than building another weather application, I designed an
+            operational intelligence platform. A single interface brought
+            environmental indicators together so users could read both current
+            conditions and emerging risk, instead of forcing people to assemble
+            the picture from multiple systems.
+          </p>
+        </div>
+        <ul class="case-tags reveal">
+          <li>Fire potential</li>
+          <li>Top current wind gusts</li>
+          <li>Relative humidity</li>
+          <li>Temperature</li>
+          <li>Wind speed &amp; direction</li>
+          <li>Weather alerts</li>
+          <li>Geographic conditions</li>
+        </ul>
+        <div class="case-body">
+          <p>
+            Environmental monitoring produces enormous amounts of data; good
+            design determines what deserves attention first. I organized
+            information into clear visual hierarchies, paired live conditions
+            with operational indicators on interactive maps, and let critical
+            information surface immediately while supporting detail stayed
+            available when needed.
+          </p>
+        </div>
+      </section>
+
+      <div class="case-pull reveal">
+        <span>The design didn&rsquo;t simplify the science. It simplified access to it.</span>
+      </div>
+
+      <figure class="case-figure reveal" data-ph="Add Pics/SDGE2.png — transmission towers at sunset">
+        <img src="brand-assets/Pics/SDGE2.png" loading="lazy"
+          alt="Electrical transmission towers silhouetted against a deep orange sunset sky."
+          onerror="this.closest('.case-figure').classList.add('case-figure--empty')" />
+        <figcaption>
+          Critical infrastructure at dusk, the operational reality the platform
+          was built to help protect.
+        </figcaption>
+      </figure>
+
+      <section class="case-section case-results reveal">
+        <p class="case-section__label">Outcomes</p>
+        <h2 class="case-h2">What it delivered.</h2>
+        <div class="case-steps">
+          <div class="case-step">
+            <span class="case-step__num">01</span>
+            <h3>Intelligence built around decisions</h3>
+            <p>A unified experience combining weather data, wildfire indicators, and environmental conditions into a single operational platform.</p>
+          </div>
+          <div class="case-step">
+            <span class="case-step__num">02</span>
+            <h3>Research-driven strategy</h3>
+            <p>Interviews with meteorologists and field workers directly informed the product architecture, reflecting real operational workflows instead of assumptions.</p>
+          </div>
+          <div class="case-step">
+            <span class="case-step__num">03</span>
+            <h3>Faster situational awareness</h3>
+            <p>Fire potential, wind conditions, humidity, and other critical indicators became immediately visible, so teams could read changing conditions more quickly.</p>
+          </div>
+          <div class="case-step">
+            <span class="case-step__num">04</span>
+            <h3>Supporting wildfire mitigation</h3>
+            <p>The platform contributed to the organization&rsquo;s broader wildfire-prevention strategy by improving visibility into the environmental conditions that drive operational risk across the region.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-cta" aria-label="Get in touch">
+        <div class="case-cta__inner">
+          <h2 class="case-cta__head reveal">Have a high-stakes product that has to be readable at a glance?</h2>
+          <div class="case-cta__actions reveal">
+            <a href="index.html#contact" class="btn">Book a strategy session</a>
+            <a href="index.html#selected" class="btn btn--ghost">See more work</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span class="footer__copy">© <span class="year"></span> Britt Midgette</span>
+      <a href="index.html#selected" class="footer__top">← Back to work</a>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

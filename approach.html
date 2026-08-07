@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How I Think &amp; Approach Design, Britt Midgette</title>
+  <meta name="description" content="How Britt Midgette approaches design: strategy, experience, visual design, and the loop that keeps a product improving after launch." />
+  <meta name="theme-color" content="#000000" />
+  <link rel="icon" type="image/png" href="brand-assets/Pics/favicon.png" />
+  <link rel="apple-touch-icon" href="brand-assets/Pics/favicon.png" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="How I Think &amp; Approach Design" />
+  <meta property="og:description" content="Design is a process. The real world rarely is." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ============ PASSWORD GATE ============ -->
+  <div id="gate" class="gate" aria-hidden="false">
+    <div class="gate__inner">
+      <h1 class="gate__title">Britt Midgette</h1>
+      <p class="gate__sub">This site is private. Enter the password to continue.</p>
+      <form id="gate-form" class="gate__form" autocomplete="off" novalidate>
+        <label class="sr-only" for="gate-input">Password</label>
+        <input id="gate-input" class="gate__input" type="password" placeholder="Password" aria-describedby="gate-error" spellcheck="false" />
+        <button class="gate__btn" type="submit">Enter</button>
+      </form>
+      <p id="gate-error" class="gate__error" role="alert" hidden>Incorrect password. Try again.</p>
+    </div>
+    <p class="gate__footer">© <span class="year"></span> Britt Midgette</p>
+  </div>
+
+  <!-- ============ SITE ============ -->
+  <div id="site" class="site" hidden>
+    <span id="top" aria-hidden="true"></span>
+    <a href="#process" class="skip-link">Skip to content</a>
+
+    <header class="header">
+      <a href="index.html" class="header__brand" aria-label="Britt Midgette, home">
+        <img class="header__logo" src="brand-assets/WhiteLogo.png" alt="Britt Midgette" />
+      </a>
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav" aria-label="Toggle menu">
+        <span></span><span></span>
+      </button>
+      <nav class="nav" id="nav" aria-label="Primary">
+        <a href="index.html#about">About</a>
+        <a href="approach.html" aria-current="page">Approach</a>
+        <a href="index.html#selected">Selected Work</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- ============ HERO ============ -->
+      <section class="ap-hero">
+        <div class="ap-hero__inner">
+          <p class="ap-hero__eyebrow reveal">Process &middot; Point of view</p>
+          <h1 class="ap-hero__title reveal">How I Think<br />&amp; Approach<br />Design</h1>
+          <p class="ap-hero__deck reveal">
+            Design is a process.<br />The real world rarely is.
+          </p>
+          <p class="ap-hero__lede reveal">
+            My approach is rooted in a version of the Double&nbsp;Diamond. But
+            I&rsquo;ve never experienced great product design as a perfectly
+            linear process.
+          </p>
+        </div>
+        <div class="ap-hero__rule" aria-hidden="true"></div>
+      </section>
+
+      <!-- ============ 01 THE PROCESS ============ -->
+      <section class="section" id="process">
+        <div class="section__head">
+          <span class="section__index">01</span>
+          <h2 class="section__title">The&nbsp;Process</h2>
+        </div>
+
+        <ol class="ap-loop reveal" aria-label="Research, then a repeating cycle of ideate, design, test, build">
+          <li class="ap-loop__item ap-loop__item--seed">Research</li>
+          <li class="ap-loop__item">Ideate</li>
+          <li class="ap-loop__item">Design</li>
+          <li class="ap-loop__item">Test</li>
+          <li class="ap-loop__item">Build</li>
+          <li class="ap-loop__item ap-loop__item--inf" aria-label="repeating">&#8734;</li>
+        </ol>
+
+        <div class="ap-prose reveal">
+          <p>
+            The first part establishes the foundation. After that, the product
+            becomes a continuous cycle of learning, making, testing, and
+            improving.
+          </p>
+          <p class="ap-prose__aside">That&rsquo;s the ideal.</p>
+        </div>
+
+        <!-- Ideal vs reality -->
+        <div class="ap-split">
+          <div class="ap-split__col reveal">
+            <p class="ap-split__label">The ideal</p>
+            <h3 class="ap-split__head">A process you get to run from the beginning.</h3>
+            <p class="ap-split__body">
+              Foundation first. Then a loop that keeps tightening as the product
+              meets real people.
+            </p>
+          </div>
+          <div class="ap-split__col ap-split__col--alt reveal">
+            <p class="ap-split__label">The reality</p>
+            <h3 class="ap-split__head">Agency life is often different.</h3>
+            <p class="ap-split__body">
+              You don&rsquo;t always get to start at the beginning.
+            </p>
+            <ul class="ap-scenarios">
+              <li>Sometimes you&rsquo;re brought in to define the strategy.</li>
+              <li>Sometimes the strategy already exists and you&rsquo;re asked to turn it into an experience.</li>
+              <li>Sometimes there are wireframes but no visual system.</li>
+              <li>Sometimes you&rsquo;re dropped directly into a product that is already being built and asked to solve a very specific problem.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="ap-prose reveal">
+          <p>
+            I&rsquo;ve spent most of my career in the
+            <strong>strategy and experience side of agency work</strong>, so
+            I&rsquo;ve learned to operate across that entire spectrum.
+          </p>
+        </div>
+      </section>
+
+      <!-- Special forces band -->
+      <section class="ap-band" aria-label="Operating principle">
+        <div class="ap-band__inner">
+          <p class="ap-band__label reveal">How I enter a project</p>
+          <blockquote class="ap-band__quote reveal">
+            <p>
+              Like a special forces team: understand the terrain quickly,
+              determine what already exists, identify what&rsquo;s missing, and
+              attack the part of the problem you&rsquo;re there to solve.
+            </p>
+          </blockquote>
+          <ol class="ap-recon reveal">
+            <li><span class="ap-recon__num">01</span><span>Understand the terrain</span></li>
+            <li><span class="ap-recon__num">02</span><span>Determine what exists</span></li>
+            <li><span class="ap-recon__num">03</span><span>Identify what&rsquo;s missing</span></li>
+            <li><span class="ap-recon__num">04</span><span>Attack the problem</span></li>
+          </ol>
+          <p class="ap-band__kicker reveal">
+            The process matters. But knowing <em>where you are</em> in the
+            process matters just as much.
+          </p>
+        </div>
+      </section>
+
+      <!-- ============ 02 START WITH WHAT WE KNOW ============ -->
+      <section class="section section--know" id="know">
+        <div class="section__head">
+          <span class="section__index">02</span>
+          <h2 class="section__title">Start With What We Know</h2>
+        </div>
+
+        <div class="ap-prose ap-prose--lead reveal">
+          <p class="ap-lead">
+            Even when I&rsquo;m brought directly into design, I don&rsquo;t
+            believe design should begin with a blank canvas.
+          </p>
+          <p>I want to understand the thinking that got us there.</p>
+        </div>
+
+        <p class="ap-inputs__label reveal">That may mean reviewing</p>
+        <ul class="ap-inputs">
+          <li class="ap-input reveal"><span class="ap-input__num">01</span>Business and product strategy</li>
+          <li class="ap-input reveal"><span class="ap-input__num">02</span>Existing research</li>
+          <li class="ap-input reveal"><span class="ap-input__num">03</span>Personas and audience archetypes</li>
+          <li class="ap-input reveal"><span class="ap-input__num">04</span>Customer journeys</li>
+          <li class="ap-input reveal"><span class="ap-input__num">05</span>Analytics</li>
+          <li class="ap-input reveal"><span class="ap-input__num">06</span>Competitive research</li>
+          <li class="ap-input reveal"><span class="ap-input__num">07</span>Brand strategy</li>
+          <li class="ap-input reveal"><span class="ap-input__num">08</span>Existing design systems</li>
+          <li class="ap-input reveal"><span class="ap-input__num">09</span>Previous concepts and prototypes</li>
+          <li class="ap-input reveal"><span class="ap-input__num">10</span>Technical constraints</li>
+        </ul>
+
+        <div class="ap-prose reveal">
+          <p>If those things exist, they become inputs into the work.</p>
+          <p>
+            If they don&rsquo;t, we establish as much of that foundation as the
+            project allows.
+          </p>
+        </div>
+
+        <p class="ap-pull reveal">
+          The amount of research changes.<br />
+          <span>The need for understanding doesn&rsquo;t.</span>
+        </p>
+      </section>
+
+      <!-- ============ 03 STRATEGY ============ -->
+      <section class="section" id="strategy">
+        <div class="section__head">
+          <span class="section__index">03</span>
+          <h2 class="section__title">Strategy</h2>
+        </div>
+
+        <div class="ap-prose ap-prose--lead reveal">
+          <p class="ap-lead">Understand the landscape before deciding where to go.</p>
+          <p>
+            Strategy is where we create the foundation for the experience. When
+            I&rsquo;m brought into a project at the strategy level, one of the
+            first things I want to understand is the ecosystem around the
+            organization.
+          </p>
+        </div>
+
+        <ul class="ap-questions reveal">
+          <li>Who are the competitors?</li>
+          <li>What standards have customers already been taught to expect?</li>
+          <li>Where is everyone doing the same thing?</li>
+          <li>Where are the opportunities to do something meaningfully better?</li>
+        </ul>
+
+        <div class="ap-prose reveal">
+          <p>
+            Competitive analysis is rarely about copying competitors. It&rsquo;s
+            about understanding the landscape well enough to know
+            <strong>where the client belongs within it and where they have
+            permission to be different.</strong>
+          </p>
+          <p>From there, research takes whatever form the problem requires.</p>
+        </div>
+
+        <p class="ap-sublabel reveal">Typical strategy activities</p>
+        <ol class="capabilities ap-caps">
+          <li class="cap reveal">
+            <span class="cap__num">01</span>
+            <h3 class="cap__title">Competitive Analysis</h3>
+            <p class="cap__desc">Understand the category, competitors, conventions, gaps, and opportunities.</p>
+          </li>
+          <li class="cap reveal">
+            <span class="cap__num">02</span>
+            <h3 class="cap__title">Internal Research</h3>
+            <p class="cap__desc">Stakeholder interviews, workshops, organizational knowledge, existing analytics, business objectives, technical realities, and institutional expertise.</p>
+          </li>
+          <li class="cap reveal">
+            <span class="cap__num">03</span>
+            <h3 class="cap__title">External Research</h3>
+            <p class="cap__desc">Customer interviews, behavioral research, market research, usability findings, search behavior, and other inputs depending on the problem.</p>
+          </li>
+          <li class="cap reveal">
+            <span class="cap__num">04</span>
+            <h3 class="cap__title">Personas &amp; Archetypes</h3>
+            <p class="cap__desc">Turn research into useful models of the people we&rsquo;re designing for.</p>
+          </li>
+          <li class="cap reveal">
+            <span class="cap__num">05</span>
+            <h3 class="cap__title">Journeys</h3>
+            <p class="cap__desc">Understand what people are trying to accomplish, where friction exists, and where the experience can create value.</p>
+          </li>
+          <li class="cap reveal">
+            <span class="cap__num">06</span>
+            <h3 class="cap__title">Digital Strategy</h3>
+            <p class="cap__desc">Bring those inputs together into a clear direction that can move forward into product and experience design.</p>
+          </li>
+        </ol>
+
+        <p class="ap-pull reveal">
+          The output of strategy isn&rsquo;t a pile of documents.<br />
+          <span>It&rsquo;s clarity about what we should build and why.</span>
+        </p>
+      </section>
+
+      <!-- ============ 04 EXPERIENCE / UX ============ -->
+      <section class="section" id="experience">
+        <div class="section__head">
+          <span class="section__index">04</span>
+          <h2 class="section__title">Experience&nbsp;/&nbsp;UX</h2>
+        </div>
+
+        <div class="ap-prose ap-prose--lead reveal">
+          <p class="ap-lead">Turning strategy into form.</p>
+          <p>
+            This is where the ethereal blah blah blah of strategy has to become
+            something real.
+          </p>
+        </div>
+
+        <div class="ap-qa">
+          <div class="ap-qa__side reveal">
+            <p class="ap-qa__label">Strategy may tell us</p>
+            <p class="ap-qa__text">Customers need greater confidence before making a decision.</p>
+          </div>
+          <div class="ap-qa__side ap-qa__side--answer reveal">
+            <p class="ap-qa__label">Experience design has to answer</p>
+            <p class="ap-qa__text">Okay. What does the product actually do about that?</p>
+          </div>
+        </div>
+
+        <p class="ap-sublabel reveal">Translating strategic ideas into</p>
+        <ul class="ap-tags reveal">
+          <li>Features</li>
+          <li>Functionality</li>
+          <li>Information architecture</li>
+          <li>Navigation</li>
+          <li>User flows</li>
+          <li>Content hierarchy</li>
+          <li>Interaction patterns</li>
+          <li>Wireframes</li>
+          <li>Prototypes</li>
+          <li>Product behaviors</li>
+        </ul>
+
+        <div class="ap-prose reveal">
+          <p>
+            We&rsquo;re beginning to expose the <strong>ribs of the
+            product</strong>. At this stage, I want to answer the difficult
+            structural questions without being distracted by whether something
+            looks beautiful yet.
+          </p>
+        </div>
+
+        <ul class="ap-questions reveal">
+          <li>What belongs here?</li>
+          <li>What happens when I click this?</li>
+          <li>What&rsquo;s most important?</li>
+          <li>What comes next?</li>
+          <li>What information does someone need before making this decision?</li>
+          <li>How does this feature actually support the strategy?</li>
+        </ul>
+
+        <div class="ap-prose reveal">
+          <p>
+            By separating these questions from visual design, we can make
+            important product decisions based on
+            <strong>behavior, hierarchy, usefulness, and intent</strong> rather
+            than aesthetics.
+          </p>
+        </div>
+      </section>
+
+      <!-- No wall between UX and UI -->
+      <section class="ap-band ap-band--tight" aria-label="UX and UI">
+        <div class="ap-band__inner">
+          <p class="ap-band__label reveal">A caveat</p>
+          <h2 class="ap-band__head reveal">UX and UI don&rsquo;t always need a wall between&nbsp;them.</h2>
+          <div class="ap-band__cols">
+            <p class="reveal">
+              The process changes when a mature design system already exists. If
+              the visual language, components, interaction patterns, and brand
+              standards have already been established, there may be little value
+              in creating grayscale wireframes simply because that&rsquo;s what
+              the traditional process says comes next.
+            </p>
+            <p class="reveal">
+              In those situations, I often work in a hybrid <strong>UX/UI
+              mode</strong>. We can solve experience problems using real
+              components and actual interface patterns while still asking
+              fundamentally UX questions.
+            </p>
+          </div>
+          <p class="ap-band__kicker reveal">
+            The artifact isn&rsquo;t the point. <em>Making the right decision is
+            the point.</em>
+          </p>
+        </div>
+      </section>
+
+      <!-- ============ 05 VISUAL DESIGN ============ -->
+      <section class="section" id="visual">
+        <div class="section__head">
+          <span class="section__index">05</span>
+          <h2 class="section__title">Visual&nbsp;Design</h2>
+        </div>
+
+        <div class="ap-prose ap-prose--lead reveal">
+          <p class="ap-lead">Make the experience unmistakably belong to the brand.</p>
+          <p>
+            My philosophy on visual design is not simply to make an interface
+            look good. It&rsquo;s to take an organization&rsquo;s
+            <strong>brand ethos and translate it into a digital product.</strong>
+          </p>
+          <p>Before designing, I consume the brand.</p>
+        </div>
+
+        <p class="ap-sublabel reveal">What I look at</p>
+        <ul class="ap-tags reveal">
+          <li>Brand guidelines</li>
+          <li>Existing marketing</li>
+          <li>Photography</li>
+          <li>Typography</li>
+          <li>Color</li>
+          <li>Voice</li>
+          <li>Physical experiences</li>
+          <li>Existing digital products</li>
+          <li>Highest-tier competitors</li>
+        </ul>
+
+        <div class="ap-prose reveal">
+          <p>Then I look outward.</p>
+          <p>
+            I hunt for exceptional visual patterns across products, industries,
+            editorial design, technology, architecture, culture, and places that
+            may have nothing to do with the client&rsquo;s category.
+          </p>
+          <p>
+            There is a certain amount of <strong>hunt and peck</strong> to great
+            visual design.
+          </p>
+        </div>
+
+        <ol class="ap-hunt">
+          <li class="reveal"><span class="ap-hunt__num">01</span><p>You see something interesting.</p></li>
+          <li class="reveal"><span class="ap-hunt__num">02</span><p>You understand why it works.</p></li>
+          <li class="reveal"><span class="ap-hunt__num">03</span><p>You pull the underlying idea apart.</p></li>
+          <li class="reveal"><span class="ap-hunt__num">04</span><p>You reinterpret it through the client&rsquo;s brand.</p></li>
+        </ol>
+
+        <div class="ap-prose reveal">
+          <p>
+            I&rsquo;m not interested in copying the pattern. I&rsquo;m interested
+            in understanding what made it compelling and finding
+            <strong>our version of it.</strong>
+          </p>
+        </div>
+      </section>
+
+      <!-- Know the standard -->
+      <section class="ap-band ap-band--standard" aria-label="Know the standard">
+        <div class="ap-band__inner">
+          <p class="ap-band__label reveal">Taste is accumulated</p>
+          <h2 class="ap-band__head reveal">Know the standard. Then push&nbsp;it.</h2>
+          <div class="ap-band__cols">
+            <p class="reveal">
+              Visual taste isn&rsquo;t something you manufacture at the beginning
+              of a project. It comes from years of seeing products that meet the
+              standard, products that miss it, and products that push far beyond
+              it. Eventually, you know what good looks like. That becomes the
+              baseline.
+            </p>
+            <p class="reveal">
+              Often the best ideas aren&rsquo;t loud. They&rsquo;re subtle
+              decisions in typography, motion, composition, interaction, imagery,
+              hierarchy, or behavior that make an experience feel distinctly like
+              the organization behind it.
+            </p>
+          </div>
+          <ol class="ap-ladder reveal">
+            <li>We know the standard.</li>
+            <li>We design to the standard.</li>
+            <li>Then we push beyond it wherever the product and brand give us permission.</li>
+          </ol>
+          <p class="ap-band__kicker reveal">
+            That&rsquo;s where visual design becomes more than decoration. It
+            becomes <em>brand expression through product.</em>
+          </p>
+        </div>
+      </section>
+
+      <!-- ============ 06 BUILD, LEARN, REPEAT ============ -->
+      <section class="section" id="repeat">
+        <div class="section__head">
+          <span class="section__index">06</span>
+          <h2 class="section__title">Build,&nbsp;Learn,&nbsp;Repeat</h2>
+        </div>
+
+        <div class="ap-prose ap-prose--lead reveal">
+          <p class="ap-lead">Design doesn&rsquo;t end when the comps are approved.</p>
+          <p>
+            Once something becomes real, we learn things we couldn&rsquo;t learn
+            while designing it.
+          </p>
+        </div>
+
+        <ul class="ap-forces">
+          <li class="reveal">People use it.</li>
+          <li class="reveal">Technology pushes back.</li>
+          <li class="reveal">Business priorities change.</li>
+          <li class="reveal">New opportunities appear.</li>
+        </ul>
+
+        <p class="ap-prose reveal">So we go around again.</p>
+
+        <ol class="ap-loop ap-loop--cycle reveal" aria-label="Ideate, design, test, build, repeating">
+          <li class="ap-loop__item">Ideate</li>
+          <li class="ap-loop__item">Design</li>
+          <li class="ap-loop__item">Test</li>
+          <li class="ap-loop__item">Build</li>
+          <li class="ap-loop__item ap-loop__item--inf" aria-label="repeating">&#8734;</li>
+        </ol>
+
+        <div class="ap-prose reveal">
+          <p>
+            The goal isn&rsquo;t to perfectly execute a process. The goal is to
+            understand <strong>what the product needs next</strong> and have the
+            range to meet it there.
+          </p>
+        </div>
+      </section>
+
+      <!-- ============ CLOSING ============ -->
+      <section class="ap-close" aria-label="In summary">
+        <div class="ap-close__inner">
+          <p class="ap-close__label reveal">The simplest way to say it</p>
+          <ol class="ap-close__list">
+            <li class="reveal">Understand where we are.</li>
+            <li class="reveal">Understand why we&rsquo;re here.</li>
+            <li class="reveal">Solve what&rsquo;s in front of us.</li>
+            <li class="reveal">Build on what we learn.</li>
+            <li class="reveal">Keep going.</li>
+          </ol>
+          <div class="ap-close__actions reveal">
+            <a href="index.html#selected" class="btn">See selected work</a>
+            <a href="index.html#contact" class="btn btn--ghost">Get in touch</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span class="footer__copy">© <span class="year"></span> Britt Midgette</span>
+      <a href="index.html" class="footer__top">← Back home</a>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
