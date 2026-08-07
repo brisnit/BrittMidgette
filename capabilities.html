@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Capabilities, Britt Midgette</title>
+  <meta name="description" content="Strategy, research, experience design, product definition, prototyping and testing. From an ambiguous business problem to a working product experience." />
+  <meta name="theme-color" content="#000000" />
+  <link rel="icon" type="image/png" href="brand-assets/Pics/favicon.png" />
+  <link rel="apple-touch-icon" href="brand-assets/Pics/favicon.png" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Capabilities, Britt Midgette" />
+  <meta property="og:description" content="From ambiguity to something real." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ============ PASSWORD GATE ============ -->
+  <div id="gate" class="gate" aria-hidden="false">
+    <div class="gate__inner">
+      <h1 class="gate__title">Britt Midgette</h1>
+      <p class="gate__sub">This site is private. Enter the password to continue.</p>
+      <form id="gate-form" class="gate__form" autocomplete="off" novalidate>
+        <label class="sr-only" for="gate-input">Password</label>
+        <input id="gate-input" class="gate__input" type="password" placeholder="Password" aria-describedby="gate-error" spellcheck="false" />
+        <button class="gate__btn" type="submit">Enter</button>
+      </form>
+      <p id="gate-error" class="gate__error" role="alert" hidden>Incorrect password. Try again.</p>
+    </div>
+    <p class="gate__footer">© <span class="year"></span> Britt Midgette</p>
+  </div>
+
+  <!-- ============ SITE ============ -->
+  <div id="site" class="site" hidden>
+    <span id="top" aria-hidden="true"></span>
+    <a href="#immersion" class="skip-link">Skip to content</a>
+
+    <header class="header">
+      <a href="index.html" class="header__brand" aria-label="Britt Midgette, home">
+        <img class="header__logo" src="brand-assets/WhiteLogo.png" alt="Britt Midgette" />
+      </a>
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav" aria-label="Toggle menu">
+        <span></span><span></span>
+      </button>
+      <nav class="nav" id="nav" aria-label="Primary">
+        <a href="index.html#about">About</a>
+        <a href="capabilities.html" aria-current="page">Capabilities</a>
+        <a href="approach.html">Approach</a>
+        <a href="index.html#selected">Selected Work</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- ============ HERO ============ -->
+      <section class="cap-hero">
+        <div class="cap-hero__inner">
+          <p class="cap-hero__eyebrow reveal">Capabilities</p>
+          <h1 class="cap-hero__title reveal">From ambiguity to something real.</h1>
+          <p class="cap-hero__lede reveal">
+            My capabilities span strategy, research, experience design, product
+            definition, prototyping, and testing. I can enter a project when the
+            problem is still being defined, or when the direction is already
+            established and the experience simply needs to be made real.
+          </p>
+
+          <div class="cap-spectrum reveal" aria-label="Capability spectrum">
+            <div class="cap-spectrum__track" aria-hidden="true"></div>
+            <ol class="cap-spectrum__row">
+              <li>
+                <span class="cap-spectrum__label">Understand</span>
+                <span class="cap-spectrum__note">Immersion &amp; research</span>
+              </li>
+              <li>
+                <span class="cap-spectrum__label">Define</span>
+                <span class="cap-spectrum__note">Journeys &amp; models</span>
+              </li>
+              <li>
+                <span class="cap-spectrum__label">Create</span>
+                <span class="cap-spectrum__note">Concepts &amp; structure</span>
+              </li>
+              <li>
+                <span class="cap-spectrum__label">Validate</span>
+                <span class="cap-spectrum__note">Test &amp; learn</span>
+              </li>
+              <li>
+                <span class="cap-spectrum__label">Make real</span>
+                <span class="cap-spectrum__note">Working prototypes</span>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 01 IMMERSION & RESEARCH ============ -->
+      <section class="cap-sec" id="immersion">
+        <div class="cap-sec__head">
+          <span class="cap-num reveal" aria-hidden="true">01</span>
+          <div>
+            <p class="cap-sec__label reveal">Immersion &amp; research</p>
+            <h2 class="cap-head reveal">Understand before we solve.</h2>
+          </div>
+        </div>
+
+        <div class="cap-body reveal">
+          <p>
+            Before making decisions, I want to understand the organization, the
+            customer, the problem, and the environment surrounding it.
+          </p>
+          <p>
+            Research doesn&rsquo;t have one prescribed format. The approach
+            should match the problem we&rsquo;re trying to solve.
+          </p>
+        </div>
+
+        <ul class="case-tags reveal">
+          <li>Stakeholder interviews</li>
+          <li>Customer interviews</li>
+          <li>Internal research</li>
+          <li>External research</li>
+          <li>Competitive analysis</li>
+          <li>Analytics &amp; data</li>
+          <li>Existing strategy</li>
+          <li>Product audits</li>
+          <li>Brand immersion</li>
+          <li>Market &amp; category research</li>
+          <li>Workshops</li>
+          <li>Existing customer insights</li>
+        </ul>
+
+        <p class="cap-kicker reveal">
+          The objective isn&rsquo;t research for the sake of producing research artifacts.
+          <span>It&rsquo;s to establish enough understanding to make defensible design decisions.</span>
+        </p>
+
+        <p class="pf-label reveal">Artifacts</p>
+        <div class="pf-asym">
+          <figure class="pf-item reveal">
+            <span class="pf-media pf-media--square" data-ph="[ COMPETITIVE ANALYSIS IMAGE ]" data-zoom data-cap="Competitive landscape" tabindex="0" role="button" aria-label="Expand competitive analysis">
+              <img src="brand-assets/Capabilities/research-competitive.png" alt="Competitive analysis" loading="lazy"
+                onerror="this.closest('.pf-media').classList.add('pf-media--empty')" />
+            </span>
+            <figcaption class="pf-item__cap"><b>Competitive landscape</b> · category mapping</figcaption>
+          </figure>
+          <div class="pf-asym__stack">
+            <figure class="pf-item reveal">
+              <span class="pf-media pf-media--wide" data-ph="[ WORKSHOP PHOTOGRAPHY ]" data-zoom data-cap="Workshop" tabindex="0" role="button" aria-label="Expand workshop photography">
+                <img src="brand-assets/Capabilities/research-workshop.png" alt="Workshop session" loading="lazy"
+                  onerror="this.closest('.pf-media').classList.add('pf-media--empty')" />
+              </span>
+              <figcaption class="pf-item__cap"><b>Workshop</b> · stakeholder alignment</figcaption>
+            </figure>
+            <figure class="pf-item reveal">
+              <span class="pf-media pf-media--wide" data-ph="[ RESEARCH ARTIFACT ]" data-zoom data-cap="Research synthesis" tabindex="0" role="button" aria-label="Expand research artifact">
+                <img src="brand-assets/Capabilities/research-synthesis.png" alt="Research synthesis" loading="lazy"
+                  onerror="this.closest('.pf-media').classList.add('pf-media--empty')" />
+              </span>
+              <figcaption class="pf-item__cap"><b>Research synthesis</b> · findings to insight</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 02 JOURNEYS, PERSONAS & ARCHETYPES ============ -->
+      <section class="cap-sec" id="journeys">
+        <div class="cap-sec__head">
+          <span class="cap-num reveal" aria-hidden="true">02</span>
+          <div>
+            <p class="cap-sec__label reveal">Journeys, personas &amp; archetypes</p>
+            <h2 class="cap-head reveal">Give the customer a shape.</h2>
+          </div>
+        </div>
+
+        <div class="cap-body reveal">
+          <p>
+            Research becomes more useful when we can turn what we&rsquo;ve
+            learned into understandable models of behavior. I create customer
+            journeys, personas, and archetypes to help teams understand who
+            we&rsquo;re designing for, what they&rsquo;re trying to accomplish,
+            what motivates them, where friction exists, what questions they
+            have, what they need at different moments, and where the
+            organization has opportunities to create value.
+          </p>
+        </div>
+
+        <p class="cap-kicker reveal">
+          These artifacts shouldn&rsquo;t become documentation that gets created once and forgotten.
+          <span>They should become decision-making tools for the product.</span>
+        </p>
+
+        <p class="pf-label reveal">Showcase &mdash; select an artifact to view it larger</p>
+        <ul class="pf-rail reveal">
+          <li>
+            <figure class="pf-item">
+              <span class="pf-media pf-media--wide" data-ph="[ CUSTOMER JOURNEY IMAGE ]" data-zoom data-cap="Customer journey map" tabindex="0" role="button" aria-label="Expand customer journey map">
+                <img src="brand-assets/Capabilities/journey-map.png" alt="Customer journey map" loading="lazy"
+                  onerror="this.closest('.pf-media').classList.add('pf-media--empty')" />
+              </span>
+              <figcaption class="pf-item__cap"><b>Customer journey</b> · end to end</figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure class="pf-item">
+              <span class="pf-media pf-media--wide" data-ph="[ PERSONA IMAGE ]" data-zoom data-cap="Persona" tabindex="0" role="button" aria-label="Expand persona">
+                <img src="brand-assets/Capabilities/persona.png" alt="Persona" loading="lazy"
+                  onerror="this.closest('.pf-media').classList.add('pf-media--empty')" />
+              </span>
+              <figcaption class="pf-item__cap"><b>Persona</b> · goals &amp; motivations</figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure class="pf-item">
+              <span class="pf-media pf-media--wide" data-ph="[ ARCHETYPE IMAGE ]" data-zoom data-cap="Archetype" tabindex="0" role="button" aria-label="Expand archetype">
+                <img src="brand-assets/Capabilities/archetype.png" alt="Archetype" loading="lazy"
+                  onerror="this.closest('.pf-media').classList.add('pf-media--empty')" />
+              </span>
+              <figcaption class="pf-item__cap"><b>Archetype</b> · behavioral model</figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure class="pf-item">
+              <span class="pf-media pf-media--wide" data-ph="[ EXPERIENCE MAP IMAGE ]" data-zoom data-cap="Experience map" tabindex="0" role="button" aria-label="Expand experience map">
+                <img src="brand-assets/Capabilities/experience-map.png" alt="Experience map" loading="lazy"
+                  onerror="this.closest('.pf-media').classList.add('pf-media--empty')" />
+              </span>
+              <figcaption class="pf-item__cap"><b>Experience map</b> · moments &amp; friction</figcaption>
+            </figure>
+          </li>
+        </ul>
+        <p class="pf-rail__hint">Scroll or swipe &rarr;</p>
+      </section>
+
+      <!-- ============ 03 CONCEPT CREATION & TESTING ============ -->
+      <section class="cap-sec" id="concepts">
+        <div class="cap-sec__head">
+          <span class="cap-num reveal" aria-hidden="true">03</span>
+          <div>
+            <p class="cap-sec__label reveal">Concept creation &amp; testing</p>
+            <h2 class="cap-head reveal">Explore before committing.</h2>
+          </div>
+        </div>
+
+        <div class="cap-body reveal">
+          <p>
+            Once we understand the problem, I want to explore multiple ways the
+            experience could solve it. Concepting is where strategy begins
+            becoming tangible.
+          </p>
+        </div>
+
+        <ul class="case-tags reveal">
+          <li>Product concepts</li>
+          <li>Feature concepts</li>
+          <li>Experience concepts</li>
+          <li>Interaction models</li>
+          <li>Navigation concepts</li>
+          <li>Content approaches</li>
+          <li>AI &amp; agentic experiences</li>
+          <li>Early interface directions</li>
+        </ul>
+
+        <div class="cap-body reveal">
+          <p>
+            The goal isn&rsquo;t to fall in love with the first idea. It&rsquo;s
+            to explore enough possibilities to find the direction worth
+            pursuing. Concepts can then be put in front of stakeholders and
+            customers early, <strong>while changing direction is still
+            inexpensive.</strong>
+          </p>
+        </div>
+
+        <p class="pf-label reveal">Progression</p>
+        <p class="pf-flow reveal"><b>Idea</b> &rarr; <b>Concept</b> &rarr; <b>Tested direction</b></p>
+        <ul class="pf-steps">
+          <li class="pf-item reveal">
+            <span class="pf-steps__num">01 &mdash; Idea</span>
+            <span class="pf-media pf-media--screen" data-ph="[ SKETCH / IDEA ]" data-zoom data-cap="Idea, early sketch" tabindex="0" role="button" aria-label="Expand idea sketch">
+              <img src="brand-assets/Capabilities/concept-idea.png" alt="Early idea sketch" loading="lazy"
+                onerror="this.closest('.pf-media').classList.add('pf-media--empty')" />
+            </span>
+          </li>
+          <li class="pf-item reveal">
+            <span class="pf-steps__num">02 &mdash; Concept</span>
+            <span class="pf-media pf-media--screen" data-ph="[ CONCEPT DIRECTION ]" data-zoom data-cap="Concept direction" tabindex="0" role="button" aria-label="Expand concept direction">
+              <img src="brand-assets/Capabilities/concept-direction.png" alt="Concept direction" loading="lazy"
+                onerror="this.closest('.pf-media').classList.add('pf-media--empty')" />
+            </span>
+          </li>
+          <li class="pf-item reveal">
+            <span class="pf-steps__num">03 &mdash; Tested</span>
+            <span class="pf-media pf-media--screen" data-ph="[ CONCEPT TESTING ]" data-zoom data-cap="Concept testing" tabindex="0" role="button" aria-label="Expand concept testing">
+              <img src="brand-assets/Capabilities/concept-tested.png" alt="Concept testing" loading="lazy"
+                onerror="this.closest('.pf-media').classList.add('pf-media--empty')" />
+            </span>
+          </li>
+        </ul>
+      </section>
+
+      <!-- ============ 04 WIREFRAMES & PRODUCT DEFINITION ============ -->
+      <section class="cap-sec" id="wireframes">
+        <div class="cap-sec__head">
+          <span class="cap-num reveal" aria-hidden="true">04</span>
+          <div>
+            <p class="cap-sec__label reveal">Wireframes &amp; product definition</p>
+            <h2 class="cap-head reveal">Show the ribs of the product.</h2>
+          </div>
+        </div>
+
+        <div class="cap-body reveal">
+          <p>This is where the experience starts becoming structurally real.</p>
+        </div>
+
+        <ul class="case-tags reveal">
+          <li>Features</li>
+          <li>Functionality</li>
+          <li>Information architecture</li>
+          <li>Navigation</li>
+          <li>User flows</li>
+          <li>Content hierarchy</li>
+          <li>Screen relationships</li>
+          <li>Interaction patterns</li>
+          <li>Product behavior</li>
+        </ul>
+
+        <div class="cap-body reveal">
+          <p>
+            Wireframes don&rsquo;t need to be low fidelity.
+            <strong>Fidelity should match the question we&rsquo;re trying to
+            answer.</strong> Sometimes a rough sketch is enough. Sometimes I
+            create highly detailed, high-fidelity wireframes that are
+            intentionally close to a real interface while remaining focused on
+            experience and product decisions.
+          </p>
+          <p>
+            When an established design system already exists, I can also work
+            directly with real components in a hybrid UX/UI process rather than
+            artificially stripping the interface back to grayscale.
+          </p>
+        </div>
+
+        <p class="cap-kicker reveal">
+          The artifact isn&rsquo;t the point.
+          <span>Making the right product decision is the point.</span>
+        </p>
+
+        <p class="pf-label reveal">Fidelity</p>
+        <p class="pf-flow reveal"><b>Sketch / Lo-fi</b> &rarr; <b>Mid-fi</b> &rarr; <b>Hi-fi</b></p>
+        <ul class="pf-steps">
+          <li class="pf-item reveal">
+            <span class="pf-steps__num">Lo-fi</span>
+            <span class="pf-media pf-media--screen" data-ph="[ LO-FI WIREFRAME ]" data-zoom data-cap="Lo-fi wireframe" tabindex="0" role="button" aria-label="Expand lo-fi wireframe">
+              <img src="brand-assets/Capabilities/wire-lofi.png" alt="Lo-fi wireframe" loading="lazy"
+                onerror="this.closest('.pf-media').classList.add('pf-media--empty')" />
+            </span>
+          </li>
+          <li class="pf-item reveal">
+            <span class="pf-steps__num">Mid-fi</span>
+            <span class="pf-media pf-media--screen" data-ph="[ MID-FI WIREFRAME ]" data-zoom data-cap="Mid-fi wireframe" tabindex="0" role="button" aria-label="Expand mid-fi wireframe">
+              <img src="brand-assets/Capabilities/wire-midfi.png" alt="Mid-fi wireframe" loading="lazy"
+                onerror="this.closest('.pf-media').classList.add('pf-media--empty')" />
+            </span>
+          </li>
+          <li class="pf-item reveal">
+            <span class="pf-steps__num">Hi-fi</span>
+            <span class="pf-media pf-media--screen" data-ph="[ HI-FI WIREFRAME ]" data-zoom data-cap="Hi-fi wireframe" tabindex="0" role="button" aria-label="Expand hi-fi wireframe">
+              <img src="brand-assets/Capabilities/wire-hifi.png" alt="Hi-fi wireframe" loading="lazy"
+                onerror="this.closest('.pf-media').classList.add('pf-media--empty')" />
+            </span>
+          </li>
+        </ul>
+
+        <p class="pf-label reveal">Desktop &amp; mobile</p>
+        <div class="pf-asym">
+          <figure class="pf-item reveal">
+            <span class="pf-media pf-media--browser pf-media--screen" data-ph="[ HI-FI WIREFRAME — DESKTOP ]" data-zoom data-cap="Hi-fi wireframe, desktop" tabindex="0" role="button" aria-label="Expand desktop wireframe">
+              <img src="brand-assets/Capabilities/wire-desktop.png" alt="Desktop wireframe" loading="lazy"
+                onerror="this.closest('.pf-media').classList.add('pf-media--empty')" />
+            </span>
+            <figcaption class="pf-item__cap"><b>Desktop</b> · structure &amp; hierarchy</figcaption>
+          </figure>
+          <figure class="pf-item reveal">
+            <span class="pf-media pf-media--phone" data-ph="[ HI-FI WIREFRAME — MOBILE ]" data-zoom data-cap="Hi-fi wireframe, mobile" tabindex="0" role="button" aria-label="Expand mobile wireframe">
+              <img src="brand-assets/Capabilities/wire-mobile.png" alt="Mobile wireframe" loading="lazy"
+                onerror="this.closest('.pf-media').classList.add('pf-media--empty')" />
+            </span>
+            <figcaption class="pf-item__cap"><b>Mobile</b> · the same product, re-thought</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- ============ 05 PROTOTYPING & TESTING ============ -->
+      <section class="cap-sec" id="prototyping">
+        <div class="cap-sec__head">
+          <span class="cap-num reveal" aria-hidden="true">05</span>
+          <div>
+            <p class="cap-sec__label reveal">Prototyping &amp; testing</p>
+            <h2 class="cap-head reveal">Make it real enough to learn from.</h2>
+          </div>
+        </div>
+
+        <div class="cap-body reveal">
+          <p>
+            I don&rsquo;t think a prototype has to be a collection of linked
+            design screens. Depending on what we&rsquo;re trying to learn, I can
+            create prototypes ranging from simple interaction models to
+            <strong>working front-end experiences.</strong>
+          </p>
+        </div>
+
+        <ul class="case-tags reveal">
+          <li>Websites</li>
+          <li>Responsive digital experiences</li>
+          <li>Web applications</li>
+          <li>Native application experiences</li>
+          <li>Complex interactions</li>
+          <li>AI-powered experiences</li>
+          <li>Agentic interfaces</li>
+          <li>Product concepts</li>
+        </ul>
+      </section>
+
+      <!-- The big moment -->
+      <section class="cap-band" aria-labelledby="proto-head">
+        <div class="cap-band__inner">
+          <p class="cap-band__label reveal">The difference</p>
+          <h2 class="cap-band__head reveal" id="proto-head">I can design the prototype and build it.</h2>
+          <div class="cap-band__sub reveal">
+            <p>
+              These can be actual working front-end prototypes rather than
+              simulations of the experience. That changes the conversation.
+              Stakeholders don&rsquo;t have to imagine how something might work.
+              <strong>They can use it.</strong> Customers can interact with it.
+              Developers can understand the intended behavior. And we can learn
+              from something that behaves much more like the eventual product.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="cap-sec">
+        <p class="pf-label reveal">Working prototypes</p>
+        <div class="pf-protos">
+          <figure class="pf-item reveal">
+            <span class="pf-media pf-media--browser pf-media--screen" data-ph="[ LIVE WEB APP PROTOTYPE ]" data-zoom data-cap="Web application prototype" tabindex="0" role="button" aria-label="Expand web app prototype">
+              <img src="brand-assets/Capabilities/proto-webapp.png" alt="Web application prototype" loading="lazy"
+                onerror="this.closest('.pf-media').classList.add('pf-media--empty')" />
+            </span>
+            <figcaption class="pf-item__cap">
+              <b>Web application</b> · desktop browser<br />
+              <span class="pf-cta">View prototype &rarr;</span>
+            </figcaption>
+          </figure>
+          <div class="pf-protos__col">
+            <figure class="pf-item reveal">
+              <span class="pf-media pf-media--browser pf-media--wide" data-ph="[ MOBILE WEB PROTOTYPE ]" data-zoom data-cap="Responsive web prototype" tabindex="0" role="button" aria-label="Expand mobile web prototype">
+                <img src="brand-assets/Capabilities/proto-mobileweb.png" alt="Mobile web prototype" loading="lazy"
+                  onerror="this.closest('.pf-media').classList.add('pf-media--empty')" />
+              </span>
+              <figcaption class="pf-item__cap">
+                <b>Responsive web</b> · mobile browser<br />
+                <span class="pf-cta">View prototype &rarr;</span>
+              </figcaption>
+            </figure>
+            <figure class="pf-item reveal">
+              <span class="pf-media pf-media--phone" data-ph="[ NATIVE APP PROTOTYPE ]" data-zoom data-cap="Native application prototype" tabindex="0" role="button" aria-label="Expand native app prototype">
+                <img src="brand-assets/Capabilities/proto-native.png" alt="Native application prototype" loading="lazy"
+                  onerror="this.closest('.pf-media').classList.add('pf-media--empty')" />
+              </span>
+              <figcaption class="pf-item__cap">
+                <b>Native application</b> · device<br />
+                <span class="pf-cta">View prototype &rarr;</span>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 06 TEST, LEARN, ITERATE ============ -->
+      <section class="cap-sec" id="iterate">
+        <div class="cap-sec__head">
+          <span class="cap-num reveal" aria-hidden="true">06</span>
+          <div>
+            <p class="cap-sec__label reveal">Test, learn, iterate</p>
+            <h2 class="cap-head reveal">The first answer doesn&rsquo;t have to be the final answer.</h2>
+          </div>
+        </div>
+
+        <div class="cap-body reveal">
+          <p>
+            Once something becomes tangible, we can put it in front of people.
+          </p>
+        </div>
+
+        <ul class="case-tags reveal">
+          <li>Concept testing</li>
+          <li>Prototype testing</li>
+          <li>Usability testing</li>
+          <li>Stakeholder validation</li>
+          <li>Customer feedback</li>
+          <li>Behavioral observation</li>
+          <li>Analytics</li>
+          <li>Technical feedback</li>
+        </ul>
+
+        <div class="cap-body reveal">
+          <p>
+            The point is not simply to determine whether people &ldquo;like&rdquo;
+            the design. We&rsquo;re trying to understand:
+            <strong>does this solve the problem we intended to solve?</strong>
+          </p>
+          <p>What we learn feeds the next iteration.</p>
+        </div>
+
+        <div class="cap-loop reveal">
+          <ol class="ap-loop" aria-label="Ideate, design, test, build, learn, repeating">
+            <li class="ap-loop__item">Ideate</li>
+            <li class="ap-loop__item">Design</li>
+            <li class="ap-loop__item">Test</li>
+            <li class="ap-loop__item">Build</li>
+            <li class="ap-loop__item">Learn</li>
+          </ol>
+          <div class="cap-loop__return" aria-hidden="true">
+            <span class="cap-loop__inf">&#8734;</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ CLOSING ============ -->
+      <section class="cap-close" aria-labelledby="close-head">
+        <div class="cap-close__inner">
+          <h2 class="cap-close__head reveal" id="close-head">Enter anywhere. Move the product forward.</h2>
+          <div class="cap-close__body">
+            <p class="reveal">
+              Projects rarely begin exactly where the design process says they
+              should.
+            </p>
+            <p class="reveal">
+              Sometimes I&rsquo;m brought in when the problem is still being
+              defined. Sometimes research and strategy already exist. Sometimes
+              the product needs experience definition. Sometimes it needs visual
+              design. And sometimes everyone simply needs to see the idea
+              working.
+            </p>
+            <p class="reveal">
+              My job is to understand where we are, determine what the product
+              needs next, and use the right tools to move it forward.
+              <strong>Then keep going.</strong>
+            </p>
+          </div>
+
+          <ol class="cap-spine">
+            <li class="reveal">Immersion &amp; research</li>
+            <li class="reveal">Journeys, personas &amp; archetypes</li>
+            <li class="reveal">Concept creation &amp; testing</li>
+            <li class="reveal">Wireframes &amp; product definition</li>
+            <li class="reveal">Prototyping &amp; testing</li>
+            <li class="reveal">Working product direction</li>
+            <li class="reveal">Learn &amp; iterate</li>
+            <li class="reveal" aria-label="continues indefinitely">&#8734;</li>
+          </ol>
+
+          <div class="case-cta__actions reveal">
+            <a href="index.html#contact" class="btn">Start a conversation</a>
+            <a href="index.html#selected" class="btn btn--ghost">See selected work</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span class="footer__copy">© <span class="year"></span> Britt Midgette</span>
+      <a href="index.html" class="footer__top">← Back home</a>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

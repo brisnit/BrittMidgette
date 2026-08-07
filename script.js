@@ -132,9 +132,80 @@
       });
     }
 
+    /* Artifact lightbox (capabilities page). Works with real images and
+       with the placeholders that stand in until those images exist. */
+    var zoomables = document.querySelectorAll("[data-zoom]");
+    if (zoomables.length) {
+      var lb = document.createElement("div");
+      lb.className = "lb";
+      lb.setAttribute("role", "dialog");
+      lb.setAttribute("aria-modal", "true");
+      lb.setAttribute("aria-label", "Artifact viewer");
+      lb.innerHTML =
+        '<button class="lb__close" type="button" aria-label="Close">✕</button>' +
+        '<div class="lb__inner"></div>';
+      document.body.appendChild(lb);
+
+      var lbInner = lb.querySelector(".lb__inner");
+      var lbClose = lb.querySelector(".lb__close");
+      var lastFocused = null;
+
+      function openLb(media) {
+        var img = media.querySelector("img");
+        var cap = media.getAttribute("data-cap") || "";
+        var ph = media.getAttribute("data-ph") || "";
+        var loaded = img && img.naturalWidth > 0;
+
+        lbInner.innerHTML = loaded
+          ? '<img src="" alt="" />'
+          : '<div class="lb__ph"></div>';
+        if (loaded) {
+          var full = lbInner.querySelector("img");
+          full.src = img.currentSrc || img.src;
+          full.alt = img.alt || cap;
+        } else {
+          lbInner.querySelector(".lb__ph").textContent = ph;
+        }
+        if (cap) {
+          var c = document.createElement("p");
+          c.className = "lb__cap";
+          c.textContent = cap;
+          lbInner.appendChild(c);
+        }
+        lastFocused = document.activeElement;
+        lb.classList.add("is-open");
+        document.body.style.overflow = "hidden";
+        lbClose.focus();
+      }
+
+      function closeLb() {
+        lb.classList.remove("is-open");
+        document.body.style.overflow = "";
+        if (lastFocused && lastFocused.focus) lastFocused.focus();
+      }
+
+      zoomables.forEach(function (media) {
+        media.addEventListener("click", function () { openLb(media); });
+        media.addEventListener("keydown", function (e) {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            openLb(media);
+          }
+        });
+      });
+
+      lbClose.addEventListener("click", closeLb);
+      lb.addEventListener("click", function (e) {
+        if (e.target === lb) closeLb();
+      });
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape" && lb.classList.contains("is-open")) closeLb();
+      });
+    }
+
     /* Transparent header while over a dark hero */
     var header = document.querySelector(".header");
-    var hero = document.getElementById("hero") || document.querySelector(".ap-hero");
+    var hero = document.getElementById("hero") || document.querySelector(".ap-hero, .cap-hero");
     if (header && hero) {
       var ticking = false;
       function syncHeader() {
