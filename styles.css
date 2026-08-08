@@ -668,7 +668,7 @@ main { display: block; }
 /* A denser artifact that needs more room than the text column */
 .case-figure--wide { max-width: 1440px; }
 /* A portrait video shouldn't tower over the page */
-.case-figure--portrait video { max-width: 420px; margin: 0 auto; }
+.case-figure--portrait video { max-width: 860px; margin: 0 auto; }
 .case-figure--portrait figcaption { text-align: center; }
 
 /* Container for full-width components dropped straight into a case page */
