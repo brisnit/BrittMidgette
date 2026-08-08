@@ -665,6 +665,12 @@ main { display: block; }
 .case-meta dd { font-size: 0.98rem; }
 
 .case-figure { max-width: var(--maxw); margin: 0 auto; padding: clamp(0.75rem, 2.5vw, 1.5rem) var(--pad); }
+/* A denser artifact that needs more room than the text column */
+.case-figure--wide { max-width: 1440px; }
+/* A portrait video shouldn't tower over the page */
+.case-figure--portrait video { max-width: 420px; margin: 0 auto; }
+.case-figure--portrait figcaption { text-align: center; }
+
 /* Container for full-width components dropped straight into a case page */
 .case-block { max-width: var(--maxw); margin: 0 auto; padding: clamp(1rem, 3vw, 2rem) var(--pad); }
 .case-figure img, .case-figure video {
