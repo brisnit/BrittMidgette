@@ -1252,10 +1252,12 @@ main { display: block; }
   display: block; position: relative; overflow: hidden;
   border-radius: 14px; background: #f4f4f4; border: 1px solid var(--line);
 }
-.pf-media img {
+.pf-media img, .pf-media video {
   width: 100%; height: 100%; object-fit: cover; display: block;
   transition: transform 0.7s var(--ease);
 }
+.pf-media video { background: #000; }
+.pf-media--browser video { border-radius: 0 0 13px 13px; }
 .pf-media--empty img { display: none; }
 .pf-media--empty::after {
   content: attr(data-ph);
