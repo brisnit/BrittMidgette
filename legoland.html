@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LEGOLAND, Case Study, Britt Midgette</title>
+  <meta name="description" content="A hidden digital layer across LEGOLAND California: the Key to the Kingdom, a park-wide RFID game designed with no kid-facing screen time. A case study by Britt Midgette." />
+  <meta name="theme-color" content="#000000" />
+  <link rel="icon" type="image/png" href="brand-assets/Pics/favicon.png" />
+  <link rel="apple-touch-icon" href="brand-assets/Pics/favicon.png" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="LEGOLAND, a hidden digital world inside the park" />
+  <meta property="og:description" content="The technology was everywhere. For the kids, the screens weren't." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ============ PASSWORD GATE ============ -->
+  <div id="gate" class="gate" aria-hidden="false">
+    <div class="gate__inner">
+      <h1 class="gate__title">Britt Midgette</h1>
+      <p class="gate__sub">This site is private. Enter the password to continue.</p>
+      <form id="gate-form" class="gate__form" autocomplete="off" novalidate>
+        <label class="sr-only" for="gate-input">Password</label>
+        <input id="gate-input" class="gate__input" type="password" placeholder="Password" aria-describedby="gate-error" spellcheck="false" />
+        <button class="gate__btn" type="submit">Enter</button>
+      </form>
+      <p id="gate-error" class="gate__error" role="alert" hidden>Incorrect password. Try again.</p>
+    </div>
+    <p class="gate__footer">© <span class="year"></span> Britt Midgette</p>
+  </div>
+
+  <!-- ============ SITE ============ -->
+  <div id="site" class="site" hidden>
+    <span id="top" aria-hidden="true"></span>
+    <a href="#overview" class="skip-link">Skip to content</a>
+
+    <header class="header">
+      <a href="index.html#selected" class="header__brand" aria-label="Britt Midgette, home">
+        <img class="header__logo" src="brand-assets/WhiteLogo.png" alt="Britt Midgette" />
+      </a>
+      <a href="index.html#selected" class="case-back">← All work</a>
+    </header>
+
+    <main class="case" id="overview">
+      <section class="case-hero">
+        <p class="case-eyebrow reveal">Case study &middot; Themed entertainment</p>
+        <h1 class="case-title reveal">Creating a hidden<br />digital world inside<br />the physical park.</h1>
+        <p class="case-intro reveal">
+          What if technology could make a theme park more interactive without
+          putting another screen in front of a kid? I helped create a park-wide
+          game and connected experience that added an invisible digital layer
+          across LEGOLAND California, letting kids discover experiences, unlock
+          activities, play games, build things, compete, and track their
+          progress using their own physical Key to the Kingdom.
+        </p>
+      </section>
+
+      <dl class="case-meta reveal">
+        <div><dt>Client</dt><dd>LEGOLAND · Merlin Entertainments</dd></div>
+        <div><dt>Scope</dt><dd>Experience Strategy · Journey · Concept</dd></div>
+        <div><dt>Channels</dt><dd>In-park · RFID · Mobile app</dd></div>
+        <div><dt>Park</dt><dd>LEGOLAND California</dd></div>
+      </dl>
+
+      <div class="case-note reveal">
+        <p>
+          About this work: I led this in a director role at a previous agency,
+          before founding Artifact Digital. The problem, the decisions and the
+          outcomes are described as they happened.
+        </p>
+      </div>
+
+      <div class="case-pull reveal">
+        <span>The technology was everywhere. For the kids, the screens weren&rsquo;t.</span>
+      </div>
+
+      <figure class="case-figure reveal" data-ph="Add Pics/LEGO-park.png — LEGOLAND / park experience">
+        <img src="brand-assets/Pics/LEGO-park.png" alt="The LEGOLAND park experience" loading="lazy"
+          onerror="this.closest('.case-figure').classList.add('case-figure--empty')" />
+      </figure>
+
+      <!-- ============ THE CHALLENGE ============ -->
+      <section class="case-section reveal">
+        <p class="case-section__label">The challenge</p>
+        <h2 class="case-h2">Make the park more digital without making the experience about devices.</h2>
+        <div class="case-body">
+          <p>
+            Theme parks are already interactive environments. Kids run, explore,
+            build, ride, discover, and play. The opportunity wasn&rsquo;t to
+            replace those behaviors with an app. It was to
+            <strong>use technology to make the physical world around them
+            respond in new ways.</strong>
+          </p>
+          <p>
+            We began exploring an experience families could opt into. To
+            everyone else, the park would look the same. But once you had the
+            key, there was another world hiding underneath it.
+          </p>
+        </div>
+      </section>
+
+      <!-- ============ IMMERSION ============ -->
+      <section class="case-section reveal">
+        <p class="case-section__label">Immersion</p>
+        <h2 class="case-h2">You can&rsquo;t design the park experience from a conference room.</h2>
+        <div class="case-body">
+          <p>
+            We began with an intensive <strong>three-day workshop at LEGOLAND
+            California</strong> with the Merlin Entertainments team. We walked
+            the park, experienced attractions, studied how families moved
+            through the environment, and looked at where kids naturally stopped,
+            played, explored, and became curious.
+          </p>
+          <p>
+            We also spent time understanding the LEGO brand ethos. LEGO
+            isn&rsquo;t about watching. <strong>It&rsquo;s about doing.</strong>
+          </p>
+        </div>
+        <ul class="line-stack line-stack--light reveal">
+          <li>Build something.</li>
+          <li>Try something.</li>
+          <li>Break something.</li>
+          <li>Rebuild it.</li>
+          <li>Use your imagination.</li>
+        </ul>
+        <div class="case-body case-body--spaced">
+          <p>
+            That became an important principle for the experience we were
+            creating.
+          </p>
+        </div>
+
+        <p class="pf-label reveal">In the park</p>
+        <ul class="pf-steps">
+          <li class="pf-item">
+            <span class="pf-steps__num">The park</span>
+            <span class="pf-media pf-media--screen" data-ph="[ LEGOLAND IMMERSION / PARK TOUR ]" data-zoom data-cap="Immersion, walking the park" tabindex="0" role="button" aria-label="Expand the park tour photo">
+              <img src="brand-assets/Pics/LEGO-immersion.png" alt="Walking LEGOLAND California during immersion" loading="lazy"
+                onerror="this.closest('.pf-media').classList.add('pf-media--empty')" />
+            </span>
+          </li>
+          <li class="pf-item">
+            <span class="pf-steps__num">The room</span>
+            <span class="pf-media pf-media--screen" data-ph="[ THREE-DAY WORKSHOP ]" data-zoom data-cap="The three-day workshop" tabindex="0" role="button" aria-label="Expand the workshop photo">
+              <img src="brand-assets/Pics/LEGO-workshop.png" alt="The three-day workshop with the Merlin Entertainments team" loading="lazy"
+                onerror="this.closest('.pf-media').classList.add('pf-media--empty')" />
+            </span>
+          </li>
+        </ul>
+      </section>
+
+      <!-- ============ HIGHLIGHT: KEY TO THE KINGDOM ============ -->
+      <section class="case-feature case-feature--dark" aria-labelledby="key-head">
+        <div class="case-feature__inner">
+          <p class="case-feature__flag reveal">The big idea</p>
+          <h2 class="case-feature__head reveal" id="key-head">A hidden layer of LEGOLAND, unlocked by a Key to the Kingdom.</h2>
+          <div class="case-feature__grid">
+            <div class="case-feature__lead reveal">
+              <p>
+                Once activated, kids received their own physical key. It became
+                their connection to the hidden world. Using RFID, it could
+                recognize the child as they moved through participating
+                experiences across the park.
+              </p>
+              <p>
+                Their activity could follow them from one experience to another.
+                <strong>The park remembered what they had done.</strong>
+              </p>
+            </div>
+            <ul class="case-feature__aside reveal">
+              <li>Discover hidden interactions</li>
+              <li>Activate experiences</li>
+              <li>Play physical games</li>
+              <li>Build things</li>
+              <li>Compete in challenges</li>
+              <li>Earn achievements</li>
+              <li>Record scores</li>
+              <li>Unlock new experiences</li>
+              <li>Appear on leaderboards</li>
+              <li>Build a history of their adventure</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <figure class="case-figure reveal" data-ph="Add Pics/LEGO-key.png — Key to the Kingdom">
+        <img src="brand-assets/Pics/LEGO-key.png" alt="The Key to the Kingdom" loading="lazy"
+          onerror="this.closest('.case-figure').classList.add('case-figure--empty')" />
+      </figure>
+
+      <!-- ============ NO SCREEN REQUIRED ============ -->
+      <section class="cap-band" aria-labelledby="noscreen-head">
+        <div class="cap-band__inner">
+          <p class="cap-band__label reveal">The governing principle</p>
+          <h2 class="cap-band__head reveal" id="noscreen-head">No kid-facing screen time.</h2>
+          <div class="cap-band__sub reveal">
+            <p>
+              We didn&rsquo;t want children walking through LEGOLAND staring at
+              phones. The digital layer needed to make the
+              <strong>physical park more interesting</strong>, not compete with
+              it. The RFID keepsake became the interface.
+            </p>
+          </div>
+          <ul class="line-stack reveal">
+            <li>Tap. Unlock. Build.</li>
+            <li>Race. Explore. Discover.</li>
+          </ul>
+          <div class="cap-band__sub reveal">
+            <p>
+              The technology could quietly recognize the child, record the
+              interaction, and connect their experiences together. But from the
+              child&rsquo;s perspective, something much simpler was happening:
+              <strong>the park knew who they were.</strong>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <figure class="case-figure reveal" data-ph="Add Pics/LEGO-rfid.png — child + physical interaction + RFID">
+        <img src="brand-assets/Pics/LEGO-rfid.png" alt="A child tapping their key at a physical interaction" loading="lazy"
+          onerror="this.closest('.case-figure').classList.add('case-figure--empty')" />
+      </figure>
+
+      <!-- ============ HIGHLIGHT: THE HIDDEN JOURNEY ============ -->
+      <section class="case-feature case-feature--tint" aria-labelledby="journey-head">
+        <div class="case-feature__inner">
+          <p class="case-feature__flag reveal">My focus &middot; The Hidden Journey</p>
+          <h2 class="case-feature__head reveal" id="journey-head">Designing an experience across an entire theme park.</h2>
+          <div class="case-feature__grid">
+            <div class="case-feature__lead reveal">
+              <p>
+                Rather than designing individual attractions independently, I
+                mapped the end-to-end experience of a family participating in
+                this hidden layer of LEGOLAND.
+              </p>
+              <p>
+                The journey gave us <strong>a blueprint for where the digital
+                layer intersected with the physical park.</strong>
+              </p>
+            </div>
+            <ul class="case-feature__aside reveal">
+              <li>Where an experience should appear</li>
+              <li>What the child would encounter</li>
+              <li>What they could do there</li>
+              <li>How the Key would interact with it</li>
+              <li>What information would be captured</li>
+              <li>What would be unlocked</li>
+              <li>How one experience could connect to another</li>
+              <li>What parents needed to know</li>
+              <li>How progress continued throughout the day</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <figure class="case-figure reveal" data-ph="Add Pics/LEGO-journey.png — Hidden Journey map">
+        <img src="brand-assets/Pics/LEGO-journey.png" alt="The Hidden Journey map across the park" loading="lazy"
+          onerror="this.closest('.case-figure').classList.add('case-figure--empty')" />
+      </figure>
+
+      <!-- ============ TWO AUDIENCES ============ -->
+      <section class="case-section reveal">
+        <p class="case-section__label">Designing for two audiences</p>
+        <h2 class="case-h2">Kids play. Parents orchestrate.</h2>
+        <div class="case-body">
+          <p>There were really two experiences happening simultaneously.</p>
+        </div>
+        <div class="case-cols">
+          <div class="case-col">
+            <h3>For kids</h3>
+            <ul class="case-list">
+              <li>The physical park was the interface</li>
+              <li>The Key to the Kingdom let them participate</li>
+              <li>No app to manage, no menus to navigate</li>
+            </ul>
+          </div>
+          <div class="case-col">
+            <h3>For parents</h3>
+            <ul class="case-list">
+              <li>Understand the experience and find participating locations</li>
+              <li>Track progress, achievements, and what remains</li>
+              <li>Help navigate toward the next experience</li>
+            </ul>
+          </div>
+        </div>
+        <p class="pf-flow reveal">
+          <b>Explore</b> &rarr; <b>Discover</b> &rarr; <b>Play</b> &rarr;
+          <b>Unlock</b> &rarr; <b>Keep going</b>
+        </p>
+        <div class="case-body">
+          <p>
+            The phone became useful to the parent
+            <strong>without becoming the center of the child&rsquo;s
+            experience.</strong>
+          </p>
+        </div>
+      </section>
+
+      <figure class="case-figure reveal" data-ph="Add Pics/LEGO-parent.png — child experience + parent app">
+        <img src="brand-assets/Pics/LEGO-parent.png" alt="The child experience alongside the parent app" loading="lazy"
+          onerror="this.closest('.case-figure').classList.add('case-figure--empty')" />
+      </figure>
+
+      <!-- ============ DESIGNING THE EXPERIENCES ============ -->
+      <section class="case-section reveal">
+        <p class="case-section__label">Designing the experiences</p>
+        <h2 class="case-h2">Every stop needed to be worth discovering.</h2>
+        <div class="case-body">
+          <p>
+            Once the Hidden Journey established where experiences could exist,
+            we began defining what actually happened at each location. Each
+            feature needed to work individually while also contributing to the
+            larger park-wide adventure.
+          </p>
+        </div>
+        <ul class="case-tags reveal">
+          <li>A score</li>
+          <li>An achievement</li>
+          <li>A completed challenge</li>
+          <li>A collectible</li>
+          <li>A leaderboard position</li>
+          <li>Progress toward something larger</li>
+        </ul>
+        <div class="case-body">
+          <p>
+            That meant <strong>every physical experience became part of a
+            connected system.</strong>
+          </p>
+        </div>
+      </section>
+
+      <figure class="case-figure reveal" data-ph="Add Pics/LEGO-ecosystem.png — experience ecosystem">
+        <img src="brand-assets/Pics/LEGO-ecosystem.png" alt="The connected experience ecosystem" loading="lazy"
+          onerror="this.closest('.case-figure').classList.add('case-figure--empty')" />
+      </figure>
+
+      <!-- ============ FERRARI ============ -->
+      <section class="case-section reveal">
+        <p class="case-section__label">Ferrari</p>
+        <h2 class="case-h2">Build it. Race it. Own the result.</h2>
+        <div class="case-body">
+          <p>
+            One of the experiences we developed centered around Ferrari. Kids
+            could create their own custom LEGO race car and then put their
+            creation to the test.
+          </p>
+        </div>
+        <p class="pf-flow reveal">
+          <b>Build your car</b> &rarr; <b>Connect your Key</b> &rarr;
+          <b>Race</b> &rarr; <b>Record your result</b> &rarr;
+          <b>See the leaderboard</b>
+        </p>
+        <div class="case-body">
+          <p>
+            The physical activity remained the hero. The child was still
+            building with LEGO, still racing, still competing. But the digital
+            layer <strong>gave that physical moment memory.</strong> The result
+            could become part of the child&rsquo;s larger LEGOLAND adventure.
+          </p>
+        </div>
+      </section>
+
+      <figure class="case-figure reveal" data-ph="Add Pics/LEGO-ferrari.png — Ferrari build &amp; race experience">
+        <img src="brand-assets/Pics/LEGO-ferrari.png" alt="The Ferrari build and race experience" loading="lazy"
+          onerror="this.closest('.case-figure').classList.add('case-figure--empty')" />
+      </figure>
+
+      <section class="case-section reveal">
+        <ul class="pf-steps">
+          <li class="pf-item">
+            <span class="pf-steps__num">The race</span>
+            <span class="pf-media pf-media--screen" data-ph="[ RACE INTERACTION ]" data-zoom data-cap="The race interaction" tabindex="0" role="button" aria-label="Expand the race interaction">
+              <img src="brand-assets/Pics/LEGO-race.png" alt="The race interaction" loading="lazy"
+                onerror="this.closest('.pf-media').classList.add('pf-media--empty')" />
+            </span>
+          </li>
+          <li class="pf-item">
+            <span class="pf-steps__num">The result</span>
+            <span class="pf-media pf-media--screen" data-ph="[ LEADERBOARD ]" data-zoom data-cap="The leaderboard" tabindex="0" role="button" aria-label="Expand the leaderboard">
+              <img src="brand-assets/Pics/LEGO-leaderboard.png" alt="The leaderboard" loading="lazy"
+                onerror="this.closest('.pf-media').classList.add('pf-media--empty')" />
+            </span>
+          </li>
+        </ul>
+      </section>
+
+      <!-- ============ THE PARK REMEMBERS YOU ============ -->
+      <section class="case-section reveal">
+        <p class="case-section__label">The park remembers you</p>
+        <h2 class="case-h2">Turn individual attractions into one continuous adventure.</h2>
+        <div class="case-body">
+          <p>
+            Normally, a theme park experience resets constantly. You ride
+            something, it&rsquo;s over. You play something, it&rsquo;s over. You
+            move to the next attraction. The Key to the Kingdom created
+            continuity, and the park could begin remembering.
+          </p>
+        </div>
+        <ul class="line-stack line-stack--light reveal">
+          <li>You built this.</li>
+          <li>You raced here.</li>
+          <li>You scored this.</li>
+          <li>You discovered this.</li>
+          <li>You haven&rsquo;t found this yet.</li>
+        </ul>
+        <div class="case-body case-body--spaced">
+          <p>
+            Suddenly, individual experiences could become
+            <strong>chapters in a larger adventure.</strong>
+          </p>
+        </div>
+      </section>
+
+      <figure class="case-figure reveal" data-ph="Add Pics/LEGO-progress.png — player progress / achievements">
+        <img src="brand-assets/Pics/LEGO-progress.png" alt="Player progress and achievements" loading="lazy"
+          onerror="this.closest('.case-figure').classList.add('case-figure--empty')" />
+      </figure>
+
+      <!-- ============ PHYSICAL + DIGITAL ============ -->
+      <section class="case-section reveal">
+        <p class="case-section__label">Physical + digital</p>
+        <h2 class="case-h2">Technology should make the real world feel more magical.</h2>
+        <div class="case-body">
+          <p>
+            There was significant technology underneath the experience. But none
+            of those things were the point. The point was what they allowed the
+            physical environment to do.
+          </p>
+        </div>
+        <ul class="case-tags reveal">
+          <li>RFID</li>
+          <li>Identity</li>
+          <li>Tracking</li>
+          <li>Connected experiences</li>
+          <li>Leaderboards</li>
+          <li>Progress</li>
+          <li>Mobile applications</li>
+          <li>Data</li>
+        </ul>
+        <ul class="line-stack line-stack--light reveal">
+          <li>A physical object could know who was holding it.</li>
+          <li>A LEGO car could become part of a persistent competition.</li>
+          <li>A hidden location could become something worth discovering.</li>
+          <li>A collection of attractions could become a connected journey.</li>
+        </ul>
+        <div class="case-body case-body--spaced">
+          <p>
+            The best technology in this experience wasn&rsquo;t asking for
+            attention. <strong>It was making LEGOLAND itself feel more
+            alive.</strong>
+          </p>
+        </div>
+      </section>
+
+      <!-- ============ THE RESULT ============ -->
+      <section class="case-section reveal">
+        <p class="case-section__label">The result</p>
+        <h2 class="case-h2">A blueprint for a connected park.</h2>
+        <div class="case-body">
+          <p>
+            The work produced an end-to-end vision for a new kind of LEGOLAND
+            experience.
+          </p>
+        </div>
+        <ul class="case-tags reveal">
+          <li>Park-wide experience strategy</li>
+          <li>The Hidden Journey</li>
+          <li>Key to the Kingdom interaction model</li>
+          <li>Parent and child experience models</li>
+          <li>Physical/digital interaction concepts</li>
+          <li>Individual feature experiences</li>
+          <li>Game mechanics</li>
+          <li>Progress tracking</li>
+          <li>Leaderboard concepts</li>
+          <li>Connected park interactions</li>
+        </ul>
+        <div class="case-body">
+          <p>
+            Most importantly, we established how those individual ideas could
+            work together as <strong>one continuous experience across the
+            park.</strong>
+          </p>
+        </div>
+        <ol class="ap-loop reveal" aria-label="Workshop, immersion, journey, concept, experience, connected park">
+          <li class="ap-loop__item ap-loop__item--seed">Workshop</li>
+          <li class="ap-loop__item">Immersion</li>
+          <li class="ap-loop__item">Journey</li>
+          <li class="ap-loop__item">Concept</li>
+          <li class="ap-loop__item">Experience</li>
+          <li class="ap-loop__item">Connected park</li>
+        </ol>
+      </section>
+
+      <figure class="case-figure reveal" data-ph="Add Pics/LEGO-endtoend.png — end-to-end experience">
+        <img src="brand-assets/Pics/LEGO-endtoend.png" alt="The end-to-end connected park experience" loading="lazy"
+          onerror="this.closest('.case-figure').classList.add('case-figure--empty')" />
+      </figure>
+
+      <!-- ============ THE BIGGER IDEA ============ -->
+      <section class="case-cta" aria-labelledby="bigger-head">
+        <div class="case-cta__inner">
+          <p class="cap-band__label reveal">The bigger idea</p>
+          <h2 class="case-cta__head reveal" id="bigger-head">The best digital experience might not have a screen.</h2>
+          <div class="cap-close__body">
+            <p class="reveal">
+              We were designing a deeply digital experience. But we weren&rsquo;t
+              trying to make kids spend more time with technology. We were using
+              technology to encourage them to interact more deeply with the
+              park, LEGO, their family, other kids, and their imagination.
+            </p>
+            <p class="reveal">
+              The Key to the Kingdom became a bridge between those worlds. Kids
+              didn&rsquo;t need to understand RFID, connected systems, identity,
+              or data. They just needed to understand three things.
+            </p>
+          </div>
+
+          <ol class="line-stack reveal">
+            <li>This is my key.</li>
+            <li>There are things hidden throughout this park.</li>
+            <li>And I can unlock them.</li>
+          </ol>
+
+          <p class="cap-band__sub reveal">
+            That&rsquo;s when technology stops feeling like technology.
+            <strong>It starts feeling like magic.</strong>
+          </p>
+
+          <div class="case-cta__actions reveal">
+            <a href="index.html#contact" class="btn">Book a strategy session</a>
+            <a href="index.html#selected" class="btn btn--ghost">See more work</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span class="footer__copy">© <span class="year"></span> Britt Midgette</span>
+      <a href="index.html#selected" class="footer__top">← Back to work</a>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
