@@ -768,15 +768,6 @@ main { display: block; }
   );
 }
 
-/* Provenance / credit note under the meta bar */
-.case-note {
-  max-width: var(--maxw); margin: 0 auto;
-  padding: 0 var(--pad) clamp(1.25rem, 3vw, 2rem);
-}
-.case-note p {
-  max-width: 70ch; font-size: 0.9rem; line-height: 1.6; color: var(--muted);
-  border-left: 2px solid var(--line-strong); padding-left: 1.1rem;
-}
 
 /* Full-bleed highlight band for the parts of a project worth dwelling on */
 .case-feature {
