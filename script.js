@@ -132,6 +132,41 @@
       });
     }
 
+    /* Case study videos: play automatically, loop, no controls.
+       They start when scrolled into view rather than on page load, so a
+       visitor who never reaches them never downloads them. Respects
+       prefers-reduced-motion, which leaves the poster frame showing. */
+    var autoVideos = document.querySelectorAll("video[data-autoplay]");
+    if (autoVideos.length) {
+      var noMotion = window.matchMedia
+        ? window.matchMedia("(prefers-reduced-motion: reduce)").matches
+        : false;
+      if (!noMotion) {
+        if ("IntersectionObserver" in window) {
+          var vio = new IntersectionObserver(
+            function (entries) {
+              entries.forEach(function (entry) {
+                var v = entry.target;
+                if (entry.isIntersecting) {
+                  var play = v.play();
+                  if (play && play.catch) play.catch(function () {});
+                } else if (!v.paused) {
+                  v.pause();
+                }
+              });
+            },
+            { threshold: 0.25 }
+          );
+          autoVideos.forEach(function (v) { vio.observe(v); });
+        } else {
+          autoVideos.forEach(function (v) {
+            var play = v.play();
+            if (play && play.catch) play.catch(function () {});
+          });
+        }
+      }
+    }
+
     /* Artifact lightbox (capabilities page). Works with real images and
        with the placeholders that stand in until those images exist. */
     var zoomables = document.querySelectorAll("[data-zoom]");
