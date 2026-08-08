@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NIPR, Case Study, Britt Midgette</title>
+  <meta name="description" content="Turning a fragmented insurance licensing platform into one unified experience: fourteen screens became one guided sequence. A case study by Britt Midgette." />
+  <meta name="theme-color" content="#000000" />
+  <link rel="icon" type="image/png" href="brand-assets/Pics/favicon.png" />
+  <link rel="apple-touch-icon" href="brand-assets/Pics/favicon.png" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="NIPR, one unified licensing experience" />
+  <meta property="og:description" content="A complicated process doesn't require a complicated experience." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ============ PASSWORD GATE ============ -->
+  <div id="gate" class="gate" aria-hidden="false">
+    <div class="gate__inner">
+      <h1 class="gate__title">Britt Midgette</h1>
+      <p class="gate__sub">This site is private. Enter the password to continue.</p>
+      <form id="gate-form" class="gate__form" autocomplete="off" novalidate>
+        <label class="sr-only" for="gate-input">Password</label>
+        <input id="gate-input" class="gate__input" type="password" placeholder="Password" aria-describedby="gate-error" spellcheck="false" />
+        <button class="gate__btn" type="submit">Enter</button>
+      </form>
+      <p id="gate-error" class="gate__error" role="alert" hidden>Incorrect password. Try again.</p>
+    </div>
+    <p class="gate__footer">© <span class="year"></span> Britt Midgette</p>
+  </div>
+
+  <!-- ============ SITE ============ -->
+  <div id="site" class="site" hidden>
+    <span id="top" aria-hidden="true"></span>
+    <a href="#overview" class="skip-link">Skip to content</a>
+
+    <header class="header">
+      <a href="index.html#selected" class="header__brand" aria-label="Britt Midgette, home">
+        <img class="header__logo" src="brand-assets/WhiteLogo.png" alt="Britt Midgette" />
+      </a>
+      <a href="index.html#selected" class="case-back">← All work</a>
+    </header>
+
+    <main class="case" id="overview">
+      <section class="case-hero">
+        <p class="case-eyebrow reveal">Case study &middot; Enterprise product</p>
+        <h1 class="case-title reveal">Turning a fragmented<br />licensing process into<br />one unified experience.</h1>
+        <p class="case-intro reveal">
+          NIPR plays a critical role in the U.S. insurance industry, helping
+          professionals and organizations navigate producer licensing and
+          registration across the country. The platform exists to make a
+          complicated process easier, but over time the digital experience
+          itself had become part of the complexity. I worked with NIPR&rsquo;s
+          internal designers and developers to rethink it from the ground up.
+        </p>
+      </section>
+
+      <dl class="case-meta reveal">
+        <div><dt>Client</dt><dd>NIPR</dd></div>
+        <div><dt>Scope</dt><dd>UX Strategy · IA · Design System</dd></div>
+        <div><dt>Channels</dt><dd>Website · Licensing application</dd></div>
+        <div><dt>Team</dt><dd>NIPR internal design &amp; development</dd></div>
+      </dl>
+
+      <div class="case-note reveal">
+        <p>
+          About this work: I led this in a director role at a previous agency,
+          before founding Artifact Digital. The problem, the decisions and the
+          outcomes are described as they happened.
+        </p>
+      </div>
+
+      <div class="case-pull reveal">
+        <span>The system contained the information. The user had to assemble the experience.</span>
+      </div>
+
+      <figure class="case-figure reveal" data-ph="Add Pics/NIPR-original.png — original experience / multiple screens">
+        <img src="brand-assets/Pics/NIPR-original.png" alt="The original NIPR experience spread across multiple screens" loading="lazy"
+          onerror="this.closest('.case-figure').classList.add('case-figure--empty')" />
+      </figure>
+
+      <!-- ============ THE CHALLENGE ============ -->
+      <section class="case-section reveal">
+        <p class="case-section__label">The challenge</p>
+        <h2 class="case-h2">A platform designed around the system instead of the user.</h2>
+        <div class="case-body">
+          <p>
+            NIPR handles inherently complicated workflows. Insurance licensing
+            involves different requirements, jurisdictions, information,
+            applications, statuses, and steps. The platform had grown over time
+            to support those needs, but much of the experience had been designed
+            and built from a technical perspective rather than around a cohesive
+            UX strategy.
+          </p>
+          <p>
+            The result was a dated interface and a highly fragmented experience.
+            In some workflows, users could end up with
+            <strong>as many as 14 NIPR screens open at the same time</strong>
+            just to accomplish a single task. They were responsible for
+            understanding how those screens related to one another, remembering
+            what they had already completed, and figuring out what needed to
+            happen next.
+          </p>
+        </div>
+      </section>
+
+      <!-- ============ UNDERSTAND THE SYSTEM ============ -->
+      <section class="case-section reveal">
+        <p class="case-section__label">Start by understanding the system</p>
+        <h2 class="case-h2">Before we could simplify it, we had to understand everything inside it.</h2>
+        <div class="case-body">
+          <p>
+            We couldn&rsquo;t simply redesign the screens. The first challenge
+            was understanding exactly what NIPR had, so I worked with the team
+            to inventory and categorize the existing experience.
+          </p>
+        </div>
+        <ul class="case-tags reveal">
+          <li>Pages</li>
+          <li>Components</li>
+          <li>Interface elements</li>
+          <li>Content types</li>
+          <li>Forms</li>
+          <li>Actions</li>
+          <li>Navigation patterns</li>
+          <li>Statuses</li>
+          <li>Repeated functionality</li>
+          <li>Variations of similar components</li>
+        </ul>
+        <div class="case-body">
+          <p>
+            We needed to understand what every element did, what information it
+            contained, and why it existed. That gave us a map of the system we
+            were actually redesigning. <strong>Only then could we begin
+            asking:</strong>
+          </p>
+        </div>
+        <ul class="ap-questions reveal">
+          <li>What belongs together?</li>
+          <li>What&rsquo;s duplicated?</li>
+          <li>What&rsquo;s missing?</li>
+          <li>What does the user actually need?</li>
+          <li>What can disappear?</li>
+        </ul>
+      </section>
+
+      <figure class="case-figure reveal" data-ph="Add Pics/NIPR-inventory.png — experience / component inventory">
+        <img src="brand-assets/Pics/NIPR-inventory.png" alt="The experience and component inventory" loading="lazy"
+          onerror="this.closest('.case-figure').classList.add('case-figure--empty')" />
+      </figure>
+
+      <!-- ============ HIGHLIGHT: SKETCHIN' SESSIONS ============ -->
+      <section class="case-feature case-feature--dark" aria-labelledby="sketch-head">
+        <div class="case-feature__inner">
+          <p class="case-feature__flag reveal">Sketchin Sessions&trade;</p>
+          <h2 class="case-feature__head reveal" id="sketch-head">Get designers, developers, and domain experts solving the problem together.</h2>
+          <div class="case-feature__grid">
+            <div class="case-feature__lead reveal">
+              <p>
+                Rather than disappearing, designing a solution, and returning
+                with an answer, I wanted the people who understood the system
+                deeply involved in defining the new experience. We worked
+                through sections of the platform together.
+              </p>
+              <p>
+                We sketched ideas, challenged assumptions, and progressively
+                created <strong>a shared understanding of what the new
+                experience needed to become.</strong>
+              </p>
+            </div>
+            <ul class="case-feature__aside reveal">
+              <li>What was this part of the experience trying to accomplish?</li>
+              <li>What information was missing?</li>
+              <li>What did users need to understand here?</li>
+              <li>What functionality was essential?</li>
+              <li>What could be simplified?</li>
+              <li>What should happen next?</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section reveal">
+        <ul class="pf-steps">
+          <li class="pf-item">
+            <span class="pf-steps__num">The room</span>
+            <span class="pf-media pf-media--screen" data-ph="[ SKETCHIN SESSION / WORKSHOP ]" data-zoom data-cap="A Sketchin Session" tabindex="0" role="button" aria-label="Expand the workshop photo">
+              <img src="brand-assets/Pics/NIPR-workshop.png" alt="A Sketchin Session workshop" loading="lazy"
+                onerror="this.closest('.pf-media').classList.add('pf-media--empty')" />
+            </span>
+          </li>
+          <li class="pf-item">
+            <span class="pf-steps__num">The output</span>
+            <span class="pf-media pf-media--screen" data-ph="[ EARLY SKETCHES ]" data-zoom data-cap="Early sketches" tabindex="0" role="button" aria-label="Expand the early sketches">
+              <img src="brand-assets/Pics/NIPR-sketches.png" alt="Early sketches" loading="lazy"
+                onerror="this.closest('.pf-media').classList.add('pf-media--empty')" />
+            </span>
+          </li>
+        </ul>
+      </section>
+
+      <!-- ============ REORGANIZING AROUND THE USER ============ -->
+      <section class="case-section reveal">
+        <p class="case-section__label">Reorganizing around the user</p>
+        <h2 class="case-h2">The company&rsquo;s structure shouldn&rsquo;t become the customer&rsquo;s navigation.</h2>
+        <div class="case-body">
+          <p>
+            Over time, digital products often begin reflecting the systems,
+            teams, databases, and processes behind them. But users don&rsquo;t
+            care how an organization stores information. They care about
+            completing their task.
+          </p>
+          <p>
+            I worked to reorganize the experience around the user&rsquo;s
+            journey rather than the underlying technical architecture.
+          </p>
+        </div>
+      </section>
+
+      <div class="case-block">
+        <div class="ap-qa">
+          <div class="ap-qa__side reveal">
+            <p class="ap-qa__label">Instead of asking</p>
+            <p class="ap-qa__text">Where does NIPR keep this information?</p>
+          </div>
+          <div class="ap-qa__side ap-qa__side--answer reveal">
+            <p class="ap-qa__label">We asked</p>
+            <p class="ap-qa__text">When does the user need this information?</p>
+          </div>
+        </div>
+      </div>
+
+      <section class="case-section reveal">
+        <div class="case-body">
+          <p>
+            That distinction influenced everything from navigation and content
+            hierarchy to workflows and dashboard design.
+          </p>
+        </div>
+      </section>
+
+      <figure class="case-figure reveal" data-ph="Add Pics/NIPR-ia.png — old information architecture → new">
+        <img src="brand-assets/Pics/NIPR-ia.png" alt="The old information architecture beside the new" loading="lazy"
+          onerror="this.closest('.case-figure').classList.add('case-figure--empty')" />
+      </figure>
+
+      <!-- ============ 14 SCREENS → ONE ============ -->
+      <section class="cap-band" aria-labelledby="unify-head">
+        <div class="cap-band__inner">
+          <p class="cap-band__label reveal">The defining idea</p>
+          <h2 class="cap-band__head reveal" id="unify-head">Fourteen screens became one experience.</h2>
+          <div class="cap-band__sub reveal">
+            <p>
+              Previously, completing a licensing task could require users to
+              navigate between numerous NIPR screens and keep multiple windows
+              open simultaneously. We brought those fragmented interactions
+              together into one unified experience. Instead of making the user
+              manage the process themselves,
+              <strong>the product could guide them through it.</strong>
+            </p>
+          </div>
+          <ul class="line-stack reveal">
+            <li>One task.</li>
+            <li>One experience.</li>
+            <li>A clear sequence of steps.</li>
+          </ul>
+        </div>
+      </section>
+
+      <figure class="case-figure reveal" data-ph="Add Pics/NIPR-unified.png — 14 screens → 1 unified experience">
+        <img src="brand-assets/Pics/NIPR-unified.png" alt="Fourteen screens consolidated into one unified experience" loading="lazy"
+          onerror="this.closest('.case-figure').classList.add('case-figure--empty')" />
+      </figure>
+
+      <!-- ============ MAKE THE PROCESS VISIBLE ============ -->
+      <section class="case-section reveal">
+        <p class="case-section__label">Make the process visible</p>
+        <h2 class="case-h2">Tell people where they are and what comes next.</h2>
+        <div class="case-body">
+          <p>
+            Simplification wasn&rsquo;t only about reducing screens. It was
+            about reducing uncertainty. Licensing can involve multiple steps,
+            and those steps aren&rsquo;t always immediately understandable to
+            someone completing the process. So we made the sequence explicit.
+          </p>
+        </div>
+        <ul class="line-stack line-stack--light reveal">
+          <li>Where you are.</li>
+          <li>What you&rsquo;ve completed.</li>
+          <li>What you&rsquo;re working on now.</li>
+          <li>What&rsquo;s left.</li>
+          <li>What happens next.</li>
+        </ul>
+        <div class="case-body case-body--spaced">
+          <p>
+            Steps could be numbered, tracked, and surfaced directly within the
+            experience. Instead of asking users to remember their progress,
+            <strong>the product remembered for them.</strong>
+          </p>
+        </div>
+      </section>
+
+      <figure class="case-figure reveal" data-ph="Add Pics/NIPR-steps.png — step-by-step licensing experience">
+        <img src="brand-assets/Pics/NIPR-steps.png" alt="The step-by-step licensing experience" loading="lazy"
+          onerror="this.closest('.case-figure').classList.add('case-figure--empty')" />
+      </figure>
+
+      <!-- ============ THE DASHBOARD ============ -->
+      <section class="case-section reveal">
+        <p class="case-section__label">The dashboard</p>
+        <h2 class="case-h2">Turn complexity into a clear plan of action.</h2>
+        <div class="case-body">
+          <p>
+            Rather than simply acting as a collection of links into different
+            parts of NIPR, the dashboard could give users a clear understanding
+            of their licensing activity.
+          </p>
+        </div>
+        <ul class="case-tags reveal">
+          <li>Active applications</li>
+          <li>Completed steps</li>
+          <li>Current step</li>
+          <li>Remaining steps</li>
+          <li>Application status</li>
+          <li>Required actions</li>
+          <li>Important information</li>
+          <li>Next steps</li>
+        </ul>
+        <div class="case-body">
+          <p>
+            The goal was to make the dashboard answer a few basic questions
+            immediately.
+          </p>
+        </div>
+        <ul class="ap-questions reveal">
+          <li>What am I working on?</li>
+          <li>Where am I in the process?</li>
+          <li>Is there anything I need to do?</li>
+          <li>What&rsquo;s next?</li>
+        </ul>
+      </section>
+
+      <figure class="case-figure reveal" data-ph="Add Pics/NIPR-dashboard.png — NIPR dashboard">
+        <img src="brand-assets/Pics/NIPR-dashboard.png" alt="The redesigned NIPR dashboard" loading="lazy"
+          onerror="this.closest('.case-figure').classList.add('case-figure--empty')" />
+      </figure>
+
+      <!-- ============ EXPERIENCE DESIGN ============ -->
+      <section class="case-section reveal">
+        <p class="case-section__label">Experience design</p>
+        <h2 class="case-h2">Simplify without pretending the process is simple.</h2>
+        <div class="case-body">
+          <p>
+            Insurance licensing is complicated. Good UX doesn&rsquo;t mean
+            hiding that complexity. It means organizing it. I worked through the
+            experience architecture, flows, wireframes, components,
+            interactions, and interface hierarchy to make complicated workflows
+            easier to understand.
+          </p>
+        </div>
+        <ul class="case-tags reveal">
+          <li>Clear hierarchy</li>
+          <li>Progressive disclosure</li>
+          <li>Consistent components</li>
+          <li>Predictable interaction patterns</li>
+          <li>Visible progress</li>
+          <li>Strong status communication</li>
+          <li>Reduced navigation</li>
+          <li>Fewer disconnected screens</li>
+          <li>Clear next actions</li>
+        </ul>
+        <div class="case-body">
+          <p>
+            The goal wasn&rsquo;t to make licensing look easy. It was to make
+            the process <strong>understandable and manageable.</strong>
+          </p>
+        </div>
+      </section>
+
+      <figure class="case-figure reveal" data-ph="Add Pics/NIPR-wireframes.png — wireframes / user flows">
+        <img src="brand-assets/Pics/NIPR-wireframes.png" alt="Wireframes and user flows" loading="lazy"
+          onerror="this.closest('.case-figure').classList.add('case-figure--empty')" />
+      </figure>
+
+      <!-- ============ HIGHLIGHT: DESIGN LANGUAGE ============ -->
+      <section class="case-feature case-feature--tint" aria-labelledby="system-head">
+        <div class="case-feature__inner">
+          <p class="case-feature__flag reveal">A unified design language</p>
+          <h2 class="case-feature__head reveal" id="system-head">One product should feel like one product.</h2>
+          <div class="case-feature__grid">
+            <div class="case-feature__lead reveal">
+              <p>
+                The initial inventory exposed another challenge. Years of
+                development had produced different components, patterns, and
+                ways of presenting similar information. That inconsistency made
+                an already complicated experience harder to learn.
+              </p>
+              <p>
+                We established reusable patterns that could work across both the
+                public-facing site and the application experience.
+              </p>
+            </div>
+            <ul class="case-feature__aside reveal">
+              <li>Common actions look and behave consistently</li>
+              <li>Statuses communicate consistently</li>
+              <li>Forms follow predictable patterns</li>
+              <li>Navigation logic doesn&rsquo;t change between workflows</li>
+            </ul>
+          </div>
+          <p class="case-feature__lead case-feature__coda reveal">
+            <strong>Consistency became a form of simplification.</strong>
+          </p>
+        </div>
+      </section>
+
+      <figure class="case-figure reveal" data-ph="Add Pics/NIPR-components.png — component system / UI patterns">
+        <img src="brand-assets/Pics/NIPR-components.png" alt="The component system and UI patterns" loading="lazy"
+          onerror="this.closest('.case-figure').classList.add('case-figure--empty')" />
+      </figure>
+
+      <!-- ============ WORKING WITH DEVELOPMENT ============ -->
+      <section class="case-section reveal">
+        <p class="case-section__label">Working with development</p>
+        <h2 class="case-h2">Design the experience with the people who have to make it real.</h2>
+        <div class="case-body">
+          <p>
+            This wasn&rsquo;t a project where design happened in isolation and
+            was thrown over the wall. I worked for months alongside NIPR&rsquo;s
+            internal designers and developers, and that collaboration was
+            critical.
+          </p>
+        </div>
+        <div class="case-cols">
+          <div class="case-col">
+            <h3>Development brought</h3>
+            <ul class="case-list">
+              <li>The technical systems</li>
+              <li>Business rules and dependencies</li>
+              <li>The realities underneath the product</li>
+            </ul>
+          </div>
+          <div class="case-col">
+            <h3>Design brought</h3>
+            <ul class="case-list">
+              <li>The user journey</li>
+              <li>Hierarchy and interaction model</li>
+              <li>The experience perspective</li>
+            </ul>
+          </div>
+        </div>
+        <div class="case-body case-body--spaced">
+          <p>
+            <strong>We needed both.</strong> Together we could determine where
+            the existing architecture could support the new experience, where
+            compromises were necessary, and where larger changes were worth
+            making.
+          </p>
+        </div>
+      </section>
+
+      <figure class="case-figure reveal" data-ph="Add Pics/NIPR-collab.png — design + development collaboration">
+        <img src="brand-assets/Pics/NIPR-collab.png" alt="Design and development collaborating" loading="lazy"
+          onerror="this.closest('.case-figure').classList.add('case-figure--empty')" />
+      </figure>
+
+      <!-- ============ WEBSITE TO PRODUCT ============ -->
+      <section class="case-section reveal">
+        <p class="case-section__label">From website to product</p>
+        <h2 class="case-h2">Create one connected NIPR experience.</h2>
+        <div class="case-body">
+          <p>
+            NIPR had both informational website needs and application
+            workflows. To the user, those aren&rsquo;t necessarily separate
+            products. They&rsquo;re simply
+            <strong>different moments in accomplishing the same goal.</strong>
+          </p>
+        </div>
+        <p class="pf-flow reveal">
+          <b>Learn</b> &rarr; <b>Understand requirements</b> &rarr; <b>Begin</b>
+          &rarr; <b>Complete steps</b> &rarr; <b>Track progress</b> &rarr;
+          <b>Finish</b>
+        </p>
+        <div class="case-body">
+          <p>
+            That meant treating the website and application as parts of one
+            broader customer journey.
+          </p>
+        </div>
+      </section>
+
+      <figure class="case-figure reveal" data-ph="Add Pics/NIPR-journey.png — end-to-end NIPR journey">
+        <img src="brand-assets/Pics/NIPR-journey.png" alt="The end-to-end NIPR journey" loading="lazy"
+          onerror="this.closest('.case-figure').classList.add('case-figure--empty')" />
+      </figure>
+
+      <!-- ============ THE RESULT ============ -->
+      <section class="case-section reveal">
+        <p class="case-section__label">The result</p>
+        <h2 class="case-h2">From fragmented screens to a guided licensing experience.</h2>
+        <div class="case-body">
+          <p>
+            The transformation wasn&rsquo;t simply visual. We changed the
+            underlying experience model.
+          </p>
+        </div>
+      </section>
+
+      <div class="case-block">
+        <div class="ap-qa">
+          <div class="ap-qa__side reveal">
+            <p class="ap-qa__label">Before</p>
+            <p class="ap-qa__text">Up to 14 disconnected screens, and the user had to understand how the pieces connected.</p>
+          </div>
+          <div class="ap-qa__side ap-qa__side--answer reveal">
+            <p class="ap-qa__label">After</p>
+            <p class="ap-qa__text">One unified sequence, with progress visible and next actions clear.</p>
+          </div>
+        </div>
+      </div>
+
+      <section class="case-section reveal">
+        <ol class="ap-loop" aria-label="Step one through four, then complete">
+          <li class="ap-loop__item ap-loop__item--seed">Step 1</li>
+          <li class="ap-loop__item">Step 2</li>
+          <li class="ap-loop__item">Step 3</li>
+          <li class="ap-loop__item">Step 4</li>
+          <li class="ap-loop__item">Complete</li>
+        </ol>
+        <div class="case-body">
+          <p>
+            Progress was visible. Completed work was accounted for. Next actions
+            were clear. And the dashboard provided a central place to understand
+            what was happening. <strong>We moved the cognitive burden away from
+            the user and into the product.</strong>
+          </p>
+        </div>
+      </section>
+
+      <!-- ============ THE BIGGER IDEA ============ -->
+      <section class="case-cta" aria-labelledby="bigger-head">
+        <div class="case-cta__inner">
+          <p class="cap-band__label reveal">The bigger idea</p>
+          <h2 class="case-cta__head reveal" id="bigger-head">A complicated process doesn&rsquo;t require a complicated experience.</h2>
+          <div class="cap-close__body">
+            <p class="reveal">
+              Sometimes the underlying system genuinely is complicated. There
+              are regulations, business rules, different jurisdictions, and
+              technical dependencies. UX can&rsquo;t make those realities
+              disappear. But it can decide
+              <strong>who carries the complexity.</strong>
+            </p>
+            <p class="reveal">
+              Before the redesign, much of that burden sat with the user. They
+              had to understand how the pieces connected, keep track of their
+              own progress, and navigate the organization&rsquo;s systems. Our
+              job was to move as much of that burden as possible into the
+              experience itself.
+            </p>
+          </div>
+
+          <ol class="ap-loop reveal" aria-label="Inventory, understand, reorganize, simplify, guide">
+            <li class="ap-loop__item ap-loop__item--seed">Inventory</li>
+            <li class="ap-loop__item">Understand</li>
+            <li class="ap-loop__item">Reorganize</li>
+            <li class="ap-loop__item">Simplify</li>
+            <li class="ap-loop__item">Guide</li>
+          </ol>
+
+          <p class="cap-band__sub reveal">
+            The licensing process was still complex.
+            <strong>Using NIPR didn&rsquo;t have to be.</strong>
+          </p>
+
+          <div class="case-cta__actions reveal">
+            <a href="index.html#contact" class="btn">Book a strategy session</a>
+            <a href="index.html#selected" class="btn btn--ghost">See more work</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span class="footer__copy">© <span class="year"></span> Britt Midgette</span>
+      <a href="index.html#selected" class="footer__top">← Back to work</a>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

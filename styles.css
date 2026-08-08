@@ -993,11 +993,12 @@ main { display: block; }
 /* Sequential highlight, driven by script.js */
 .ap-loop__item.is-lit { background: var(--black); color: #fff; border-color: var(--black); }
 /* Inverted on dark bands, where a black pill on black would disappear */
-.cap-band .ap-loop__item,
+.cap-band .ap-loop__item, .case-cta .ap-loop__item,
 .case-feature--dark .ap-loop__item { border-color: rgba(255,255,255,0.3); }
-.cap-band .ap-loop__item::after,
+.cap-band .ap-loop__item::after, .case-cta .ap-loop__item::after,
 .case-feature--dark .ap-loop__item::after { color: rgba(255,255,255,0.5); }
 .cap-band .ap-loop__item--seed, .cap-band .ap-loop__item.is-lit,
+.case-cta .ap-loop__item--seed, .case-cta .ap-loop__item.is-lit,
 .case-feature--dark .ap-loop__item--seed, .case-feature--dark .ap-loop__item.is-lit {
   background: #fff; color: #000; border-color: #fff;
 }
@@ -1493,7 +1494,7 @@ main { display: block; }
 }
 .pf-flow {
   display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 0.9rem;
-  margin-bottom: clamp(1.5rem, 3vw, 2rem);
+  margin: clamp(1.5rem, 3vw, 2rem) 0;
   font-family: var(--mono); font-size: 0.76rem; letter-spacing: 0.1em;
   text-transform: uppercase; color: var(--muted);
 }
