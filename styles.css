@@ -1660,3 +1660,233 @@ main { display: block; }
   .capabilities { grid-template-columns: 1fr; }
   .project { grid-template-columns: 1fr; }
 }
+
+/* ============================================================
+   CASE STUDY v2 — large-format visual storytelling
+   Reusable across case studies. Text supports the work.
+   ============================================================ */
+:root { --wide: 1560px; --ink-2: #5a5a5a; }
+
+.cs { --pad-w: clamp(1.25rem, 4vw, 4rem); }
+
+/* --- containers --- */
+.cs-wrap  { max-width: var(--maxw); margin: 0 auto; padding-inline: var(--pad-w); }
+.cs-wide  { max-width: var(--wide); margin: 0 auto; padding-inline: var(--pad-w); }
+.cs-bleed { width: 100%; }
+
+/* --- rhythm --- */
+.cs-sec { padding-block: clamp(4rem, 10vw, 9rem); }
+.cs-sec--tight { padding-block: clamp(2.5rem, 6vw, 5rem); }
+.cs-sec--dark { background: #0a0a0a; color: #fff; }
+.cs-sec--tint { background: #f4f4f4; }
+
+/* --- type --- */
+.cs-eyebrow {
+  font-family: var(--mono); font-size: 0.74rem; letter-spacing: 0.16em;
+  text-transform: uppercase; color: var(--muted); margin-bottom: 1.5rem;
+}
+.cs-sec--dark .cs-eyebrow { color: rgba(255,255,255,0.5); }
+.cs-h {
+  font-family: var(--display); font-weight: 400;
+  font-size: clamp(1.9rem, 5.2vw, 4rem); line-height: 1.02;
+  letter-spacing: -0.03em; max-width: 20ch;
+}
+.cs-h--wide { max-width: 26ch; }
+.cs-say {
+  margin-top: clamp(1.25rem, 3vw, 2rem); max-width: 58ch;
+  font-size: clamp(1rem, 1.5vw, 1.15rem); line-height: 1.6; color: var(--ink-2);
+}
+.cs-sec--dark .cs-say { color: rgba(255,255,255,0.72); }
+.cs-say strong { color: var(--ink); font-weight: 500; }
+.cs-sec--dark .cs-say strong { color: #fff; }
+.cs-cap {
+  margin-top: 1rem; font-family: var(--mono); font-size: 0.74rem;
+  letter-spacing: 0.06em; color: var(--muted);
+}
+.cs-sec--dark .cs-cap { color: rgba(255,255,255,0.5); }
+
+/* --- hero --- */
+.cs-hero { padding: clamp(7rem, 14vw, 11rem) 0 clamp(2rem, 5vw, 4rem); }
+.cs-hero__title {
+  font-family: var(--display); font-weight: 400;
+  font-size: clamp(2.6rem, 8.5vw, 7.5rem); line-height: 0.94;
+  letter-spacing: -0.04em; margin-bottom: clamp(1.5rem, 3vw, 2rem);
+}
+.cs-hero__say { max-width: 46ch; font-size: clamp(1.05rem, 2vw, 1.5rem); line-height: 1.45; color: var(--ink-2); }
+.cs-metaline {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1.5rem; margin-top: clamp(2.5rem, 6vw, 4rem);
+  padding-top: clamp(1.5rem, 3vw, 2rem); border-top: 1px solid var(--line);
+}
+.cs-metaline dt {
+  font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--muted); margin-bottom: 0.4rem;
+}
+.cs-metaline dd { font-size: 0.95rem; line-height: 1.4; }
+
+/* --- big media --- */
+.cs-fig { margin: 0; }
+.cs-fig img, .cs-fig video { width: 100%; height: auto; display: block; }
+.cs-fig--round img, .cs-fig--round video { border-radius: 16px; }
+
+/* Browser chrome, drawn not imaged */
+.cs-browser { border-radius: 14px; overflow: hidden; background: #e9e9e9; box-shadow: 0 30px 80px rgba(0,0,0,0.18); }
+.cs-browser__bar {
+  height: 34px; display: flex; align-items: center; gap: 6px; padding: 0 14px;
+  background: #e9e9e9; border-bottom: 1px solid #dcdcdc;
+}
+.cs-browser__bar i { width: 9px; height: 9px; border-radius: 50%; background: #c6c6c6; }
+.cs-browser__bar span {
+  flex: 1; height: 16px; margin-left: 10px; border-radius: 100px; background: #f6f6f6;
+}
+.cs-browser img, .cs-browser video { display: block; width: 100%; height: auto; }
+
+/* Phone rail */
+.cs-phones { display: grid; grid-auto-flow: column; gap: clamp(0.75rem, 2vw, 1.5rem); justify-content: start; }
+.cs-phone {
+  width: clamp(150px, 15vw, 230px); border-radius: 26px; padding: 7px;
+  background: #1a1a1a; box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+}
+.cs-phone img { display: block; width: 100%; border-radius: 19px; }
+
+/* --- metrics --- */
+.cs-metrics {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: clamp(1.5rem, 4vw, 3rem);
+}
+.cs-metric__n {
+  display: block; font-family: var(--display); font-weight: 400;
+  font-size: clamp(2.4rem, 6vw, 4.5rem); line-height: 0.95; letter-spacing: -0.03em;
+}
+.cs-metric__l {
+  display: block; margin-top: 0.75rem; font-family: var(--mono);
+  font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--muted); max-width: 22ch;
+}
+.cs-sec--dark .cs-metric__l { color: rgba(255,255,255,0.55); }
+
+/* --- next project --- */
+.cs-next { display: block; position: relative; overflow: hidden; background: #0a0a0a; color: #fff; }
+.cs-next__img { position: absolute; inset: 0; opacity: 0.4; transition: transform 1.2s var(--ease), opacity 0.6s var(--ease); }
+.cs-next__img img { width: 100%; height: 100%; object-fit: cover; }
+.cs-next:hover .cs-next__img { transform: scale(1.04); opacity: 0.5; }
+.cs-next__in { position: relative; z-index: 1; padding: clamp(4rem, 12vw, 9rem) 0; }
+.cs-next__t {
+  font-family: var(--display); font-weight: 400;
+  font-size: clamp(2rem, 6vw, 4.5rem); line-height: 1.0; letter-spacing: -0.03em;
+}
+.cs-next__go { display: inline-block; margin-top: 1.5rem; font-family: var(--mono); font-size: 0.85rem; letter-spacing: 0.06em; }
+
+/* ============================================================
+   CASE STUDY v2 — process artifacts (drawn in CSS/SVG)
+   ============================================================ */
+
+/* Scattered-windows diagram: the fragmented before-state */
+.cs-scatter { position: relative; aspect-ratio: 16 / 9; background: #f4f4f4; border-radius: 14px; overflow: hidden; }
+.cs-scatter i {
+  position: absolute; border-radius: 5px; background: #fff;
+  border: 1px solid #d8d8d8; box-shadow: 0 6px 18px rgba(0,0,0,0.07);
+}
+.cs-scatter i::before {
+  content: ""; position: absolute; inset: 0 0 auto 0; height: 20%;
+  background: #ededed; border-bottom: 1px solid #e2e2e2; border-radius: 5px 5px 0 0;
+}
+.cs-scatter i::after {
+  content: ""; position: absolute; left: 10%; right: 30%; top: 34%; height: 6%;
+  background: #e8e8e8; box-shadow: 0 180% 0 #eee, 0 360% 0 #f0f0f0;
+}
+
+/* Figma-style working board */
+.cs-board {
+  background: #f4f4f4; border-radius: 16px; padding: clamp(1.25rem, 3vw, 2.5rem);
+  border: 1px solid var(--line);
+}
+.cs-sec--dark .cs-board { background: #141414; border-color: rgba(255,255,255,0.12); }
+.cs-board__head {
+  display: flex; align-items: baseline; gap: 1rem; flex-wrap: wrap;
+  margin-bottom: clamp(1.25rem, 3vw, 2rem);
+  font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--muted);
+}
+.cs-board__head b { color: var(--ink); font-weight: 400; }
+.cs-sec--dark .cs-board__head b { color: #fff; }
+.cs-board__grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: clamp(0.75rem, 1.6vw, 1.15rem); align-items: start;
+}
+
+/* Cards used on boards */
+.cs-card {
+  background: #fff; border: 1px solid var(--line); border-radius: 10px;
+  padding: 1rem 1.1rem; font-size: 0.88rem; line-height: 1.45;
+}
+.cs-card__k {
+  display: block; font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--muted); margin-bottom: 0.5rem;
+}
+.cs-card--note { background: #fdf6d8; border-color: #f0e4ab; }
+.cs-card--pain { background: #fdeceb; border-color: #f4cfcc; }
+.cs-card--opp  { background: #e9f5ee; border-color: #c6e3d2; }
+.cs-card--lead { background: #0a0a0a; color: #fff; border-color: #0a0a0a; }
+.cs-card--lead .cs-card__k { color: rgba(255,255,255,0.55); }
+
+/* Wireframe blocks, drawn */
+.cs-wires { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: clamp(0.75rem, 2vw, 1.5rem); }
+.cs-wire {
+  background: #fff; border: 1px solid var(--line-strong); border-radius: 8px;
+  aspect-ratio: 3 / 4; padding: 10px; display: flex; flex-direction: column; gap: 6px;
+}
+.cs-wire span { display: block; background: #e6e6e6; border-radius: 3px; }
+.cs-wire .b-nav  { height: 14px; background: #d2d2d2; }
+.cs-wire .b-hero { height: 22%; background: #dedede; }
+.cs-wire .b-line { height: 7px; }
+.cs-wire .b-line.s { width: 55%; }
+.cs-wire .b-line.m { width: 78%; }
+.cs-wire .b-row   { height: 34px; background: #ececec; }
+.cs-wire .b-grid  { flex: 1; background:
+  repeating-linear-gradient(90deg,#ececec 0 30%,transparent 30% 35%),
+  repeating-linear-gradient(0deg,#ececec 0 44%,transparent 44% 52%); }
+.cs-wire .b-cta   { height: 20px; width: 45%; background: #bdbdbd; }
+.cs-wire__l {
+  margin-top: 0.6rem; font-family: var(--mono); font-size: 0.66rem;
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted);
+}
+
+/* Flow / journey rails drawn in SVG get this wrapper */
+.cs-svg { width: 100%; height: auto; display: block; overflow: visible; }
+.cs-scroll { overflow-x: auto; padding-bottom: 1rem; scrollbar-width: thin; }
+.cs-scroll::-webkit-scrollbar { height: 3px; }
+.cs-scroll::-webkit-scrollbar-thumb { background: var(--line-strong); border-radius: 100px; }
+.cs-scroll__hint {
+  font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--muted); margin-top: 0.5rem;
+}
+
+/* Design-system sheet */
+.cs-sys { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: clamp(1rem, 2.5vw, 2rem); }
+.cs-sys__cell { background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 1.25rem; }
+.cs-swatches { display: flex; gap: 0.5rem; }
+.cs-swatches i { flex: 1; height: 54px; border-radius: 6px; border: 1px solid rgba(0,0,0,0.06); }
+.cs-type__xl { font-family: var(--display); font-size: 2rem; line-height: 1; letter-spacing: -0.02em; }
+.cs-type__md { font-size: 1rem; margin-top: 0.5rem; }
+.cs-type__sm { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.1em; color: var(--muted); margin-top: 0.5rem; }
+.cs-chips { display: flex; flex-wrap: wrap; gap: 0.45rem; }
+.cs-chip {
+  font-family: var(--mono); font-size: 0.66rem; letter-spacing: 0.06em;
+  padding: 0.35rem 0.7rem; border-radius: 100px; border: 1px solid var(--line-strong);
+}
+.cs-chip--on  { background: #0a0a0a; color: #fff; border-color: #0a0a0a; }
+.cs-chip--ok  { background: #e9f5ee; border-color: #c6e3d2; }
+.cs-chip--wait{ background: #fdf6d8; border-color: #f0e4ab; }
+.cs-chip--act { background: #fdeceb; border-color: #f4cfcc; }
+
+/* Before / after */
+.cs-ba { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(1rem, 3vw, 2.5rem); align-items: start; }
+.cs-ba__l {
+  font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--muted); margin-bottom: 0.85rem;
+}
+
+@media (max-width: 900px) {
+  .cs-ba { grid-template-columns: 1fr; }
+}

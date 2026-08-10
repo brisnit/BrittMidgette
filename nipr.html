@@ -4,12 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>NIPR, Case Study, Britt Midgette</title>
-  <meta name="description" content="Turning a fragmented insurance licensing platform into one unified experience: fourteen screens became one guided sequence. A case study by Britt Midgette." />
+  <meta name="description" content="Fourteen screens became one guided sequence. UX strategy, information architecture and a design system for the national insurance producer registry." />
   <meta name="theme-color" content="#000000" />
   <link rel="icon" type="image/png" href="brand-assets/Pics/favicon.png" />
   <link rel="apple-touch-icon" href="brand-assets/Pics/favicon.png" />
 
-  <!-- Open Graph -->
   <meta property="og:type" content="article" />
   <meta property="og:title" content="NIPR, one unified licensing experience" />
   <meta property="og:description" content="A complicated process doesn't require a complicated experience." />
@@ -47,480 +46,421 @@
       <a href="index.html#selected" class="case-back">← All work</a>
     </header>
 
-    <main class="case" id="overview">
-      <section class="case-hero">
-        <p class="case-eyebrow reveal">Case study &middot; Enterprise product</p>
-        <h1 class="case-title reveal">Turning a fragmented<br />licensing process into<br />one unified experience.</h1>
-        <p class="case-intro reveal">
-          NIPR plays a critical role in the U.S. insurance industry, helping
-          professionals and organizations navigate producer licensing and
-          registration across the country. The platform exists to make a
-          complicated process easier, but over time the digital experience
-          itself had become part of the complexity. I worked with NIPR&rsquo;s
-          internal designers and developers to rethink it from the ground up.
-        </p>
+    <main class="cs" id="overview">
+
+      <!-- ============ HERO ============ -->
+      <section class="cs-hero">
+        <div class="cs-wide">
+          <p class="cs-eyebrow reveal">NIPR &middot; Enterprise product</p>
+          <h1 class="cs-hero__title reveal">Fourteen screens,<br />one experience.</h1>
+          <p class="cs-hero__say reveal">
+            Insurance licensing for every producer in the United States, rebuilt
+            around the person doing the task instead of the system storing the data.
+          </p>
+          <dl class="cs-metaline reveal">
+            <div><dt>Role</dt><dd>UX Director</dd></div>
+            <div><dt>Client</dt><dd>NIPR</dd></div>
+            <div><dt>Year</dt><dd>2024</dd></div>
+            <div><dt>Platform</dt><dd>Web &middot; Responsive</dd></div>
+            <div><dt>Responsibilities</dt><dd>UX strategy, IA, workshops, wireframes, design system, UI direction</dd></div>
+          </dl>
+        </div>
       </section>
 
-      <dl class="case-meta reveal">
-        <div><dt>Client</dt><dd>NIPR</dd></div>
-        <div><dt>Year</dt><dd>2024</dd></div>
-        <div><dt>Scope</dt><dd>UX Strategy · IA · Design System</dd></div>
-        <div><dt>Channels</dt><dd>Website · Licensing application</dd></div>
-      </dl>
-
-      <div class="case-pull reveal">
-        <span>The system contained the information. The user had to assemble the experience.</span>
-      </div>
-
-      <figure class="case-figure reveal">
-        <img src="brand-assets/Pics/NIPR-1.jpg" alt="The redesigned NIPR Licensing Center" loading="lazy" />
-        <figcaption>The Licensing Center: one entry point for applying, adding and renewing.</figcaption>
-      </figure>
+      <section class="cs-sec--tight">
+        <div class="cs-wide">
+          <figure class="cs-fig cs-fig--round reveal">
+            <img src="brand-assets/Pics/NIPR-1.jpg" alt="The redesigned NIPR Licensing Center" />
+          </figure>
+        </div>
+      </section>
 
       <!-- ============ THE CHALLENGE ============ -->
-      <section class="case-section reveal">
-        <p class="case-section__label">The challenge</p>
-        <h2 class="case-h2">A platform designed around the system instead of the user.</h2>
-        <div class="case-body">
-          <p>
-            NIPR handles inherently complicated workflows. Insurance licensing
-            involves different requirements, jurisdictions, information,
-            applications, statuses, and steps. The platform had grown over time
-            to support those needs, but much of the experience had been designed
-            and built from a technical perspective rather than around a cohesive
-            UX strategy.
+      <section class="cs-sec cs-sec--tint">
+        <div class="cs-wide">
+          <p class="cs-eyebrow reveal">The challenge</p>
+          <h2 class="cs-h reveal">A single task could mean fourteen open windows.</h2>
+          <p class="cs-say reveal">
+            The system held everything it needed to. The user had to assemble the
+            experience themselves &mdash; remembering what was done, what came next,
+            and how any of it connected.
           </p>
-          <p>
-            The result was a dated interface and a highly fragmented experience.
-            In some workflows, users could end up with
-            <strong>as many as 14 NIPR screens open at the same time</strong>
-            just to accomplish a single task. They were responsible for
-            understanding how those screens related to one another, remembering
-            what they had already completed, and figuring out what needed to
-            happen next.
-          </p>
-        </div>
-      </section>
 
-      <!-- ============ UNDERSTAND THE SYSTEM ============ -->
-      <section class="case-section reveal">
-        <p class="case-section__label">Start by understanding the system</p>
-        <h2 class="case-h2">Before we could simplify it, we had to understand everything inside it.</h2>
-        <div class="case-body">
-          <p>
-            We couldn&rsquo;t simply redesign the screens. The first challenge
-            was understanding exactly what NIPR had, so I worked with the team
-            to inventory and categorize the existing experience.
-          </p>
-        </div>
-        <ul class="case-tags reveal">
-          <li>Pages</li>
-          <li>Components</li>
-          <li>Interface elements</li>
-          <li>Content types</li>
-          <li>Forms</li>
-          <li>Actions</li>
-          <li>Navigation patterns</li>
-          <li>Statuses</li>
-          <li>Repeated functionality</li>
-          <li>Variations of similar components</li>
-        </ul>
-        <div class="case-body">
-          <p>
-            We needed to understand what every element did, what information it
-            contained, and why it existed. That gave us a map of the system we
-            were actually redesigning. <strong>Only then could we begin
-            asking:</strong>
-          </p>
-        </div>
-        <ul class="ap-questions reveal">
-          <li>What belongs together?</li>
-          <li>What&rsquo;s duplicated?</li>
-          <li>What&rsquo;s missing?</li>
-          <li>What does the user actually need?</li>
-          <li>What can disappear?</li>
-        </ul>
-      </section>
-
-      <!-- ============ HIGHLIGHT: SKETCHIN' SESSIONS ============ -->
-      <section class="case-feature case-feature--dark" aria-labelledby="sketch-head">
-        <div class="case-feature__inner">
-          <p class="case-feature__flag reveal">Sketchin Sessions&trade;</p>
-          <h2 class="case-feature__head reveal" id="sketch-head">Get designers, developers, and domain experts solving the problem together.</h2>
-          <div class="case-feature__grid">
-            <div class="case-feature__lead reveal">
-              <p>
-                Rather than disappearing, designing a solution, and returning
-                with an answer, I wanted the people who understood the system
-                deeply involved in defining the new experience. We worked
-                through sections of the platform together.
-              </p>
-              <p>
-                We sketched ideas, challenged assumptions, and progressively
-                created <strong>a shared understanding of what the new
-                experience needed to become.</strong>
-              </p>
+          <div class="cs-fig reveal" style="margin-top: clamp(2.5rem, 6vw, 4rem)">
+            <div class="cs-scatter" role="img" aria-label="Fourteen overlapping browser windows scattered across the screen, representing the fragmented original experience">
+              <i style="left:2%;  top:6%;  width:30%; height:36%"></i>
+              <i style="left:12%; top:14%; width:30%; height:36%"></i>
+              <i style="left:22%; top:22%; width:30%; height:36%"></i>
+              <i style="left:34%; top:4%;  width:28%; height:34%"></i>
+              <i style="left:46%; top:12%; width:28%; height:34%"></i>
+              <i style="left:58%; top:20%; width:28%; height:34%"></i>
+              <i style="left:68%; top:6%;  width:29%; height:35%"></i>
+              <i style="left:4%;  top:52%; width:29%; height:35%"></i>
+              <i style="left:16%; top:58%; width:29%; height:35%"></i>
+              <i style="left:30%; top:50%; width:28%; height:36%"></i>
+              <i style="left:44%; top:56%; width:28%; height:36%"></i>
+              <i style="left:56%; top:48%; width:29%; height:37%"></i>
+              <i style="left:66%; top:56%; width:29%; height:37%"></i>
+              <i style="left:74%; top:34%; width:24%; height:32%"></i>
             </div>
-            <ul class="case-feature__aside reveal">
-              <li>What was this part of the experience trying to accomplish?</li>
-              <li>What information was missing?</li>
-              <li>What did users need to understand here?</li>
-              <li>What functionality was essential?</li>
-              <li>What could be simplified?</li>
-              <li>What should happen next?</li>
-            </ul>
+            <p class="cs-cap">The original experience, reconstructed &mdash; fourteen windows for one licensing task.</p>
           </div>
         </div>
       </section>
 
-      <!-- ============ REORGANIZING AROUND THE USER ============ -->
-      <section class="case-section reveal">
-        <p class="case-section__label">Reorganizing around the user</p>
-        <h2 class="case-h2">The company&rsquo;s structure shouldn&rsquo;t become the customer&rsquo;s navigation.</h2>
-        <div class="case-body">
-          <p>
-            Over time, digital products often begin reflecting the systems,
-            teams, databases, and processes behind them. But users don&rsquo;t
-            care how an organization stores information. They care about
-            completing their task.
+      <!-- ============ BOARD 01 — UNDERSTANDING ============ -->
+      <section class="cs-sec">
+        <div class="cs-wide">
+          <p class="cs-eyebrow reveal">01 &middot; Understanding the problem</p>
+          <h2 class="cs-h cs-h--wide reveal">Before we could simplify it, we had to inventory all of it.</h2>
+          <p class="cs-say reveal">
+            Every page, component, form, status and repeated pattern &mdash; catalogued,
+            then interrogated with the client's own designers and developers in
+            <strong>Sketchin Sessions&trade;</strong>.
           </p>
-          <p>
-            I worked to reorganize the experience around the user&rsquo;s
-            journey rather than the underlying technical architecture.
-          </p>
-        </div>
-      </section>
 
-      <div class="case-block">
-        <div class="ap-qa">
-          <div class="ap-qa__side reveal">
-            <p class="ap-qa__label">Instead of asking</p>
-            <p class="ap-qa__text">Where does NIPR keep this information?</p>
-          </div>
-          <div class="ap-qa__side ap-qa__side--answer reveal">
-            <p class="ap-qa__label">We asked</p>
-            <p class="ap-qa__text">When does the user need this information?</p>
-          </div>
-        </div>
-      </div>
-
-      <section class="case-section reveal">
-        <div class="case-body">
-          <p>
-            That distinction influenced everything from navigation and content
-            hierarchy to workflows and dashboard design.
-          </p>
-        </div>
-      </section>
-
-      <!-- ============ 14 SCREENS → ONE ============ -->
-      <section class="cap-band" aria-labelledby="unify-head">
-        <div class="cap-band__inner">
-          <p class="cap-band__label reveal">The defining idea</p>
-          <h2 class="cap-band__head reveal" id="unify-head">Fourteen screens became one experience.</h2>
-          <div class="cap-band__sub reveal">
-            <p>
-              Previously, completing a licensing task could require users to
-              navigate between numerous NIPR screens and keep multiple windows
-              open simultaneously. We brought those fragmented interactions
-              together into one unified experience. Instead of making the user
-              manage the process themselves,
-              <strong>the product could guide them through it.</strong>
-            </p>
-          </div>
-          <ul class="line-stack reveal">
-            <li>One task.</li>
-            <li>One experience.</li>
-            <li>A clear sequence of steps.</li>
-          </ul>
-        </div>
-      </section>
-
-      <figure class="case-figure reveal">
-        <img src="brand-assets/Pics/NIPR-2.jpg" alt="The NIPR experience across mobile screens" loading="lazy" />
-        <figcaption>One experience carried across devices, not a separate mobile product.</figcaption>
-      </figure>
-
-      <!-- ============ MAKE THE PROCESS VISIBLE ============ -->
-      <section class="case-section reveal">
-        <p class="case-section__label">Make the process visible</p>
-        <h2 class="case-h2">Tell people where they are and what comes next.</h2>
-        <div class="case-body">
-          <p>
-            Simplification wasn&rsquo;t only about reducing screens. It was
-            about reducing uncertainty. Licensing can involve multiple steps,
-            and those steps aren&rsquo;t always immediately understandable to
-            someone completing the process. So we made the sequence explicit.
-          </p>
-        </div>
-        <ul class="line-stack line-stack--light reveal">
-          <li>Where you are.</li>
-          <li>What you&rsquo;ve completed.</li>
-          <li>What you&rsquo;re working on now.</li>
-          <li>What&rsquo;s left.</li>
-          <li>What happens next.</li>
-        </ul>
-        <div class="case-body case-body--spaced">
-          <p>
-            Steps could be numbered, tracked, and surfaced directly within the
-            experience. Instead of asking users to remember their progress,
-            <strong>the product remembered for them.</strong>
-          </p>
-        </div>
-      </section>
-
-      <!-- ============ THE DASHBOARD ============ -->
-      <section class="case-section reveal">
-        <p class="case-section__label">The dashboard</p>
-        <h2 class="case-h2">Turn complexity into a clear plan of action.</h2>
-        <div class="case-body">
-          <p>
-            Rather than simply acting as a collection of links into different
-            parts of NIPR, the dashboard could give users a clear understanding
-            of their licensing activity.
-          </p>
-        </div>
-        <ul class="case-tags reveal">
-          <li>Active applications</li>
-          <li>Completed steps</li>
-          <li>Current step</li>
-          <li>Remaining steps</li>
-          <li>Application status</li>
-          <li>Required actions</li>
-          <li>Important information</li>
-          <li>Next steps</li>
-        </ul>
-        <div class="case-body">
-          <p>
-            The goal was to make the dashboard answer a few basic questions
-            immediately.
-          </p>
-        </div>
-        <ul class="ap-questions reveal">
-          <li>What am I working on?</li>
-          <li>Where am I in the process?</li>
-          <li>Is there anything I need to do?</li>
-          <li>What&rsquo;s next?</li>
-        </ul>
-      </section>
-
-      <figure class="case-figure reveal">
-        <img src="brand-assets/Pics/NIPR-3.jpg" alt="Licensing requirements explained in context" loading="lazy" />
-        <figcaption>Requirements and fees explained where the user needs them.</figcaption>
-      </figure>
-
-      <!-- ============ EXPERIENCE DESIGN ============ -->
-      <section class="case-section reveal">
-        <p class="case-section__label">Experience design</p>
-        <h2 class="case-h2">Simplify without pretending the process is simple.</h2>
-        <div class="case-body">
-          <p>
-            Insurance licensing is complicated. Good UX doesn&rsquo;t mean
-            hiding that complexity. It means organizing it. I worked through the
-            experience architecture, flows, wireframes, components,
-            interactions, and interface hierarchy to make complicated workflows
-            easier to understand.
-          </p>
-        </div>
-        <ul class="case-tags reveal">
-          <li>Clear hierarchy</li>
-          <li>Progressive disclosure</li>
-          <li>Consistent components</li>
-          <li>Predictable interaction patterns</li>
-          <li>Visible progress</li>
-          <li>Strong status communication</li>
-          <li>Reduced navigation</li>
-          <li>Fewer disconnected screens</li>
-          <li>Clear next actions</li>
-        </ul>
-        <div class="case-body">
-          <p>
-            The goal wasn&rsquo;t to make licensing look easy. It was to make
-            the process <strong>understandable and manageable.</strong>
-          </p>
-        </div>
-      </section>
-
-      <!-- ============ HIGHLIGHT: DESIGN LANGUAGE ============ -->
-      <section class="case-feature case-feature--tint" aria-labelledby="system-head">
-        <div class="case-feature__inner">
-          <p class="case-feature__flag reveal">A unified design language</p>
-          <h2 class="case-feature__head reveal" id="system-head">One product should feel like one product.</h2>
-          <div class="case-feature__grid">
-            <div class="case-feature__lead reveal">
-              <p>
-                The initial inventory exposed another challenge. Years of
-                development had produced different components, patterns, and
-                ways of presenting similar information. That inconsistency made
-                an already complicated experience harder to learn.
-              </p>
-              <p>
-                We established reusable patterns that could work across both the
-                public-facing site and the application experience.
-              </p>
+          <div class="cs-board reveal" style="margin-top: clamp(2rem, 5vw, 3rem)">
+            <p class="cs-board__head"><b>Board 01</b> <span>Inventory &rarr; questions &rarr; opportunity areas</span></p>
+            <div class="cs-board__grid">
+              <div class="cs-card cs-card--lead">
+                <span class="cs-card__k">Inventory</span>
+                Pages · Components · Interface elements · Content types · Forms · Actions · Navigation patterns · Statuses
+              </div>
+              <div class="cs-card cs-card--note">
+                <span class="cs-card__k">Workshop note</span>
+                Same action appears in three places, behaving differently in each.
+              </div>
+              <div class="cs-card cs-card--note">
+                <span class="cs-card__k">Workshop note</span>
+                Statuses are written for the system, not for the person waiting.
+              </div>
+              <div class="cs-card cs-card--pain">
+                <span class="cs-card__k">Pain point</span>
+                The user has to hold their own place in the process.
+              </div>
+              <div class="cs-card cs-card--pain">
+                <span class="cs-card__k">Pain point</span>
+                Nothing tells you what happens after this step.
+              </div>
+              <div class="cs-card cs-card--pain">
+                <span class="cs-card__k">Pain point</span>
+                Navigation logic changes between workflows.
+              </div>
+              <div class="cs-card cs-card--opp">
+                <span class="cs-card__k">Opportunity</span>
+                Collapse the task into one sequence with visible progress.
+              </div>
+              <div class="cs-card cs-card--opp">
+                <span class="cs-card__k">Opportunity</span>
+                One dashboard that answers "where am I?" immediately.
+              </div>
+              <div class="cs-card cs-card--opp">
+                <span class="cs-card__k">Opportunity</span>
+                One component set across site and application.
+              </div>
+              <div class="cs-card">
+                <span class="cs-card__k">Framing question</span>
+                What belongs together? What's duplicated? What can disappear?
+              </div>
             </div>
-            <ul class="case-feature__aside reveal">
-              <li>Common actions look and behave consistently</li>
-              <li>Statuses communicate consistently</li>
-              <li>Forms follow predictable patterns</li>
-              <li>Navigation logic doesn&rsquo;t change between workflows</li>
-            </ul>
           </div>
-          <p class="case-feature__lead case-feature__coda reveal">
-            <strong>Consistency became a form of simplification.</strong>
+          <p class="cs-cap reveal">Representative reconstruction of the working boards from this engagement.</p>
+        </div>
+      </section>
+
+      <!-- ============ BOARD 02 — ARCHITECTURE ============ -->
+      <section class="cs-sec cs-sec--dark">
+        <div class="cs-wide">
+          <p class="cs-eyebrow reveal">02 &middot; Making sense of complexity</p>
+          <h2 class="cs-h cs-h--wide reveal">The company's structure shouldn't become the customer's navigation.</h2>
+          <p class="cs-say reveal">
+            The old architecture mirrored internal systems. The new one follows the
+            order a person actually needs information.
+          </p>
+
+          <div class="cs-scroll reveal" style="margin-top: clamp(2rem, 5vw, 3.5rem)">
+            <svg class="cs-svg" viewBox="0 0 1400 420" style="min-width: 880px" role="img"
+                 aria-label="Two information architecture diagrams side by side. Before: a system-shaped tree of disconnected databases. After: a journey-shaped spine following learn, requirements, begin, steps, track, finish.">
+              <g font-family="Roboto, sans-serif" font-size="13">
+                <!-- BEFORE -->
+                <text x="20" y="16" fill="rgba(255,255,255,.5)" font-size="11" letter-spacing="2">BEFORE &#8212; SYSTEM SHAPED</text>
+                <rect x="180" y="40" width="150" height="40" rx="5" fill="none" stroke="rgba(255,255,255,.35)"/>
+                <text x="255" y="65" fill="#fff" text-anchor="middle">NIPR.com</text>
+                <g stroke="rgba(255,255,255,.25)" fill="none">
+                  <path d="M255 80 V108 M90 108 H410 M90 108 V130 M250 108 V130 M410 108 V130"/>
+                </g>
+                <g fill="none" stroke="rgba(255,255,255,.28)">
+                  <rect x="20"  y="130" width="140" height="34" rx="4"/>
+                  <rect x="180" y="130" width="140" height="34" rx="4"/>
+                  <rect x="340" y="130" width="140" height="34" rx="4"/>
+                  <rect x="20"  y="186" width="140" height="34" rx="4"/>
+                  <rect x="180" y="186" width="140" height="34" rx="4"/>
+                  <rect x="340" y="186" width="140" height="34" rx="4"/>
+                  <rect x="20"  y="242" width="140" height="34" rx="4"/>
+                  <rect x="180" y="242" width="140" height="34" rx="4"/>
+                  <rect x="340" y="242" width="140" height="34" rx="4"/>
+                </g>
+                <g fill="rgba(255,255,255,.65)" font-size="11" text-anchor="middle">
+                  <text x="90"  y="151">Licensing DB</text>
+                  <text x="250" y="151">Products</text>
+                  <text x="410" y="151">About</text>
+                  <text x="90"  y="207">Applications</text>
+                  <text x="250" y="207">Renewals</text>
+                  <text x="410" y="207">Reports</text>
+                  <text x="90"  y="263">Attachments</text>
+                  <text x="250" y="263">Contact mgmt</text>
+                  <text x="410" y="263">Help</text>
+                </g>
+                <g stroke="rgba(255,255,255,.14)" stroke-dasharray="3 3" fill="none">
+                  <path d="M90 164 L250 186 M250 164 L410 186 M90 220 L410 242 M410 164 L90 242 M250 220 L90 186"/>
+                </g>
+                <text x="250" y="316" fill="rgba(255,255,255,.4)" font-size="11" text-anchor="middle">the user connects these</text>
+
+                <!-- divider -->
+                <line x1="640" y1="30" x2="640" y2="330" stroke="rgba(255,255,255,.15)"/>
+
+                <!-- AFTER -->
+                <text x="700" y="16" fill="rgba(255,255,255,.5)" font-size="11" letter-spacing="2">AFTER — JOURNEY SHAPED</text>
+                <line x1="716" y1="150" x2="1360" y2="150" stroke="rgba(255,255,255,.4)"/>
+                <g>
+                  <circle cx="716"  cy="150" r="7" fill="#fff"/>
+                  <circle cx="845"  cy="150" r="7" fill="#fff"/>
+                  <circle cx="974"  cy="150" r="7" fill="#fff"/>
+                  <circle cx="1103" cy="150" r="7" fill="#fff"/>
+                  <circle cx="1232" cy="150" r="7" fill="#fff"/>
+                  <circle cx="1360" cy="150" r="9" fill="#fff"/>
+                </g>
+                <g fill="#fff" font-size="13" text-anchor="middle">
+                  <text x="716"  y="128">Learn</text>
+                  <text x="845"  y="128">Requirements</text>
+                  <text x="974"  y="128">Begin</text>
+                  <text x="1103" y="128">Complete steps</text>
+                  <text x="1232" y="128">Track progress</text>
+                  <text x="1360" y="128">Finish</text>
+                </g>
+                <g fill="rgba(255,255,255,.5)" font-size="11" text-anchor="middle">
+                  <text x="716"  y="180">what is this</text>
+                  <text x="845"  y="180">what my state needs</text>
+                  <text x="974"  y="180">one entry point</text>
+                  <text x="1103" y="180">guided sequence</text>
+                  <text x="1232" y="180">dashboard</text>
+                  <text x="1360" y="180">confirmation</text>
+                </g>
+                <g fill="none" stroke="rgba(255,255,255,.22)">
+                  <rect x="656" y="212" width="704" height="46" rx="6"/>
+                </g>
+                <text x="1008" y="240" fill="rgba(255,255,255,.6)" font-size="11" text-anchor="middle">one component set — website and application</text>
+                <text x="1008" y="316" fill="rgba(255,255,255,.4)" font-size="11" text-anchor="middle">the product connects these</text>
+              </g>
+            </svg>
+            <p class="cs-scroll__hint">Scroll to compare &rarr;</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ BOARD 03 — EXPLORATION ============ -->
+      <section class="cs-sec">
+        <div class="cs-wide">
+          <p class="cs-eyebrow reveal">03 &middot; Exploration</p>
+          <h2 class="cs-h cs-h--wide reveal">Thinking through making.</h2>
+          <p class="cs-say reveal">
+            Sequence, density and disclosure explored in grayscale before any
+            interface decisions were made.
+          </p>
+
+          <div class="cs-wires reveal" style="margin-top: clamp(2rem, 5vw, 3rem)">
+            <figure class="cs-fig">
+              <div class="cs-wire">
+                <span class="b-nav"></span><span class="b-hero"></span>
+                <span class="b-line m"></span><span class="b-line s"></span>
+                <span class="b-row"></span><span class="b-row"></span><span class="b-cta"></span>
+              </div>
+              <figcaption class="cs-wire__l">01 — Entry point</figcaption>
+            </figure>
+            <figure class="cs-fig">
+              <div class="cs-wire">
+                <span class="b-nav"></span><span class="b-line m"></span>
+                <span class="b-grid"></span><span class="b-cta"></span>
+              </div>
+              <figcaption class="cs-wire__l">02 — Requirements</figcaption>
+            </figure>
+            <figure class="cs-fig">
+              <div class="cs-wire">
+                <span class="b-nav"></span><span class="b-row"></span>
+                <span class="b-line m"></span><span class="b-line"></span><span class="b-line s"></span>
+                <span class="b-row"></span><span class="b-cta"></span>
+              </div>
+              <figcaption class="cs-wire__l">03 — Step in sequence</figcaption>
+            </figure>
+            <figure class="cs-fig">
+              <div class="cs-wire">
+                <span class="b-nav"></span><span class="b-hero"></span>
+                <span class="b-row"></span><span class="b-row"></span>
+                <span class="b-line s"></span><span class="b-cta"></span>
+              </div>
+              <figcaption class="cs-wire__l">04 — Dashboard</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ THE FLOW ============ -->
+      <section class="cs-sec cs-sec--tint">
+        <div class="cs-wide">
+          <p class="cs-eyebrow reveal">04 &middot; The unified task</p>
+          <h2 class="cs-h cs-h--wide reveal">One task. One sequence. Progress you can see.</h2>
+
+          <div class="cs-scroll reveal" style="margin-top: clamp(2rem, 5vw, 3.5rem)">
+            <svg class="cs-svg" viewBox="0 0 1320 260" style="min-width: 820px" role="img"
+                 aria-label="A task flow: start, then four numbered steps with decision branches, ending in complete. Beneath, a persistent progress bar and dashboard.">
+              <g font-family="Roboto, sans-serif">
+                <line x1="60" y1="70" x2="1260" y2="70" stroke="#c9c9c9"/>
+                <g>
+                  <rect x="24"   y="46" width="90"  height="48" rx="24" fill="#0a0a0a"/>
+                  <text x="69"   y="76" fill="#fff" font-size="12" text-anchor="middle">Start</text>
+                </g>
+                <g fill="#fff" stroke="#0a0a0a">
+                  <rect x="230"  y="46" width="130" height="48" rx="8"/>
+                  <rect x="470"  y="46" width="130" height="48" rx="8"/>
+                  <rect x="710"  y="46" width="130" height="48" rx="8"/>
+                  <rect x="950"  y="46" width="130" height="48" rx="8"/>
+                </g>
+                <g fill="#0a0a0a" font-size="12" text-anchor="middle">
+                  <text x="295" y="76">Step 1</text>
+                  <text x="535" y="76">Step 2</text>
+                  <text x="775" y="76">Step 3</text>
+                  <text x="1015" y="76">Step 4</text>
+                </g>
+                <g>
+                  <rect x="1180" y="46" width="116" height="48" rx="24" fill="#0a0a0a"/>
+                  <text x="1238" y="76" fill="#fff" font-size="12" text-anchor="middle">Complete</text>
+                </g>
+                <!-- decision branch -->
+                <g stroke="#9a9a9a" fill="none" stroke-dasharray="4 4">
+                  <path d="M600 70 C640 70 640 150 680 150 L820 150 C860 150 860 70 900 70"/>
+                </g>
+                <rect x="680" y="128" width="140" height="44" rx="8" fill="#fdf6d8" stroke="#e6d79b"/>
+                <text x="750" y="155" font-size="11" text-anchor="middle" fill="#6b5d1f">More info required</text>
+                <!-- progress -->
+                <rect x="24" y="212" width="1272" height="10" rx="5" fill="#e2e2e2"/>
+                <rect x="24" y="212" width="700"  height="10" rx="5" fill="#0a0a0a"/>
+                <text x="24" y="248" font-size="11" fill="#6b6b6b" letter-spacing="1.5">PERSISTENT PROGRESS — VISIBLE ON EVERY STEP AND ON THE DASHBOARD</text>
+              </g>
+            </svg>
+            <p class="cs-scroll__hint">Scroll the flow &rarr;</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ DESIGN SYSTEM ============ -->
+      <section class="cs-sec">
+        <div class="cs-wide">
+          <p class="cs-eyebrow reveal">05 &middot; One product, one language</p>
+          <h2 class="cs-h cs-h--wide reveal">Consistency became a form of simplification.</h2>
+          <p class="cs-say reveal">
+            Reusable patterns spanning the public site and the licensing application,
+            so navigation logic never changes between workflows.
+          </p>
+
+          <div class="cs-sys reveal" style="margin-top: clamp(2rem, 5vw, 3rem)">
+            <div class="cs-sys__cell">
+              <p class="cs-card__k">Palette</p>
+              <div class="cs-swatches">
+                <i style="background:#0b3d6b"></i><i style="background:#1668b3"></i>
+                <i style="background:#4a9ad6"></i><i style="background:#eef4f9"></i>
+                <i style="background:#0a0a0a"></i>
+              </div>
+              <p class="cs-type__sm">Institutional blue · neutral ground</p>
+            </div>
+            <div class="cs-sys__cell">
+              <p class="cs-card__k">Type scale</p>
+              <p class="cs-type__xl">Licensing</p>
+              <p class="cs-type__md">Body copy at a readable measure</p>
+              <p class="cs-type__sm">Label / meta / 12px</p>
+            </div>
+            <div class="cs-sys__cell">
+              <p class="cs-card__k">Status system</p>
+              <div class="cs-chips">
+                <span class="cs-chip cs-chip--ok">Complete</span>
+                <span class="cs-chip cs-chip--on">In progress</span>
+                <span class="cs-chip cs-chip--wait">Pending review</span>
+                <span class="cs-chip cs-chip--act">Action needed</span>
+                <span class="cs-chip">Not started</span>
+              </div>
+              <p class="cs-type__sm">One vocabulary, every workflow</p>
+            </div>
+            <div class="cs-sys__cell">
+              <p class="cs-card__k">Core components</p>
+              <div class="cs-chips">
+                <span class="cs-chip">Step header</span><span class="cs-chip">Progress rail</span>
+                <span class="cs-chip">Application card</span><span class="cs-chip">Requirement row</span>
+                <span class="cs-chip">Form group</span><span class="cs-chip">Action bar</span>
+                <span class="cs-chip">Status pill</span><span class="cs-chip">Empty state</span>
+              </div>
+            </div>
+          </div>
+          <p class="cs-cap reveal">Representative reconstruction of the pattern set.</p>
+        </div>
+      </section>
+
+      <!-- ============ FINAL EXPERIENCE ============ -->
+      <section class="cs-sec cs-sec--dark">
+        <div class="cs-wide">
+          <p class="cs-eyebrow reveal">06 &middot; The final experience</p>
+          <h2 class="cs-h reveal">Guided, not fragmented.</h2>
+        </div>
+
+        <div class="cs-wide" style="margin-top: clamp(2.5rem, 6vw, 4rem)">
+          <figure class="cs-fig cs-fig--round reveal">
+            <img src="brand-assets/Pics/NIPR-2.jpg" alt="The responsive NIPR experience across five mobile screens" />
+            <figcaption class="cs-cap">Responsive from the same component set &mdash; not a separate mobile product.</figcaption>
+          </figure>
+        </div>
+
+        <div class="cs-wide" style="margin-top: clamp(2rem, 5vw, 3rem)">
+          <figure class="cs-fig cs-fig--round reveal">
+            <img src="brand-assets/Pics/NIPR-3.jpg" alt="A requirements module explaining state license requirements and fees" />
+            <figcaption class="cs-cap">Requirements explained in plain language, at the moment they're needed.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- ============ IMPACT ============ -->
+      <section class="cs-sec">
+        <div class="cs-wide">
+          <p class="cs-eyebrow reveal">Impact</p>
+          <div class="cs-metrics reveal">
+            <div class="cs-metric">
+              <span class="cs-metric__n">14 &rarr; 1</span>
+              <span class="cs-metric__l">Screens per task, collapsed into one sequence</span>
+            </div>
+            <div class="cs-metric">
+              <span class="cs-metric__n">2</span>
+              <span class="cs-metric__l">Properties unified &mdash; website and licensing application</span>
+            </div>
+            <div class="cs-metric">
+              <span class="cs-metric__n">1</span>
+              <span class="cs-metric__l">Component language across both</span>
+            </div>
+          </div>
+          <p class="cs-say reveal" style="margin-top: clamp(2rem, 5vw, 3rem)">
+            The cognitive burden moved off the user and into the product.
+            <strong>The licensing process is still complex. Using NIPR doesn't have to be.</strong>
           </p>
         </div>
       </section>
 
-      <!-- ============ WORKING WITH DEVELOPMENT ============ -->
-      <section class="case-section reveal">
-        <p class="case-section__label">Working with development</p>
-        <h2 class="case-h2">Design the experience with the people who have to make it real.</h2>
-        <div class="case-body">
-          <p>
-            This wasn&rsquo;t a project where design happened in isolation and
-            was thrown over the wall. I worked for months alongside NIPR&rsquo;s
-            internal designers and developers, and that collaboration was
-            critical.
-          </p>
-        </div>
-        <div class="case-cols">
-          <div class="case-col">
-            <h3>Development brought</h3>
-            <ul class="case-list">
-              <li>The technical systems</li>
-              <li>Business rules and dependencies</li>
-              <li>The realities underneath the product</li>
-            </ul>
-          </div>
-          <div class="case-col">
-            <h3>Design brought</h3>
-            <ul class="case-list">
-              <li>The user journey</li>
-              <li>Hierarchy and interaction model</li>
-              <li>The experience perspective</li>
-            </ul>
+      <!-- ============ NEXT ============ -->
+      <a class="cs-next" href="sagaftra.html">
+        <div class="cs-next__img" aria-hidden="true"><img src="brand-assets/SAG-case.jpg" alt="" loading="lazy" /></div>
+        <div class="cs-next__in">
+          <div class="cs-wide">
+            <p class="cs-eyebrow" style="color:rgba(255,255,255,.5)">Next project</p>
+            <p class="cs-next__t">SAG-AFTRA &mdash;<br />residuals, made understandable.</p>
+            <span class="cs-next__go">View case study &rarr;</span>
           </div>
         </div>
-        <div class="case-body case-body--spaced">
-          <p>
-            <strong>We needed both.</strong> Together we could determine where
-            the existing architecture could support the new experience, where
-            compromises were necessary, and where larger changes were worth
-            making.
-          </p>
-        </div>
-      </section>
-
-      <!-- ============ WEBSITE TO PRODUCT ============ -->
-      <section class="case-section reveal">
-        <p class="case-section__label">From website to product</p>
-        <h2 class="case-h2">Create one connected NIPR experience.</h2>
-        <div class="case-body">
-          <p>
-            NIPR had both informational website needs and application
-            workflows. To the user, those aren&rsquo;t necessarily separate
-            products. They&rsquo;re simply
-            <strong>different moments in accomplishing the same goal.</strong>
-          </p>
-        </div>
-        <p class="pf-flow reveal">
-          <b>Learn</b> &rarr; <b>Understand requirements</b> &rarr; <b>Begin</b>
-          &rarr; <b>Complete steps</b> &rarr; <b>Track progress</b> &rarr;
-          <b>Finish</b>
-        </p>
-        <div class="case-body">
-          <p>
-            That meant treating the website and application as parts of one
-            broader customer journey.
-          </p>
-        </div>
-      </section>
-
-      <!-- ============ THE RESULT ============ -->
-      <section class="case-section reveal">
-        <p class="case-section__label">The result</p>
-        <h2 class="case-h2">From fragmented screens to a guided licensing experience.</h2>
-        <div class="case-body">
-          <p>
-            The transformation wasn&rsquo;t simply visual. We changed the
-            underlying experience model.
-          </p>
-        </div>
-      </section>
-
-      <div class="case-block">
-        <div class="ap-qa">
-          <div class="ap-qa__side reveal">
-            <p class="ap-qa__label">Before</p>
-            <p class="ap-qa__text">Up to 14 disconnected screens, and the user had to understand how the pieces connected.</p>
-          </div>
-          <div class="ap-qa__side ap-qa__side--answer reveal">
-            <p class="ap-qa__label">After</p>
-            <p class="ap-qa__text">One unified sequence, with progress visible and next actions clear.</p>
-          </div>
-        </div>
-      </div>
-
-      <section class="case-section reveal">
-        <ol class="ap-loop" aria-label="Step one through four, then complete">
-          <li class="ap-loop__item ap-loop__item--seed">Step 1</li>
-          <li class="ap-loop__item">Step 2</li>
-          <li class="ap-loop__item">Step 3</li>
-          <li class="ap-loop__item">Step 4</li>
-          <li class="ap-loop__item">Complete</li>
-        </ol>
-        <div class="case-body">
-          <p>
-            Progress was visible. Completed work was accounted for. Next actions
-            were clear. And the dashboard provided a central place to understand
-            what was happening. <strong>We moved the cognitive burden away from
-            the user and into the product.</strong>
-          </p>
-        </div>
-      </section>
-
-      <!-- ============ THE BIGGER IDEA ============ -->
-      <section class="case-cta" aria-labelledby="bigger-head">
-        <div class="case-cta__inner">
-          <p class="cap-band__label reveal">The bigger idea</p>
-          <h2 class="case-cta__head reveal" id="bigger-head">A complicated process doesn&rsquo;t require a complicated experience.</h2>
-          <div class="cap-close__body">
-            <p class="reveal">
-              Sometimes the underlying system genuinely is complicated. There
-              are regulations, business rules, different jurisdictions, and
-              technical dependencies. UX can&rsquo;t make those realities
-              disappear. But it can decide
-              <strong>who carries the complexity.</strong>
-            </p>
-            <p class="reveal">
-              Before the redesign, much of that burden sat with the user. They
-              had to understand how the pieces connected, keep track of their
-              own progress, and navigate the organization&rsquo;s systems. Our
-              job was to move as much of that burden as possible into the
-              experience itself.
-            </p>
-          </div>
-
-          <ol class="ap-loop reveal" aria-label="Inventory, understand, reorganize, simplify, guide">
-            <li class="ap-loop__item ap-loop__item--seed">Inventory</li>
-            <li class="ap-loop__item">Understand</li>
-            <li class="ap-loop__item">Reorganize</li>
-            <li class="ap-loop__item">Simplify</li>
-            <li class="ap-loop__item">Guide</li>
-          </ol>
-
-          <p class="cap-band__sub reveal">
-            The licensing process was still complex.
-            <strong>Using NIPR didn&rsquo;t have to be.</strong>
-          </p>
-
-          <div class="case-cta__actions reveal">
-            <a href="index.html#contact" class="btn">Book a strategy session</a>
-            <a href="index.html#selected" class="btn btn--ghost">See more work</a>
-          </div>
-        </div>
-      </section>
+      </a>
     </main>
 
     <footer class="footer">
