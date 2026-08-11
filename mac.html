@@ -4,20 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MAC Cosmetics, Case Study, Britt Midgette</title>
-  <meta name="description" content="Reimagining beauty retail as a connected experience: MAC Pass, Virtual Try-On and Tap & Try in the Queens concept store, with 200%+ higher digital engagement. A case study by Britt Midgette." />
+  <meta name="description" content="A connected physical-digital store in Queens built on MAC Pass, Virtual Try-On and RFID Tap & Try, with a 200%+ lift in digital engagement." />
   <meta name="theme-color" content="#000000" />
   <link rel="icon" type="image/png" href="brand-assets/Pics/favicon.png" />
   <link rel="apple-touch-icon" href="brand-assets/Pics/favicon.png" />
 
-  <!-- Open Graph -->
   <meta property="og:type" content="article" />
-  <meta property="og:title" content="MAC Cosmetics, reimagining beauty retail" />
-  <meta property="og:description" content="Pick up the product, see the product on you. A connected physical-digital store experience." />
+  <meta property="og:title" content="MAC Cosmetics, beauty retail connected" />
+  <meta property="og:description" content="Pick up the product, see the product on you." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=8" />
 </head>
 <body>
   <!-- ============ PASSWORD GATE ============ -->
@@ -32,7 +31,7 @@
       </form>
       <p id="gate-error" class="gate__error" role="alert" hidden>Incorrect password. Try again.</p>
     </div>
-    <p class="gate__footer">© <span class="year"></span> Britt Midgette</p>
+    <p class="gate__footer">&copy; <span class="year"></span> Britt Midgette</p>
   </div>
 
   <!-- ============ SITE ============ -->
@@ -44,435 +43,162 @@
       <a href="index.html#selected" class="header__brand" aria-label="Britt Midgette, home">
         <img class="header__logo" src="brand-assets/WhiteLogo.png" alt="Britt Midgette" />
       </a>
-      <a href="index.html#selected" class="case-back">← All work</a>
+      <a href="index.html#selected" class="case-back">&larr; All work</a>
     </header>
 
-    <main class="case" id="overview">
-      <section class="case-hero">
-        <p class="case-eyebrow reveal">Case study &middot; Connected retail</p>
-        <h1 class="case-title reveal">Reimagining beauty<br />retail as a connected<br />experience.</h1>
-        <p class="case-intro reveal">
-          MAC has always been a brand built around artistry, experimentation,
-          and human connection. I worked on the experience design for MAC&rsquo;s
-          concept store in Queens, New York, helping create a connected
-          physical-digital journey that let customers explore products,
-          virtually try them on, save their preferences, and carry those choices
-          with them throughout the store.
-        </p>
-      </section>
+    <main class="cs" id="overview">
 
-      <dl class="case-meta reveal">
-        <div><dt>Client</dt><dd>MAC Cosmetics</dd></div>
-        <div><dt>Year</dt><dd>2022</dd></div>
-        <div><dt>Scope</dt><dd>Experience Design</dd></div>
-        <div><dt>Channels</dt><dd>In-store · AR · RFID</dd></div>
-      </dl>
-
-      <div class="case-pull reveal">
-        <span>The goal wasn&rsquo;t simply to add technology. It was to rethink what the relationship between customer, product, artist, and store could become.</span>
-      </div>
-
-      <figure class="case-figure reveal">
-        <img src="brand-assets/Pics/MAC-1.jpg" alt="Virtual Try-On with saved favourites and a QR handoff" loading="lazy" />
-        <figcaption>Try a shade, save it, and carry the session away by QR.</figcaption>
-      </figure>
-
-      <!-- ============ THE CHALLENGE ============ -->
-      <section class="case-section reveal">
-        <p class="case-section__label">The challenge</p>
-        <h2 class="case-h2">Bring digital into the store without losing what makes MAC human.</h2>
-        <div class="case-body">
-          <p>
-            Beauty retail has always been highly physical. Customers want to see
-            colors, touch products, experiment, try something unexpected, and,
-            importantly, interact with professional makeup artists who
-            understand how those products come together.
-          </p>
-          <p>
-            MAC wanted to modernize that experience
-            <strong>without replacing the human interaction that made the brand
-            special.</strong> The opportunity was to create a retail environment
-            where physical and digital behavior could work together.
-          </p>
+      <section class="cs-hero">
+        <div class="cs-wide">
+          <p class="cs-eyebrow reveal">MAC Cosmetics &middot; Connected retail</p>
+          <h1 class="cs-hero__title reveal">The store<br />remembers<br />you.</h1>
+          <p class="cs-hero__say reveal">A concept store in Queens where picking up a lipstick changed what the mirror showed &mdash; and every choice followed the customer through the room.</p>
+          <dl class="cs-metaline reveal">
+            <div><dt>Role</dt><dd>Experience Director</dd></div>
+            <div><dt>Client</dt><dd>MAC Cosmetics</dd></div>
+            <div><dt>Year</dt><dd>2022</dd></div>
+            <div><dt>Platform</dt><dd>In-store &middot; AR &middot; RFID</dd></div>
+            <div><dt>Responsibilities</dt><dd>Experience design, interaction model, retail journey</dd></div>
+          </dl>
         </div>
-        <ul class="line-stack line-stack--light reveal">
-          <li>A customer could explore digitally.</li>
-          <li>Interact physically.</li>
-          <li>Save what they discovered.</li>
-          <li>And bring that into a conversation with a MAC Artist.</li>
-        </ul>
       </section>
-
-      <!-- ============ A RETAIL LAB ============ -->
-      <section class="case-section reveal">
-        <p class="case-section__label">A retail lab</p>
-        <h2 class="case-h2">Design something that could learn.</h2>
-        <div class="case-body">
-          <p>
-            The Queens concept store wasn&rsquo;t intended to simply be another
-            MAC location. It was designed as a <strong>retail
-            laboratory</strong>: an environment where new technologies and
-            interaction models could be introduced to real customers, observed,
-            measured, refined, and eventually considered for broader rollout.
-          </p>
-          <p>
-            That meant I wasn&rsquo;t designing around the assumption that every
-            idea was already correct. The store itself became part of the design
-            process.
-          </p>
+      <section class="cs-sec--tight">
+        <div class="cs-wide">
+          <figure class="cs-fig cs-fig--round reveal">
+            <img src="brand-assets/Pics/MAC-1.jpg" alt="The MAC connected store experience" loading="lazy" />
+          </figure>
         </div>
-        <ol class="ap-loop reveal" aria-label="Create, launch, observe, learn, improve">
-          <li class="ap-loop__item ap-loop__item--seed">Create</li>
-          <li class="ap-loop__item">Launch</li>
-          <li class="ap-loop__item">Observe</li>
-          <li class="ap-loop__item">Learn</li>
-          <li class="ap-loop__item">Improve</li>
-        </ol>
       </section>
-
-      <!-- ============ HIGHLIGHT: MAC PASS ============ -->
-      <section class="case-feature case-feature--dark" aria-labelledby="pass-head">
-        <div class="case-feature__inner">
-          <p class="case-feature__flag reveal">MAC Pass</p>
-          <h2 class="case-feature__head reveal" id="pass-head">Give the customer a memory.</h2>
-          <div class="case-feature__grid">
-            <div class="case-feature__lead reveal">
-              <p>
-                Customers could identify themselves by scanning a personal QR
-                code at experiences throughout the store, including the Lips,
-                Eyes, and Face stations. Once connected, the store could begin
-                remembering what the customer discovered.
-              </p>
-              <p>
-                Instead of every interaction existing independently, those
-                moments could accumulate into a persistent customer profile.
-                That created a very different kind of retail experience.
-                <strong>The store could remember you.</strong>
-              </p>
-            </div>
-            <ul class="case-feature__aside reveal">
-              <li>Products</li>
-              <li>Shades</li>
-              <li>Favorites</li>
-              <li>Selfies</li>
-              <li>GIFs</li>
-              <li>Virtual looks</li>
-            </ul>
+      <section class="cs-sec cs-sec--dark">
+        <div class="cs-wide">
+          <p class="cs-eyebrow reveal">Tap &amp; Try</p>
+          <h2 class="cs-h cs-h--wide reveal">Pick it up. See it on.</h2>
+          <p class="cs-say reveal">RFID recognises the product in your hand. The mirror applies it instantly. No searching, no typing, no catalogue. The technology underneath was sophisticated; the interaction wasn&rsquo;t.</p>
+        </div>
+      </section>
+      <section class="cs-sec--tight">
+        <div class="cs-wide">
+          <figure class="cs-fig cs-fig--round reveal">
+            <video
+              src="brand-assets/Pics/MAC-voice.mp4"
+              poster="brand-assets/Pics/MAC-voice-poster.jpg"
+              muted loop playsinline preload="none" data-autoplay
+              aria-label="The MAC voice experience in use"
+            ></video>
+            <figcaption class="cs-cap">The voice experience, running.</figcaption>
+          </figure>
+        </div>
+      </section>
+      <section class="cs-sec cs-sec--tint">
+        <div class="cs-wide">
+          <p class="cs-eyebrow reveal">01 &middot; Continuity</p>
+          <h2 class="cs-h cs-h--wide reveal">One identity, carried across the room.</h2>
+          <p class="cs-say reveal">MAC Pass wasn&rsquo;t a login. It was memory &mdash; turning disconnected screens into a single accumulating visit.</p>
+          <div class="cs-scroll reveal" style="margin-top: clamp(2rem, 5vw, 3.5rem)">
+            <svg class="cs-svg" viewBox="0 0 1320 140" style="min-width: 780px" role="img" aria-label="One identity, carried across the room.">
+              <g font-family="Roboto, sans-serif">
+                <line x1="115" y1="70" x2="1205" y2="70" stroke="#c9c9c9"/>
+                <rect x="30" y="46" width="170" height="48" rx="24" fill="#0a0a0a"/>
+                <text x="115" y="76" fill="#fff" font-size="12" text-anchor="middle">Scan</text>
+                <text x="115" y="118" fill="#6b6b6b" font-size="11" text-anchor="middle">personal QR</text>
+                <rect x="302" y="46" width="170" height="48" rx="8" fill="#fff" stroke="#0a0a0a"/>
+                <text x="388" y="76" fill="#0a0a0a" font-size="12" text-anchor="middle">Lips</text>
+                <text x="388" y="118" fill="#6b6b6b" font-size="11" text-anchor="middle">discover a shade</text>
+                <rect x="575" y="46" width="170" height="48" rx="8" fill="#fff" stroke="#0a0a0a"/>
+                <text x="660" y="76" fill="#0a0a0a" font-size="12" text-anchor="middle">Eyes</text>
+                <text x="660" y="118" fill="#6b6b6b" font-size="11" text-anchor="middle">build on it</text>
+                <rect x="848" y="46" width="170" height="48" rx="8" fill="#fff" stroke="#0a0a0a"/>
+                <text x="932" y="76" fill="#0a0a0a" font-size="12" text-anchor="middle">Face</text>
+                <text x="932" y="118" fill="#6b6b6b" font-size="11" text-anchor="middle">complete the look</text>
+                <rect x="1120" y="46" width="170" height="48" rx="24" fill="#0a0a0a"/>
+                <text x="1205" y="76" fill="#fff" font-size="12" text-anchor="middle">Keep</text>
+                <text x="1205" y="118" fill="#6b6b6b" font-size="11" text-anchor="middle">saved to the profile</text>
+              </g>
+            </svg>
+            <p class="cs-scroll__hint">Scroll the flow &rarr;</p>
           </div>
         </div>
       </section>
-
-      <figure class="case-figure reveal">
-        <img src="brand-assets/Pics/MAC-2.jpg" alt="The QR code journey across the store" loading="lazy" />
-        <figcaption>The QR journey, from the first station through to checkout.</figcaption>
-      </figure>
-
-      <!-- ============ DESIGNING CONTINUITY ============ -->
-      <section class="case-section reveal">
-        <p class="case-section__label">Designing continuity</p>
-        <h2 class="case-h2">Let choices follow the customer.</h2>
-        <div class="case-body">
-          <p>
-            The real power of MAC Pass wasn&rsquo;t simply logging someone into
-            an experience. It created continuity. A customer might discover a
-            lipstick at the Lips station. That choice could then become part of
-            what they explored at Eyes. Their eye choice could contribute to a
-            complete Face look.
-          </p>
-          <p>
-            Instead of interacting with disconnected screens throughout the
-            store, customers could progressively build an understanding of what
-            worked for them. The store began behaving more like
-            <strong>a continuous journey than a collection of individual
-            touchpoints.</strong>
-          </p>
-        </div>
-        <p class="pf-flow reveal"><b>Discover</b> &rarr; <b>Save</b> &rarr; <b>Build</b> &rarr; <b>Refine</b></p>
-      </section>
-
-      <!-- ============ EXPERIENCE DESIGN ============ -->
-      <section class="case-section reveal">
-        <p class="case-section__label">Experience design</p>
-        <h2 class="case-h2">Make sophisticated technology feel like play.</h2>
-        <div class="case-body">
-          <p>
-            A major part of my role was making sure these experiences
-            didn&rsquo;t feel technical. The customer shouldn&rsquo;t need to
-            understand any of what was running underneath.
-          </p>
-        </div>
-        <ul class="case-tags reveal">
-          <li>RFID</li>
-          <li>Augmented reality</li>
-          <li>Customer identity</li>
-          <li>Cloud infrastructure</li>
-          <li>Data persistence</li>
-          <li>Connected profiles</li>
-        </ul>
-        <div class="case-body">
-          <p>They should simply understand three things.</p>
-        </div>
-        <ul class="line-stack line-stack--light reveal">
-          <li>Pick something up.</li>
-          <li>See what it looks like.</li>
-          <li>Save it if you love it.</li>
-        </ul>
-        <div class="case-body case-body--spaced">
-          <p>
-            The interface needed to give customers enough information to make
-            decisions while keeping the overall experience playful, intuitive,
-            and entertaining. Beauty is experimentation.
-            <strong>The digital experience needed to feel the same way.</strong>
-          </p>
-        </div>
-
-      </section>
-
-      <!-- ============ VIRTUAL TRY-ON ============ -->
-      <section class="case-section reveal">
-        <p class="case-section__label">Virtual Try-On</p>
-        <h2 class="case-h2">Experiment without the friction.</h2>
-        <div class="case-body">
-          <p>
-            Using augmented reality, customers could preview products directly
-            on themselves through digital mirrors and connected devices,
-            experimenting with lip colors, eye shades, looks, and product
-            combinations without having to physically apply every product.
-          </p>
-          <p>
-            That removed friction from experimentation. Try something. Try
-            something completely different. Take a selfie. Create a GIF. Save a
-            favorite. Share it. Move on. The goal wasn&rsquo;t to replace trying
-            makeup physically. It was to make discovery
-            <strong>faster, broader, and more fun.</strong>
-          </p>
-        </div>
-      </section>
-
-      <!-- ============ HIGHLIGHT: TAP & TRY ============ -->
-      <section class="case-feature case-feature--tint" aria-labelledby="tap-head">
-        <div class="case-feature__inner">
-          <p class="case-feature__flag reveal">Tap &amp; Try</p>
-          <h2 class="case-feature__head reveal" id="tap-head">Pick it up. See it on.</h2>
-          <div class="case-feature__grid">
-            <div class="case-feature__lead reveal">
-              <p>
-                A customer picked up a physical MAC product. RFID recognized
-                which product they were holding. The connected virtual mirror
-                immediately applied that product digitally to the
-                customer&rsquo;s face. No searching, no typing, no scrolling
-                through a catalog.
-              </p>
-              <p>
-                The technology underneath it was sophisticated. The interaction
-                wasn&rsquo;t. <strong>That&rsquo;s exactly why it worked.</strong>
-              </p>
-            </div>
-            <ul class="case-feature__aside reveal">
-              <li>Pick up a physical product</li>
-              <li>RFID recognizes it</li>
-              <li>The mirror applies it instantly</li>
-              <li>Save it, or put it back and try another</li>
-            </ul>
-          </div>
-          <p class="case-feature__lead case-feature__coda reveal">
-            <strong>Pick up the product &rarr; see the product on you.</strong>
-          </p>
-        </div>
-      </section>
-
-      <figure class="case-figure case-figure--portrait reveal">
-        <video
-          src="brand-assets/Pics/MAC-voice.mp4"
-          poster="brand-assets/Pics/MAC-voice-poster.jpg"
-          muted
-          loop
-          playsinline
-          preload="none"
-          data-autoplay
-          aria-label="The MAC voice experience in use"
-        ></video>
-        <figcaption>The voice experience, running.</figcaption>
-      </figure>
-
-      <!-- ============ PHYSICAL → DIGITAL → PHYSICAL ============ -->
-      <section class="case-section reveal">
-        <p class="case-section__label">Physical &rarr; digital &rarr; physical</p>
-        <h2 class="case-h2">Blur the boundary.</h2>
-        <div class="case-body">
-          <p>
-            Tap &amp; Try represented a bigger idea behind the entire
-            experience. I wasn&rsquo;t designing a digital product that happened
-            to sit inside a store. <strong>I was designing interactions between
-            physical products and digital experiences.</strong>
-          </p>
-        </div>
-        <ul class="line-stack line-stack--light reveal">
-          <li>Hold something real and see its effect digitally.</li>
-          <li>Decide digitally, then find or purchase the physical product.</li>
-          <li>Let those digital preferences help a real MAC Artist recommend better.</li>
-        </ul>
-        <div class="case-body case-body--spaced">
-          <p>
-            The boundaries between channels started disappearing. That was the
-            real opportunity.
-          </p>
-        </div>
-      </section>
-
-      <!-- ============ DON'T REPLACE THE ARTIST ============ -->
-      <section class="case-section reveal">
-        <p class="case-section__label">Don&rsquo;t replace the artist</p>
-        <h2 class="case-h2">Make the expert more informed.</h2>
-        <div class="case-body">
-          <p>
-            One of the most important design considerations was preserving the
-            role of MAC&rsquo;s professional makeup artists. Technology
-            wasn&rsquo;t the hero of MAC. <strong>Artistry was.</strong>
-          </p>
-          <p>
-            As customers moved through the store, MAC Pass could accumulate
-            information about what they liked and what they had explored. That
-            information could ultimately make the interaction with a MAC Artist
-            better.
-          </p>
-        </div>
-      </section>
-
-      <div class="case-block">
-        <div class="ap-qa">
-          <div class="ap-qa__side reveal">
-            <p class="ap-qa__label">Instead of starting with</p>
-            <p class="ap-qa__text">&ldquo;What are you looking for?&rdquo;</p>
-          </div>
-          <div class="ap-qa__side ap-qa__side--answer reveal">
-            <p class="ap-qa__label">The artist could already know</p>
-            <p class="ap-qa__text">Products explored, shades liked, looks created, favorites saved.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="case-pull reveal">
-        <span>The digital experience didn&rsquo;t need to replace human expertise. It could make human expertise more powerful.</span>
-      </div>
-
-      <!-- ============ PERSONALIZATION ============ -->
-      <section class="case-section reveal">
-        <p class="case-section__label">Personalization</p>
-        <h2 class="case-h2">Make the experience theirs.</h2>
-        <div class="case-body">
-          <p>
-            The connected store also created opportunities for customers to make
-            their purchases more personal, moving away from a completely
-            standardized retail interaction and toward an experience that
-            increasingly felt like it belonged to the individual customer.
-          </p>
-        </div>
-        <ul class="case-tags reveal">
-          <li>Custom product printing</li>
-          <li>Personalized packaging</li>
-          <li>Custom palettes</li>
-          <li>Saved favorite shades</li>
-          <li>Personal product combinations</li>
-        </ul>
-      </section>
-
-      <!-- ============ THE RESULT ============ -->
-      <section class="case-feature case-feature--dark" aria-labelledby="result-head">
-        <div class="case-feature__inner">
-          <p class="case-feature__flag reveal">The result</p>
-          <h2 class="case-feature__head reveal" id="result-head">More than 200% higher digital engagement.</h2>
-          <div class="case-feature__grid">
-            <div class="case-feature__lead reveal">
-              <p>
-                The concept store provided an immediate opportunity to see
-                whether customers would actually engage with these new
-                experiences. <strong>They did.</strong>
-              </p>
-              <p>
-                Customers responded especially well to Tap &amp; Try because of
-                its ease of navigation, clear shade imagery, and immediate
-                connection to Virtual Try-On. Virtual Try-On proved engaging
-                enough that the experience continued to expand, and custom
-                printing became a customer favorite.
-              </p>
-            </div>
-            <ul class="case-feature__aside reveal">
-              <li>Ease of navigation</li>
-              <li>Clear shade imagery</li>
-              <li>Immediate connection to Virtual Try-On</li>
-              <li>Custom printing as a customer favorite</li>
-            </ul>
-          </div>
-          <div class="case-stats reveal">
-            <div class="case-stat">
-              <span class="case-stat__num">200%+</span>
-              <span class="case-stat__label">Increase in digital engagement</span>
-            </div>
-            <div class="case-stat">
-              <span class="case-stat__num">1 in 3</span>
-              <span class="case-stat__label">In-store customers used MAC Pass</span>
-            </div>
-            <div class="case-stat">
-              <span class="case-stat__num">Month 1</span>
-              <span class="case-stat__label">How quickly it showed</span>
+      <section class="cs-sec">
+        <div class="cs-wide">
+          <p class="cs-eyebrow reveal">02 &middot; Physical and digital, blurred</p>
+          <h2 class="cs-h cs-h--wide reveal">Technology that makes the real world respond.</h2>
+          <div class="cs-board reveal" style="margin-top: clamp(2rem, 5vw, 3rem)">
+            <p class="cs-board__head"><b>Board 02</b> <span>Interaction model</span></p>
+            <div class="cs-board__grid">
+              <div class="cs-card cs-card--lead">
+                <span class="cs-card__k">The bridge</span>
+                A physical object that knows who is holding it &mdash; and a room that reacts to it
+              </div>
+              <div class="cs-card cs-card--note">
+                <span class="cs-card__k">Physical &rarr; digital</span>
+                Hold a product, see its effect on your face.
+              </div>
+              <div class="cs-card cs-card--note">
+                <span class="cs-card__k">Digital &rarr; physical</span>
+                Decide on screen, find the product on the shelf.
+              </div>
+              <div class="cs-card cs-card--note">
+                <span class="cs-card__k">Digital &rarr; human</span>
+                Preferences help a MAC Artist recommend better.
+              </div>
+              <div class="cs-card cs-card--opp">
+                <span class="cs-card__k">Principle</span>
+                Artistry is the hero. Technology makes the artist better.
+              </div>
+              <div class="cs-card cs-card--opp">
+                <span class="cs-card__k">Principle</span>
+                Customers came to experience MAC, not to use an app.
+              </div>
             </div>
           </div>
         </div>
       </section>
-
-      <!-- ============ THE BIGGER IDEA ============ -->
-      <section class="cap-band" aria-labelledby="bigger-head">
-        <div class="cap-band__inner">
-          <p class="cap-band__label reveal">The bigger idea</p>
-          <h2 class="cap-band__head reveal" id="bigger-head">The store doesn&rsquo;t have to forget you when you walk away from the screen.</h2>
-          <div class="cap-band__sub reveal">
-            <p>
-              The most interesting part of the MAC project wasn&rsquo;t any
-              single interface. It was the system connecting them.
-            </p>
-          </div>
-          <ul class="line-stack reveal">
-            <li>A physical product could trigger a digital experience.</li>
-            <li>A digital experiment could become a saved preference.</li>
-            <li>A saved preference could travel through the store.</li>
-            <li>Those preferences could help an artist understand the customer.</li>
-            <li>And the same identity could connect the store to the wider relationship with MAC.</li>
-          </ul>
-          <div class="cap-band__sub reveal">
-            <p>
-              That changes the role of digital inside retail. It isn&rsquo;t
-              another channel. <strong>It becomes connective tissue.</strong>
-              The technology disappears into the experience, while the customer,
-              the product, and the artist remain at the center.
-            </p>
-          </div>
-          <ol class="ap-loop reveal" aria-label="Physical, digital, personal, human">
-            <li class="ap-loop__item ap-loop__item--seed">Physical</li>
-            <li class="ap-loop__item">Digital</li>
-            <li class="ap-loop__item">Personal</li>
-            <li class="ap-loop__item">Human</li>
-          </ol>
+      <section class="cs-sec--tight">
+        <div class="cs-wide">
+          <figure class="cs-fig cs-fig--round reveal">
+            <img src="brand-assets/Pics/MAC-2.jpg" alt="Virtual Try-On and the connected mirror" loading="lazy" />
+          </figure>
         </div>
       </section>
-
-      <section class="case-cta" aria-label="Get in touch">
-        <div class="case-cta__inner">
-          <h2 class="case-cta__head reveal">Want physical and digital to stop behaving like separate channels?</h2>
-          <div class="case-cta__actions reveal">
-            <a href="index.html#contact" class="btn">Book a strategy session</a>
-            <a href="index.html#selected" class="btn btn--ghost">See more work</a>
+      <section class="cs-sec cs-sec--dark">
+        <div class="cs-wide">
+          <p class="cs-eyebrow reveal">Impact</p>
+          <div class="cs-metrics reveal">
+            <div class="cs-metric">
+              <span class="cs-metric__n">200%+</span>
+              <span class="cs-metric__l">Increase in digital engagement, first month</span>
+            </div>
+            <div class="cs-metric">
+              <span class="cs-metric__n">1 in 3</span>
+              <span class="cs-metric__l">In-store customers used MAC Pass</span>
+            </div>
+            <div class="cs-metric">
+              <span class="cs-metric__n">Month 1</span>
+              <span class="cs-metric__l">How quickly it showed</span>
+            </div>
           </div>
+          <p class="cs-say reveal" style="margin-top: clamp(2rem, 5vw, 3rem)">Digital stopped being another channel. <strong>It became connective tissue.</strong></p>
         </div>
       </section>
+      <a class="cs-next" href="menswearhouse.html">
+        <div class="cs-next__img" aria-hidden="true"><img src="brand-assets/MW-case.jpg" alt="" loading="lazy" /></div>
+        <div class="cs-next__in">
+          <div class="cs-wide">
+            <p class="cs-eyebrow" style="color:rgba(255,255,255,.5)">Next project</p>
+            <p class="cs-next__t">Men&rsquo;s Wearhouse &mdash;<br />store of the future.</p>
+            <span class="cs-next__go">View case study &rarr;</span>
+          </div>
+        </div>
+      </a>
     </main>
 
     <footer class="footer">
-      <span class="footer__copy">© <span class="year"></span> Britt Midgette</span>
-      <a href="index.html#selected" class="footer__top">← Back to work</a>
+      <span class="footer__copy">&copy; <span class="year"></span> Britt Midgette</span>
+      <a href="index.html#selected" class="footer__top">&larr; Back to work</a>
     </footer>
   </div>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=8"></script>
 </body>
 </html>

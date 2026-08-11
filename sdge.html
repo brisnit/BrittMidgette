@@ -4,20 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SDG&amp;E, Case Study, Britt Midgette</title>
-  <meta name="description" content="A weather intelligence platform for SDG&E, turning thousands of data points into a tool teams could read at a glance in one of the most wildfire-prone regions in the US. A case study by Britt Midgette." />
+  <meta name="description" content="A weather intelligence platform turning thousands of data points into decisions for crews in one of the most wildfire-prone regions in the US." />
   <meta name="theme-color" content="#000000" />
   <link rel="icon" type="image/png" href="brand-assets/Pics/favicon.png" />
   <link rel="apple-touch-icon" href="brand-assets/Pics/favicon.png" />
 
-  <!-- Open Graph -->
   <meta property="og:type" content="article" />
-  <meta property="og:title" content="Seeing risk before it becomes reality" />
-  <meta property="og:description" content="A weather intelligence platform built to help SDG&E read wildfire risk at a glance." />
+  <meta property="og:title" content="SDG&E, seeing risk before it becomes reality" />
+  <meta property="og:description" content="Weather isn't a forecast for a utility. It's operational risk." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=8" />
 </head>
 <body>
   <!-- ============ PASSWORD GATE ============ -->
@@ -32,7 +31,7 @@
       </form>
       <p id="gate-error" class="gate__error" role="alert" hidden>Incorrect password. Try again.</p>
     </div>
-    <p class="gate__footer">© <span class="year"></span> Britt Midgette</p>
+    <p class="gate__footer">&copy; <span class="year"></span> Britt Midgette</p>
   </div>
 
   <!-- ============ SITE ============ -->
@@ -44,171 +43,179 @@
       <a href="index.html#selected" class="header__brand" aria-label="Britt Midgette, home">
         <img class="header__logo" src="brand-assets/WhiteLogo.png" alt="Britt Midgette" />
       </a>
-      <a href="index.html#selected" class="case-back">← All work</a>
+      <a href="index.html#selected" class="case-back">&larr; All work</a>
     </header>
 
-    <main class="case" id="overview">
-      <section class="case-hero">
-        <p class="case-eyebrow reveal">Case study &middot; Utility &amp; wildfire risk</p>
-        <h1 class="case-title reveal">Seeing risk<br />before it becomes<br />reality.</h1>
-        <p class="case-intro reveal">
-          I designed a weather intelligence platform to help SDG&amp;E make
-          faster, safer decisions in one of the most wildfire-prone regions in
-          the United States, turning thousands of data points into a tool teams
-          could read at a glance.
-        </p>
-      </section>
+    <main class="cs" id="overview">
 
-      <dl class="case-meta reveal">
-        <div><dt>Client</dt><dd>SDG&amp;E</dd></div>
-        <div><dt>Year</dt><dd>2019</dd></div>
-        <div><dt>Scope</dt><dd>Research · Product Strategy · UX · Visual Design</dd></div>
-        <div><dt>Region</dt><dd>Southern California</dd></div>
-      </dl>
-
-      <figure class="case-figure reveal">
-        <img src="brand-assets/Pics/SDGE-1.jpg" alt="The weather intelligence platform on five phone screens" loading="lazy" />
-        <figcaption>Fire potential, wind, humidity and grid indicators, read at a glance against the conditions they describe.</figcaption>
-      </figure>
-
-      <section class="case-section reveal">
-        <p class="case-section__label">The opportunity</p>
-        <h2 class="case-h2">Read conditions. Surface risk. Decide faster.</h2>
-        <div class="case-steps">
-          <div class="case-step">
-            <span class="case-step__num">01</span>
-            <h3>Weather as operational risk</h3>
-            <p>For a utility responsible for critical infrastructure, changing conditions aren&rsquo;t a forecast. Wind, heat, humidity, and dry vegetation are operational risk, shaping where crews deploy, what equipment gets watched, and when to act.</p>
-          </div>
-          <div class="case-step">
-            <span class="case-step__num">02</span>
-            <h3>Clarity at a glance</h3>
-            <p>The challenge wasn&rsquo;t displaying weather data. It was transforming thousands of data points into a decision-making tool field teams, meteorologists, and operations leaders could understand instantly.</p>
-          </div>
-          <div class="case-step">
-            <span class="case-step__num">03</span>
-            <h3>Lower the risk</h3>
-            <p>The goal was clear: improve situational awareness and ultimately help reduce wildfire risk across the region.</p>
-          </div>
+      <section class="cs-hero">
+        <div class="cs-wide">
+          <p class="cs-eyebrow reveal">SDG&amp;E &middot; Operational intelligence</p>
+          <h1 class="cs-hero__title reveal">Seeing risk<br />before it<br />becomes reality.</h1>
+          <p class="cs-hero__say reveal">For a utility in wildfire country, wind and humidity aren&rsquo;t a forecast &mdash; they decide where crews go and what gets watched. We turned thousands of data points into a tool readable at a glance.</p>
+          <dl class="cs-metaline reveal">
+            <div><dt>Role</dt><dd>Design Director</dd></div>
+            <div><dt>Client</dt><dd>SDG&amp;E</dd></div>
+            <div><dt>Year</dt><dd>2019</dd></div>
+            <div><dt>Region</dt><dd>Southern California</dd></div>
+            <div><dt>Responsibilities</dt><dd>Research, product strategy, UX, visual design</dd></div>
+          </dl>
         </div>
       </section>
-
-      <!-- ============ HIGHLIGHT: RESEARCH ============ -->
-      <section class="case-feature case-feature--dark" aria-labelledby="research-head">
-        <div class="case-feature__inner">
-          <p class="case-feature__flag reveal">The research</p>
-          <h2 class="case-feature__head reveal" id="research-head">I learned how weather was actually used before I designed a single screen.</h2>
-          <div class="case-feature__grid">
-            <div class="case-feature__lead reveal">
-              <p>
-                I ran in-depth interviews with the internal meteorology team to
-                understand how they interpreted models, monitored changing
-                conditions, and identified areas of concern. What I was really
-                after was <strong>which information truly influenced operational
-                decisions, and which metrics were simply background noise.</strong>
-              </p>
-              <p>
-                I also interviewed the field workers responsible for maintaining
-                infrastructure across the region. Those conversations were just
-                as valuable.
-              </p>
+      <section class="cs-sec--tight">
+        <div class="cs-wide">
+          <figure class="cs-fig cs-fig--round reveal">
+            <img src="brand-assets/Pics/SDGE-1.jpg" alt="The SDG&amp;E weather intelligence platform" loading="lazy" />
+          </figure>
+        </div>
+      </section>
+      <section class="cs-sec cs-sec--tint">
+        <div class="cs-wide">
+          <p class="cs-eyebrow reveal">The challenge</p>
+          <h2 class="cs-h cs-h--wide reveal">The problem was never displaying weather data.</h2>
+          <p class="cs-say reveal">It was turning thousands of readings into something a field crew, a meteorologist and an operations lead could each act on &mdash; outdoors, quickly, under changing conditions.</p>
+        </div>
+      </section>
+      <section class="cs-sec">
+        <div class="cs-wide">
+          <p class="cs-eyebrow reveal">01 &middot; Research</p>
+          <h2 class="cs-h cs-h--wide reveal">Two very different users, one platform.</h2>
+          <p class="cs-say reveal">Interviews with the internal meteorology team and with the field workers who maintain infrastructure across the region.</p>
+          <div class="cs-board reveal" style="margin-top: clamp(2rem, 5vw, 3rem)">
+            <p class="cs-board__head"><b>Board 01</b> <span>Meteorologists &rarr; field crews</span></p>
+            <div class="cs-board__grid">
+              <div class="cs-card cs-card--lead">
+                <span class="cs-card__k">Meteorology team</span>
+                How models are interpreted, which metrics influence decisions, and which are background noise
+              </div>
+              <div class="cs-card cs-card--lead">
+                <span class="cs-card__k">Field crews</span>
+                Need answers outdoors, fast, while conditions shift
+              </div>
+              <div class="cs-card cs-card--note">
+                <span class="cs-card__k">Insight</span>
+                Crews weren&rsquo;t asking for a dashboard. They wanted to know what needs attention now.
+              </div>
+              <div class="cs-card cs-card--pain">
+                <span class="cs-card__k">Problem</span>
+                Data lived across multiple systems.
+              </div>
+              <div class="cs-card cs-card--pain">
+                <span class="cs-card__k">Problem</span>
+                Users assembled the picture themselves.
+              </div>
+              <div class="cs-card cs-card--opp">
+                <span class="cs-card__k">Direction</span>
+                One operational view, not another weather app.
+              </div>
+              <div class="cs-card cs-card--opp">
+                <span class="cs-card__k">Direction</span>
+                Design around decisions, not around readings.
+              </div>
             </div>
-            <ul class="case-feature__aside reveal">
-              <li>Crews needed information quickly, often outdoors under shifting conditions</li>
-              <li>They weren&rsquo;t looking for complicated dashboards or scientific reports</li>
-              <li>They needed to know where conditions were changing</li>
-              <li>Where risk was increasing, and what required attention right now</li>
-            </ul>
+          </div>
+          <p class="cs-cap reveal">Representative reconstruction of the research synthesis.</p>
+        </div>
+      </section>
+      <section class="cs-sec cs-sec--dark">
+        <div class="cs-wide">
+          <p class="cs-eyebrow reveal">02 &middot; From reading to decision</p>
+          <h2 class="cs-h cs-h--wide reveal">Data is only useful at the moment it changes what someone does.</h2>
+          <div class="cs-scroll reveal" style="margin-top: clamp(2rem, 5vw, 3.5rem)">
+            <svg class="cs-svg" viewBox="0 0 1320 140" style="min-width: 780px" role="img" aria-label="Data is only useful at the moment it changes what someone does.">
+              <g font-family="Roboto, sans-serif">
+                <line x1="115" y1="70" x2="1205" y2="70" stroke="rgba(255,255,255,.4)"/>
+                <rect x="30" y="46" width="170" height="48" rx="24" fill="#fff"/>
+                <text x="115" y="76" fill="#141414" font-size="12" text-anchor="middle">Conditions</text>
+                <text x="115" y="118" fill="rgba(255,255,255,.5)" font-size="11" text-anchor="middle">wind, heat, humidity</text>
+                <rect x="302" y="46" width="170" height="48" rx="8" fill="#141414" stroke="#fff"/>
+                <text x="388" y="76" fill="#fff" font-size="12" text-anchor="middle">Indicators</text>
+                <text x="388" y="118" fill="rgba(255,255,255,.5)" font-size="11" text-anchor="middle">fire potential index</text>
+                <rect x="575" y="46" width="170" height="48" rx="8" fill="#141414" stroke="#fff"/>
+                <text x="660" y="76" fill="#fff" font-size="12" text-anchor="middle">Context</text>
+                <text x="660" y="118" fill="rgba(255,255,255,.5)" font-size="11" text-anchor="middle">geography &amp; assets</text>
+                <rect x="848" y="46" width="170" height="48" rx="8" fill="#141414" stroke="#fff"/>
+                <text x="932" y="76" fill="#fff" font-size="12" text-anchor="middle">Signal</text>
+                <text x="932" y="118" fill="rgba(255,255,255,.5)" font-size="11" text-anchor="middle">what changed</text>
+                <rect x="1120" y="46" width="170" height="48" rx="24" fill="#fff"/>
+                <text x="1205" y="76" fill="#141414" font-size="12" text-anchor="middle">Decision</text>
+                <text x="1205" y="118" fill="rgba(255,255,255,.5)" font-size="11" text-anchor="middle">where crews go</text>
+              </g>
+            </svg>
+            <p class="cs-scroll__hint">Scroll the flow &rarr;</p>
           </div>
         </div>
       </section>
-
-      <section class="case-section reveal">
-        <p class="case-section__label">Designing for action</p>
-        <h2 class="case-h2">Designed for action, not observation.</h2>
-        <div class="case-body">
-          <p>
-            Rather than building another weather application, I designed an
-            operational intelligence platform. A single interface brought
-            environmental indicators together so users could read both current
-            conditions and emerging risk, instead of forcing people to assemble
-            the picture from multiple systems.
-          </p>
-        </div>
-        <ul class="case-tags reveal">
-          <li>Fire potential</li>
-          <li>Top current wind gusts</li>
-          <li>Relative humidity</li>
-          <li>Temperature</li>
-          <li>Wind speed &amp; direction</li>
-          <li>Weather alerts</li>
-          <li>Geographic conditions</li>
-        </ul>
-        <div class="case-body">
-          <p>
-            Environmental monitoring produces enormous amounts of data; good
-            design determines what deserves attention first. I organized
-            information into clear visual hierarchies, paired live conditions
-            with operational indicators on interactive maps, and let critical
-            information surface immediately while supporting detail stayed
-            available when needed.
-          </p>
-        </div>
-      </section>
-
-      <div class="case-pull reveal">
-        <span>The design didn&rsquo;t simplify the science. It simplified access to it.</span>
-      </div>
-
-      <figure class="case-figure reveal">
-        <img src="brand-assets/Pics/SDGE-2.jpg" alt="Design exploration for the weather briefing" loading="lazy" />
-        <figcaption>Exploring the briefing: current view beside proposed.</figcaption>
-      </figure>
-
-      <section class="case-section case-results reveal">
-        <p class="case-section__label">Outcomes</p>
-        <h2 class="case-h2">What it delivered.</h2>
-        <div class="case-steps">
-          <div class="case-step">
-            <span class="case-step__num">01</span>
-            <h3>Intelligence built around decisions</h3>
-            <p>A unified experience combining weather data, wildfire indicators, and environmental conditions into a single operational platform.</p>
-          </div>
-          <div class="case-step">
-            <span class="case-step__num">02</span>
-            <h3>Research-driven strategy</h3>
-            <p>Interviews with meteorologists and field workers directly informed the product architecture, reflecting real operational workflows instead of assumptions.</p>
-          </div>
-          <div class="case-step">
-            <span class="case-step__num">03</span>
-            <h3>Faster situational awareness</h3>
-            <p>Fire potential, wind conditions, humidity, and other critical indicators became immediately visible, so teams could read changing conditions more quickly.</p>
-          </div>
-          <div class="case-step">
-            <span class="case-step__num">04</span>
-            <h3>Supporting wildfire mitigation</h3>
-            <p>The platform contributed to the organization&rsquo;s broader wildfire-prevention strategy by improving visibility into the environmental conditions that drive operational risk across the region.</p>
+      <section class="cs-sec">
+        <div class="cs-wide">
+          <p class="cs-eyebrow reveal">03 &middot; Hierarchy</p>
+          <h2 class="cs-h cs-h--wide reveal">The most important thing, first. Always.</h2>
+          <p class="cs-say reveal">Fire potential, top wind gusts, humidity and grid indicators surfaced immediately, with supporting detail one level down.</p>
+          <div class="cs-wires reveal" style="margin-top: clamp(2rem, 5vw, 3rem)">
+            <figure class="cs-fig">
+              <div class="cs-wire"><span class="b-nav"></span><span class="b-hero"></span><span class="b-row"></span><span class="b-row"></span><span class="b-cta"></span></div>
+              <figcaption class="cs-wire__l">01 &mdash; Operational view</figcaption>
+            </figure>
+            <figure class="cs-fig">
+              <div class="cs-wire"><span class="b-nav"></span><span class="b-line m"></span><span class="b-grid"></span><span class="b-cta"></span></div>
+              <figcaption class="cs-wire__l">02 &mdash; Map layers</figcaption>
+            </figure>
+            <figure class="cs-fig">
+              <div class="cs-wire"><span class="b-nav"></span><span class="b-row"></span><span class="b-line m"></span><span class="b-line"></span><span class="b-line s"></span><span class="b-cta"></span></div>
+              <figcaption class="cs-wire__l">03 &mdash; District detail</figcaption>
+            </figure>
+            <figure class="cs-fig">
+              <div class="cs-wire"><span class="b-nav"></span><span class="b-line m"></span><span class="b-row"></span><span class="b-row"></span><span class="b-row"></span><span class="b-line s"></span></div>
+              <figcaption class="cs-wire__l">04 &mdash; Alerts</figcaption>
+            </figure>
           </div>
         </div>
       </section>
-
-      <section class="case-cta" aria-label="Get in touch">
-        <div class="case-cta__inner">
-          <h2 class="case-cta__head reveal">Have a high-stakes product that has to be readable at a glance?</h2>
-          <div class="case-cta__actions reveal">
-            <a href="index.html#contact" class="btn">Book a strategy session</a>
-            <a href="index.html#selected" class="btn btn--ghost">See more work</a>
-          </div>
+      <section class="cs-sec--tight">
+        <div class="cs-wide">
+          <figure class="cs-fig cs-fig--round reveal">
+            <img src="brand-assets/Pics/SDGE-2.jpg" alt="The SDG&amp;E mobile experience" loading="lazy" />
+          </figure>
         </div>
       </section>
+      <section class="cs-sec">
+        <div class="cs-wide">
+          <p class="cs-eyebrow reveal">Impact</p>
+          <div class="cs-metrics reveal">
+            <div class="cs-metric">
+              <span class="cs-metric__n">1</span>
+              <span class="cs-metric__l">Operational view replacing several systems</span>
+            </div>
+            <div class="cs-metric">
+              <span class="cs-metric__n">2</span>
+              <span class="cs-metric__l">User groups &mdash; meteorology and field</span>
+            </div>
+            <div class="cs-metric">
+              <span class="cs-metric__n">At a glance</span>
+              <span class="cs-metric__l">The design requirement</span>
+            </div>
+          </div>
+          <p class="cs-say reveal" style="margin-top: clamp(2rem, 5vw, 3rem)">The platform contributed to the organisation&rsquo;s wildfire-prevention strategy by improving visibility into the conditions that drive operational risk.</p>
+        </div>
+      </section>
+      <a class="cs-next" href="comptia.html">
+        <div class="cs-next__img" aria-hidden="true"><img src="brand-assets/exp-1.jpg" alt="" loading="lazy" /></div>
+        <div class="cs-next__in">
+          <div class="cs-wide">
+            <p class="cs-eyebrow" style="color:rgba(255,255,255,.5)">Next project</p>
+            <p class="cs-next__t">CompTIA &mdash;<br />digital careers reimagined.</p>
+            <span class="cs-next__go">View case study &rarr;</span>
+          </div>
+        </div>
+      </a>
     </main>
 
     <footer class="footer">
-      <span class="footer__copy">© <span class="year"></span> Britt Midgette</span>
-      <a href="index.html#selected" class="footer__top">← Back to work</a>
+      <span class="footer__copy">&copy; <span class="year"></span> Britt Midgette</span>
+      <a href="index.html#selected" class="footer__top">&larr; Back to work</a>
     </footer>
   </div>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=8"></script>
 </body>
 </html>

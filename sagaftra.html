@@ -4,20 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SAG-AFTRA, Case Study, Britt Midgette</title>
-  <meta name="description" content="Rethinking residuals tracking for SAG-AFTRA members: research with 30 actors, a clearer information hierarchy, and internal process made visible. A case study by Britt Midgette." />
+  <meta name="description" content="Residuals tracking rebuilt around member understanding, informed by 30 member interviews and by making internal process visible." />
   <meta name="theme-color" content="#000000" />
   <link rel="icon" type="image/png" href="brand-assets/Pics/favicon.png" />
   <link rel="apple-touch-icon" href="brand-assets/Pics/favicon.png" />
 
-  <!-- Open Graph -->
   <meta property="og:type" content="article" />
-  <meta property="og:title" content="SAG-AFTRA, making residuals easier to understand" />
-  <meta property="og:description" content="Transparency is a UX feature. We weren't simply reducing clicks, we were reducing uncertainty." />
+  <meta property="og:title" content="SAG-AFTRA, residuals made understandable" />
+  <meta property="og:description" content="Transparency is a UX feature. We weren't reducing clicks, we were reducing uncertainty." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=8" />
 </head>
 <body>
   <!-- ============ PASSWORD GATE ============ -->
@@ -32,7 +31,7 @@
       </form>
       <p id="gate-error" class="gate__error" role="alert" hidden>Incorrect password. Try again.</p>
     </div>
-    <p class="gate__footer">© <span class="year"></span> Britt Midgette</p>
+    <p class="gate__footer">&copy; <span class="year"></span> Britt Midgette</p>
   </div>
 
   <!-- ============ SITE ============ -->
@@ -44,427 +43,189 @@
       <a href="index.html#selected" class="header__brand" aria-label="Britt Midgette, home">
         <img class="header__logo" src="brand-assets/WhiteLogo.png" alt="Britt Midgette" />
       </a>
-      <a href="index.html#selected" class="case-back">← All work</a>
+      <a href="index.html#selected" class="case-back">&larr; All work</a>
     </header>
 
-    <main class="case" id="overview">
-      <section class="case-hero">
-        <p class="case-eyebrow reveal">Case study &middot; Member experience</p>
-        <h1 class="case-title reveal">Making residuals<br />easier to understand,<br />track, and trust.</h1>
-        <p class="case-intro reveal">
-          Residuals are an important part of how actors get paid. But for many
-          SAG-AFTRA members, understanding where that money was in the process
-          could be confusing, frustrating, and unnecessarily opaque. I led a
-          team across research, UX, and UI design to rethink the residuals
-          tracking experience from the member&rsquo;s point of view.
-        </p>
-      </section>
+    <main class="cs" id="overview">
 
-      <dl class="case-meta reveal">
-        <div><dt>Client</dt><dd>SAG-AFTRA</dd></div>
-        <div><dt>Year</dt><dd>2025</dd></div>
-        <div><dt>Scope</dt><dd>Research · UX · UI Design</dd></div>
-        <div><dt>Research</dt><dd>30 member interviews</dd></div>
-      </dl>
-
-      <div class="case-pull reveal">
-        <span>Make it easier for actors to understand what they were owed, where their payment was, and what was happening next.</span>
-      </div>
-
-      <figure class="case-figure case-figure--wide reveal">
-        <img src="brand-assets/Pics/SAG-1.jpg" alt="The redesigned residuals portal on desktop and mobile" loading="lazy" />
-        <figcaption>The residuals portal, desktop and mobile.</figcaption>
-      </figure>
-
-      <!-- ============ THE CHALLENGE ============ -->
-      <section class="case-section reveal">
-        <p class="case-section__label">The challenge</p>
-        <h2 class="case-h2">The problem wasn&rsquo;t only the interface.</h2>
-        <div class="case-body">
-          <p>
-            The existing residuals tracker had usability issues, but the deeper
-            challenge was that <strong>the product did not fully reflect how
-            residual payments actually moved through SAG-AFTRA&rsquo;s internal
-            process.</strong> There were important internal steps, statuses, and
-            ways of working that members couldn&rsquo;t see. That created
-            uncertainty.
-          </p>
-          <p>
-            An actor might know that a residual existed but still not understand
-            any of the following.
-          </p>
-        </div>
-        <ul class="case-feature__aside reveal">
-          <li>Where it was in the process</li>
-          <li>Whether action was required</li>
-          <li>Why it had not been paid</li>
-          <li>What SAG-AFTRA was doing with it</li>
-          <li>What would happen next</li>
-          <li>How long the process might take</li>
-        </ul>
-        <div class="case-body case-body--spaced">
-          <p>
-            The lack of visibility made an already complicated subject feel even
-            harder to understand. Before changing the interface, we needed to
-            understand the entire system behind it.
-          </p>
+      <section class="cs-hero">
+        <div class="cs-wide">
+          <p class="cs-eyebrow reveal">SAG-AFTRA &middot; Member experience</p>
+          <h1 class="cs-hero__title reveal">Where is<br />my money?</h1>
+          <p class="cs-hero__say reveal">Residuals are how actors get paid. Understanding where a payment sat in the process was needlessly opaque &mdash; so we made the union&rsquo;s internal workflow visible to its members.</p>
+          <dl class="cs-metaline reveal">
+            <div><dt>Role</dt><dd>Design Director</dd></div>
+            <div><dt>Client</dt><dd>SAG-AFTRA</dd></div>
+            <div><dt>Year</dt><dd>2025</dd></div>
+            <div><dt>Research</dt><dd>30 member interviews</dd></div>
+            <div><dt>Responsibilities</dt><dd>Research, UX, information hierarchy, UI design</dd></div>
+          </dl>
         </div>
       </section>
-
-      <!-- ============ HIGHLIGHT: RESEARCH ============ -->
-      <section class="case-feature case-feature--dark" aria-labelledby="research-head">
-        <div class="case-feature__inner">
-          <p class="case-feature__flag reveal">Research</p>
-          <h2 class="case-feature__head reveal" id="research-head">Start with the people actually waiting for the money.</h2>
-          <div class="case-feature__grid">
-            <div class="case-feature__lead reveal">
-              <p>
-                I led the research effort with SAG-AFTRA members to understand
-                how actors were using the residuals tracker and where the
-                experience was failing them. We created structured testing and
-                interview scripts and spoke with
-                <strong>30 actors who were SAG-AFTRA members.</strong>
-              </p>
-              <p>
-                We wanted to understand more than whether someone could click
-                through the product.
-              </p>
+      <section class="cs-sec--tight">
+        <div class="cs-wide">
+          <figure class="cs-fig cs-fig--round reveal">
+            <img src="brand-assets/Pics/SAG-1.jpg" alt="The residuals tracking experience" loading="lazy" />
+          </figure>
+        </div>
+      </section>
+      <section class="cs-sec">
+        <div class="cs-wide">
+          <p class="cs-eyebrow reveal">01 &middot; Research</p>
+          <h2 class="cs-h cs-h--wide reveal">Start with the people actually waiting for the money.</h2>
+          <p class="cs-say reveal">Structured interviews with thirty SAG-AFTRA members &mdash; not to test whether they could click through, but to learn how they think about residuals.</p>
+          <div class="cs-board reveal" style="margin-top: clamp(2rem, 5vw, 3rem)">
+            <p class="cs-board__head"><b>Board 01</b> <span>What we asked &rarr; what we heard</span></p>
+            <div class="cs-board__grid">
+              <div class="cs-card cs-card--lead">
+                <span class="cs-card__k">Method</span>
+                Structured testing and interview scripts &middot; 30 working actors who are SAG-AFTRA members
+              </div>
+              <div class="cs-card cs-card--note">
+                <span class="cs-card__k">We asked</span>
+                What do you look for first?
+              </div>
+              <div class="cs-card cs-card--note">
+                <span class="cs-card__k">We asked</span>
+                What do these statuses mean to you?
+              </div>
+              <div class="cs-card cs-card--note">
+                <span class="cs-card__k">We asked</span>
+                What do you do when you can&rsquo;t find an answer?
+              </div>
+              <div class="cs-card cs-card--pain">
+                <span class="cs-card__k">We heard</span>
+                I know it exists. I don&rsquo;t know where it is.
+              </div>
+              <div class="cs-card cs-card--pain">
+                <span class="cs-card__k">We heard</span>
+                I can&rsquo;t tell if I need to do something.
+              </div>
+              <div class="cs-card cs-card--pain">
+                <span class="cs-card__k">We heard</span>
+                Nothing says how long this should take.
+              </div>
+              <div class="cs-card cs-card--opp">
+                <span class="cs-card__k">So</span>
+                Expose the process, not just the result.
+              </div>
+              <div class="cs-card cs-card--opp">
+                <span class="cs-card__k">So</span>
+                Rank information by the question it answers.
+              </div>
             </div>
-            <ul class="case-feature__aside reveal">
-              <li>How members thought about residuals</li>
-              <li>What information they looked for first</li>
-              <li>Where they became confused</li>
-              <li>What terminology made sense</li>
-              <li>What they believed different statuses meant</li>
-              <li>What they did when they couldn&rsquo;t find an answer</li>
-              <li>Which information mattered most</li>
-              <li>Where the experience created unnecessary effort</li>
-              <li>What would give them greater confidence</li>
-            </ul>
           </div>
-          <p class="case-feature__lead case-feature__coda reveal">
-            The research gave us a much clearer picture of what members actually
-            needed from the product.
-          </p>
+          <p class="cs-cap reveal">Representative reconstruction of the research synthesis.</p>
         </div>
       </section>
-
-      <!-- ============ THE HIDDEN JOURNEY ============ -->
-      <section class="case-section reveal">
-        <p class="case-section__label">The hidden journey</p>
-        <h2 class="case-h2">Members were only seeing part of the process.</h2>
-        <div class="case-body">
-          <p>
-            One of the most important discoveries was that SAG-AFTRA&rsquo;s
-            internal residuals workflow contained meaningful steps that were not
-            visible to members. Internally, the organization understood where a
-            payment was and what needed to happen next.
-            <strong>The member often didn&rsquo;t.</strong>
-          </p>
-          <p>
-            That gap created a significant experience problem. What felt like an
-            unexplained delay to an actor might actually be a normal step in the
-            residuals process. The opportunity was to bring more of that
-            internal knowledge into the customer-facing experience.
-          </p>
-        </div>
-      </section>
-
-      <div class="case-block">
-        <div class="ap-qa">
-          <div class="ap-qa__side reveal">
-            <p class="ap-qa__label">Instead of forcing members to wonder</p>
-            <p class="ap-qa__text">&ldquo;Where is my money?&rdquo;</p>
-          </div>
-          <div class="ap-qa__side ap-qa__side--answer reveal">
-            <p class="ap-qa__label">We could begin answering</p>
-            <p class="ap-qa__text">&ldquo;Here&rsquo;s exactly where it is.&rdquo;</p>
+      <section class="cs-sec cs-sec--dark">
+        <div class="cs-wide">
+          <p class="cs-eyebrow reveal">02 &middot; Designing for transparency</p>
+          <h2 class="cs-h cs-h--wide reveal">Show the process, not just the result.</h2>
+          <p class="cs-say reveal">Members were seeing <strong>Paid</strong> or <strong>Not paid</strong>. The journey in between was invisible &mdash; and that gap is where the anxiety lived.</p>
+          <div class="cs-scroll reveal" style="margin-top: clamp(2rem, 5vw, 3.5rem)">
+            <svg class="cs-svg" viewBox="0 0 1320 180" style="min-width: 780px" role="img" aria-label="Show the process, not just the result.">
+              <g font-family="Roboto, sans-serif">
+                <line x1="115" y1="70" x2="1205" y2="70" stroke="rgba(255,255,255,.4)"/>
+                <rect x="30" y="46" width="170" height="48" rx="24" fill="#fff"/>
+                <text x="115" y="76" fill="#141414" font-size="12" text-anchor="middle">Identified</text>
+                <text x="115" y="118" fill="rgba(255,255,255,.5)" font-size="11" text-anchor="middle">a residual exists</text>
+                <rect x="302" y="46" width="170" height="48" rx="8" fill="#141414" stroke="#fff"/>
+                <text x="388" y="76" fill="#fff" font-size="12" text-anchor="middle">Processing</text>
+                <text x="388" y="118" fill="rgba(255,255,255,.5)" font-size="11" text-anchor="middle">in the workflow</text>
+                <rect x="575" y="46" width="170" height="48" rx="8" fill="#141414" stroke="#fff"/>
+                <text x="660" y="76" fill="#fff" font-size="12" text-anchor="middle">Info needed</text>
+                <text x="660" y="118" fill="rgba(255,255,255,.5)" font-size="11" text-anchor="middle">action required</text>
+                <rect x="848" y="46" width="170" height="48" rx="8" fill="#141414" stroke="#fff"/>
+                <text x="932" y="76" fill="#fff" font-size="12" text-anchor="middle">Preparing</text>
+                <text x="932" y="118" fill="rgba(255,255,255,.5)" font-size="11" text-anchor="middle">payment assembled</text>
+                <rect x="1120" y="46" width="170" height="48" rx="24" fill="#fff"/>
+                <text x="1205" y="76" fill="#141414" font-size="12" text-anchor="middle">Issued</text>
+                <text x="1205" y="118" fill="rgba(255,255,255,.5)" font-size="11" text-anchor="middle">on its way</text>
+                <text x="30" y="160" font-size="11" fill="rgba(255,255,255,.5)" letter-spacing="1.5">THE SPECIFIC STATES REFLECT SAG-AFTRA&rsquo;S ACTUAL PROCESS &mdash; THE PRINCIPLE IS VISIBILITY</text>
+              </g>
+            </svg>
+            <p class="cs-scroll__hint">Scroll the flow &rarr;</p>
           </div>
         </div>
-      </div>
-
-      <!-- ============ CREATING THE HIERARCHY ============ -->
-      <section class="case-section reveal">
-        <p class="case-section__label">Creating the hierarchy</p>
-        <h2 class="case-h2">Not every piece of information is equally important.</h2>
-        <div class="case-body">
-          <p>
-            Our research helped us establish a clearer hierarchy of what members
-            needed to see, which gave us the foundation for simplifying the
-            experience.
-          </p>
-        </div>
-        <ul class="case-tags reveal">
-          <li>Most important information</li>
-          <li>Secondary information</li>
-          <li>Required actions</li>
-          <li>Payment status</li>
-          <li>Residual details</li>
-          <li>Process milestones</li>
-          <li>Supporting information</li>
-          <li>Less frequent functionality</li>
-        </ul>
-        <div class="case-body">
-          <p>
-            Rather than presenting everything with equal weight, we could design
-            around the questions members were actually trying to answer.
-          </p>
-        </div>
-        <ul class="ap-questions reveal">
-          <li>How much is it?</li>
-          <li>What is it for?</li>
-          <li>Where is it?</li>
-          <li>Do I need to do anything?</li>
-          <li>What happens next?</li>
-        </ul>
-        <div class="case-body">
-          <p>
-            That hierarchy became <strong>the backbone of the redesigned
-            experience.</strong>
-          </p>
+      </section>
+      <section class="cs-sec cs-sec--tint">
+        <div class="cs-wide">
+          <p class="cs-eyebrow reveal">03 &middot; Hierarchy</p>
+          <h2 class="cs-h cs-h--wide reveal">Not every piece of information is equally important.</h2>
+          <p class="cs-say reveal">Rebuilt around the five questions a member actually arrives with: how much, what for, where is it, do I need to act, what happens next.</p>
+          <div class="cs-wires reveal" style="margin-top: clamp(2rem, 5vw, 3rem)">
+            <figure class="cs-fig">
+              <div class="cs-wire"><span class="b-nav"></span><span class="b-hero"></span><span class="b-row"></span><span class="b-row"></span><span class="b-cta"></span></div>
+              <figcaption class="cs-wire__l">01 &mdash; Overview</figcaption>
+            </figure>
+            <figure class="cs-fig">
+              <div class="cs-wire"><span class="b-nav"></span><span class="b-line m"></span><span class="b-row"></span><span class="b-row"></span><span class="b-row"></span><span class="b-line s"></span></div>
+              <figcaption class="cs-wire__l">02 &mdash; Residual list</figcaption>
+            </figure>
+            <figure class="cs-fig">
+              <div class="cs-wire"><span class="b-nav"></span><span class="b-row"></span><span class="b-line m"></span><span class="b-line"></span><span class="b-line s"></span><span class="b-cta"></span></div>
+              <figcaption class="cs-wire__l">03 &mdash; Residual detail</figcaption>
+            </figure>
+            <figure class="cs-fig">
+              <div class="cs-wire"><span class="b-nav"></span><span class="b-line s"></span><span class="b-row"></span><span class="b-row"></span><span class="b-row"></span><span class="b-cta"></span></div>
+              <figcaption class="cs-wire__l">04 &mdash; Action required</figcaption>
+            </figure>
+          </div>
         </div>
       </section>
-
-      <!-- ============ SIMPLIFYING ============ -->
-      <section class="case-section reveal">
-        <p class="case-section__label">Simplifying the experience</p>
-        <h2 class="case-h2">Fewer clicks. Clearer answers.</h2>
-        <div class="case-body">
-          <p>
-            One of the primary UX goals was reducing the amount of effort
-            required to understand a residual.
-          </p>
+      <section class="cs-sec--tight">
+        <div class="cs-wide">
+          <figure class="cs-fig cs-fig--round reveal">
+            <img src="brand-assets/Pics/SAG-2.jpg" alt="The redesigned residuals interface" loading="lazy" />
+          </figure>
         </div>
-        <ul class="case-tags reveal">
-          <li>Navigation</li>
-          <li>Search</li>
-          <li>Filtering</li>
-          <li>Information architecture</li>
-          <li>Status visibility</li>
-          <li>Detail views</li>
-          <li>Interaction patterns</li>
-          <li>Feature priority</li>
-        </ul>
-        <div class="case-body">
-          <p>
-            We reduced unnecessary steps and brought the most important
-            information closer to the surface. Instead of making members dig
-            through multiple screens to piece together an answer, the experience
-            was designed to provide the right information earlier.
-          </p>
-        </div>
-        <ul class="line-stack line-stack--light reveal">
-          <li>Less navigation.</li>
-          <li>Less interpretation.</li>
-          <li>More clarity.</li>
-        </ul>
       </section>
-
-      <figure class="case-figure case-figure--wide reveal">
-        <img src="brand-assets/Pics/SAG-2.jpg" alt="Filtering and transaction detail in the residuals portal" loading="lazy" />
-        <figcaption>Filtering by time frame, payment range and company, with detail on every transaction.</figcaption>
-      </figure>
-
-      <!-- ============ HIGHLIGHT: TRANSPARENCY ============ -->
-      <section class="case-feature case-feature--tint" aria-labelledby="transparency-head">
-        <div class="case-feature__inner">
-          <p class="case-feature__flag reveal">Designing for transparency</p>
-          <h2 class="case-feature__head reveal" id="transparency-head">Show the process, not just the result.</h2>
-          <div class="case-feature__grid">
-            <div class="case-feature__lead reveal">
-              <p>
-                A major part of the redesign was bringing SAG-AFTRA&rsquo;s
-                internal ways of working into the member experience. We wanted
-                members to see more than <strong>Paid</strong> or
-                <strong>Not Paid</strong>, so we designed an experience where
-                the status of a residual could communicate more of the actual
-                journey.
-              </p>
-              <p>
-                The specific language and states needed to reflect
-                SAG-AFTRA&rsquo;s actual processes, but the principle was
-                consistent: give the member visibility into what&rsquo;s
-                happening behind the scenes.
-              </p>
+      <section class="cs-sec--tight">
+        <div class="cs-wide">
+          <figure class="cs-fig cs-fig--round reveal">
+            <img src="brand-assets/Pics/SAG-3.jpg" alt="Getting started with the residuals portal" loading="lazy" />
+          </figure>
+        </div>
+      </section>
+      <section class="cs-sec">
+        <div class="cs-wide">
+          <p class="cs-eyebrow reveal">Impact</p>
+          <div class="cs-metrics reveal">
+            <div class="cs-metric">
+              <span class="cs-metric__n">30</span>
+              <span class="cs-metric__l">Members interviewed</span>
             </div>
-            <ul class="case-feature__aside reveal">
-              <li>Reduces uncertainty for the member</li>
-              <li>Explains delays that are actually normal steps</li>
-              <li>Reduces calls asking only for a status update</li>
-              <li>Builds confidence in the process itself</li>
-            </ul>
+            <div class="cs-metric">
+              <span class="cs-metric__n">5</span>
+              <span class="cs-metric__l">Questions the hierarchy is built around</span>
+            </div>
+            <div class="cs-metric">
+              <span class="cs-metric__n">1</span>
+              <span class="cs-metric__l">Status vocabulary across the product</span>
+            </div>
           </div>
-          <p class="pf-flow reveal">
-            <b>Residual identified</b> &rarr; <b>Processing</b> &rarr;
-            <b>Additional information required</b> &rarr;
-            <b>Payment being prepared</b> &rarr; <b>Payment issued</b>
-          </p>
+          <p class="cs-say reveal" style="margin-top: clamp(2rem, 5vw, 3rem)">We weren&rsquo;t simply reducing clicks. <strong>We were reducing uncertainty.</strong></p>
         </div>
       </section>
-
-      <figure class="case-figure reveal">
-        <img src="brand-assets/Pics/SAG-3.jpg" alt="Getting started with the residuals portal" loading="lazy" />
-        <figcaption>Onboarding, so a member&rsquo;s first visit explains itself.</figcaption>
-      </figure>
-
-      <!-- ============ FROM RESEARCH TO FEATURES ============ -->
-      <section class="case-section reveal">
-        <p class="case-section__label">From research to features</p>
-        <h2 class="case-h2">Let member needs define the product.</h2>
-        <div class="case-body">
-          <p>
-            The interviews weren&rsquo;t just validation for a design we had
-            already decided to make. They directly influenced the hierarchy and
-            feature set. From the research, we identified which capabilities
-            needed to be immediately available and which could remain secondary.
-          </p>
-          <p>
-            That allowed the product to prioritize
-            <strong>the real jobs members were trying to accomplish</strong>
-            rather than organizing the interface around internal systems or
-            organizational structure.
-          </p>
-        </div>
-      </section>
-
-      <div class="case-pull reveal">
-        <span>Less about how SAG-AFTRA stores residual information. More about how an actor needs to understand it.</span>
-      </div>
-
-      <!-- ============ EXPERIENCE DESIGN ============ -->
-      <section class="case-section reveal">
-        <p class="case-section__label">Experience design</p>
-        <h2 class="case-h2">Turn a complicated process into something understandable.</h2>
-        <div class="case-body">
-          <p>
-            Residuals can be inherently complicated. The UX didn&rsquo;t need to
-            add another layer of complexity. My team translated the research and
-            process understanding into a full set of design outputs.
-          </p>
-        </div>
-        <ul class="case-tags reveal">
-          <li>Information architecture</li>
-          <li>User flows</li>
-          <li>Feature hierarchy</li>
-          <li>Wireframes</li>
-          <li>Status systems</li>
-          <li>Interaction patterns</li>
-          <li>UI design</li>
-          <li>Testing prototypes</li>
-        </ul>
-        <div class="case-body">
-          <p>
-            The goal wasn&rsquo;t to hide important complexity. It was to
-            <strong>organize complexity around the member&rsquo;s mental
-            model.</strong> The interface needed to help an actor understand the
-            situation without requiring them to understand SAG-AFTRA&rsquo;s
-            internal organization first.
-          </p>
-        </div>
-
-      </section>
-
-      <!-- ============ LEADING THE TEAM ============ -->
-      <section class="case-section reveal">
-        <p class="case-section__label">Leading across research, UX &amp; UI</p>
-        <h2 class="case-h2">Keep the evidence connected to the design.</h2>
-        <div class="case-body">
-          <p>
-            I led the team across the full design process. That meant making
-            sure the research <strong>didn&rsquo;t become a report that
-            disappeared once design started.</strong>
-          </p>
-        </div>
-        <ul class="line-stack line-stack--light reveal">
-          <li>Research findings informed our feature hierarchy.</li>
-          <li>The hierarchy informed our flows.</li>
-          <li>The flows informed our wireframes.</li>
-          <li>The wireframes informed the interface.</li>
-          <li>And the interface stayed grounded in what members told us.</li>
-        </ul>
-        <ol class="ap-loop reveal" aria-label="Research, prioritize, simplify, design, validate">
-          <li class="ap-loop__item ap-loop__item--seed">Research</li>
-          <li class="ap-loop__item">Prioritize</li>
-          <li class="ap-loop__item">Simplify</li>
-          <li class="ap-loop__item">Design</li>
-          <li class="ap-loop__item">Validate</li>
-        </ol>
-      </section>
-
-      <!-- ============ THE RESULT ============ -->
-      <section class="cap-band" aria-labelledby="result-head">
-        <div class="cap-band__inner">
-          <p class="cap-band__label reveal">The result</p>
-          <h2 class="cap-band__head reveal" id="result-head">A residuals experience built around member understanding.</h2>
-          <div class="cap-band__sub reveal">
-            <p>
-              The redesign created a clearer and more transparent way for
-              SAG-AFTRA members to understand their residuals.
-            </p>
-          </div>
-          <ul class="line-stack reveal">
-            <li>We reduced unnecessary interaction.</li>
-            <li>We established a stronger information hierarchy.</li>
-            <li>We prioritized the features members actually needed.</li>
-            <li>We brought internal process into the member experience.</li>
-          </ul>
-          <div class="cap-band__sub reveal">
-            <p>
-              The work shifted the experience from simply tracking residual
-              records toward something much more useful:
-              <strong>helping members understand the status of their
-              compensation.</strong>
-            </p>
+      <a class="cs-next" href="nipr.html">
+        <div class="cs-next__img" aria-hidden="true"><img src="brand-assets/NIPR-case.jpg" alt="" loading="lazy" /></div>
+        <div class="cs-next__in">
+          <div class="cs-wide">
+            <p class="cs-eyebrow" style="color:rgba(255,255,255,.5)">Next project</p>
+            <p class="cs-next__t">NIPR &mdash;<br />fourteen screens, one experience.</p>
+            <span class="cs-next__go">View case study &rarr;</span>
           </div>
         </div>
-      </section>
-
-      <!-- ============ THE BIGGER IDEA ============ -->
-      <section class="case-cta" aria-labelledby="bigger-head">
-        <div class="case-cta__inner">
-          <p class="cap-band__label reveal">The bigger idea</p>
-          <h2 class="case-cta__head reveal" id="bigger-head">Transparency is a UX feature.</h2>
-          <div class="cap-close__body">
-            <p class="reveal">
-              The most interesting lesson from this work wasn&rsquo;t about
-              navigation or wireframes. It was about trust. When people are
-              waiting for money they&rsquo;ve earned, silence creates anxiety.
-              The organization may know exactly what&rsquo;s happening
-              internally, but if the customer can&rsquo;t see it, that knowledge
-              doesn&rsquo;t help them.
-            </p>
-            <p class="reveal">
-              Our opportunity was to expose the right parts of that process. Not
-              every internal detail. Just enough to help the member understand.
-            </p>
-          </div>
-
-          <ol class="line-stack reveal">
-            <li>We know about your residual.</li>
-            <li>Here&rsquo;s where it is.</li>
-            <li>Here&rsquo;s what&rsquo;s happening.</li>
-            <li>Here&rsquo;s what comes next.</li>
-          </ol>
-
-          <p class="cap-band__sub reveal">
-            That&rsquo;s what made the work meaningful. We weren&rsquo;t simply
-            reducing clicks. <strong>We were reducing uncertainty.</strong>
-          </p>
-
-          <div class="case-cta__actions reveal">
-            <a href="index.html#contact" class="btn">Book a strategy session</a>
-            <a href="index.html#selected" class="btn btn--ghost">See more work</a>
-          </div>
-        </div>
-      </section>
+      </a>
     </main>
 
     <footer class="footer">
-      <span class="footer__copy">© <span class="year"></span> Britt Midgette</span>
-      <a href="index.html#selected" class="footer__top">← Back to work</a>
+      <span class="footer__copy">&copy; <span class="year"></span> Britt Midgette</span>
+      <a href="index.html#selected" class="footer__top">&larr; Back to work</a>
     </footer>
   </div>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=8"></script>
 </body>
 </html>

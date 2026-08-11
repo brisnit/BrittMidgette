@@ -4,14 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Samsung, Case Study, Britt Midgette</title>
-  <meta name="description" content="Reimagining retail with Samsung: an immersive AR showroom case study by Britt Midgette." />
+  <meta name="description" content="An app-free AR showroom for Samsung premium appliances, launched via QR on the store floor." />
   <meta name="theme-color" content="#000000" />
   <link rel="icon" type="image/png" href="brand-assets/Pics/favicon.png" />
   <link rel="apple-touch-icon" href="brand-assets/Pics/favicon.png" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Samsung, reimagining retail" />
+  <meta property="og:description" content="Scan to play. No install, no friction, full AR showroom." />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=8" />
 </head>
 <body>
   <!-- ============ PASSWORD GATE ============ -->
@@ -26,7 +31,7 @@
       </form>
       <p id="gate-error" class="gate__error" role="alert" hidden>Incorrect password. Try again.</p>
     </div>
-    <p class="gate__footer">© <span class="year"></span> Britt Midgette</p>
+    <p class="gate__footer">&copy; <span class="year"></span> Britt Midgette</p>
   </div>
 
   <!-- ============ SITE ============ -->
@@ -38,119 +43,161 @@
       <a href="index.html#selected" class="header__brand" aria-label="Britt Midgette, home">
         <img class="header__logo" src="brand-assets/WhiteLogo.png" alt="Britt Midgette" />
       </a>
-      <a href="index.html#selected" class="case-back">← All work</a>
+      <a href="index.html#selected" class="case-back">&larr; All work</a>
     </header>
 
-    <main class="case" id="overview">
-      <section class="case-hero">
-        <p class="case-eyebrow reveal">Digital Retail</p>
-        <h1 class="case-title reveal">Reimagining retail with Samsung</h1>
-        <p class="case-intro reveal">
-          We partnered with Samsung to build an immersive AR showroom, bringing
-          premium appliances to life through interactive in-store technology that
-          drives engagement and informed purchases.
-        </p>
+    <main class="cs" id="overview">
+
+      <section class="cs-hero">
+        <div class="cs-wide">
+          <p class="cs-eyebrow reveal">Samsung &middot; Immersive retail</p>
+          <h1 class="cs-hero__title reveal">A showroom<br />you could<br />scan into.</h1>
+          <p class="cs-hero__say reveal">Premium appliances brought to life on the store floor through an AR experience that needed no app, no install and no explanation.</p>
+          <dl class="cs-metaline reveal">
+            <div><dt>Role</dt><dd>Design Director</dd></div>
+            <div><dt>Client</dt><dd>Samsung</dd></div>
+            <div><dt>Year</dt><dd>2023</dd></div>
+            <div><dt>Platform</dt><dd>In-store &middot; Mobile web AR</dd></div>
+            <div><dt>Responsibilities</dt><dd>AR strategy, experience design, build</dd></div>
+          </dl>
+        </div>
       </section>
-
-      <dl class="case-meta reveal">
-        <div><dt>Client</dt><dd>Samsung</dd></div>
-        <div><dt>Year</dt><dd>2023</dd></div>
-        <div><dt>Scope</dt><dd>AR strategy · Design · Build</dd></div>
-        <div><dt>Channels</dt><dd>In-store · Mobile web</dd></div>
-      </dl>
-
-      <div class="case-pull reveal">
-        <span>QR-launched AR running directly in the customer&rsquo;s browser: no app, no waiting.</span>
-      </div>
-
-      <figure class="case-figure reveal">
-        <img src="brand-assets/Pics/Samsung1.jpg" alt="AR showroom" loading="lazy" />
-      </figure>
-
-      <section class="case-section reveal">
-        <p class="case-section__label">The opportunity</p>
-        <h2 class="case-h2">Boost engagement. Ease entry. Sharpen discovery.</h2>
-        <div class="case-steps">
-          <div class="case-step">
-            <span class="case-step__num">01</span>
-            <h3>Boost engagement</h3>
-            <p>A magnetic attractor loop pulled curious shoppers in and turned passive browsing into active exploration.</p>
-          </div>
-          <div class="case-step">
-            <span class="case-step__num">02</span>
-            <h3>Easy entry</h3>
-            <p>A single QR scan launched the experience straight on the customer&rsquo;s phone, no download, no friction.</p>
-          </div>
-          <div class="case-step">
-            <span class="case-step__num">03</span>
-            <h3>Smart discovery</h3>
-            <p>Object detection recognized appliances on the floor and surfaced features, 3D animations, and lifestyle context in real time.</p>
+      <section class="cs-sec--tight">
+        <div class="cs-wide">
+          <figure class="cs-fig cs-fig--round reveal">
+            <video
+              src="brand-assets/Pics/IMG_6257.mp4"
+              muted loop playsinline preload="none" data-autoplay
+              aria-label="The Samsung AR showroom in use"
+            ></video>
+            <figcaption class="cs-cap">The AR showroom running on the store floor.</figcaption>
+          </figure>
+        </div>
+      </section>
+      <section class="cs-sec cs-sec--tint">
+        <div class="cs-wide">
+          <p class="cs-eyebrow reveal">The challenge</p>
+          <h2 class="cs-h cs-h--wide reveal">Every install is a door people don&rsquo;t walk through.</h2>
+          <p class="cs-say reveal">Native AR meant an app-store detour in the middle of a shopping trip. The experience had to start at the speed of curiosity.</p>
+        </div>
+      </section>
+      <section class="cs-sec">
+        <div class="cs-wide">
+          <p class="cs-eyebrow reveal">01 &middot; The interaction</p>
+          <h2 class="cs-h cs-h--wide reveal">Scan, and you&rsquo;re already inside it.</h2>
+          <div class="cs-scroll reveal" style="margin-top: clamp(2rem, 5vw, 3.5rem)">
+            <svg class="cs-svg" viewBox="0 0 1320 180" style="min-width: 780px" role="img" aria-label="Scan, and you&rsquo;re already inside it.">
+              <g font-family="Roboto, sans-serif">
+                <line x1="115" y1="70" x2="1205" y2="70" stroke="#c9c9c9"/>
+                <rect x="30" y="46" width="170" height="48" rx="24" fill="#0a0a0a"/>
+                <text x="115" y="76" fill="#fff" font-size="12" text-anchor="middle">Notice</text>
+                <text x="115" y="118" fill="#6b6b6b" font-size="11" text-anchor="middle">a code on the floor</text>
+                <rect x="302" y="46" width="170" height="48" rx="8" fill="#fff" stroke="#0a0a0a"/>
+                <text x="388" y="76" fill="#0a0a0a" font-size="12" text-anchor="middle">Scan</text>
+                <text x="388" y="118" fill="#6b6b6b" font-size="11" text-anchor="middle">phone camera</text>
+                <rect x="575" y="46" width="170" height="48" rx="8" fill="#fff" stroke="#0a0a0a"/>
+                <text x="660" y="76" fill="#0a0a0a" font-size="12" text-anchor="middle">Load</text>
+                <text x="660" y="118" fill="#6b6b6b" font-size="11" text-anchor="middle">mobile web AR</text>
+                <rect x="848" y="46" width="170" height="48" rx="8" fill="#fff" stroke="#0a0a0a"/>
+                <text x="932" y="76" fill="#0a0a0a" font-size="12" text-anchor="middle">Explore</text>
+                <text x="932" y="118" fill="#6b6b6b" font-size="11" text-anchor="middle">place &amp; open</text>
+                <rect x="1120" y="46" width="170" height="48" rx="24" fill="#0a0a0a"/>
+                <text x="1205" y="76" fill="#fff" font-size="12" text-anchor="middle">Decide</text>
+                <text x="1205" y="118" fill="#6b6b6b" font-size="11" text-anchor="middle">specs, compare</text>
+                <text x="30" y="160" font-size="11" fill="#6b6b6b" letter-spacing="1.5">ZERO INSTALL &mdash; THE WHOLE JOURNEY HAPPENS IN THE BROWSER</text>
+              </g>
+            </svg>
+            <p class="cs-scroll__hint">Scroll the flow &rarr;</p>
           </div>
         </div>
       </section>
-
-      <figure class="case-figure reveal">
-        <img src="brand-assets/Pics/Samsung2.jpg" alt="AR experience on phone" loading="lazy" />
-      </figure>
-
-      <section class="case-section reveal">
-        <p class="case-section__label">The experience</p>
-        <h2 class="case-h2">A showroom you could scan into.</h2>
-        <div class="case-body">
-          <p>
-            A QR-powered attractor loop opened the AR journey straight on the
-            customer&rsquo;s phone: no app, no store account, no waiting. Object
-            detection recognized each appliance on the floor and unlocked interactive
-            overlays: feature highlights, 3D animations, and lifestyle context tuned
-            to the product in front of them.
-          </p>
-          <p>
-            The roll-out covered select premium appliance stores, fully integrated
-            with Samsung&rsquo;s high-end aesthetic. Visually striking codes invited
-            interaction, while intuitive, app-free navigation made access effortless,
-            sparking curiosity and deeper engagement right at the point of decision.
-          </p>
+      <section class="cs-sec--tight">
+        <div class="cs-wide">
+          <figure class="cs-fig cs-fig--round reveal">
+            <img src="brand-assets/Pics/Samsung1.jpg" alt="The Samsung AR experience" loading="lazy" />
+          </figure>
         </div>
       </section>
-
-      <figure class="case-figure reveal">
-        <video src="brand-assets/Pics/IMG_6257.mp4" autoplay muted loop playsinline controls preload="metadata"></video>
-      </figure>
-
-      <section class="case-section case-results reveal">
-        <p class="case-section__label">Outcomes</p>
-        <h2 class="case-h2">What it delivered.</h2>
-        <div class="case-steps">
-          <div class="case-step">
-            <span class="case-step__num">01</span>
-            <h3>App-free AR via QR</h3>
-            <p>Zero install: scan to play, anywhere on the floor.</p>
-          </div>
-          <div class="case-step">
-            <span class="case-step__num">02</span>
-            <h3>Real-time object detection</h3>
-            <p>Recognizes appliances and triggers the right overlay.</p>
-          </div>
-          <div class="case-step">
-            <span class="case-step__num">03</span>
-            <h3>3D animations &amp; lifestyle context</h3>
-            <p>Feature reveals layered with how the product fits a home.</p>
-          </div>
-          <div class="case-step">
-            <span class="case-step__num">04</span>
-            <h3>Premium store integration</h3>
-            <p>A visual system tuned to Samsung&rsquo;s high-end retail tone.</p>
+      <section class="cs-sec cs-sec--dark">
+        <div class="cs-wide">
+          <p class="cs-eyebrow reveal">02 &middot; Designing for the floor</p>
+          <h2 class="cs-h cs-h--wide reveal">A retail environment is not a usability lab.</h2>
+          <div class="cs-board reveal" style="margin-top: clamp(2rem, 5vw, 3rem)">
+            <p class="cs-board__head"><b>Board 02</b> <span>Constraints &rarr; decisions</span></p>
+            <div class="cs-board__grid">
+              <div class="cs-card cs-card--pain">
+                <span class="cs-card__k">Constraint</span>
+                People are standing, moving, and not alone.
+              </div>
+              <div class="cs-card cs-card--pain">
+                <span class="cs-card__k">Constraint</span>
+                Lighting and space vary store to store.
+              </div>
+              <div class="cs-card cs-card--pain">
+                <span class="cs-card__k">Constraint</span>
+                No one reads instructions on a shop floor.
+              </div>
+              <div class="cs-card cs-card--opp">
+                <span class="cs-card__k">Decision</span>
+                One gesture to start. No onboarding.
+              </div>
+              <div class="cs-card cs-card--opp">
+                <span class="cs-card__k">Decision</span>
+                Product does the explaining, not the UI.
+              </div>
+              <div class="cs-card cs-card--opp">
+                <span class="cs-card__k">Decision</span>
+                Every state readable at arm&rsquo;s length.
+              </div>
+            </div>
           </div>
         </div>
       </section>
+      <section class="cs-sec--tight">
+        <div class="cs-wide">
+          <figure class="cs-fig cs-fig--round reveal">
+            <img src="brand-assets/Pics/Samsung2.jpg" alt="Samsung AR product detail" loading="lazy" />
+          </figure>
+        </div>
+      </section>
+      <section class="cs-sec">
+        <div class="cs-wide">
+          <p class="cs-eyebrow reveal">Impact</p>
+          <div class="cs-metrics reveal">
+            <div class="cs-metric">
+              <span class="cs-metric__n">0</span>
+              <span class="cs-metric__l">Installs required</span>
+            </div>
+            <div class="cs-metric">
+              <span class="cs-metric__n">QR</span>
+              <span class="cs-metric__l">The entire entry point</span>
+            </div>
+            <div class="cs-metric">
+              <span class="cs-metric__n">In-store</span>
+              <span class="cs-metric__l">Built for the floor, tested on it</span>
+            </div>
+          </div>
+          <p class="cs-say reveal" style="margin-top: clamp(2rem, 5vw, 3rem)">Zero install meant the experience began the moment someone was curious &mdash; not several taps later.</p>
+        </div>
+      </section>
+      <a class="cs-next" href="legoland.html">
+        <div class="cs-next__img" aria-hidden="true"><img src="brand-assets/LEGO-card-v3.jpg" alt="" loading="lazy" /></div>
+        <div class="cs-next__in">
+          <div class="cs-wide">
+            <p class="cs-eyebrow" style="color:rgba(255,255,255,.5)">Next project</p>
+            <p class="cs-next__t">LEGOLAND &mdash;<br />a hidden world inside the park.</p>
+            <span class="cs-next__go">View case study &rarr;</span>
+          </div>
+        </div>
+      </a>
     </main>
 
     <footer class="footer">
-      <span class="footer__copy">© <span class="year"></span> Britt Midgette</span>
-      <a href="index.html#selected" class="footer__top">← Back to work</a>
+      <span class="footer__copy">&copy; <span class="year"></span> Britt Midgette</span>
+      <a href="index.html#selected" class="footer__top">&larr; Back to work</a>
     </footer>
   </div>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=8"></script>
 </body>
 </html>
