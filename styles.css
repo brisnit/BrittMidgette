@@ -1928,3 +1928,10 @@ main { display: block; }
 @media (max-width: 860px) {
   .cs-split { grid-template-columns: 1fr; }
 }
+
+/* Aside note under body copy */
+.cs-note {
+  margin-top: clamp(1.1rem, 2.2vw, 1.6rem); max-width: 54ch;
+  font-size: 0.92rem; line-height: 1.6; color: var(--muted);
+}
+.cs-sec--dark .cs-note { color: rgba(255,255,255,0.58); }
