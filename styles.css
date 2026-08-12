@@ -1891,4 +1891,16 @@ main { display: block; }
   .cs-ba { grid-template-columns: 1fr; }
 }
 
+
+/* A visual that hangs off the bottom of its band into the next section */
+.cs-sec--hangs { padding-bottom: 0; display: flow-root; } /* flow-root stops the negative margin collapsing out */
+.cs-fig--over {
+  position: relative; z-index: 2;
+  width: min(1560px, calc(100vw - clamp(1.5rem, 5vw, 5rem) * 2));
+  margin: clamp(2.5rem, 6vw, 4rem) auto calc(-1 * clamp(2.5rem, 7vw, 7rem));
+}
+.cs-sec--caught { padding-top: clamp(5rem, 12vw, 11rem); }
+@media (max-width: 760px) {
+  .cs-fig--over { margin-bottom: calc(-1 * clamp(1.5rem, 6vw, 3rem)); }
+  .cs-sec--caught { padding-top: clamp(3.5rem, 14vw, 6rem); }
 }
