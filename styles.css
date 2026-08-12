@@ -1906,3 +1906,12 @@ main { display: block; }
   .cs-fig--over { margin-bottom: calc(-1 * clamp(1.5rem, 6vw, 3rem)); }
   .cs-sec--caught { padding-top: clamp(3.5rem, 14vw, 6rem); }
 }
+
+/* Tighter vertical rhythm. Consecutive sections stack their padding, so the
+   base value is roughly halved rather than trimmed. */
+.cs--snug .cs-hero { padding-bottom: clamp(1.5rem, 3vw, 2.5rem); }
+.cs--snug .cs-sec { padding-block: clamp(2.5rem, 6.5vw, 6rem); }
+.cs--snug .cs-sec--tight { padding-block: clamp(1.25rem, 3vw, 2.5rem); }
+.cs--snug .cs-sec--caught { padding-top: clamp(3rem, 8vw, 7.5rem); }
+/* must follow the base rule above, which would otherwise restore the padding */
+.cs--snug .cs-sec--hangs { padding-bottom: 0; }
