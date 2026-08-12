@@ -1915,3 +1915,16 @@ main { display: block; }
 .cs--snug .cs-sec--caught { padding-top: clamp(3rem, 8vw, 7.5rem); }
 /* must follow the base rule above, which would otherwise restore the padding */
 .cs--snug .cs-sec--hangs { padding-bottom: 0; }
+
+/* Split section: copy beside a visual, equal columns */
+.cs-split {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 5vw, 4.5rem); align-items: center;
+}
+.cs-split__copy > * + * { margin-top: clamp(1rem, 2vw, 1.5rem); }
+.cs-split__media { margin: 0; }
+.cs-split__media video,
+.cs-split__media img { width: 100%; height: auto; display: block; border-radius: 14px; }
+@media (max-width: 860px) {
+  .cs-split { grid-template-columns: 1fr; }
+}
