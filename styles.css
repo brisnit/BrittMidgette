@@ -1935,3 +1935,18 @@ main { display: block; }
   font-size: 0.92rem; line-height: 1.6; color: var(--muted);
 }
 .cs-sec--dark .cs-note { color: rgba(255,255,255,0.58); }
+
+/* Outbound CTA, e.g. to a live file */
+.cs-cta {
+  display: inline-flex; align-items: center; gap: 0.6rem;
+  margin-top: clamp(1.75rem, 4vw, 2.5rem);
+  padding: 0.85rem 1.5rem; border-radius: 100px;
+  border: 1px solid var(--ink); color: var(--ink);
+  font-family: var(--mono); font-size: 0.82rem; letter-spacing: 0.04em;
+  transition: background 0.25s var(--ease), color 0.25s var(--ease);
+}
+.cs-cta:hover, .cs-cta:focus-visible { background: var(--ink); color: #fff; }
+.cs-cta__arrow { transition: transform 0.25s var(--ease); }
+.cs-cta:hover .cs-cta__arrow { transform: translateX(3px); }
+.cs-sec--dark .cs-cta { border-color: rgba(255,255,255,0.5); color: #fff; }
+.cs-sec--dark .cs-cta:hover, .cs-sec--dark .cs-cta:focus-visible { background: #fff; color: #0a0a0a; }
