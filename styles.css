@@ -1950,3 +1950,19 @@ main { display: block; }
 .cs-cta:hover .cs-cta__arrow { transform: translateX(3px); }
 .cs-sec--dark .cs-cta { border-color: rgba(255,255,255,0.5); color: #fff; }
 .cs-sec--dark .cs-cta:hover, .cs-sec--dark .cs-cta:focus-visible { background: #fff; color: #0a0a0a; }
+
+/* Case-study header: outbound CTA beside the back link */
+.header__right { display: flex; align-items: center; gap: clamp(0.85rem, 2vw, 1.5rem); }
+.header__cta {
+  display: inline-flex; align-items: center; gap: 0.45rem;
+  padding: 0.5rem 1rem; border-radius: 100px;
+  border: 1px solid currentColor;
+  font-family: var(--mono); font-size: 0.76rem; letter-spacing: 0.04em;
+  white-space: nowrap;
+  transition: background 0.25s var(--ease), color 0.25s var(--ease);
+}
+.header__cta:hover, .header__cta:focus-visible { background: var(--ink); color: #fff; border-color: var(--ink); }
+@media (max-width: 560px) {
+  .header__cta { padding: 0.4rem 0.75rem; font-size: 0.7rem; }
+  .header__cta span { display: none; }
+}
