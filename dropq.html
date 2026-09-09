@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DropQ, Case Study, Britt Midgette</title>
+  <meta name="description" content="The operating system for modern product drops: timed releases, inventory that cannot oversell, and a customer list the seller owns." />
+  <meta name="theme-color" content="#000000" />
+  <link rel="icon" type="image/png" href="brand-assets/Pics/favicon.png" />
+  <link rel="apple-touch-icon" href="brand-assets/Pics/favicon.png" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="DropQ, organized drops and happy customers" />
+  <meta property="og:description" content="Scarcity that sells out on purpose. One link, one platform, no crashed ordering forms." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=8" />
+</head>
+<body>
+  <!-- ============ PASSWORD GATE ============ -->
+  <div id="gate" class="gate" aria-hidden="false">
+    <div class="gate__inner">
+      <h1 class="gate__title">Britt Midgette</h1>
+      <p class="gate__sub">This site is private. Enter the password to continue.</p>
+      <form id="gate-form" class="gate__form" autocomplete="off" novalidate>
+        <label class="sr-only" for="gate-input">Password</label>
+        <input id="gate-input" class="gate__input" type="password" placeholder="Password" aria-describedby="gate-error" spellcheck="false" />
+        <button class="gate__btn" type="submit">Enter</button>
+      </form>
+      <p id="gate-error" class="gate__error" role="alert" hidden>Incorrect password. Try again.</p>
+    </div>
+    <p class="gate__footer">&copy; <span class="year"></span> Britt Midgette</p>
+  </div>
+
+  <!-- ============ SITE ============ -->
+  <div id="site" class="site" hidden>
+    <span id="top" aria-hidden="true"></span>
+    <a href="#overview" class="skip-link">Skip to content</a>
+
+    <header class="header">
+      <a href="index.html#selected" class="header__brand" aria-label="Britt Midgette, home">
+        <img class="header__logo" src="brand-assets/WhiteLogo.png" alt="Britt Midgette" />
+      </a>
+      <div class="header__right">
+        <a class="header__cta" href="https://drop-q.com/" target="_blank" rel="noopener noreferrer">Visit DropQ <span aria-hidden="true">&#8599;</span></a>
+        <a href="index.html#selected" class="case-back">&larr; All work</a>
+      </div>
+    </header>
+
+    <main class="cs cs--snug" id="overview">
+
+      <section class="cs-hero">
+        <div class="cs-wide">
+          <p class="cs-eyebrow reveal">DropQ &middot; Product, design &amp; build</p>
+          <h1 class="cs-hero__title reveal">Queue<br />the hype.</h1>
+          <p class="cs-hero__say reveal">Independent sellers run limited drops on a stack of apps that do not talk to each other &mdash; a form for orders, a payment app, a spreadsheet, a group text. DropQ replaces that with timed releases, inventory that cannot oversell, and a customer list the seller actually owns.</p>
+          <dl class="cs-metaline reveal">
+            <div><dt>Role</dt><dd>Founder &middot; Product design &amp; build</dd></div>
+            <div><dt>Product</dt><dd>DropQ</dd></div>
+            <div><dt>Platform</dt><dd>Web &middot; Mobile-first</dd></div>
+            <div><dt>Sectors</dt><dd>Food &middot; Collectibles &middot; Apparel &middot; Art</dd></div>
+            <div><dt>Responsibilities</dt><dd>Product strategy, UX, IA, UI, front-end</dd></div>
+          </dl>
+        </div>
+      </section>
+      <section class="cs-sec--tight">
+        <div class="cs-wide">
+          <figure class="cs-fig cs-fig--round reveal">
+            <img src="brand-assets/Pics/DQ-1.jpg" alt="Category cards for food and beverage, collectibles, apparel and merch, art and handmade" loading="lazy" />
+            <figcaption class="cs-cap">One mechanic, five very different kinds of seller.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="cs-sec cs-sec--tint">
+        <div class="cs-wide">
+          <p class="cs-eyebrow reveal">01 &middot; The problem</p>
+          <h2 class="cs-h cs-h--wide reveal">Your business runs on a dozen apps that don&rsquo;t talk to each other.</h2>
+          <p class="cs-say reveal">Instagram for marketing. A link in bio for the catalogue. A spreadsheet for orders. A payment app. A group text for the waitlist. It works until a drop goes viral &mdash; then it fails at the worst possible moment.</p>
+
+          <figure class="cs-fig cs-fig--round reveal" style="margin-top: clamp(2.5rem, 6vw, 4rem)">
+            <img src="brand-assets/Pics/DQ-2.jpg" alt="Three failure modes: overselling and refunds, crashed links, and customers you lose" loading="lazy" />
+          </figure>
+        </div>
+      </section>
+
+      <section class="cs-sec cs-sec--dark">
+        <div class="cs-wide">
+          <p class="cs-eyebrow reveal">02 &middot; The flow</p>
+          <h2 class="cs-h cs-h--wide reveal">From idea to sold-out in one afternoon.</h2>
+          <p class="cs-say reveal">Set up the store, build the drop, share one link, fulfil and get paid. Four steps, no code, nothing that assumes the seller is technical.</p>
+
+          <figure class="cs-fig cs-fig--round reveal" style="margin-top: clamp(2.5rem, 6vw, 4rem)">
+            <img src="brand-assets/Pics/DQ-3.jpg" alt="The four steps: set up your store, build a drop, share one link, fulfil and get paid" loading="lazy" />
+          </figure>
+        </div>
+      </section>
+
+      <section class="cs-sec">
+        <div class="cs-wide">
+          <p class="cs-eyebrow reveal">03 &middot; The system</p>
+          <h2 class="cs-h cs-h--wide reveal">Six jobs the seller was doing by hand.</h2>
+          <p class="cs-say reveal">Limited drops, online ordering, fulfilment, customer growth, analytics, and the consolidation of the app stack that was being held together manually.</p>
+
+          <figure class="cs-fig cs-fig--round reveal" style="margin-top: clamp(2.5rem, 6vw, 4rem)">
+            <img src="brand-assets/Pics/DQ-4.jpg" alt="Six numbered capabilities, from limited drops through analytics to replacing the duct-tape stack" loading="lazy" />
+          </figure>
+        </div>
+      </section>
+
+      <section class="cs-sec cs-sec--dark">
+        <div class="cs-wide">
+          <p class="cs-eyebrow reveal">From a seller</p>
+          <h2 class="cs-h reveal">&ldquo;I sold out my first drop in 11 minutes and finally have a customer list I own.&rdquo;</h2>
+          <p class="cs-say reveal">Matt Jennings, Dope Collectables &mdash; as published on drop-q.com</p>
+        </div>
+      </section>
+
+      <section class="cs-sec cs-sec--tint">
+        <div class="cs-wide">
+          <p class="cs-eyebrow reveal">04 &middot; The model</p>
+          <h2 class="cs-h cs-h--wide reveal">Pricing that follows the sale.</h2>
+          <p class="cs-say reveal">Free to begin, eight dollars a month for unlimited drops, fourteen for a lower transaction fee and deeper analytics. The cost arrives after the revenue does, not before it.</p>
+
+          <figure class="cs-fig cs-fig--round reveal" style="margin-top: clamp(2.5rem, 6vw, 4rem)">
+            <img src="brand-assets/Pics/DQ-5.jpg" alt="Three pricing tiers: free, basic at eight dollars, and pro at fourteen dollars a month" loading="lazy" />
+          </figure>
+        </div>
+      </section>
+
+      <section class="cs-sec">
+        <div class="cs-wide">
+          <p class="cs-eyebrow reveal">Impact</p>
+          <div class="cs-metrics reveal">
+            <div class="cs-metric">
+              <span class="cs-metric__n">1</span>
+              <span class="cs-metric__l">Link, replacing a stack of apps</span>
+            </div>
+            <div class="cs-metric">
+              <span class="cs-metric__n">0</span>
+              <span class="cs-metric__l">Oversells, by construction</span>
+            </div>
+            <div class="cs-metric">
+              <span class="cs-metric__n">2%</span>
+              <span class="cs-metric__l">Transaction fee at the free tier</span>
+            </div>
+          </div>
+          <p class="cs-say reveal" style="margin-top: clamp(2rem, 5vw, 3rem)">The customer list belongs to the seller. That is the part the app stack was quietly taking away.</p>
+          <a class="cs-cta reveal" href="https://drop-q.com/" target="_blank" rel="noopener noreferrer">See DropQ <span class="cs-cta__arrow" aria-hidden="true">&#8599;</span></a>
+        </div>
+      </section>
+
+      <a class="cs-next" href="nipr.html">
+        <div class="cs-next__img" aria-hidden="true"><img src="brand-assets/NIPR-case.jpg" alt="" loading="lazy" /></div>
+        <div class="cs-next__in">
+          <div class="cs-wide">
+            <p class="cs-eyebrow" style="color:rgba(255,255,255,.5)">Next project</p>
+            <p class="cs-next__t">NIPR &mdash;<br />one task, fourteen open windows.</p>
+            <span class="cs-next__go">View case study &rarr;</span>
+          </div>
+        </div>
+      </a>
+    </main>
+
+    <footer class="footer">
+      <span class="footer__copy">&copy; <span class="year"></span> Britt Midgette</span>
+      <a href="index.html#selected" class="footer__top">&larr; Back to work</a>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

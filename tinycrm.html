@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tiny CRM, Case Study, Britt Midgette</title>
+  <meta name="description" content="A simple AI-powered CRM for the person running several businesses at once. Product design and build." />
+  <meta name="theme-color" content="#000000" />
+  <link rel="icon" type="image/png" href="brand-assets/Pics/favicon.png" />
+  <link rel="apple-touch-icon" href="brand-assets/Pics/favicon.png" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Tiny CRM, your whole business organized" />
+  <meta property="og:description" content="Contacts, deals, projects and tasks in one place, for the person running several businesses at once." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=8" />
+</head>
+<body>
+  <!-- ============ PASSWORD GATE ============ -->
+  <div id="gate" class="gate" aria-hidden="false">
+    <div class="gate__inner">
+      <h1 class="gate__title">Britt Midgette</h1>
+      <p class="gate__sub">This site is private. Enter the password to continue.</p>
+      <form id="gate-form" class="gate__form" autocomplete="off" novalidate>
+        <label class="sr-only" for="gate-input">Password</label>
+        <input id="gate-input" class="gate__input" type="password" placeholder="Password" aria-describedby="gate-error" spellcheck="false" />
+        <button class="gate__btn" type="submit">Enter</button>
+      </form>
+      <p id="gate-error" class="gate__error" role="alert" hidden>Incorrect password. Try again.</p>
+    </div>
+    <p class="gate__footer">&copy; <span class="year"></span> Britt Midgette</p>
+  </div>
+
+  <!-- ============ SITE ============ -->
+  <div id="site" class="site" hidden>
+    <span id="top" aria-hidden="true"></span>
+    <a href="#overview" class="skip-link">Skip to content</a>
+
+    <header class="header">
+      <a href="index.html#selected" class="header__brand" aria-label="Britt Midgette, home">
+        <img class="header__logo" src="brand-assets/WhiteLogo.png" alt="Britt Midgette" />
+      </a>
+      <div class="header__right">
+        <a class="header__cta" href="https://tinycrm.biz/" target="_blank" rel="noopener noreferrer">Visit Tiny CRM <span aria-hidden="true">&#8599;</span></a>
+        <a href="index.html#selected" class="case-back">&larr; All work</a>
+      </div>
+    </header>
+
+    <main class="cs cs--snug" id="overview">
+
+      <section class="cs-hero">
+        <div class="cs-wide">
+          <p class="cs-eyebrow reveal">Tiny CRM &middot; Product, design &amp; build</p>
+          <h1 class="cs-hero__title reveal">Your whole<br />business.<br />Organized.</h1>
+          <p class="cs-hero__say reveal">Most CRMs are built for a sales department. This one is built for the person running several businesses at once &mdash; contacts, deals, projects and tasks on one relational spine, with an assistant that has actually read it. I designed and built it end to end.</p>
+          <dl class="cs-metaline reveal">
+            <div><dt>Role</dt><dd>Founder &middot; Product design &amp; build</dd></div>
+            <div><dt>Product</dt><dd>Tiny CRM</dd></div>
+            <div><dt>Platform</dt><dd>Web &middot; Responsive</dd></div>
+            <div><dt>Model</dt><dd>Free &middot; $14/mo &middot; $250 lifetime</dd></div>
+            <div><dt>Responsibilities</dt><dd>Product strategy, UX, IA, UI, front-end</dd></div>
+          </dl>
+        </div>
+      </section>
+      <section class="cs-sec--tight">
+        <div class="cs-wide">
+          <figure class="cs-fig cs-fig--round reveal">
+            <img src="brand-assets/Pics/TCRM-1.jpg" alt="The Tiny CRM dashboard: a morning brief, pipeline and forecast figures, and the deals that need a push" loading="lazy" />
+            <figcaption class="cs-cap">The morning view &mdash; what is happening, and what needs a push.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="cs-sec cs-sec--tint">
+        <div class="cs-wide">
+          <p class="cs-eyebrow reveal">01 &middot; The premise</p>
+          <h2 class="cs-h cs-h--wide reveal">Four questions, answered on every screen.</h2>
+          <p class="cs-say reveal">Most CRMs make you assemble the answer yourself. Every record here resolves the same four questions before you have to ask them.</p>
+
+          <figure class="cs-fig cs-fig--round reveal" style="margin-top: clamp(2.5rem, 6vw, 4rem)">
+            <img src="brand-assets/Pics/TCRM-2.jpg" alt="Four cards: what is happening, who is involved, what needs my attention, what should I do next" loading="lazy" />
+          </figure>
+        </div>
+      </section>
+
+      <section class="cs-sec">
+        <div class="cs-wide">
+          <p class="cs-eyebrow reveal">02 &middot; Structure</p>
+          <h2 class="cs-h cs-h--wide reveal">Everything has a home, a relationship, and a next action.</h2>
+          <p class="cs-say reveal">Eight modules on one relational spine &mdash; a contact belongs to a company, a deal belongs to a project, and nothing floats loose.</p>
+
+          <figure class="cs-fig cs-fig--round reveal" style="margin-top: clamp(2.5rem, 6vw, 4rem)">
+            <img src="brand-assets/Pics/TCRM-3.jpg" alt="Module cards for opportunities, tasks, calendar and automations" loading="lazy" />
+          </figure>
+        </div>
+      </section>
+
+      <section class="cs-sec cs-sec--dark">
+        <div class="cs-wide">
+          <p class="cs-eyebrow reveal">03 &middot; Multi-business</p>
+          <h2 class="cs-h cs-h--wide reveal">Switch context without losing the whole picture.</h2>
+          <p class="cs-say reveal">A separate workspace per business, and an aggregated view across all of them. Built for the reality of running more than one thing at once.</p>
+
+          <figure class="cs-fig cs-fig--round reveal" style="margin-top: clamp(2.5rem, 6vw, 4rem)">
+            <img src="brand-assets/Pics/TCRM-4.jpg" alt="The workspace switcher listing separate businesses and an all-businesses view" loading="lazy" />
+          </figure>
+        </div>
+      </section>
+
+      <section class="cs-sec">
+        <div class="cs-wide">
+          <p class="cs-eyebrow reveal">04 &middot; The assistant</p>
+          <h2 class="cs-h cs-h--wide reveal">An assistant that has actually read your CRM.</h2>
+          <p class="cs-say reveal">Morning briefs, duplicate detection, summarisation and answers over your own records. It proposes rather than executes &mdash; the point is judgement, not automation for its own sake.</p>
+
+          <figure class="cs-fig cs-fig--round reveal" style="margin-top: clamp(2.5rem, 6vw, 4rem)">
+            <img src="brand-assets/Pics/TCRM-5.jpg" alt="The assistant panel answering questions about the day, attention items and stalled deals" loading="lazy" />
+          </figure>
+        </div>
+      </section>
+
+      <section class="cs-sec cs-sec--tint">
+        <div class="cs-wide">
+          <p class="cs-eyebrow reveal">05 &middot; The model</p>
+          <h2 class="cs-h cs-h--wide reveal">Priced like a tool, not a platform.</h2>
+          <p class="cs-say reveal">Free at the bottom, fourteen dollars a month in the middle, and a lifetime option &mdash; because a tool you run your own business on should not be rented forever.</p>
+
+          <figure class="cs-fig cs-fig--round reveal" style="margin-top: clamp(2.5rem, 6vw, 4rem)">
+            <img src="brand-assets/Pics/TCRM-6.jpg" alt="Three pricing tiers with their feature lists" loading="lazy" />
+          </figure>
+        </div>
+      </section>
+
+      <section class="cs-sec">
+        <div class="cs-wide">
+          <p class="cs-eyebrow reveal">Impact</p>
+          <div class="cs-metrics reveal">
+            <div class="cs-metric">
+              <span class="cs-metric__n">8</span>
+              <span class="cs-metric__l">Modules on one relational spine</span>
+            </div>
+            <div class="cs-metric">
+              <span class="cs-metric__n">&infin;</span>
+              <span class="cs-metric__l">Workspaces on a single account</span>
+            </div>
+            <div class="cs-metric">
+              <span class="cs-metric__n">1</span>
+              <span class="cs-metric__l">Assistant, reading your own data</span>
+            </div>
+          </div>
+          <p class="cs-say reveal" style="margin-top: clamp(2rem, 5vw, 3rem)">Built for the person who is the sales department, the delivery team and operations at the same time.</p>
+          <a class="cs-cta reveal" href="https://tinycrm.biz/" target="_blank" rel="noopener noreferrer">Try Tiny CRM <span class="cs-cta__arrow" aria-hidden="true">&#8599;</span></a>
+        </div>
+      </section>
+
+      <a class="cs-next" href="dropq.html">
+        <div class="cs-next__img" aria-hidden="true"><img src="brand-assets/DQ-case.jpg" alt="" loading="lazy" /></div>
+        <div class="cs-next__in">
+          <div class="cs-wide">
+            <p class="cs-eyebrow" style="color:rgba(255,255,255,.5)">Next project</p>
+            <p class="cs-next__t">DropQ &mdash;<br />the operating system for product drops.</p>
+            <span class="cs-next__go">View case study &rarr;</span>
+          </div>
+        </div>
+      </a>
+    </main>
+
+    <footer class="footer">
+      <span class="footer__copy">&copy; <span class="year"></span> Britt Midgette</span>
+      <a href="index.html#selected" class="footer__top">&larr; Back to work</a>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
