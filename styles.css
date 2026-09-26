@@ -2446,8 +2446,7 @@ h1, h2, h3, h4,
   .home-logo.is-tall { max-width: 88px;  max-height: 38px; }
 }
 
-/* The strip sits below its label and runs the full width of the page. */
-.home-marquee { margin-top: clamp(2.25rem, 4.5vw, 3.25rem); }
+/* The strip carries the section on its own and runs the full page width. */
 
 /* Reduced motion: no movement, but every client stays visible. The track
    stops being a clipped rail and becomes an ordinary wrapping row, and the
