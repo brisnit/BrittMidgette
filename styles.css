@@ -2589,9 +2589,11 @@ h1, h2, h3, h4,
 .t-more[open] .t-more__btn { margin-top: clamp(1.25rem, 2.5vw, 1.75rem); }
 
 .t-by {
-  display: flex; flex-direction: column; gap: 0.3rem;
+  display: flex; align-items: center;
+  gap: clamp(0.75rem, 1.4vw, 1.1rem);
   margin-top: clamp(2rem, 4vw, 3rem);
 }
+.t-by__who { display: flex; flex-direction: column; gap: 0.25rem; min-width: 0; }
 .t-by__name {
   display: inline-flex; align-items: center; gap: 0.4rem;
   width: fit-content;
@@ -2609,8 +2611,10 @@ h1, h2, h3, h4,
 .t-rail.is-dragging { cursor: grabbing; scroll-snap-type: none; user-select: none; }
 .t-rail.is-dragging a { pointer-events: none; }
 
-/* Room for a circular portrait later, without rebuilding the component. */
+/* A circular portrait beside each name. */
 .t-by__photo {
-  width: 44px; height: 44px; border-radius: 50%;
+  width: clamp(48px, 4vw, 56px); height: clamp(48px, 4vw, 56px);
+  flex: none; border-radius: 50%;
   object-fit: cover; display: block;
+  background: #ececec;
 }
