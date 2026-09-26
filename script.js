@@ -278,6 +278,40 @@
       }
     }
 
+    /* Testimonials rail: trackpad and touch already work, this only adds
+       mouse dragging. A click is suppressed solely once the pointer has
+       actually travelled, so links keep working on a plain click. */
+    var rail = document.querySelector(".t-rail");
+    if (rail && window.matchMedia && window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+      var down = false, moved = false, startX = 0, startLeft = 0;
+      rail.classList.add("is-draggable");
+      rail.addEventListener("pointerdown", function (e) {
+        if (e.button !== 0) return;
+        down = true; moved = false;
+        startX = e.clientX; startLeft = rail.scrollLeft;
+      });
+      rail.addEventListener("pointermove", function (e) {
+        if (!down) return;
+        var dx = e.clientX - startX;
+        if (!moved && Math.abs(dx) < 5) return;
+        if (!moved) { moved = true; rail.classList.add("is-dragging"); rail.setPointerCapture(e.pointerId); }
+        rail.scrollLeft = startLeft - dx;
+      });
+      var end = function (e) {
+        if (!down) return;
+        down = false;
+        rail.classList.remove("is-dragging");
+        if (moved && e && e.pointerId !== undefined && rail.hasPointerCapture(e.pointerId)) {
+          rail.releasePointerCapture(e.pointerId);
+        }
+      };
+      rail.addEventListener("pointerup", end);
+      rail.addEventListener("pointercancel", end);
+      rail.addEventListener("click", function (e) {
+        if (moved) { e.preventDefault(); e.stopPropagation(); moved = false; }
+      }, true);
+    }
+
     /* Mobile nav (present on the home page only) */
     var toggle = document.getElementById("nav-toggle");
     var nav = document.getElementById("nav");

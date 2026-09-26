@@ -2504,3 +2504,113 @@ h1, h2, h3, h4,
   .ed-head > a:hover .ed-head__logo,
   .ed-head__logo.is-greeting { animation: none; }
 }
+
+/* ============================================================
+   Testimonials: a browsable rail, moved by the reader
+   ============================================================ */
+
+.t-sec { border-top: 1px solid var(--ink); }   /* a black rule, not a hairline */
+
+.t-head {
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: var(--w-med); line-height: 1;
+  letter-spacing: -0.035em;
+}
+
+/* The rail runs to the page edges so the next card is visibly entering. */
+.t-rail {
+  margin-top: clamp(2.25rem, 4.5vw, 3.5rem);
+  overflow-x: auto; overflow-y: hidden;
+  scroll-snap-type: x proximity;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+.t-rail:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
+.t-track {
+  display: flex; align-items: flex-start;
+  gap: clamp(1rem, 2.2vw, 1.75rem);
+  list-style: none; margin: 0;
+  padding: 0 var(--pad) 0.5rem;
+  width: max-content;
+}
+.t-item { display: flex; flex: none; scroll-snap-align: start; }
+
+.t-card {
+  display: flex; flex-direction: column; justify-content: space-between;
+  width: min(820px, 82vw);
+  min-height: clamp(330px, 38vw, 545px);
+  margin: 0;
+  padding: clamp(1.75rem, 3.5vw, 3.25rem);
+  background: #f4f4f4;
+  border: 0; box-shadow: none;
+  border-radius: var(--media-radius);
+}
+
+/* Between tablet and large desktop the 820px cap leaves the next card only
+   just peeking, so the card narrows there to keep the row legibly continuing. */
+@media (min-width: 900px) and (max-width: 1200px) {
+  .t-card { width: min(700px, 78vw); }
+}
+
+.t-quote { margin: 0; }
+.t-quote__short,
+.t-quote__full p {
+  font-size: clamp(1.25rem, 1.9vw, 1.9rem);
+  line-height: 1.4; letter-spacing: -0.015em;
+  color: var(--ink);
+}
+.t-quote__full p + p { margin-top: 1em; }
+
+/* The excerpt steps aside once the full recommendation is open, so the
+   opening lines are not read twice. */
+.t-card:has(.t-more[open]) .t-quote__short { display: none; }
+
+/* <summary> must come first in the markup; visually the control belongs
+   under the text it reveals, in both states. */
+.t-more {
+  margin-top: clamp(1.25rem, 2.5vw, 1.75rem);
+  display: flex; flex-direction: column;
+}
+.t-quote__full { order: 1; }
+.t-more__btn {
+  order: 2; align-self: flex-start;
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  font-size: var(--t-small); font-weight: var(--w-med); color: var(--ink);
+  cursor: pointer; list-style: none;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid var(--line-strong);
+  transition: border-bottom-color 0.3s var(--ease);
+}
+.t-more__btn::-webkit-details-marker { display: none; }
+.t-more__btn:hover { border-bottom-color: var(--ink); }
+.t-more__shut { display: none; }
+.t-more[open] .t-more__open { display: none; }
+.t-more[open] .t-more__shut { display: inline; }
+.t-more[open] .t-more__btn { margin-top: clamp(1.25rem, 2.5vw, 1.75rem); }
+
+.t-by {
+  display: flex; flex-direction: column; gap: 0.3rem;
+  margin-top: clamp(2rem, 4vw, 3rem);
+}
+.t-by__name {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  width: fit-content;
+  font-size: var(--t-body); font-weight: var(--w-med); color: var(--ink);
+  border-bottom: 1px solid transparent;
+  transition: border-bottom-color 0.3s var(--ease);
+}
+.t-by__name:hover, .t-by__name:focus-visible { border-bottom-color: var(--ink); }
+.t-by__a { transition: transform 0.3s var(--ease); }
+.t-by__name:hover .t-by__a { transform: translate(3px, -3px); }
+.t-by__title { font-size: var(--t-small); color: var(--text-secondary); }
+
+/* Dragging with a mouse; the pointer only changes while a drag is possible. */
+.t-rail.is-draggable { cursor: grab; }
+.t-rail.is-dragging { cursor: grabbing; scroll-snap-type: none; user-select: none; }
+.t-rail.is-dragging a { pointer-events: none; }
+
+/* Room for a circular portrait later, without rebuilding the component. */
+.t-by__photo {
+  width: 44px; height: 44px; border-radius: 50%;
+  object-fit: cover; display: block;
+}
