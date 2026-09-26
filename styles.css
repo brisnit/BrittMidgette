@@ -2068,10 +2068,8 @@ h1, h2, h3, h4,
   display: flex; align-items: center; justify-content: space-between;
   gap: var(--s-4); padding: var(--s-3) var(--pad);
   padding-block: 1.28rem;   /* the mark grew; the header height does not */
-  background: color-mix(in srgb, var(--paper) 88%, transparent);
-  backdrop-filter: saturate(160%) blur(12px);
-  -webkit-backdrop-filter: saturate(160%) blur(12px);
-  border-bottom: 1px solid var(--line);
+  background-color: var(--header-ground);
+  border-bottom: 0;
 }
 .ed-head__logo { display: block; height: 41px; width: auto; }
 .ed-nav { display: flex; gap: clamp(1.25rem, 2.5vw, 2.25rem); align-items: center; }
@@ -2296,58 +2294,57 @@ h1, h2, h3, h4,
 }
 
 /* ============================================================
-   Homepage: header + hero as one continuous animated field
+   Shared animated ground: header everywhere, plus the home and
+   About heroes, as one continuous colour field
    ============================================================ */
 
 /* One registered custom property is the single source of truth for the
-   ground colour. The animation runs once, on <body>; the header and the
-   hero both read the inherited value, so they cannot drift apart. */
-@property --home-ground {
+   ground colour, registered so it can interpolate rather than step. */
+@property --header-ground {
   syntax: '<color>';
   inherits: true;
   initial-value: #eaf8f5;
 }
 
-body.is-home {
-  --home-ground: #eaf8f5;
-  animation: home-drift 56s ease-in-out infinite;
+/* The animation runs once, on the root element, and nothing else animates a
+   colour anywhere. Every surface that should share the ground simply reads
+   the inherited value, so they are the same colour by construction rather
+   than by keeping separate timelines in step. */
+:root {
+  --header-ground: #eaf8f5;
+  animation: ground-drift 56s ease-in-out infinite;
 }
 
 /* mint -> blue -> lavender -> ice. 10s at rest, 4s to cross. */
-@keyframes home-drift {
-  0%,     17.857% { --home-ground: #eaf8f5; }
-  25%,    42.857% { --home-ground: #edf4ff; }
-  50%,    67.857% { --home-ground: #f3f0fa; }
-  75%,    92.857% { --home-ground: #eef8fa; }
-  100%            { --home-ground: #eaf8f5; }
+@keyframes ground-drift {
+  0%,     17.857% { --header-ground: #eaf8f5; }
+  25%,    42.857% { --header-ground: #edf4ff; }
+  50%,    67.857% { --header-ground: #f3f0fa; }
+  75%,    92.857% { --header-ground: #eef8fa; }
+  100%            { --header-ground: #eaf8f5; }
 }
 
-body.is-home .ed-head,
-body.is-home .home-hero { background-color: var(--home-ground); }
+/* the three surfaces that share the ground, on every page */
+.ed-head,
+.home-hero,
+.ed-hero-live { background-color: var(--header-ground); }
 
-/* The header is already sticky. Over the hero it must be the hero colour
-   exactly, so no blur, no tint and no transition that could lag behind it. */
-body.is-home .ed-head {
+/* The sticky header keeps the ground at every scroll position: no blur, no
+   tint, no veil, and no transition that could lag a frame behind. */
+.ed-head {
   background-image: none;
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
-  border-bottom-color: transparent;
-  transition: border-bottom-color 0.45s var(--ease);
+  border-bottom: 0;
 }
-/* Past the hero the header veils to white. The veil fades over the ground
-   rather than replacing it, so the background colour never has to animate. */
-body.is-home .ed-head::before {
-  content: ""; position: absolute; inset: 0; z-index: 0;
-  background: var(--paper);
-  opacity: 0; transition: opacity 0.45s var(--ease);
-  pointer-events: none;
-}
-body.is-home .ed-head > * { position: relative; z-index: 1; }
-body.is-home .ed-head.is-past::before { opacity: 1; }
-body.is-home .ed-head.is-past { border-bottom-color: var(--line); }
+
+/* A shared ground must not be interrupted by a rule: none above the hero,
+   and none where it meets the white page below. */
+.ed-hero-live { border-top: 0; }
+.ed-hero-live + .ed-sec { border-top: 0; }
 
 @media (prefers-reduced-motion: reduce) {
-  body.is-home { animation: none; --home-ground: #eaf8f5; }
+  :root { animation: none; --header-ground: #eaf8f5; }
 }
 
 /* ---------- hero: one statement, nothing else ---------- */

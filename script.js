@@ -261,19 +261,6 @@
       syncHeader();
     }
 
-    /* Homepage header: matches the hero ground while over it, veils to
-       white once the hero has scrolled away. The colour itself is never
-       animated here, so the header cannot lag behind the hero. */
-    var homeHero = document.querySelector(".home-hero");
-    var homeHead = document.querySelector("body.is-home .ed-head");
-    if (homeHero && homeHead && "IntersectionObserver" in window) {
-      new IntersectionObserver(
-        function (entries) {
-          homeHead.classList.toggle("is-past", !entries[0].isIntersecting);
-        },
-        { rootMargin: "-60px 0px 0px 0px", threshold: 0 }
-      ).observe(homeHero);
-    }
 
     /* One soft hello from the head mark shortly after the home page settles.
        Never repeats, and never runs when reduced motion is requested. */
