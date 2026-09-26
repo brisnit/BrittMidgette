@@ -261,6 +261,36 @@
       syncHeader();
     }
 
+    /* Homepage header: matches the hero ground while over it, veils to
+       white once the hero has scrolled away. The colour itself is never
+       animated here, so the header cannot lag behind the hero. */
+    var homeHero = document.querySelector(".home-hero");
+    var homeHead = document.querySelector("body.is-home .ed-head");
+    if (homeHero && homeHead && "IntersectionObserver" in window) {
+      new IntersectionObserver(
+        function (entries) {
+          homeHead.classList.toggle("is-past", !entries[0].isIntersecting);
+        },
+        { rootMargin: "-60px 0px 0px 0px", threshold: 0 }
+      ).observe(homeHero);
+    }
+
+    /* One soft hello from the head mark shortly after the home page settles.
+       Never repeats, and never runs when reduced motion is requested. */
+    if (document.body.classList.contains("is-home")) {
+      var mark = document.querySelector(".ed-head__logo");
+      var calm = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (mark && !calm) {
+        setTimeout(function () {
+          mark.classList.add("is-greeting");
+          mark.addEventListener("animationend", function done() {
+            mark.classList.remove("is-greeting");
+            mark.removeEventListener("animationend", done);
+          });
+        }, 700);
+      }
+    }
+
     /* Mobile nav (present on the home page only) */
     var toggle = document.getElementById("nav-toggle");
     var nav = document.getElementById("nav");

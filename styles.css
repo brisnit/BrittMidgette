@@ -2067,12 +2067,13 @@ h1, h2, h3, h4,
   position: sticky; top: 0; z-index: 100;
   display: flex; align-items: center; justify-content: space-between;
   gap: var(--s-4); padding: var(--s-3) var(--pad);
+  padding-block: 1.28rem;   /* the mark grew; the header height does not */
   background: color-mix(in srgb, var(--paper) 88%, transparent);
   backdrop-filter: saturate(160%) blur(12px);
   -webkit-backdrop-filter: saturate(160%) blur(12px);
   border-bottom: 1px solid var(--line);
 }
-.ed-head__logo { display: block; height: 34px; width: auto; }
+.ed-head__logo { display: block; height: 41px; width: auto; }
 .ed-nav { display: flex; gap: clamp(1.25rem, 2.5vw, 2.25rem); align-items: center; }
 .ed-nav a {
   font-size: var(--t-small); font-weight: var(--w-med); color: var(--ink);
@@ -2292,4 +2293,171 @@ h1, h2, h3, h4,
   .ar-hero, .ar-wide, .ar-land, .ar-pair, .ar-tall, .ar-portrait {
     border-radius: var(--media-radius);
   }
+}
+
+/* ============================================================
+   Homepage: header + hero as one continuous animated field
+   ============================================================ */
+
+/* One registered custom property is the single source of truth for the
+   ground colour. The animation runs once, on <body>; the header and the
+   hero both read the inherited value, so they cannot drift apart. */
+@property --home-ground {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #eaf8f5;
+}
+
+body.is-home {
+  --home-ground: #eaf8f5;
+  animation: home-drift 56s ease-in-out infinite;
+}
+
+/* mint -> blue -> lavender -> ice. 10s at rest, 4s to cross. */
+@keyframes home-drift {
+  0%,     17.857% { --home-ground: #eaf8f5; }
+  25%,    42.857% { --home-ground: #edf4ff; }
+  50%,    67.857% { --home-ground: #f3f0fa; }
+  75%,    92.857% { --home-ground: #eef8fa; }
+  100%            { --home-ground: #eaf8f5; }
+}
+
+body.is-home .ed-head,
+body.is-home .home-hero { background-color: var(--home-ground); }
+
+/* The header is already sticky. Over the hero it must be the hero colour
+   exactly, so no blur, no tint and no transition that could lag behind it. */
+body.is-home .ed-head {
+  background-image: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border-bottom-color: transparent;
+  transition: border-bottom-color 0.45s var(--ease);
+}
+/* Past the hero the header veils to white. The veil fades over the ground
+   rather than replacing it, so the background colour never has to animate. */
+body.is-home .ed-head::before {
+  content: ""; position: absolute; inset: 0; z-index: 0;
+  background: var(--paper);
+  opacity: 0; transition: opacity 0.45s var(--ease);
+  pointer-events: none;
+}
+body.is-home .ed-head > * { position: relative; z-index: 1; }
+body.is-home .ed-head.is-past::before { opacity: 1; }
+body.is-home .ed-head.is-past { border-bottom-color: var(--line); }
+
+@media (prefers-reduced-motion: reduce) {
+  body.is-home { animation: none; --home-ground: #eaf8f5; }
+}
+
+/* ---------- hero: one statement, nothing else ---------- */
+.home-hero {
+  display: flex; align-items: center;
+  min-height: calc(80vh - 5.25rem);
+  padding-block: clamp(3.5rem, 10vw, 8rem) clamp(4rem, 12vw, 9rem);
+}
+@supports (min-height: 80svh) {
+  .home-hero { min-height: calc(80svh - 5.25rem); }
+}
+/* as a flex child the wrap would shrink to its content and centre itself */
+.home-hero > .ed-wrap { width: 100%; }
+.home-hero__name {
+  font-size: clamp(3rem, 9vw, 7.5rem);
+  font-weight: var(--w-med); line-height: 0.95;
+  letter-spacing: -0.04em;
+  margin-bottom: clamp(1.25rem, 3vw, 2.25rem);
+}
+.home-hero__role {
+  font-size: clamp(1.6rem, 4.6vw, 3.75rem);
+  font-weight: var(--w-med); line-height: 1.08;
+  letter-spacing: -0.025em; color: var(--ink-2);
+  max-width: 18ch;             /* keeps the three lines intentional */
+  text-wrap: balance;
+}
+
+/* ---------- intro: white, one paragraph, two links ---------- */
+.home-intro { background: var(--paper); border-top: 0; }
+.home-intro__p {
+  max-width: 54ch;
+  font-size: var(--t-lede); line-height: 1.5;
+}
+.home-cta {
+  display: flex; flex-wrap: wrap;
+  gap: clamp(1.25rem, 3vw, 2.5rem);
+  margin-top: clamp(2rem, 4.5vw, 3.25rem);
+}
+.home-cta__l {
+  display: inline-flex; align-items: center; gap: 0.45rem;
+  font-size: var(--t-body); font-weight: var(--w-med); color: var(--ink);
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--line-strong);
+  transition: border-bottom-color 0.3s var(--ease);
+}
+.home-cta__l:hover, .home-cta__l:focus-visible { border-bottom-color: var(--ink); }
+.home-cta__a { display: inline-block; transition: transform 0.3s var(--ease); }
+.home-cta__l:hover .home-cta__a,
+.home-cta__l:focus-visible .home-cta__a { transform: translate(4px, -4px); }
+
+/* ---------- client logos: black marks on white ---------- */
+.home-logos {
+  display: grid; grid-template-columns: repeat(5, minmax(0, 1fr));
+  align-items: center; justify-items: center;
+  list-style: none; margin: 0; padding: 0;
+  gap: clamp(2rem, 4vw, 3rem) clamp(1.5rem, 3vw, 2.5rem);
+}
+.home-logos li { display: flex; align-items: center; justify-content: center; width: 100%; }
+/* Sized by perceived weight, not by a single shared width: squat wordmarks
+   get more width, upright marks get more height. */
+.home-logo          { display: block; width: auto; height: auto;
+                      max-width: 118px; max-height: 34px; object-fit: contain; }
+.home-logo.is-wide  { max-width: 136px; max-height: 28px; }
+.home-logo.is-tall  { max-width: 96px;  max-height: 42px; }
+
+@media (max-width: 900px) {
+  .home-logos { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+@media (max-width: 640px) {
+  .home-logos { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem 1.5rem; }
+  .home-logo         { max-width: 92px;  max-height: 26px; }
+  .home-logo.is-wide { max-width: 104px; max-height: 21px; }
+  .home-logo.is-tall { max-width: 74px;  max-height: 32px; }
+}
+
+/* ---------- head mark: a quick hello, not an error shake ---------- */
+/* The transform sits on the graphic, never on the anchor, so the hit
+   area stays exactly where it was. */
+.ed-head__logo {
+  transform-origin: 50% 72%;
+  will-change: transform;
+}
+
+@keyframes head-wobble {
+  0%   { transform: rotate(0deg)  translate(0, 0); }
+  18%  { transform: rotate(-5deg) translate(-1px, 1px); }
+  38%  { transform: rotate(4deg)  translate(1px, -1px); }
+  58%  { transform: rotate(-3deg) translate(-1px, 0); }
+  78%  { transform: rotate(2deg)  translate(1px, 0); }
+  100% { transform: none; }
+}
+
+/* softer greeting on load */
+@keyframes head-wobble-soft {
+  0%   { transform: rotate(0deg)  translate(0, 0); }
+  20%  { transform: rotate(-3.5deg) translate(-1px, 0); }
+  42%  { transform: rotate(2.5deg)  translate(1px, 0); }
+  64%  { transform: rotate(-1.75deg) translate(0, 0); }
+  84%  { transform: rotate(1deg)   translate(0, 0); }
+  100% { transform: none; }
+}
+
+/* hover plays once and can be retriggered by leaving and returning */
+@media (hover: hover) and (pointer: fine) {
+  .ed-head > a:hover .ed-head__logo { animation: head-wobble 560ms ease-in-out 1; }
+}
+
+.ed-head__logo.is-greeting { animation: head-wobble-soft 620ms ease-in-out 1; }
+
+@media (prefers-reduced-motion: reduce) {
+  .ed-head > a:hover .ed-head__logo,
+  .ed-head__logo.is-greeting { animation: none; }
 }
