@@ -4,23 +4,44 @@
    ============================================================ */
 
 :root {
-  /* ---- colour: warm off-white ground, near-black ink ---- */
-  --paper:        #f7f5f1;   /* page ground, warm off-white */
-  --paper-2:      #efece6;   /* secondary warm band */
-  --paper-3:      #e7e3db;   /* tertiary / hover wash */
-  --ink:          #16150f;   /* near-black, warm */
-  --ink-2:        #55524a;   /* secondary text */
-  --muted:        #85806f;   /* labels, meta */
-  --line:         #ddd8ce;   /* hairline */
-  --line-strong:  #c4bdaf;
-  --dark:         #16150f;   /* inverted sections */
-  --dark-2:       #1f1e16;
-  --on-dark:      #f7f5f1;
-  --on-dark-2:    rgba(247,245,241,.62);
+  /* ---- ground: white is the default canvas ---- */
+  --background:   #ffffff;              /* the canvas */
+  --white:        var(--background);
+  --paper:        var(--background);
 
-  /* legacy aliases, kept so existing components resolve */
+  /* ---- pale secondary grounds, used sparingly for rhythm ---- */
+  --mint:         #eaf8f5;
+  --blue:         #edf4ff;
+  --lavender:     #f3f0fa;
+  --rose:         #faf0f2;
+  --sage:         #f1f6ee;
+  --ice:          #eef8fa;
+
+  /* legacy aliases now resolve to neutral greys, not warm tints */
+  --paper-2:      var(--mint);
+  --paper-3:      #f4f4f4;
+
+  /* ---- ink ---- */
+  --ink:            #080808;
+  --text-secondary: #666666;
+  --ink-2:          var(--text-secondary);
+  --muted:          #767676;
+
+  /* ---- rules ---- */
+  --rule:         #d9d9d9;              /* hairline */
+  --line:         var(--rule);
+  --line-strong:  #c2c2c2;
+
+  /* ---- inverted ---- */
+  --dark:         #080808;
+  --dark-2:       #111111;
+  --on-dark:      #ffffff;
+  --on-dark-2:    rgba(255,255,255,.66);
+
   --black: var(--ink);
-  --white: var(--paper);
+
+  /* ---- media ---- */
+  --media-radius: 20px;
 
   /* ---- type: one family, one weight ---- */
   --sans:    "Schibsted Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -1853,9 +1874,9 @@ main { display: block; }
   display: block; font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.12em;
   text-transform: uppercase; color: var(--muted); margin-bottom: 0.5rem;
 }
-.cs-card--note { background: #fdf6d8; border-color: #f0e4ab; }
-.cs-card--pain { background: #fdeceb; border-color: #f4cfcc; }
-.cs-card--opp  { background: #e9f5ee; border-color: #c6e3d2; }
+.cs-card--note { background: var(--lavender); border-color: #ddd5ee; }
+.cs-card--pain { background: var(--rose); border-color: #f0d6dc; }
+.cs-card--opp  { background: var(--sage); border-color: #d5e5cd; }
 .cs-card--lead { background: #0a0a0a; color: #fff; border-color: #0a0a0a; }
 .cs-card--lead .cs-card__k { color: rgba(255,255,255,0.55); }
 
@@ -1905,9 +1926,9 @@ main { display: block; }
   padding: 0.35rem 0.7rem; border-radius: 100px; border: 1px solid var(--line-strong);
 }
 .cs-chip--on  { background: #0a0a0a; color: #fff; border-color: #0a0a0a; }
-.cs-chip--ok  { background: #e9f5ee; border-color: #c6e3d2; }
-.cs-chip--wait{ background: #fdf6d8; border-color: #f0e4ab; }
-.cs-chip--act { background: #fdeceb; border-color: #f4cfcc; }
+.cs-chip--ok  { background: var(--sage); border-color: #d5e5cd; }
+.cs-chip--wait{ background: var(--blue); border-color: #d4e3fb; }
+.cs-chip--act { background: var(--rose); border-color: #f0d6dc; }
 
 /* Before / after */
 .cs-ba { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(1rem, 3vw, 2.5rem); align-items: start; }
@@ -2174,7 +2195,7 @@ h1, h2, h3, h4,
 .ed-statement__s { margin-top: var(--s-3); max-width: 52ch; font-size: var(--t-lede); line-height: 1.45; color: var(--ink-2); }
 
 /* inverted band */
-.ed-invert { background: var(--dark); color: var(--on-dark); border-top-color: rgba(247,245,241,.16); }
+.ed-invert { background: var(--dark); color: var(--on-dark); border-top-color: rgba(255,255,255,.16); }
 .ed-invert .ed-label, .ed-invert .ed-statement__t, .ed-invert .ed-case__name { color: var(--on-dark); }
 .ed-invert .ed-body, .ed-invert .ed-statement__s { color: var(--on-dark-2); }
 .ed-invert .ed-body strong { color: var(--on-dark); }
@@ -2192,10 +2213,10 @@ h1, h2, h3, h4,
 .ed-out { display: inline-flex; align-items: center; gap: 0.5rem; margin-top: var(--s-4);
   font-size: var(--t-small); font-weight: var(--w-med); border-bottom: 1px solid var(--line-strong); padding-bottom: 0.15rem; }
 .ed-out:hover { border-bottom-color: currentColor; }
-.ed-invert .ed-out { border-bottom-color: rgba(247,245,241,.4); }
+.ed-invert .ed-out { border-bottom-color: rgba(255,255,255,.4); }
 
 /* next project */
-.ed-next { display: block; border-top: 1px solid var(--line); padding-block: clamp(3rem, 7vw, 6rem); }
+.ed-next { display: block; background: var(--lavender); border-top: 1px solid transparent; padding-block: clamp(3rem, 7vw, 6rem); }
 .ed-next__k { font-size: var(--t-label); color: var(--muted); }
 .ed-next__n { margin-top: var(--s-2); font-size: clamp(2rem, 6vw, 4.5rem); font-weight: var(--w-med);
   letter-spacing: -0.03em; line-height: 1; display: flex; align-items: baseline; gap: 0.5rem; }
@@ -2209,7 +2230,66 @@ h1, h2, h3, h4,
 .ed-refs__l { display: flex; flex-wrap: wrap; gap: 0.4rem 1.1rem; }
 .ed-refs__l a { font-size: var(--t-small); border-bottom: 1px solid var(--line-strong); padding-bottom: 0.08rem; }
 .ed-refs__l a:hover { border-bottom-color: var(--ink); }
-.ed-invert .ed-refs { border-top-color: rgba(247,245,241,.18); }
-.ed-invert .ed-refs__l a { border-bottom-color: rgba(247,245,241,.4); }
+.ed-invert .ed-refs { border-top-color: rgba(255,255,255,.18); }
+.ed-invert .ed-refs__l a { border-bottom-color: rgba(255,255,255,.4); }
 .ed-exp__note { margin-top: var(--s-2); max-width: 62ch; font-size: var(--t-small); line-height: 1.55; color: var(--ink-2); }
 .ed-exp__row { align-items: start; }
+
+/* ==========================================================
+   MEDIA SYSTEM — 20px radius, typography stays sharp
+   ========================================================== */
+.ed-media,
+.ed-proj__media,
+.ed-portrait,
+.cs-split__media,
+.ed-mediasec figure { border-radius: var(--media-radius); overflow: hidden; }
+
+.ed-media img, .ed-media video,
+.ed-proj__media img, .ed-proj__media video,
+.ed-portrait img,
+.cs-split__media img, .cs-split__media video { border-radius: var(--media-radius); display: block; }
+
+/* caption sits outside the rounded surface */
+.ed-media { overflow: visible; }
+.ed-media > img, .ed-media > video { border-radius: var(--media-radius); overflow: hidden; }
+.ed-media__cap { border-radius: 0; }
+
+/* aspect presets, ready for the standardised asset set */
+.ar-hero     { aspect-ratio: 8 / 5; }
+.ar-wide     { aspect-ratio: 16 / 9; }
+.ar-land     { aspect-ratio: 4 / 3; }
+.ar-pair     { aspect-ratio: 4 / 5; }
+.ar-tall     { aspect-ratio: 3 / 4; }
+.ar-portrait { aspect-ratio: 4 / 5; }
+.ar-hero, .ar-wide, .ar-land, .ar-pair, .ar-tall, .ar-portrait { border-radius: var(--media-radius); overflow: hidden; }
+.ar-hero > *, .ar-wide > *, .ar-land > *, .ar-pair > *, .ar-tall > *, .ar-portrait > * {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+}
+
+/* ---- pale grounds, used for rhythm ---- */
+.ed-ground-mint     { background: var(--mint); }
+.ed-ground-blue     { background: var(--blue); }
+.ed-ground-lavender { background: var(--lavender); }
+.ed-ground-rose     { background: var(--rose); }
+.ed-ground-sage     { background: var(--sage); }
+.ed-ground-ice      { background: var(--ice); }
+.ed-ground-mint, .ed-ground-blue, .ed-ground-lavender,
+.ed-ground-rose, .ed-ground-sage, .ed-ground-ice { border-top-color: transparent; }
+
+/* An unloaded video (preload="none", no poster) should read as a soft rounded
+   block, not a hard black rectangle, so the corner treatment holds before play. */
+.ed-media > video, .ed-mediasec video, .cs-split__media video {
+  background: var(--paper-3);
+}
+
+/* Radius holds at every breakpoint: never reduced on small screens. */
+@media (max-width: 900px) {
+  .ed-media, .ed-media > img, .ed-media > video,
+  .ed-proj__media, .ed-proj__media img, .ed-proj__media video,
+  .ed-portrait, .ed-portrait img,
+  .cs-split__media, .cs-split__media img, .cs-split__media video,
+  .ed-mediasec figure,
+  .ar-hero, .ar-wide, .ar-land, .ar-pair, .ar-tall, .ar-portrait {
+    border-radius: var(--media-radius);
+  }
+}
