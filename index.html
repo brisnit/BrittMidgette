@@ -3,21 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Britt Midgette, Design Technologist</title>
-  <meta name="description" content="Britt Midgette, design technologist and systems thinker who takes work from strategy to shipped code." />
-  <meta name="theme-color" content="#000000" />
+  <title>Britt Midgette — Creative Director & Design Technologist</title>
+  <meta name="description" content="Creative direction, experience design, digital products, design systems and AI. Selected work from a career spent between strategy and shipped code." />
+  <meta name="theme-color" content="#f7f5f1" />
   <link rel="icon" type="image/png" href="brand-assets/Pics/favicon.png" />
   <link rel="apple-touch-icon" href="brand-assets/Pics/favicon.png" />
-
-  <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Britt Midgette, Design Technologist" />
-  <meta property="og:description" content="Design technologist and systems thinker who takes work from strategy to shipped code." />
-
+  <meta property="og:title" content="Britt Midgette — Creative Director & Design Technologist" />
+  <meta property="og:description" content="Creative direction, experience design, digital products, design systems and AI. Selected work from a career spent between strategy and shipped code." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=8" />
+  <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=9" />
 </head>
 <body>
   <!-- ============ PASSWORD GATE ============ -->
@@ -27,417 +24,236 @@
       <p class="gate__sub">This site is private. Enter the password to continue.</p>
       <form id="gate-form" class="gate__form" autocomplete="off" novalidate>
         <label class="sr-only" for="gate-input">Password</label>
-        <input
-          id="gate-input"
-          class="gate__input"
-          type="password"
-          placeholder="Password"
-          aria-describedby="gate-error"
-          spellcheck="false"
-        />
+        <input id="gate-input" class="gate__input" type="password" placeholder="Password" aria-describedby="gate-error" spellcheck="false" />
         <button class="gate__btn" type="submit">Enter</button>
       </form>
       <p id="gate-error" class="gate__error" role="alert" hidden>Incorrect password. Try again.</p>
     </div>
-    <p class="gate__footer">© <span class="year"></span> Britt Midgette</p>
+    <p class="gate__footer">&copy; <span class="year"></span> Britt Midgette</p>
   </div>
 
-  <!-- ============ SITE ============ -->
   <div id="site" class="site" hidden>
     <span id="top" aria-hidden="true"></span>
-    <a href="#selected" class="skip-link">Skip to content</a>
+    <a href="#main" class="skip-link">Skip to content</a>
 
-    <!-- Header -->
-    <header class="header">
-      <a href="#top" class="header__brand" aria-label="Britt Midgette, home">
-        <img class="header__logo" src="brand-assets/WhiteLogo.png" alt="Britt Midgette" />
+    <header class="ed-head">
+      <a href="index.html" aria-label="Britt Midgette, home">
+        <img class="ed-head__logo" src="brand-assets/WhiteLogo.png" alt="Britt Midgette" style="filter:invert(1)" />
       </a>
-      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav" aria-label="Toggle menu">
-        <span></span><span></span>
-      </button>
-      <nav class="nav" id="nav" aria-label="Primary">
-        <a href="#about">About</a>
-        <a href="#work">What I Do</a>
-        <a href="capabilities.html">Capabilities</a>
-        <a href="approach.html">Approach</a>
-        <a href="#selected">Selected Work</a>
-        <a href="#contact">Contact</a>
+      <nav class="ed-nav" aria-label="Primary">
+        <a href="index.html#work">Work</a>
+        <a href="about.html">About</a>
+        <a href="index.html#contact">Contact</a>
       </nav>
     </header>
 
-    <main>
-      <!-- Hero -->
-      <section class="hero" id="hero">
-        <video
-          class="hero__video"
-          src="brand-assets/hero-vid2.mp4"
-          autoplay
-          muted
-          loop
-          playsinline
-          preload="auto"
-        ></video>
-        <div class="hero__overlay" aria-hidden="true"></div>
-        <div class="hero__content">
-          <p class="hero__eyebrow reveal">Design Technologist · Systems Thinker</p>
-          <h1 class="hero__headline reveal">Britt<br />Midgette</h1>
-          <p class="hero__lede reveal">
-            Digital strategy, UX, visual design, and design systems, paired with
-            hands-on front-end execution that turns ideas into production.
-          </p>
-          <div class="hero__actions reveal">
-            <a href="#work" class="btn">See what I do</a>
-            <a href="#contact" class="btn btn--ghost">Get in touch</a>
+    <main id="main">
+      <section class="ed-sec ed-intro">
+        <div class="ed-wrap">
+          <h1 class="ed-intro__name reveal">Britt Midgette</h1>
+          <p class="ed-intro__role reveal">Creative Director &amp; Design Technologist</p>
+          <p class="ed-intro__say reveal">I work across creative direction, experience design, digital products, design systems, brand experiences and AI &mdash; from the ambiguous end of a problem through to shipped code.</p>
+          <p class="ed-intro__say reveal">Most of my career has been spent on the strategy and experience side of agency work, leading teams for global brands. More recently I have been building products of my own.</p>
+        </div>
+      </section>
+
+      <section class="ed-sec" id="work">
+        <div class="ed-wide">
+          <div class="ed-cols" style="margin-bottom: clamp(2.5rem,5vw,4rem)">
+            <h2 class="ed-label reveal">Work</h2>
+            <p class="ed-body reveal">Twelve selected projects &mdash; enterprise platforms, connected retail, themed entertainment, and products I designed and built myself.</p>
           </div>
-        </div>
-        <a href="#about" class="hero__scroll" aria-label="Scroll to content">
-          <span>Scroll</span>
-          <span class="hero__scroll-arrow">↓</span>
-        </a>
-      </section>
-
-      <!-- Selected Work -->
-      <section class="section section--experiments" id="selected">
-        <div class="exp-bg" aria-hidden="true"></div>
-        <div class="section__head">
-          <span class="section__index">01</span>
-          <h2 class="section__title">Selected Work</h2>
-        </div>
-        <ul class="experiments">
-          <li class="reveal">
-            <a class="glass" href="artifactintelligence.html">
-              <span class="glass__preview">
-                <img src="brand-assets/AI-case.jpg" alt="Artifact Intelligence - Learning intelligence" loading="lazy" />
+          <ul class="ed-work">
+          <li class="ed-work__item is-wide reveal">
+            <a class="ed-proj" href="artifactintelligence.html">
+              <span class="ed-proj__media"><img src="brand-assets/AI-case.jpg" alt="Artifact Intelligence" loading="lazy" /></span>
+              <span class="ed-proj__row">
+                <span class="ed-proj__name">Artifact Intelligence</span>
+                <span class="ed-proj__arrow" aria-hidden="true">&#8599;</span>
               </span>
-              <span class="glass__body">
-                <span class="glass__tag">Product &middot; AI</span>
-                <span class="glass__title">Artifact Intelligence - Learning intelligence</span>
-                <span class="glass__desc">A Learning Intelligence Platform that reads the signals a learning environment already produces, and turns them into pathways an institution can act on before an outcome is fixed.</span>
-                <span class="glass__cta">View case study &rarr;</span>
-              </span>
+              <span class="ed-proj__say">A Learning Intelligence Platform that reads the signals a learning environment already produces, and turns them into pathways an institution can act o</span>
+              <span class="ed-proj__meta"><span>Learning Intelligence Platform</span><span>Founder &middot; Product strategy &amp; design</span></span>
             </a>
           </li>
-          <li class="reveal">
-            <a class="glass" href="tinycrm.html">
-              <span class="glass__preview">
-                <img src="brand-assets/TCRM-case.jpg" alt="Tiny CRM - Your whole business, organized" loading="lazy" />
+          <li class="ed-work__item reveal">
+            <a class="ed-proj" href="tinycrm.html">
+              <span class="ed-proj__media"><img src="brand-assets/TCRM-case.jpg" alt="Tiny CRM" loading="lazy" /></span>
+              <span class="ed-proj__row">
+                <span class="ed-proj__name">Tiny CRM</span>
+                <span class="ed-proj__arrow" aria-hidden="true">&#8599;</span>
               </span>
-              <span class="glass__body">
-                <span class="glass__tag">Product &middot; SaaS</span>
-                <span class="glass__title">Tiny CRM - Your whole business, organized</span>
-                <span class="glass__desc">An AI-powered CRM built for the person running several businesses at once, not for a sales department. Designed and built end to end.</span>
-                <span class="glass__cta">View case study &rarr;</span>
-              </span>
+              <span class="ed-proj__say">An AI-powered CRM built for the person running several businesses at once, not for a sales department. Designed and built end to end.</span>
+              <span class="ed-proj__meta"><span>Tiny CRM</span><span>Founder &middot; Product design &amp; build</span></span>
             </a>
           </li>
-          <li class="reveal">
-            <a class="glass" href="dropq.html">
-              <span class="glass__preview">
-                <img src="brand-assets/DQ-case.jpg" alt="DropQ - The operating system for drops" loading="lazy" />
+          <li class="ed-work__item reveal">
+            <a class="ed-proj" href="dropq.html">
+              <span class="ed-proj__media"><img src="brand-assets/DQ-case.jpg" alt="DropQ" loading="lazy" /></span>
+              <span class="ed-proj__row">
+                <span class="ed-proj__name">DropQ</span>
+                <span class="ed-proj__arrow" aria-hidden="true">&#8599;</span>
               </span>
-              <span class="glass__body">
-                <span class="glass__tag">Product &middot; Commerce</span>
-                <span class="glass__title">DropQ - The operating system for drops</span>
-                <span class="glass__desc">Timed product releases with inventory that cannot oversell, ordering that holds under a spike, and a customer list the seller actually owns.</span>
-                <span class="glass__cta">View case study &rarr;</span>
-              </span>
+              <span class="ed-proj__say">Timed product releases with inventory that cannot oversell, ordering that holds under a spike, and a customer list the seller actually owns.</span>
+              <span class="ed-proj__meta"><span>DropQ</span><span>Founder &middot; Product design &amp; build</span></span>
             </a>
           </li>
-          <li class="reveal">
-            <a class="glass" href="nipr.html">
-              <span class="glass__preview" data-ph="Add NIPR-case.jpg">
-                <img src="brand-assets/NIPR-case.jpg" alt="NIPR" loading="lazy"
-                  onerror="this.closest('.glass__preview').classList.add('glass__preview--empty')" />
+          <li class="ed-work__item is-wide reveal">
+            <a class="ed-proj" href="nipr.html">
+              <span class="ed-proj__media"><img src="brand-assets/NIPR-case.jpg" alt="NIPR" loading="lazy" /></span>
+              <span class="ed-proj__row">
+                <span class="ed-proj__name">NIPR</span>
+                <span class="ed-proj__arrow" aria-hidden="true">&#8599;</span>
               </span>
-              <span class="glass__body">
-                <span class="glass__tag">Enterprise Product</span>
-                <span class="glass__title">NIPR - One unified licensing experience</span>
-                <span class="glass__desc">A fragmented insurance licensing platform where a single task could mean fourteen open screens, reorganized around the user&rsquo;s journey into one guided sequence with visible progress.</span>
-                <span class="glass__cta">View case study &rarr;</span>
-              </span>
+              <span class="ed-proj__say">A fragmented insurance licensing platform where a single task could mean fourteen open screens, reorganized around the user&rsquo;s journey into one g</span>
+              <span class="ed-proj__meta"><span>NIPR</span><span>UX Director</span><span>2024</span></span>
             </a>
           </li>
-          <li class="reveal">
-            <a class="glass" href="comptia.html">
-              <span class="glass__preview" data-ph="Add exp-1.jpg">
-                <img src="brand-assets/exp-1.jpg" alt="CompTIA" loading="lazy"
-                  onerror="this.closest('.glass__preview').classList.add('glass__preview--empty')" />
+          <li class="ed-work__item reveal">
+            <a class="ed-proj" href="comptia.html">
+              <span class="ed-proj__media"><img src="brand-assets/exp-1.jpg" alt="CompTIA" loading="lazy" /></span>
+              <span class="ed-proj__row">
+                <span class="ed-proj__name">CompTIA</span>
+                <span class="ed-proj__arrow" aria-hidden="true">&#8599;</span>
               </span>
-              <span class="glass__body">
-                <span class="glass__tag">IT Training and Certification</span>
-                <span class="glass__title">CompTIA - digital careers reimagined</span>
-                <span class="glass__desc">CompTIA is a leading online IT training and certification platform helping people build technology careers through certifications and guided learning pathways.</span>
-                <span class="glass__cta">View case study →</span>
-              </span>
+              <span class="ed-proj__say">CompTIA is a leading online IT training and certification platform helping people build technology careers through certifications and guided learning </span>
+              <span class="ed-proj__meta"><span>CompTIA</span><span>Design Director</span><span>2025</span></span>
             </a>
           </li>
-          <li class="reveal">
-            <a class="glass" href="adm.html">
-              <span class="glass__preview" data-ph="Add exp-2.jpg">
-                <img src="brand-assets/exp-2.jpg" alt="ADM" loading="lazy"
-                  onerror="this.closest('.glass__preview').classList.add('glass__preview--empty')" />
+          <li class="ed-work__item reveal">
+            <a class="ed-proj" href="adm.html">
+              <span class="ed-proj__media"><img src="brand-assets/exp-2.jpg" alt="ADM" loading="lazy" /></span>
+              <span class="ed-proj__row">
+                <span class="ed-proj__name">ADM</span>
+                <span class="ed-proj__arrow" aria-hidden="true">&#8599;</span>
               </span>
-              <span class="glass__body">
-                <span class="glass__tag">Digital Transformation</span>
-                <span class="glass__title">ADM - Global nutrition. Unified.</span>
-                <span class="glass__desc">ADM is a global food and nutrition brand connecting supply chains, products and markets across six continents, operating at massive scale, with a worldwide workforce and an expansive business ecosystem.</span>
-                <span class="glass__cta">View case study →</span>
-              </span>
+              <span class="ed-proj__say">ADM is a global food and nutrition brand connecting supply chains, products and markets across six continents, operating at massive scale, with a worl</span>
+              <span class="ed-proj__meta"><span>ADM</span><span>Design Director</span><span>2022</span></span>
             </a>
           </li>
-          <li class="reveal">
-            <a class="glass" href="legoland.html">
-              <span class="glass__preview" data-ph="Add LEGO-card-v3.jpg">
-                <img src="brand-assets/LEGO-card-v3.jpg" alt="LEGOLAND" loading="lazy"
-                  onerror="this.closest('.glass__preview').classList.add('glass__preview--empty')" />
+          <li class="ed-work__item reveal">
+            <a class="ed-proj" href="legoland.html">
+              <span class="ed-proj__media"><img src="brand-assets/LEGO-card-v3.jpg" alt="LEGOLAND" loading="lazy" /></span>
+              <span class="ed-proj__row">
+                <span class="ed-proj__name">LEGOLAND</span>
+                <span class="ed-proj__arrow" aria-hidden="true">&#8599;</span>
               </span>
-              <span class="glass__body">
-                <span class="glass__tag">Themed Entertainment</span>
-                <span class="glass__title">LEGOLAND - A hidden world inside the park</span>
-                <span class="glass__desc">A park-wide RFID game across LEGOLAND California, unlocked by a physical Key to the Kingdom and designed around one rule: no kid-facing screen time.</span>
-                <span class="glass__cta">View case study &rarr;</span>
-              </span>
+              <span class="ed-proj__say">A park-wide RFID game across LEGOLAND California, unlocked by a physical Key to the Kingdom and designed around one rule: no kid-facing screen time.</span>
+              <span class="ed-proj__meta"><span>LEGOLAND &middot; Merlin Entertainments</span><span>Experience Director</span></span>
             </a>
           </li>
-          <li class="reveal">
-            <a class="glass" href="sagaftra.html">
-              <span class="glass__preview" data-ph="Add SAG-case.jpg">
-                <img src="brand-assets/SAG-case.jpg" alt="SAG-AFTRA" loading="lazy"
-                  onerror="this.closest('.glass__preview').classList.add('glass__preview--empty')" />
+          <li class="ed-work__item reveal">
+            <a class="ed-proj" href="sagaftra.html">
+              <span class="ed-proj__media"><img src="brand-assets/SAG-case.jpg" alt="SAG-AFTRA" loading="lazy" /></span>
+              <span class="ed-proj__row">
+                <span class="ed-proj__name">SAG-AFTRA</span>
+                <span class="ed-proj__arrow" aria-hidden="true">&#8599;</span>
               </span>
-              <span class="glass__body">
-                <span class="glass__tag">Member Experience</span>
-                <span class="glass__title">SAG-AFTRA - Residuals, made understandable</span>
-                <span class="glass__desc">Research with 30 actors reshaped how SAG-AFTRA members track residuals, bringing the union&rsquo;s internal payment process into the member experience so an actor can see where their money is and what happens next.</span>
-                <span class="glass__cta">View case study &rarr;</span>
-              </span>
+              <span class="ed-proj__say">Research with 30 actors reshaped how SAG-AFTRA members track residuals, bringing the union&rsquo;s internal payment process into the member experience</span>
+              <span class="ed-proj__meta"><span>SAG-AFTRA</span><span>Design Director</span><span>2025</span></span>
             </a>
           </li>
-          <li class="reveal">
-            <a class="glass" href="mac.html">
-              <span class="glass__preview" data-ph="Add MAC-case.jpg">
-                <img src="brand-assets/MAC-case.jpg" alt="MAC Cosmetics" loading="lazy"
-                  onerror="this.closest('.glass__preview').classList.add('glass__preview--empty')" />
+          <li class="ed-work__item is-wide reveal">
+            <a class="ed-proj" href="mac.html">
+              <span class="ed-proj__media"><img src="brand-assets/MAC-case.jpg" alt="MAC Cosmetics" loading="lazy" /></span>
+              <span class="ed-proj__row">
+                <span class="ed-proj__name">MAC Cosmetics</span>
+                <span class="ed-proj__arrow" aria-hidden="true">&#8599;</span>
               </span>
-              <span class="glass__body">
-                <span class="glass__tag">Connected Retail</span>
-                <span class="glass__title">MAC Cosmetics - Beauty retail, connected</span>
-                <span class="glass__desc">A connected physical-digital store in Queens built on MAC Pass, Virtual Try-On and RFID-driven Tap &amp; Try, delivering a 200%+ lift in digital engagement in its first month.</span>
-                <span class="glass__cta">View case study &rarr;</span>
-              </span>
+              <span class="ed-proj__say">A connected physical-digital store in Queens built on MAC Pass, Virtual Try-On and RFID-driven Tap &amp; Try, delivering a 200%+ lift in digital engag</span>
+              <span class="ed-proj__meta"><span>MAC Cosmetics</span><span>Experience Director</span><span>2022</span></span>
             </a>
           </li>
-          <li class="reveal">
-            <a class="glass" href="underarmour.html">
-              <span class="glass__preview" data-ph="Add UA-case.jpg">
-                <img src="brand-assets/UA-case.jpg" alt="Under Armour" loading="lazy"
-                  onerror="this.closest('.glass__preview').classList.add('glass__preview--empty')" />
+          <li class="ed-work__item reveal">
+            <a class="ed-proj" href="underarmour.html">
+              <span class="ed-proj__media"><img src="brand-assets/UA-case.jpg" alt="Under Armour" loading="lazy" /></span>
+              <span class="ed-proj__row">
+                <span class="ed-proj__name">Under Armour</span>
+                <span class="ed-proj__arrow" aria-hidden="true">&#8599;</span>
               </span>
-              <span class="glass__body">
-                <span class="glass__tag">Future Retail</span>
-                <span class="glass__title">Under Armour - The future of the athlete experience</span>
-                <span class="glass__desc">Experience strategy and concept development for a Human Performance Center, and two pilots &mdash; Armour Bar and Map My Run &mdash; exploring what a store could do for an athlete.</span>
-                <span class="glass__cta">View case study &rarr;</span>
-              </span>
+              <span class="ed-proj__say">Experience strategy and concept development for a Human Performance Center, and two pilots &mdash; Armour Bar and Map My Run &mdash; exploring what a </span>
+              <span class="ed-proj__meta"><span>Under Armour</span><span>Experience Director</span><span>2018</span></span>
             </a>
           </li>
-          <li class="reveal">
-            <a class="glass" href="bose.html">
-              <span class="glass__preview" data-ph="Add Bose-case.jpg">
-                <img src="brand-assets/Bose-case.jpg" alt="Bose" loading="lazy"
-                  onerror="this.closest('.glass__preview').classList.add('glass__preview--empty')" />
+          <li class="ed-work__item reveal">
+            <a class="ed-proj" href="bose.html">
+              <span class="ed-proj__media"><img src="brand-assets/Bose-case.jpg" alt="Bose" loading="lazy" /></span>
+              <span class="ed-proj__row">
+                <span class="ed-proj__name">Bose</span>
+                <span class="ed-proj__arrow" aria-hidden="true">&#8599;</span>
               </span>
-              <span class="glass__body">
-                <span class="glass__tag">Digital Retail</span>
-                <span class="glass__title">Bose - An iconic audio brand, in-store</span>
-                <span class="glass__desc">Digital retail experiences designed on the rails of an existing physical display system, built from years of Bose research and carried across in-store screens, QR, Bose.com and retail partners.</span>
-                <span class="glass__cta">View case study &rarr;</span>
-              </span>
+              <span class="ed-proj__say">Digital retail experiences designed on the rails of an existing physical display system, built from years of Bose research and carried across in-store</span>
+              <span class="ed-proj__meta"><span>Bose</span><span>Design Director</span><span>2024</span></span>
             </a>
           </li>
-          <li class="reveal">
-            <a class="glass" href="menswearhouse.html">
-              <span class="glass__preview" data-ph="Add MW-case.jpg">
-                <img src="brand-assets/MW-case.jpg" alt="Men&rsquo;s Wearhouse" loading="lazy"
-                  onerror="this.closest('.glass__preview').classList.add('glass__preview--empty')" />
+          <li class="ed-work__item reveal">
+            <a class="ed-proj" href="menswearhouse.html">
+              <span class="ed-proj__media"><img src="brand-assets/MW-case.jpg" alt="Men&rsquo;s Wearhouse" loading="lazy" /></span>
+              <span class="ed-proj__row">
+                <span class="ed-proj__name">Men&rsquo;s Wearhouse</span>
+                <span class="ed-proj__arrow" aria-hidden="true">&#8599;</span>
               </span>
-              <span class="glass__body">
-                <span class="glass__tag">Retail Innovation</span>
-                <span class="glass__title">Men&rsquo;s Wearhouse - Store of the Future</span>
-                <span class="glass__desc">Twelve digital concepts tested with sixty customers in Chicago, narrowed to two, prototyped in the San Jose flagship and rolled out to Men&rsquo;s Wearhouse flagship stores across the country.</span>
-                <span class="glass__cta">View case study →</span>
-              </span>
+              <span class="ed-proj__say">Twelve digital concepts tested with sixty customers in Chicago, narrowed to two, prototyped in the San Jose flagship and rolled out to Men&rsquo;s Wea</span>
+              <span class="ed-proj__meta"><span>Men&rsquo;s Wearhouse</span><span>Design Director</span><span>2019</span></span>
             </a>
           </li>
-        </ul>
-      </section>
-
-      <!-- Quote banner -->
-      <section class="quote" aria-label="Quote">
-        <img class="quote__bg" src="brand-assets/Quote_BKG.jpg" alt="" loading="lazy" />
-        <div class="quote__overlay" aria-hidden="true"></div>
-        <blockquote class="quote__inner reveal">
-          <p class="quote__text">
-            Few ideas work on the first try.<br />
-            Iteration is the key to innovation.<br />
-            <cite class="quote__cite">~ Sebastian Thrun</cite>
-          </p>
-        </blockquote>
-      </section>
-
-      <!-- About -->
-      <section class="section section--about" id="about">
-        <div class="section__head">
-          <span class="section__index">02</span>
-          <h2 class="section__title">About</h2>
-        </div>
-        <div class="about__grid">
-          <div class="about__body">
-            <p class="about__lead reveal">
-              I turn ideas into
-              <span class="rotator" aria-hidden="true">
-                <span class="rotator__word is-active">shipped code.</span>
-                <span class="rotator__word">design systems.</span>
-                <span class="rotator__word">real products.</span>
-                <span class="rotator__word">things people use.</span>
-              </span>
-              <span class="sr-only">shipped code, design systems, real products, and things people actually use.</span>
-            </p>
-            <p class="reveal">
-              I work at the seam between design and engineering, where good ideas
-              either become real products or quietly fall apart.
-            </p>
-            <p class="reveal">
-              My background spans digital strategy, user experience, and visual
-              design, with deep, repeated experience building and scaling design
-              systems that keep large organizations coherent. I&nbsp;don&rsquo;t hand
-              off at the mockup. I vibe the front-end code that turns a system into
-              something people actually use.
-            </p>
-            <p class="reveal">
-              That end-to-end fluency means fewer translation losses between teams,
-              faster paths from concept to production, and design decisions that hold
-              up once they meet the realities of the browser. I think in systems,
-              communicate in plain language, and ship.
-            </p>
-          </div>
-          <figure class="photo about__photo reveal" data-ph="Portrait: add Me2.jpg">
-            <img
-              src="brand-assets/Me2.jpg"
-              alt="Britt Midgette"
-              loading="lazy"
-              onerror="this.closest('.photo').classList.add('photo--empty')"
-            />
-          </figure>
-        </div>
-      </section>
-
-      <!-- What I Do -->
-      <section class="section section--work" id="work">
-        <div class="section__head">
-          <span class="section__index">03</span>
-          <h2 class="section__title">What&nbsp;I&nbsp;Do</h2>
-        </div>
-        <ol class="capabilities">
-          <li class="cap reveal">
-            <span class="cap__num">01</span>
-            <h3 class="cap__title">Digital Strategy</h3>
-            <p class="cap__desc">
-              Translating business goals into product direction: roadmaps,
-              priorities, and the hard tradeoffs that make a vision shippable.
-            </p>
-          </li>
-          <li class="cap reveal">
-            <span class="cap__num">02</span>
-            <h3 class="cap__title">User Experience</h3>
-            <p class="cap__desc">
-              Research-informed flows, information architecture, and interaction
-              design that make complex products feel obvious.
-            </p>
-          </li>
-          <li class="cap reveal">
-            <span class="cap__num">03</span>
-            <h3 class="cap__title">Visual Design</h3>
-            <p class="cap__desc">
-              Typography, layout, and brand expression with the restraint and
-              precision that high-stakes interfaces demand.
-            </p>
-          </li>
-          <li class="cap reveal">
-            <span class="cap__num">04</span>
-            <h3 class="cap__title">Design Systems</h3>
-            <p class="cap__desc">
-              Building and scaling component libraries, tokens, and documentation
-              that keep teams consistent and fast as they grow.
-            </p>
-          </li>
-          <li class="cap reveal">
-            <span class="cap__num">05</span>
-            <h3 class="cap__title">Front-End Engineering</h3>
-            <p class="cap__desc">
-              Hands-on execution in modern HTML, CSS, and JavaScript, turning
-              designs into accessible, production-grade code.
-            </p>
-          </li>
-          <li class="cap reveal">
-            <span class="cap__num">06</span>
-            <h3 class="cap__title">Systems Thinking</h3>
-            <p class="cap__desc">
-              Seeing the whole: how strategy, design, code, and organization fit
-              together, and removing the friction between them.
-            </p>
-          </li>
-        </ol>
-      </section>
-
-      <!-- Brands -->
-      <section class="section section--brands" id="brands">
-        <div class="section__head">
-          <span class="section__index">04</span>
-          <h2 class="section__title">Some brands I&rsquo;ve worked with</h2>
-        </div>
-        <ul class="brands">
-          <li class="brand reveal"><img src="brand-assets/ADM.png" alt="ADM" loading="lazy" /></li>
-          <li class="brand reveal"><img src="brand-assets/CompTIA.png" alt="CompTIA" loading="lazy" /></li>
-          <li class="brand reveal"><img src="brand-assets/LEGOLAND.png" alt="LEGOLAND" loading="lazy" /></li>
-          <li class="brand reveal"><img src="brand-assets/Levis.png" alt="Levi&rsquo;s" loading="lazy" /></li>
-          <li class="brand reveal"><img src="brand-assets/MAC.png" alt="MAC Cosmetics" loading="lazy" /></li>
-          <li class="brand reveal"><img src="brand-assets/Samsung.png" alt="Samsung" loading="lazy" /></li>
-          <li class="brand reveal"><img src="brand-assets/SHOE-CARN.png" alt="Shoe Carnival" loading="lazy" /></li>
-          <li class="brand reveal"><img src="brand-assets/Under.png" alt="Under Armour" loading="lazy" /></li>
-          <li class="brand reveal"><img src="brand-assets/Bose.png" alt="Bose" loading="lazy" /></li>
-          <li class="brand reveal"><img src="brand-assets/Loreal.png" alt="L&rsquo;Or&eacute;al" loading="lazy" /></li>
-          <li class="brand reveal"><img src="brand-assets/Phiips.png" alt="Philips" loading="lazy" /></li>
-          <li class="brand reveal"><img src="brand-assets/Sag.png" alt="SAG-AFTRA" loading="lazy" /></li>
-        </ul>
-      </section>
-
-      <!-- Contact -->
-      <section class="section section--contact" id="contact">
-        <div class="section__head">
-          <span class="section__index">05</span>
-          <h2 class="section__title">Contact</h2>
-        </div>
-        <div class="contact__body">
-          <p class="contact__lead reveal">
-            Have a problem that lives between design and engineering?<br />
-            Let&rsquo;s talk.
-          </p>
-          <a class="contact__email reveal" href="mailto:brisnit@gmail.com">brisnit@gmail.com</a>
-          <ul class="contact__links reveal">
-            <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn ↗</a></li>
-            <li><a href="brand-assets/britt-midgette-resume3.pdf" download rel="noopener">Resume ↓</a></li>
           </ul>
+        </div>
+      </section>
+
+      <section class="ed-sec">
+        <div class="ed-wrap ed-cols">
+          <h2 class="ed-label reveal">Clients</h2>
+          <div class="reveal">
+            <ul class="ed-clients">
+              <li>ADM</li>
+              <li>Bose</li>
+              <li>CompTIA</li>
+              <li>LEGOLAND</li>
+              <li>Levi&rsquo;s</li>
+              <li>L&rsquo;Or&eacute;al</li>
+              <li>MAC Cosmetics</li>
+              <li>Men&rsquo;s Wearhouse</li>
+              <li>NIPR</li>
+              <li>Philips</li>
+              <li>SAG-AFTRA</li>
+              <li>Samsung</li>
+              <li>Shoe Carnival</li>
+              <li>Under Armour</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="ed-sec" id="contact">
+        <div class="ed-wrap ed-cols">
+          <h2 class="ed-label reveal">Contact</h2>
+          <div class="reveal">
+            <p class="ed-contact__big">Have a problem that lives between design and engineering?</p>
+            <a class="ed-mail" href="mailto:brisnit@gmail.com">brisnit@gmail.com</a>
+            <div class="ed-links">
+              <a href="brand-assets/britt-midgette-resume3.pdf" download>R&eacute;sum&eacute;</a>
+              <a href="capabilities.html">Capabilities</a>
+              <a href="approach.html">Approach</a>
+            </div>
+          </div>
         </div>
       </section>
     </main>
 
-    <footer class="footer">
-      <span class="footer__copy">© <span class="year"></span> Britt Midgette</span>
-      <a href="#top" class="footer__top">Back to top ↑</a>
+    <footer class="ed-foot">
+      <div class="ed-wrap ed-foot__in">
+        <span>&copy; <span class="year"></span> Britt Midgette</span>
+        <nav class="ed-foot__nav" aria-label="Footer">
+          <a href="index.html#work">Work</a>
+          <a href="about.html">About</a>
+          <a href="capabilities.html">Capabilities</a>
+          <a href="approach.html">Approach</a>
+          <a href="mailto:brisnit@gmail.com">Email</a>
+        </nav>
+      </div>
     </footer>
   </div>
 
-  <script src="script.js?v=8"></script>
+  <script src="script.js"></script>
 </body>
 </html>

@@ -4,22 +4,52 @@
    ============================================================ */
 
 :root {
-  --black: #000;
-  --white: #fff;
-  --ink: #0a0a0a;
-  --paper: #ffffff;
-  --muted: #6b6b6b;
-  --line: #e3e3e3;
-  --line-strong: #c9c9c9;
+  /* ---- colour: warm off-white ground, near-black ink ---- */
+  --paper:        #f7f5f1;   /* page ground, warm off-white */
+  --paper-2:      #efece6;   /* secondary warm band */
+  --paper-3:      #e7e3db;   /* tertiary / hover wash */
+  --ink:          #16150f;   /* near-black, warm */
+  --ink-2:        #55524a;   /* secondary text */
+  --muted:        #85806f;   /* labels, meta */
+  --line:         #ddd8ce;   /* hairline */
+  --line-strong:  #c4bdaf;
+  --dark:         #16150f;   /* inverted sections */
+  --dark-2:       #1f1e16;
+  --on-dark:      #f7f5f1;
+  --on-dark-2:    rgba(247,245,241,.62);
 
-  /* Primary (display) & secondary (body) */
-  --display: "Archivo Black", "Arial Black", sans-serif;
-  --sans: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --serif: var(--display);            /* headings now use Archivo Black */
-  --mono: "Roboto", ui-monospace, monospace; /* small labels, Roboto + tracking */
+  /* legacy aliases, kept so existing components resolve */
+  --black: var(--ink);
+  --white: var(--paper);
 
-  --maxw: 1160px;
-  --pad: clamp(1.25rem, 5vw, 5rem);
+  /* ---- type: one family, one weight ---- */
+  --sans:    "Schibsted Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --display: var(--sans);
+  --serif:   var(--sans);
+  --mono:    var(--sans);
+  --w-reg: 400;
+  --w-med: 500;
+
+  /* ---- type scale ---- */
+  --t-hero:  clamp(2.75rem, 7.2vw, 6rem);
+  --t-h1:    clamp(2.5rem,  6vw,   5rem);
+  --t-h2:    clamp(1.9rem,  4.2vw, 3.5rem);
+  --t-h3:    clamp(1.25rem, 2vw,   1.75rem);
+  --t-lede:  clamp(1.15rem, 1.9vw, 1.6rem);
+  --t-body:  clamp(1.05rem, 1.35vw, 1.25rem);
+  --t-small: clamp(0.9rem,  1.05vw, 1rem);
+  --t-label: clamp(0.8rem,  0.95vw, 0.9rem);
+
+  /* ---- space ---- */
+  --s-1: 0.5rem;  --s-2: 1rem;   --s-3: 1.5rem;  --s-4: 2rem;
+  --s-5: 3rem;    --s-6: 4rem;   --s-7: 6rem;    --s-8: 8rem;
+  --s-sec: clamp(4.5rem, 9vw, 9rem);
+  --s-sec-sm: clamp(2.5rem, 5vw, 4.5rem);
+
+  /* ---- layout ---- */
+  --maxw: 1240px;
+  --wide: 1560px;
+  --pad:  clamp(1.5rem, 5vw, 5rem);
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -1665,7 +1695,6 @@ main { display: block; }
    CASE STUDY v2 — large-format visual storytelling
    Reusable across case studies. Text supports the work.
    ============================================================ */
-:root { --wide: 1560px; --ink-2: #5a5a5a; }
 
 .cs { --pad-w: clamp(1.25rem, 4vw, 4rem); }
 
@@ -1966,3 +1995,146 @@ main { display: block; }
   .header__cta { padding: 0.4rem 0.75rem; font-size: 0.7rem; }
   .header__cta span { display: none; }
 }
+
+/* ==========================================================
+   REDESIGN LAYER — editorial system
+   One family at weight 500. Sentence case. Warm ground.
+   ========================================================== */
+body { background: var(--paper); color: var(--ink); font-size: var(--t-body); line-height: 1.55; }
+
+h1, h2, h3, h4,
+.cs-hero__title, .cs-h, .section__title, .case-title, .case-h2,
+.cap-hero__title, .cap-head, .cap-band__head, .cap-close__head,
+.ap-hero__title, .ap-band__head, .case-cta__head, .cs-next__t,
+.glass__title, .hero__headline, .about__lead, .contact__lead,
+.cs-metric__n, .quote__text, .case-feature__head, .cs-feature__head {
+  font-family: var(--sans);
+  font-weight: var(--w-med);
+  letter-spacing: -0.02em;
+  text-transform: none;
+}
+
+/* Eyebrows / labels: quiet, sentence case, no heavy tracking */
+.cs-eyebrow, .section__index, .case-eyebrow, .cs-metric__l, .cs-cap,
+.case-section__label, .cap-sec__label, .ap-band__label, .cap-band__label,
+.pf-label, .glass__tag, .case-feature__flag, .cs-metaline dt, .case-meta dt {
+  font-family: var(--sans);
+  font-weight: var(--w-med);
+  font-size: var(--t-label);
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--muted);
+}
+
+/* Section rule + label/content columns — the reference's core device */
+.ed-sec { border-top: 1px solid var(--line); padding-block: var(--s-sec); }
+.ed-sec:first-of-type { border-top: 0; }
+.ed-wrap { max-width: var(--maxw); margin: 0 auto; padding-inline: var(--pad); }
+.ed-wide { max-width: var(--wide); margin: 0 auto; padding-inline: var(--pad); }
+.ed-cols { display: grid; grid-template-columns: 1fr; gap: var(--s-4); }
+@media (min-width: 900px) {
+  .ed-cols { grid-template-columns: minmax(180px, 22%) 1fr; gap: clamp(2rem, 6vw, 6rem); }
+}
+.ed-label { font-size: var(--t-h2); font-weight: var(--w-med); letter-spacing: -0.02em; line-height: 1.05; }
+.ed-body { max-width: 62ch; font-size: var(--t-lede); line-height: 1.5; color: var(--ink); }
+.ed-body p + p { margin-top: 1.4em; }
+.ed-body a { text-decoration: underline; text-underline-offset: 3px; }
+.ed-note { font-size: var(--t-small); color: var(--muted); }
+
+/* ---------- header ---------- */
+.ed-head {
+  position: sticky; top: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: var(--s-4); padding: var(--s-3) var(--pad);
+  background: color-mix(in srgb, var(--paper) 88%, transparent);
+  backdrop-filter: saturate(160%) blur(12px);
+  -webkit-backdrop-filter: saturate(160%) blur(12px);
+  border-bottom: 1px solid var(--line);
+}
+.ed-head__logo { display: block; height: 34px; width: auto; }
+.ed-nav { display: flex; gap: clamp(1.25rem, 2.5vw, 2.25rem); align-items: center; }
+.ed-nav a {
+  font-size: var(--t-small); font-weight: var(--w-med); color: var(--ink);
+  position: relative; padding-block: 0.2rem;
+}
+.ed-nav a::after {
+  content: ""; position: absolute; left: 0; bottom: 0; width: 100%; height: 1px;
+  background: currentColor; transform: scaleX(0); transform-origin: right;
+  transition: transform .3s var(--ease);
+}
+.ed-nav a:hover::after, .ed-nav a:focus-visible::after, .ed-nav a[aria-current]::after { transform: scaleX(1); transform-origin: left; }
+.ed-nav a[aria-current] { color: var(--ink); }
+@media (max-width: 560px) { .ed-nav { gap: 1rem; } .ed-nav a { font-size: 0.85rem; } }
+
+/* ---------- editorial intro ---------- */
+.ed-intro { padding-block: clamp(4rem, 11vw, 10rem) clamp(3rem, 7vw, 6rem); }
+.ed-intro__name {
+  font-size: var(--t-hero); font-weight: var(--w-med);
+  line-height: 0.98; letter-spacing: -0.035em; margin-bottom: var(--s-3);
+}
+.ed-intro__role {
+  font-size: var(--t-h3); font-weight: var(--w-med); color: var(--muted);
+  letter-spacing: -0.01em; margin-bottom: clamp(2rem, 5vw, 3.5rem);
+}
+.ed-intro__say { max-width: 46ch; font-size: var(--t-lede); line-height: 1.45; }
+.ed-intro__say + .ed-intro__say { margin-top: 1.3em; }
+
+/* ---------- work index ---------- */
+.ed-work { display: grid; grid-template-columns: 1fr; gap: clamp(3rem, 6vw, 5.5rem) clamp(1.5rem, 3vw, 2.5rem); }
+@media (min-width: 860px) { .ed-work { grid-template-columns: 1fr 1fr; } }
+.ed-work__item.is-wide { grid-column: 1 / -1; }
+.ed-proj { display: block; }
+.ed-proj__media {
+  display: block; overflow: hidden; background: var(--paper-2);
+  aspect-ratio: 16 / 11;
+}
+.ed-work__item.is-wide .ed-proj__media { aspect-ratio: 21 / 9; }
+.ed-proj__media img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .5s var(--ease), opacity .3s var(--ease); }
+.ed-proj:hover .ed-proj__media img { transform: scale(1.03); }
+.ed-proj__row { display: flex; align-items: baseline; gap: 0.5rem; margin-top: var(--s-3); }
+.ed-proj__name { font-size: var(--t-h3); font-weight: var(--w-med); letter-spacing: -0.015em; }
+.ed-proj__arrow { transition: transform .3s var(--ease); display: inline-block; }
+.ed-proj:hover .ed-proj__arrow { transform: translate(3px,-3px); }
+.ed-proj__say { margin-top: 0.4rem; max-width: 46ch; color: var(--ink-2); font-size: var(--t-small); line-height: 1.5; }
+.ed-proj__meta { margin-top: 0.75rem; display: flex; flex-wrap: wrap; gap: 0.4rem 1.25rem; font-size: var(--t-label); color: var(--muted); }
+
+/* ---------- client strip ---------- */
+.ed-clients { display: flex; flex-wrap: wrap; align-items: center; gap: clamp(1.75rem,4vw,3.5rem); }
+.ed-clients li { font-size: var(--t-small); color: var(--ink-2); }
+
+/* ---------- experience list ---------- */
+.ed-exp { display: flex; flex-direction: column; }
+.ed-exp__row {
+  display: grid; grid-template-columns: 1fr auto; gap: 0.5rem var(--s-4);
+  padding-block: var(--s-3); border-top: 1px solid var(--line);
+}
+.ed-exp__row:first-child { border-top: 0; }
+.ed-exp__co { font-size: var(--t-h3); font-weight: var(--w-med); letter-spacing: -0.015em; }
+.ed-exp__role { color: var(--ink-2); font-size: var(--t-small); margin-top: 0.15rem; }
+.ed-exp__when { color: var(--muted); font-size: var(--t-small); white-space: nowrap; }
+
+/* ---------- contact ---------- */
+.ed-contact__big { font-size: var(--t-h2); font-weight: var(--w-med); letter-spacing: -0.025em; line-height: 1.05; max-width: 20ch; }
+.ed-mail { display: inline-block; margin-top: var(--s-4); font-size: var(--t-h3); font-weight: var(--w-med);
+  border-bottom: 1px solid var(--line-strong); padding-bottom: 0.15rem; }
+.ed-mail:hover { border-bottom-color: var(--ink); }
+.ed-links { display: flex; gap: var(--s-4); margin-top: var(--s-4); flex-wrap: wrap; }
+.ed-links a { font-size: var(--t-small); border-bottom: 1px solid var(--line-strong); padding-bottom: 0.1rem; }
+.ed-links a:hover { border-bottom-color: var(--ink); }
+
+/* ---------- footer ---------- */
+.ed-foot { border-top: 1px solid var(--line); padding-block: var(--s-5); }
+.ed-foot__in { display: flex; flex-wrap: wrap; gap: var(--s-3) var(--s-5); align-items: baseline; justify-content: space-between; }
+.ed-foot__nav { display: flex; flex-wrap: wrap; gap: var(--s-3) var(--s-4); }
+.ed-foot a, .ed-foot span { font-size: var(--t-small); color: var(--muted); }
+.ed-foot a:hover { color: var(--ink); }
+.ed-head .header__cta {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  padding: 0.45rem 0.9rem; border-radius: 100px; border: 1px solid var(--line-strong);
+  font-size: var(--t-label); font-weight: var(--w-med); color: var(--ink);
+  margin-left: auto; margin-right: var(--s-3); white-space: nowrap;
+}
+.ed-head .header__cta:hover { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.ed-portrait { margin: var(--s-4) 0 0; max-width: 300px; }
+.ed-portrait img { width: 100%; display: block; }
+@media (max-width: 899px) { .ed-portrait { max-width: 220px; } }
