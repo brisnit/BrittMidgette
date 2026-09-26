@@ -2324,18 +2324,20 @@ h1, h2, h3, h4,
    the inherited value, so they are the same colour by construction rather
    than by keeping separate timelines in step. */
 :root {
-  --header-ground: #ace9be;
-  animation: ground-drift 56s ease-in-out infinite;
+  --header-ground: #eaf8f5;
+  animation: ground-drift 70s ease-in-out infinite;
 }
 
-/* leaf -> sky -> butter -> sun, the four grounds in turn. 10s at rest,
-   4s to cross, 56s round. */
+/* mint -> blue -> lavender -> ice -> cream. Still 10s at rest and 4s to
+   cross; the loop lengthens to 70s rather than the colours being squeezed
+   into the old one. Cream is one moment in the palette, not the ground. */
 @keyframes ground-drift {
-  0%,     17.857% { --header-ground: #ace9be; }
-  25%,    42.857% { --header-ground: #d3f7fb; }
-  50%,    67.857% { --header-ground: #fff8c8; }
-  75%,    92.857% { --header-ground: #ffe893; }
-  100%            { --header-ground: #ace9be; }
+  0%,     14.286% { --header-ground: #eaf8f5; }
+  20%,    34.286% { --header-ground: #edf4ff; }
+  40%,    54.286% { --header-ground: #f3f0fa; }
+  60%,    74.286% { --header-ground: #eef8fa; }
+  80%,    94.286% { --header-ground: #fff6ea; }
+  100%            { --header-ground: #eaf8f5; }
 }
 
 /* the three surfaces that share the ground, on every page */
@@ -2358,7 +2360,7 @@ h1, h2, h3, h4,
 .ed-hero-live + .ed-sec { border-top: 0; }
 
 @media (prefers-reduced-motion: reduce) {
-  :root { animation: none; --header-ground: #ace9be; }
+  :root { animation: none; --header-ground: #eaf8f5; }
 }
 
 /* ---------- hero: one statement, nothing else ---------- */
