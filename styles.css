@@ -2101,7 +2101,7 @@ h1, h2, h3, h4,
 .ed-intro__say + .ed-intro__say { margin-top: 1.3em; }
 
 /* ---------- work index ---------- */
-.ed-work { display: grid; grid-template-columns: 1fr; gap: clamp(3rem, 6vw, 5.5rem) clamp(1.5rem, 3vw, 2.5rem); }
+.ed-work { display: grid; grid-template-columns: 1fr; gap: clamp(3rem, 6vw, 5.5rem) clamp(1.5rem, 3vw, 2.5rem); list-style: none; }
 @media (min-width: 860px) { .ed-work { grid-template-columns: 1fr 1fr; } }
 .ed-work__item.is-wide { grid-column: 1 / -1; }
 .ed-proj { display: block; }
