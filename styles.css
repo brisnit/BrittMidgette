@@ -69,9 +69,12 @@
   --s-sec-sm: clamp(2.5rem, 5vw, 4.5rem);
 
   /* ---- layout ---- */
-  --maxw: 1240px;
-  --wide: 1560px;
-  --pad:  clamp(1.5rem, 5vw, 5rem);
+  /* one frame for the whole site: content stops at --content-max and stays
+     centred, while section backgrounds keep running edge to edge */
+  --content-max: 1240px;
+  --maxw: var(--content-max);
+  --wide: var(--content-max);
+  --pad:  clamp(1.75rem, 6.5vw, 7rem);  /* 28px -> 112px */
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -2069,6 +2072,8 @@ h1, h2, h3, h4,
   display: flex; align-items: center; justify-content: space-between;
   gap: var(--s-4); padding: var(--s-3) var(--pad);
   padding-block: 1.28rem;   /* the mark grew; the header height does not */
+  /* background stays edge to edge; the row inside lines up with .ed-wrap */
+  padding-inline: calc(max(0px, (100% - var(--content-max)) / 2) + var(--pad));
   background-color: var(--header-ground);
   border-bottom: 0;
 }
