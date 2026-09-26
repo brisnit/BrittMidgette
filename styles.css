@@ -16,6 +16,7 @@
   --rose:         #faf0f2;
   --sage:         #f1f6ee;
   --ice:          #eef8fa;
+  --cream:        #fff6ea;
 
   /* legacy aliases now resolve to neutral greys, not warm tints */
   --paper-2:      var(--mint);
@@ -2312,15 +2313,18 @@ h1, h2, h3, h4,
    than by keeping separate timelines in step. */
 :root {
   --header-ground: #eaf8f5;
-  animation: ground-drift 56s ease-in-out infinite;
+  animation: ground-drift 70s ease-in-out infinite;
 }
 
-/* mint -> blue -> lavender -> ice. 10s at rest, 4s to cross. */
+/* mint -> blue -> lavender -> ice -> cream. Still 10s at rest and 4s to
+   cross; the loop lengthens to 70s rather than the colours being squeezed
+   into the old one. Cream is one moment in the palette, not the ground. */
 @keyframes ground-drift {
-  0%,     17.857% { --header-ground: #eaf8f5; }
-  25%,    42.857% { --header-ground: #edf4ff; }
-  50%,    67.857% { --header-ground: #f3f0fa; }
-  75%,    92.857% { --header-ground: #eef8fa; }
+  0%,     14.286% { --header-ground: #eaf8f5; }
+  20%,    34.286% { --header-ground: #edf4ff; }
+  40%,    54.286% { --header-ground: #f3f0fa; }
+  60%,    74.286% { --header-ground: #eef8fa; }
+  80%,    94.286% { --header-ground: #fff6ea; }
   100%            { --header-ground: #eaf8f5; }
 }
 
@@ -2396,13 +2400,36 @@ h1, h2, h3, h4,
 .home-cta__l:focus-visible .home-cta__a { transform: translate(4px, -4px); }
 
 /* ---------- client logos: black marks on white ---------- */
-.home-logos {
-  display: grid; grid-template-columns: repeat(5, minmax(0, 1fr));
-  align-items: center; justify-items: center;
-  list-style: none; margin: 0; padding: 0;
-  gap: clamp(2rem, 4vw, 3rem) clamp(1.5rem, 3vw, 2.5rem);
+/* A continuous strip, not a carousel: two identical groups in one track,
+   translated by exactly one group's width, so the loop closes on itself. */
+.home-marquee {
+  --logo-gap: clamp(3.5rem, 6vw, 7rem);
+  width: 100%; overflow: hidden;
+  /* the faintest fade so marks enter and leave rather than being cut */
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
+          mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
 }
-.home-logos li { display: flex; align-items: center; justify-content: center; width: 100%; }
+.home-marquee__track {
+  display: flex; width: max-content;
+  animation: logo-marquee 40s linear infinite;
+  will-change: transform;
+}
+.home-marquee__group {
+  display: flex; align-items: center; flex: none;
+  list-style: none; margin: 0; padding: 0 var(--logo-gap) 0 0;
+  gap: var(--logo-gap);
+}
+.home-marquee__group li { display: flex; align-items: center; flex: none; }
+
+@keyframes logo-marquee {
+  from { transform: translate3d(0, 0, 0); }
+  to   { transform: translate3d(-50%, 0, 0); }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .home-marquee:hover .home-marquee__track { animation-play-state: paused; }
+}
+
 /* Sized by perceived weight, not by a single shared width: squat wordmarks
    get more width, upright marks get more height. */
 .home-logo          { display: block; width: auto; height: auto;
@@ -2410,14 +2437,34 @@ h1, h2, h3, h4,
 .home-logo.is-wide  { max-width: 136px; max-height: 28px; }
 .home-logo.is-tall  { max-width: 96px;  max-height: 42px; }
 
-@media (max-width: 900px) {
-  .home-logos { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-}
+/* Still moving on small screens, just closer together. The marks stay
+   near their desktop size because the strip scrolls rather than wraps. */
 @media (max-width: 640px) {
-  .home-logos { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem 1.5rem; }
-  .home-logo         { max-width: 92px;  max-height: 26px; }
-  .home-logo.is-wide { max-width: 104px; max-height: 21px; }
-  .home-logo.is-tall { max-width: 74px;  max-height: 32px; }
+  .home-marquee { --logo-gap: 2.75rem; }
+  .home-logo         { max-width: 108px; max-height: 31px; }
+  .home-logo.is-wide { max-width: 124px; max-height: 26px; }
+  .home-logo.is-tall { max-width: 88px;  max-height: 38px; }
+}
+
+/* The strip sits below its label and runs the full width of the page. */
+.home-marquee { margin-top: clamp(2.25rem, 4.5vw, 3.25rem); }
+
+/* Reduced motion: no movement, but every client stays visible. The track
+   stops being a clipped rail and becomes an ordinary wrapping row, and the
+   duplicate group is dropped so nothing reads twice. */
+@media (prefers-reduced-motion: reduce) {
+  .home-marquee {
+    overflow: visible;
+    -webkit-mask-image: none; mask-image: none;
+    padding-inline: var(--pad);
+  }
+  .home-marquee__track { animation: none; width: auto; display: block; }
+  .home-marquee__group[aria-hidden="true"] { display: none; }
+  .home-marquee__group {
+    flex-wrap: wrap; justify-content: flex-start;
+    padding-right: 0;
+    gap: clamp(2rem, 4vw, 3rem) clamp(2.5rem, 5vw, 4rem);
+  }
 }
 
 /* ---------- head mark: a quick hello, not an error shake ---------- */
