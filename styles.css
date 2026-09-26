@@ -9,14 +9,20 @@
   --white:        var(--background);
   --paper:        var(--background);
 
-  /* ---- pale secondary grounds, used sparingly for rhythm ---- */
-  --mint:         #eaf8f5;
-  --blue:         #edf4ff;
-  --lavender:     #f3f0fa;
-  --rose:         #faf0f2;
-  --sage:         #f1f6ee;
-  --ice:          #eef8fa;
-  --cream:        #fff6ea;
+  /* ---- the four grounds. nothing else tints a surface ---- */
+  --sun:          #ffe893;
+  --leaf:         #ace9be;
+  --butter:       #fff8c8;
+  --sky:          #d3f7fb;
+
+  /* legacy names resolve into the four, so every consumer follows */
+  --mint:         var(--leaf);
+  --blue:         var(--sky);
+  --ice:          var(--sky);
+  --lavender:     var(--butter);
+  --cream:        var(--sun);
+  --rose:         var(--sun);
+  --sage:         var(--leaf);
 
   /* legacy aliases now resolve to neutral greys, not warm tints */
   --paper-2:      var(--mint);
@@ -26,7 +32,7 @@
   --ink:            #080808;
   --text-secondary: #666666;
   --ink-2:          var(--text-secondary);
-  --muted:          #767676;
+  --muted:          #606060;   /* clears AA on all four grounds */
 
   /* ---- rules ---- */
   --rule:         #d9d9d9;              /* hairline */
@@ -34,10 +40,11 @@
   --line-strong:  #c2c2c2;
 
   /* ---- inverted ---- */
-  --dark:         #080808;
-  --dark-2:       #111111;
-  --on-dark:      #ffffff;
-  --on-dark-2:    rgba(255,255,255,.66);
+  /* the band that used to be black is now a ground like any other */
+  --dark:         var(--sun);
+  --dark-2:       var(--butter);
+  --on-dark:      var(--ink);
+  --on-dark-2:    var(--text-secondary);
 
   --black: var(--ink);
 
@@ -119,7 +126,7 @@ a { color: inherit; text-decoration: none; }
 
 .skip-link {
   position: fixed; left: 1rem; top: -100px; z-index: 1100;
-  background: var(--black); color: var(--white);
+  background: var(--sun); color: var(--ink);
   padding: 0.75rem 1.25rem; font-family: var(--mono); font-size: 0.8rem;
   transition: top 0.2s var(--ease);
 }
@@ -130,7 +137,7 @@ a { color: inherit; text-decoration: none; }
    ============================================================ */
 .gate {
   position: fixed; inset: 0; z-index: 1000;
-  background: var(--black); color: var(--white);
+  background: var(--sky); color: var(--ink);
   display: flex; flex-direction: column;
   align-items: center; justify-content: center;
   text-align: center; padding: var(--pad);
@@ -150,7 +157,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 .gate__sub {
-  color: rgba(255,255,255,0.55); font-size: 0.92rem;
+  color: var(--text-secondary); font-size: 0.92rem;
   margin-bottom: 2.25rem; max-width: 28ch;
 }
 
@@ -158,27 +165,27 @@ a { color: inherit; text-decoration: none; }
 
 .gate__input {
   flex: 1; min-width: 0;
-  background: transparent; color: var(--white);
-  border: 1px solid rgba(255,255,255,0.3); border-radius: 100px;
+  background: transparent; color: var(--ink);
+  border: 1px solid rgba(8,8,8,0.3); border-radius: 100px;
   /* 16px min prevents iOS Safari from auto-zooming (and getting stuck wide) on focus */
   padding: 0.85rem 1.25rem; font-family: var(--mono); font-size: 16px;
   transition: border-color 0.3s var(--ease);
 }
-.gate__input::placeholder { color: rgba(255,255,255,0.4); }
-.gate__input:focus { outline: none; border-color: var(--white); }
+.gate__input::placeholder { color: rgba(8,8,8,0.45); }
+.gate__input:focus { outline: none; border-color: var(--ink); }
 
 .gate__btn {
-  background: var(--white); color: var(--black);
-  border: 1px solid var(--white); border-radius: 100px;
+  background: var(--sun); color: var(--ink);
+  border: 1px solid var(--ink); border-radius: 100px;
   padding: 0.85rem 1.5rem; font-family: var(--mono); font-size: 0.85rem;
   letter-spacing: 0.05em; cursor: pointer;
   transition: background 0.25s var(--ease), color 0.25s var(--ease);
 }
-.gate__btn:hover { background: transparent; color: var(--white); }
+.gate__btn:hover { background: var(--ink); color: var(--sun); }
 
 .gate__error {
   margin-top: 1rem; font-family: var(--mono); font-size: 0.78rem;
-  color: var(--white); letter-spacing: 0.03em;
+  color: var(--ink); letter-spacing: 0.03em;
 }
 .gate.is-shake .gate__inner { animation: shake 0.4s var(--ease); }
 
@@ -192,7 +199,7 @@ a { color: inherit; text-decoration: none; }
 .gate__footer {
   position: absolute; bottom: var(--pad);
   font-family: var(--mono); font-size: 0.72rem;
-  color: rgba(255,255,255,0.35); letter-spacing: 0.05em;
+  color: var(--text-secondary); letter-spacing: 0.05em;
 }
 
 /* ============================================================
@@ -1881,8 +1888,8 @@ main { display: block; }
 .cs-card--note { background: var(--lavender); border-color: #ddd5ee; }
 .cs-card--pain { background: var(--rose); border-color: #f0d6dc; }
 .cs-card--opp  { background: var(--sage); border-color: #d5e5cd; }
-.cs-card--lead { background: #0a0a0a; color: #fff; border-color: #0a0a0a; }
-.cs-card--lead .cs-card__k { color: rgba(255,255,255,0.55); }
+.cs-card--lead { background: var(--sun); color: var(--ink); border-color: #f0d98a; }
+.cs-card--lead .cs-card__k { color: var(--text-secondary); }
 
 /* Wireframe blocks, drawn */
 .cs-wires { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: clamp(0.75rem, 2vw, 1.5rem); }
@@ -1929,7 +1936,7 @@ main { display: block; }
   font-family: var(--mono); font-size: 0.66rem; letter-spacing: 0.06em;
   padding: 0.35rem 0.7rem; border-radius: 100px; border: 1px solid var(--line-strong);
 }
-.cs-chip--on  { background: #0a0a0a; color: #fff; border-color: #0a0a0a; }
+.cs-chip--on  { background: var(--sun); color: var(--ink); border-color: #f0d98a; }
 .cs-chip--ok  { background: var(--sage); border-color: #d5e5cd; }
 .cs-chip--wait{ background: var(--blue); border-color: #d4e3fb; }
 .cs-chip--act { background: var(--rose); border-color: #f0d6dc; }
@@ -2200,7 +2207,7 @@ h1, h2, h3, h4,
 .ed-statement__s { margin-top: var(--s-3); max-width: 52ch; font-size: var(--t-lede); line-height: 1.45; color: var(--ink-2); }
 
 /* inverted band */
-.ed-invert { background: var(--dark); color: var(--on-dark); border-top-color: rgba(255,255,255,.16); }
+.ed-invert { background: var(--dark); color: var(--on-dark); border-top-color: transparent; }
 .ed-invert .ed-label, .ed-invert .ed-statement__t, .ed-invert .ed-case__name { color: var(--on-dark); }
 .ed-invert .ed-body, .ed-invert .ed-statement__s { color: var(--on-dark-2); }
 .ed-invert .ed-body strong { color: var(--on-dark); }
@@ -2218,7 +2225,7 @@ h1, h2, h3, h4,
 .ed-out { display: inline-flex; align-items: center; gap: 0.5rem; margin-top: var(--s-4);
   font-size: var(--t-small); font-weight: var(--w-med); border-bottom: 1px solid var(--line-strong); padding-bottom: 0.15rem; }
 .ed-out:hover { border-bottom-color: currentColor; }
-.ed-invert .ed-out { border-bottom-color: rgba(255,255,255,.4); }
+.ed-invert .ed-out { border-bottom-color: rgba(8,8,8,.35); }
 
 /* next project */
 .ed-next { display: block; background: var(--lavender); border-top: 1px solid transparent; padding-block: clamp(3rem, 7vw, 6rem); }
@@ -2235,8 +2242,8 @@ h1, h2, h3, h4,
 .ed-refs__l { display: flex; flex-wrap: wrap; gap: 0.4rem 1.1rem; }
 .ed-refs__l a { font-size: var(--t-small); border-bottom: 1px solid var(--line-strong); padding-bottom: 0.08rem; }
 .ed-refs__l a:hover { border-bottom-color: var(--ink); }
-.ed-invert .ed-refs { border-top-color: rgba(255,255,255,.18); }
-.ed-invert .ed-refs__l a { border-bottom-color: rgba(255,255,255,.4); }
+.ed-invert .ed-refs { border-top-color: rgba(8,8,8,.18); }
+.ed-invert .ed-refs__l a { border-bottom-color: rgba(8,8,8,.35); }
 .ed-exp__note { margin-top: var(--s-2); max-width: 62ch; font-size: var(--t-small); line-height: 1.55; color: var(--ink-2); }
 .ed-exp__row { align-items: start; }
 
@@ -2317,20 +2324,18 @@ h1, h2, h3, h4,
    the inherited value, so they are the same colour by construction rather
    than by keeping separate timelines in step. */
 :root {
-  --header-ground: #eaf8f5;
-  animation: ground-drift 70s ease-in-out infinite;
+  --header-ground: #ace9be;
+  animation: ground-drift 56s ease-in-out infinite;
 }
 
-/* mint -> blue -> lavender -> ice -> cream. Still 10s at rest and 4s to
-   cross; the loop lengthens to 70s rather than the colours being squeezed
-   into the old one. Cream is one moment in the palette, not the ground. */
+/* leaf -> sky -> butter -> sun, the four grounds in turn. 10s at rest,
+   4s to cross, 56s round. */
 @keyframes ground-drift {
-  0%,     14.286% { --header-ground: #eaf8f5; }
-  20%,    34.286% { --header-ground: #edf4ff; }
-  40%,    54.286% { --header-ground: #f3f0fa; }
-  60%,    74.286% { --header-ground: #eef8fa; }
-  80%,    94.286% { --header-ground: #fff6ea; }
-  100%            { --header-ground: #eaf8f5; }
+  0%,     17.857% { --header-ground: #ace9be; }
+  25%,    42.857% { --header-ground: #d3f7fb; }
+  50%,    67.857% { --header-ground: #fff8c8; }
+  75%,    92.857% { --header-ground: #ffe893; }
+  100%            { --header-ground: #ace9be; }
 }
 
 /* the three surfaces that share the ground, on every page */
@@ -2353,7 +2358,7 @@ h1, h2, h3, h4,
 .ed-hero-live + .ed-sec { border-top: 0; }
 
 @media (prefers-reduced-motion: reduce) {
-  :root { animation: none; --header-ground: #eaf8f5; }
+  :root { animation: none; --header-ground: #ace9be; }
 }
 
 /* ---------- hero: one statement, nothing else ---------- */
@@ -2621,7 +2626,7 @@ h1, h2, h3, h4,
   width: clamp(48px, 4vw, 56px); height: clamp(48px, 4vw, 56px);
   flex: none; border-radius: 50%;
   object-fit: cover; display: block;
-  background: #ececec;
+  background: var(--paper-3);
 }
 
 /* On a case study the closing block and the footer are one coloured field:
