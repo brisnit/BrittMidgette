@@ -2631,15 +2631,16 @@ h1, h2, h3, h4,
   background: var(--paper-3);
 }
 
-/* On a case study the closing block and the footer are one coloured field:
-   the next-project ground runs straight through to the bottom of the page
-   with no rule where they meet. */
-body:has(.ed-next) .ed-foot {
-  background: var(--lavender);
-  border-top: 0;
-}
-/* --muted falls to 4.0:1 on lavender, so the footer text steps one stop
-   darker there to stay above 4.5:1. */
+/* The footer continues whichever ground closes the page, so the colour runs
+   unbroken to the bottom with no rule where they meet. A case study closes on
+   the next-project block; every other page closes on its contact ground. */
+body:has(.ed-next) .ed-foot { background: var(--lavender); border-top: 0; }
+body:has(main .ed-ground-ice) .ed-foot { background: var(--ice); border-top: 0; }
+
+/* Footer text steps one stop darker on a coloured ground to stay above 4.5:1. */
 body:has(.ed-next) .ed-foot a,
-body:has(.ed-next) .ed-foot span { color: var(--text-secondary); }
-body:has(.ed-next) .ed-foot a:hover { color: var(--ink); }
+body:has(.ed-next) .ed-foot span,
+body:has(main .ed-ground-ice) .ed-foot a,
+body:has(main .ed-ground-ice) .ed-foot span { color: var(--text-secondary); }
+body:has(.ed-next) .ed-foot a:hover,
+body:has(main .ed-ground-ice) .ed-foot a:hover { color: var(--ink); }
