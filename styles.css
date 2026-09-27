@@ -44,7 +44,7 @@
   --dark:         var(--sun);
   --dark-2:       var(--butter);
   --on-dark:      var(--ink);
-  --on-dark-2:    var(--text-secondary);
+  --on-dark-2:    #5a5a5a;   /* holds 5:1 on every separator colour */
 
   --black: var(--ink);
 
@@ -2209,11 +2209,27 @@ h1, h2, h3, h4,
 .ed-statement__s { margin-top: var(--s-3); max-width: 52ch; font-size: var(--t-lede); line-height: 1.45; color: var(--ink-2); }
 
 /* inverted band */
-.ed-invert { background: var(--dark); color: var(--on-dark); border-top-color: transparent; }
+.ed-invert { background: var(--sep, var(--dark)); color: var(--on-dark); border-top-color: transparent; }
 .ed-invert .ed-label, .ed-invert .ed-statement__t, .ed-invert .ed-case__name { color: var(--on-dark); }
+
+/* Each case study sets the colour of the bands that break up its page. */
+body[data-case="dropq"] { --sep: #ffe2d3; }
+body[data-case="mac"] { --sep: #dfded2; }
+body[data-case="tinycrm"] { --sep: #d5f1e2; }
+body[data-case="sagaftra"] { --sep: #ffe893; }
+body[data-case="bose"] { --sep: #ddf7f1; }
+body[data-case="artifactintelligence"] { --sep: #fff8c8; }
+body[data-case="nipr"] { --sep: #ffe2d3; }
+body[data-case="adm"] { --sep: #d3f7fb; }
+body[data-case="comptia"] { --sep: #fff5ec; }
+body[data-case="menswearhouse"] { --sep: #d3f7fb; }
+body[data-case="legoland"] { --sep: #ffe2d3; }
+body[data-case="underarmour"] { --sep: #b9e7c1; }
 .ed-invert .ed-body, .ed-invert .ed-statement__s { color: var(--on-dark-2); }
 .ed-invert .ed-body strong { color: var(--on-dark); }
 .ed-invert .ed-media__cap, .ed-invert .ed-label--quiet { color: var(--on-dark-2); }
+/* legacy copy classes that also land inside a band */
+.ed-invert .cs-say, .ed-invert .cs-lead, .ed-invert .cs-cap { color: var(--on-dark-2); }
 
 /* lead line inside a content column */
 .ed-lead { font-size: var(--t-h3); font-weight: var(--w-med); letter-spacing: -0.015em; line-height: 1.2; margin-bottom: var(--s-3); }
