@@ -2168,6 +2168,8 @@ h1, h2, h3, h4,
   margin-left: auto; margin-right: var(--s-3); white-space: nowrap;
 }
 .ed-head .header__cta:hover { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+/* a second link sits beside the first rather than being pushed right again */
+.ed-head .header__cta + .header__cta { margin-left: 0; }
 .ed-portrait { margin: var(--s-4) 0 0; max-width: 300px; }
 .ed-portrait img { width: 100%; display: block; }
 @media (max-width: 899px) { .ed-portrait { max-width: 220px; } }
