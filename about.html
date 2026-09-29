@@ -14,25 +14,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=25" />
+  <link rel="stylesheet" href="styles.css?v=27" />
 </head>
 <body>
-  <!-- ============ PASSWORD GATE ============ -->
-  <div id="gate" class="gate" aria-hidden="false">
-    <div class="gate__inner">
-      <h1 class="gate__title">Britt Midgette</h1>
-      <p class="gate__sub">This site is private. Enter the password to continue.</p>
-      <form id="gate-form" class="gate__form" autocomplete="off" novalidate>
-        <label class="sr-only" for="gate-input">Password</label>
-        <input id="gate-input" class="gate__input" type="password" placeholder="Password" aria-describedby="gate-error" spellcheck="false" />
-        <button class="gate__btn" type="submit">Enter</button>
-      </form>
-      <p id="gate-error" class="gate__error" role="alert" hidden>Incorrect password. Try again.</p>
-    </div>
-    <p class="gate__footer">&copy; <span class="year"></span> Britt Midgette</p>
-  </div>
 
-  <div id="site" class="site" hidden>
+  <div id="site" class="site">
     <span id="top" aria-hidden="true"></span>
     <a href="#main" class="skip-link">Skip to content</a>
 
