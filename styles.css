@@ -2635,6 +2635,9 @@ body[data-case="underarmour"] { --sep: #b9e7c1; }
 .t-by__a { transition: transform 0.3s var(--ease); }
 .t-by__name:hover .t-by__a { transform: translate(3px, -3px); }
 .t-by__title { font-size: var(--t-small); color: var(--text-secondary); }
+/* a name with no profile to link to is not interactive */
+.t-by__name--plain { cursor: default; }
+.t-by__name--plain:hover { border-bottom-color: transparent; }
 
 /* Dragging with a mouse; the pointer only changes while a drag is possible. */
 .t-rail.is-draggable { cursor: grab; }
