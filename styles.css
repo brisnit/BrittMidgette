@@ -2142,6 +2142,11 @@ h1, h2, h3, h4,
 .ed-invert { background: var(--sep, var(--dark)); color: var(--on-dark); border-top-color: transparent; }
 .ed-invert .ed-label, .ed-invert .ed-statement__t, .ed-invert .ed-case__name { color: var(--on-dark); }
 
+/* DropQ is laid out to a supplied composition: the touts sit closer together
+   than the site default, and its closing image runs the full width. */
+body[data-case="dropq"] { --s-sec: clamp(3rem, 6vw, 6.25rem); }
+.ed-mediasec--bleed .ed-wide { max-width: none; padding-inline: 0; }
+
 /* A page can vary a band where its own composition calls for it. */
 .ed-invert--cream { --sep: #fff5ec; }
 .ed-invert--mint  { --sep: #eaf8f5; }
