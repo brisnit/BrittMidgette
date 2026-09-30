@@ -10,10 +10,10 @@
   --paper:        var(--background);
 
   /* ---- the four grounds. nothing else tints a surface ---- */
-  --sun:          #ffe893;
+  --sun:          #fff8c8;
   --leaf:         #ace9be;
   --butter:       #fff8c8;
-  --sky:          #d3f7fb;
+  --sky:          #ecf8fa;
 
   /* legacy names resolve into the four, so every consumer follows */
   --mint:         var(--leaf);
@@ -2143,17 +2143,17 @@ h1, h2, h3, h4,
 .ed-invert .ed-label, .ed-invert .ed-statement__t, .ed-invert .ed-case__name { color: var(--on-dark); }
 
 /* Each case study sets the colour of the bands that break up its page. */
-body[data-case="dropq"] { --sep: #ffe2d3; }
+body[data-case="dropq"] { --sep: #fff6ed; }
 body[data-case="mac"] { --sep: #dfded2; }
-body[data-case="tinycrm"] { --sep: #d5f1e2; }
-body[data-case="sagaftra"] { --sep: #ffe893; }
+body[data-case="tinycrm"] { --sep: #e7f9f5; }
+body[data-case="sagaftra"] { --sep: #fff8c8; }
 body[data-case="bose"] { --sep: #ddf7f1; }
 body[data-case="artifactintelligence"] { --sep: #fff8c8; }
-body[data-case="nipr"] { --sep: #ffe2d3; }
-body[data-case="adm"] { --sep: #d3f7fb; }
+body[data-case="nipr"] { --sep: #fff6ed; }
+body[data-case="adm"] { --sep: #ecf8fa; }
 body[data-case="comptia"] { --sep: #fff5ec; }
-body[data-case="menswearhouse"] { --sep: #d3f7fb; }
-body[data-case="legoland"] { --sep: #ffe2d3; }
+body[data-case="menswearhouse"] { --sep: #ecf8fa; }
+body[data-case="legoland"] { --sep: #fff6ed; }
 body[data-case="underarmour"] { --sep: #b9e7c1; }
 .ed-invert .ed-body, .ed-invert .ed-statement__s { color: var(--on-dark-2); }
 .ed-invert .ed-body strong { color: var(--on-dark); }
