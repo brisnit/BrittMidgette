@@ -2410,8 +2410,9 @@ body[data-case="underarmour"] { --sep: #b9e7c1; }
   max-width: 46ch;
   text-wrap: balance;
 }
-/* each credential stays whole, so the line only ever breaks at a divider */
-.home-hero__role span { white-space: nowrap; }
+/* with the dividers gone, each credential takes its own line so they stay
+   legible as separate things rather than running together */
+.home-hero__role span { display: block; white-space: nowrap; }
 
 /* ---------- intro: white, one paragraph, two links ---------- */
 .home-intro { background: var(--paper); border-top: 0; }
