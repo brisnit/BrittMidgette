@@ -264,6 +264,58 @@
       }, true);
     }
 
+    /* Copy the address to the clipboard, and say so. The label returns on its
+       own, and the live region announces it for anyone not watching the button. */
+    var copyBtn = document.querySelector(".header__copy");
+    if (copyBtn) {
+      var label = copyBtn.querySelector(".header__copy-label");
+      var original = label.textContent;
+      var status = document.createElement("span");
+      status.className = "sr-only";
+      status.setAttribute("role", "status");
+      status.setAttribute("aria-live", "polite");
+      copyBtn.parentNode.insertBefore(status, copyBtn.nextSibling);
+      var resetTimer;
+
+      function say(text, ok) {
+        label.textContent = text;
+        status.textContent = text;
+        copyBtn.classList.toggle("is-done", !!ok);
+        window.clearTimeout(resetTimer);
+        resetTimer = window.setTimeout(function () {
+          label.textContent = original;
+          status.textContent = "";
+          copyBtn.classList.remove("is-done");
+        }, 2200);
+      }
+
+      copyBtn.addEventListener("click", function () {
+        var email = copyBtn.getAttribute("data-email");
+        if (navigator.clipboard && window.isSecureContext) {
+          navigator.clipboard.writeText(email).then(
+            function () { say("Copied", true); },
+            function () { say(email, false); }
+          );
+          return;
+        }
+        // older browsers, or a page served without https
+        try {
+          var ta = document.createElement("textarea");
+          ta.value = email;
+          ta.setAttribute("readonly", "");
+          ta.style.position = "fixed";
+          ta.style.top = "-1000px";
+          document.body.appendChild(ta);
+          ta.select();
+          var ok = document.execCommand("copy");
+          document.body.removeChild(ta);
+          say(ok ? "Copied" : email, ok);
+        } catch (err) {
+          say(email, false);
+        }
+      });
+    }
+
     /* Mobile nav (present on the home page only) */
     var toggle = document.getElementById("nav-toggle");
     var nav = document.getElementById("nav");
