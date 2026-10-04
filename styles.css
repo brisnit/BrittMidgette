@@ -2213,6 +2213,7 @@ body[data-case="dropq"] .ed-invert:has(+ section:not(.ed-invert)) {
 .ed-invert--sun   { --sep: #fff8c8; }
 .ed-invert--grey  { --sep: #ececec; }
 .ed-invert--peach { --sep: #fff6ed; }
+.ed-invert--sky   { --sep: #ecf8fa; }
 
 /* Each case study sets the colour of the bands that break up its page. */
 body[data-case="dropq"] { --sep: #fff6ed; }
@@ -2221,6 +2222,9 @@ body[data-case="dropq"] { --sep: #fff6ed; }
    instead of the site default. */
 body[data-case="nipr"] .ed-next,
 body[data-case="nipr"]:has(.ed-next) .ed-foot { background: #eaf8f5; }
+/* CompTIA closes on its sky band, so the tout and footer continue that colour. */
+body[data-case="comptia"] .ed-next,
+body[data-case="comptia"]:has(.ed-next) .ed-foot { background: #ecf8fa; }
 body[data-case="mac"] { --sep: #dfded2; }
 body[data-case="tinycrm"] { --sep: #e7f9f5; }
 body[data-case="sagaftra"] { --sep: #fff8c8; }
