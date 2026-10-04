@@ -594,14 +594,14 @@ main { display: block; }
   display: flex; align-items: center; justify-content: space-between;
   gap: 1rem; flex-wrap: wrap;
   padding: 2.5rem var(--pad);
-  background: var(--black); color: #fff;
-  border-top: 1px solid rgba(255,255,255,0.15);
-  box-shadow: 0 0 0 100vmax var(--black);
+  background: var(--sky); color: var(--ink);
+  border-top: 0;
+  box-shadow: 0 0 0 100vmax var(--sky);
   clip-path: inset(0 -100vmax);
 }
-.footer__copy, .footer__top { font-family: var(--mono); font-size: 0.8rem; color: rgba(255,255,255,0.6); }
+.footer__copy, .footer__top { font-family: var(--mono); font-size: 0.8rem; color: var(--muted); }
 .footer__top { transition: color 0.25s var(--ease); }
-.footer__top:hover { color: #fff; }
+.footer__top:hover { color: var(--ink); }
 
 /* ============================================================
    SCROLL REVEAL
@@ -1668,7 +1668,7 @@ main { display: block; }
 /* --- rhythm --- */
 .cs-sec { padding-block: clamp(4rem, 10vw, 9rem); }
 .cs-sec--tight { padding-block: clamp(2.5rem, 6vw, 5rem); }
-.cs-sec--dark { background: #0a0a0a; color: #fff; }
+.cs-sec--dark { background: var(--dark); color: var(--on-dark); }
 .cs-sec--tint { background: #f4f4f4; }
 
 /* --- type --- */
@@ -1676,7 +1676,7 @@ main { display: block; }
   font-family: var(--mono); font-size: 0.74rem; letter-spacing: 0.16em;
   text-transform: uppercase; color: var(--muted); margin-bottom: 1.5rem;
 }
-.cs-sec--dark .cs-eyebrow { color: rgba(255,255,255,0.5); }
+.cs-sec--dark .cs-eyebrow { color: var(--on-dark-2); }
 .cs-h {
   font-family: var(--display); font-weight: 400;
   font-size: clamp(1.9rem, 5.2vw, 4rem); line-height: 1.02;
@@ -1687,14 +1687,14 @@ main { display: block; }
   margin-top: clamp(1.25rem, 3vw, 2rem); max-width: 58ch;
   font-size: clamp(1rem, 1.5vw, 1.15rem); line-height: 1.6; color: var(--ink-2);
 }
-.cs-sec--dark .cs-say { color: rgba(255,255,255,0.72); }
+.cs-sec--dark .cs-say { color: var(--on-dark-2); }
 .cs-say strong { color: var(--ink); font-weight: 500; }
-.cs-sec--dark .cs-say strong { color: #fff; }
+.cs-sec--dark .cs-say strong { color: var(--ink); }
 .cs-cap {
   margin-top: 1rem; font-family: var(--mono); font-size: 0.74rem;
   letter-spacing: 0.06em; color: var(--muted);
 }
-.cs-sec--dark .cs-cap { color: rgba(255,255,255,0.5); }
+.cs-sec--dark .cs-cap { color: var(--on-dark-2); }
 
 /* --- hero --- */
 .cs-hero { padding: clamp(7rem, 14vw, 11rem) 0 clamp(2rem, 5vw, 4rem); }
@@ -1754,10 +1754,11 @@ main { display: block; }
   font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase;
   color: var(--muted); max-width: 22ch;
 }
-.cs-sec--dark .cs-metric__l { color: rgba(255,255,255,0.55); }
+.cs-sec--dark .cs-metric__l { color: var(--on-dark-2); }
 
 /* --- next project --- */
-.cs-next { display: block; position: relative; overflow: hidden; background: #0a0a0a; color: #fff; }
+.cs-next { display: block; position: relative; overflow: hidden; background: var(--sky); color: var(--ink); }
+.cs-next__img { display: none; }
 .cs-next__img { position: absolute; inset: 0; opacity: 0.4; transition: transform 1.2s var(--ease), opacity 0.6s var(--ease); }
 .cs-next__img img { width: 100%; height: 100%; object-fit: cover; }
 .cs-next:hover .cs-next__img { transform: scale(1.04); opacity: 0.5; }
@@ -1792,7 +1793,7 @@ main { display: block; }
   background: #f4f4f4; border-radius: 16px; padding: clamp(1.25rem, 3vw, 2.5rem);
   border: 1px solid var(--line);
 }
-.cs-sec--dark .cs-board { background: #141414; border-color: rgba(255,255,255,0.12); }
+.cs-sec--dark .cs-board { background: var(--paper); border-color: rgba(8,8,8,0.12); }
 .cs-board__head {
   display: flex; align-items: baseline; gap: 1rem; flex-wrap: wrap;
   margin-bottom: clamp(1.25rem, 3vw, 2rem);
@@ -1800,7 +1801,7 @@ main { display: block; }
   text-transform: uppercase; color: var(--muted);
 }
 .cs-board__head b { color: var(--ink); font-weight: 400; }
-.cs-sec--dark .cs-board__head b { color: #fff; }
+.cs-sec--dark .cs-board__head b { color: var(--ink); }
 .cs-board__grid {
   display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
   gap: clamp(0.75rem, 1.6vw, 1.15rem); align-items: start;
@@ -1925,7 +1926,7 @@ main { display: block; }
   margin-top: clamp(1.1rem, 2.2vw, 1.6rem); max-width: 54ch;
   font-size: 0.92rem; line-height: 1.6; color: var(--muted);
 }
-.cs-sec--dark .cs-note { color: rgba(255,255,255,0.58); }
+.cs-sec--dark .cs-note { color: var(--on-dark-2); }
 
 /* Outbound CTA, e.g. to a live file */
 .cs-cta {
@@ -1939,8 +1940,8 @@ main { display: block; }
 .cs-cta:hover, .cs-cta:focus-visible { background: var(--ink); color: #fff; }
 .cs-cta__arrow { transition: transform 0.25s var(--ease); }
 .cs-cta:hover .cs-cta__arrow { transform: translateX(3px); }
-.cs-sec--dark .cs-cta { border-color: rgba(255,255,255,0.5); color: #fff; }
-.cs-sec--dark .cs-cta:hover, .cs-sec--dark .cs-cta:focus-visible { background: #fff; color: #0a0a0a; }
+.cs-sec--dark .cs-cta { border-color: rgba(8,8,8,0.5); color: var(--ink); }
+.cs-sec--dark .cs-cta:hover, .cs-sec--dark .cs-cta:focus-visible { background: var(--ink); color: var(--paper); }
 
 /* Case-study header: outbound CTA beside the back link */
 .header__right { display: flex; align-items: center; gap: clamp(0.85rem, 2vw, 1.5rem); }
@@ -2178,6 +2179,8 @@ h1, h2, h3, h4,
 
 /* inverted band */
 .ed-invert { background: var(--sep, var(--dark)); color: var(--on-dark); border-top-color: transparent; }
+/* a band returning to white needs no rule either */
+.ed-invert + .ed-sec, .ed-invert + .ed-mediasec { border-top-color: transparent; }
 .ed-invert .ed-label, .ed-invert .ed-statement__t, .ed-invert .ed-case__name { color: var(--on-dark); }
 
 /* DropQ is laid out to a supplied composition: the touts sit closer together
@@ -2209,6 +2212,7 @@ body[data-case="dropq"] .ed-invert:has(+ section:not(.ed-invert)) {
 .ed-invert--mint  { --sep: #eaf8f5; }
 .ed-invert--sun   { --sep: #fff8c8; }
 .ed-invert--grey  { --sep: #ececec; }
+.ed-invert--peach { --sep: #fff6ed; }
 
 /* Each case study sets the colour of the bands that break up its page. */
 body[data-case="dropq"] { --sep: #fff6ed; }
