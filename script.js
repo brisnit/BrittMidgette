@@ -36,7 +36,10 @@
       var io = new IntersectionObserver(
         function (entries) {
           entries.forEach(function (entry) {
-            if (entry.isIntersecting) {
+            /* A short element can be carried clean past the 12% threshold
+               by one fast scroll, and would then never reveal. If it has
+               ended up above the viewport, it has been read past: show it. */
+            if (entry.isIntersecting || entry.boundingClientRect.top < 0) {
               entry.target.classList.add("is-in");
               io.unobserve(entry.target);
             }
@@ -45,6 +48,30 @@
         { threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
       );
       reveals.forEach(function (el) { io.observe(el); });
+
+      /* Safety net. A short element can be carried clean through the
+         observer's threshold by one fast scroll, so no entry is ever
+         delivered and it stays invisible for good. On each scroll,
+         reveal anything that has reached the point the observer would
+         have fired at anyway. The observer still does the normal work;
+         this only catches what it missed. */
+      var sweeping = false;
+      var sweep = function () {
+        var left = 0;
+        reveals.forEach(function (el) {
+          if (el.classList.contains("is-in")) return;
+          if (el.getBoundingClientRect().top < window.innerHeight * 0.92) {
+            el.classList.add("is-in");
+            io.unobserve(el);
+          } else { left += 1; }
+        });
+        sweeping = false;
+        if (!left) window.removeEventListener("scroll", onScroll);
+      };
+      var onScroll = function () {
+        if (!sweeping) { sweeping = true; window.requestAnimationFrame(sweep); }
+      };
+      window.addEventListener("scroll", onScroll, { passive: true });
     } else {
       reveals.forEach(function (el) { el.classList.add("is-in"); });
     }
@@ -315,6 +342,94 @@
         }
       });
     }
+
+    /* ------------------------------------------------------------
+       MOTION
+       Everything here is additive: if any of it fails the page is
+       still readable, and each piece checks for reduced motion.
+       ------------------------------------------------------------ */
+    var calmMotion = window.matchMedia
+      ? window.matchMedia("(prefers-reduced-motion: reduce)").matches
+      : false;
+
+    /* Media fades up once it has actually decoded, which matters now
+       that almost everything below the fold loads lazily. The flag on
+       <html> is what lets the stylesheet hide un-decoded media, so it
+       is only set once this code is running. */
+    (function fadeMediaIn() {
+      var media = document.querySelectorAll(
+        ".ed-media img, .ed-proj__media img, .ed-portrait img, .t-face img, .ed-media video"
+      );
+      if (!media.length) return;
+      document.documentElement.setAttribute("data-fade-media", "");
+      media.forEach(function (el) {
+        var done = function () { el.classList.add("is-loaded"); };
+        if (el.tagName === "VIDEO") { done(); return; }
+        if (el.complete && el.naturalWidth > 0) { done(); return; }
+        el.addEventListener("load", done, { once: true });
+        /* A broken file must not stay invisible. */
+        el.addEventListener("error", done, { once: true });
+      });
+      /* Backstop: never leave media hidden, whatever the events do. */
+      window.setTimeout(function () {
+        media.forEach(function (el) { el.classList.add("is-loaded"); });
+      }, 6000);
+    })();
+
+    /* Number the children of a few groups so they can come in one
+       after another. Numbering restarts on each visual row, because a
+       card that scrolls into view by itself should not sit waiting out
+       the delay earned by the eleven cards above it. Index only; the
+       delay itself lives in the CSS. */
+    (function stagger() {
+      [".ed-work", ".t-track", ".ed-case__meta", ".home-hero__role"].forEach(function (sel) {
+        var group = document.querySelector(sel);
+        if (!group) return;
+        var rowTop = null, col = 0;
+        Array.prototype.forEach.call(group.children, function (child) {
+          var top = child.offsetTop;
+          if (rowTop === null || Math.abs(top - rowTop) > 4) { rowTop = top; col = 0; }
+          child.style.setProperty("--i", col);
+          col += 1;
+        });
+      });
+    })();
+
+    /* The editorial header lifts off the page once you leave the top. */
+    (function stickHeader() {
+      var head = document.querySelector(".ed-head");
+      if (!head) return;
+      var pending = false;
+      var sync = function () {
+        head.classList.toggle("is-stuck", window.scrollY > 4);
+        pending = false;
+      };
+      window.addEventListener("scroll", function () {
+        if (!pending) { pending = true; window.requestAnimationFrame(sync); }
+      }, { passive: true });
+      sync();
+    })();
+
+    /* Reading progress, on the long case studies only. */
+    (function readingBar() {
+      if (calmMotion || !document.body.hasAttribute("data-case")) return;
+      var bar = document.createElement("div");
+      bar.className = "read-bar";
+      bar.setAttribute("aria-hidden", "true");
+      document.body.appendChild(bar);
+      var pending = false;
+      var sync = function () {
+        var run = document.documentElement.scrollHeight - window.innerHeight;
+        var p = run > 0 ? window.scrollY / run : 0;
+        bar.style.transform = "scaleX(" + Math.min(1, Math.max(0, p)) + ")";
+        pending = false;
+      };
+      window.addEventListener("scroll", function () {
+        if (!pending) { pending = true; window.requestAnimationFrame(sync); }
+      }, { passive: true });
+      window.addEventListener("resize", sync, { passive: true });
+      sync();
+    })();
 
     /* Mobile nav (present on the home page only) */
     var toggle = document.getElementById("nav-toggle");

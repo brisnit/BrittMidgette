@@ -1738,7 +1738,7 @@ main { display: block; }
   width: clamp(150px, 15vw, 230px); border-radius: 26px; padding: 7px;
   background: #1a1a1a; box-shadow: 0 20px 50px rgba(0,0,0,0.25);
 }
-.cs-phone img { display: block; width: 100%; border-radius: 19px; }
+.cs-phone img { display: block; width: 100%; height: auto; border-radius: 19px; }
 
 /* --- metrics --- */
 .cs-metrics {
@@ -2139,7 +2139,7 @@ h1, h2, h3, h4,
 /* a second link sits beside the first rather than being pushed right again */
 .ed-head .header__cta + .header__cta { margin-left: 0; }
 .ed-portrait { margin: var(--s-4) 0 0; max-width: 300px; }
-.ed-portrait img { width: 100%; display: block; }
+.ed-portrait img { width: 100%; height: auto; display: block; }
 @media (max-width: 899px) { .ed-portrait { max-width: 220px; } }
 
 /* ==========================================================
@@ -2681,3 +2681,151 @@ body:has(main .ed-ground-ice) .ed-foot a,
 body:has(main .ed-ground-ice) .ed-foot span { color: var(--text-secondary); }
 body:has(.ed-next) .ed-foot a:hover,
 body:has(main .ed-ground-ice) .ed-foot a:hover { color: var(--ink); }
+
+/* ============================================================
+   MOTION
+   One place for how this site moves. Nothing here changes
+   layout or colour, so removing the whole block leaves the
+   site intact. The reduced-motion rules at the end switch
+   every one of these off.
+   ============================================================ */
+
+:root {
+  --ease-out:    cubic-bezier(0.33, 1, 0.68, 1);
+  --ease-spring: cubic-bezier(0.34, 1.42, 0.64, 1);
+  --t-quick: 0.16s;
+  --t-base:  0.3s;
+  --t-slow:  0.55s;
+  --stagger: 65ms;
+}
+
+/* ---- Press. Anything you can click dips slightly under the finger. ---- */
+.header__copy, .header__cta, .home-cta__l, .t-more__btn,
+.ed-proj, .t-card, .brand, .ed-nav a, .ed-foot a {
+  -webkit-tap-highlight-color: transparent;
+}
+.header__copy, .header__cta, .t-more__btn {
+  transition: background var(--t-base) var(--ease), color var(--t-base) var(--ease),
+              border-color var(--t-base) var(--ease), transform var(--t-quick) var(--ease-out);
+}
+.header__copy:active, .header__cta:active, .t-more__btn:active { transform: scale(0.955); }
+.ed-proj { transition: transform var(--t-quick) var(--ease-out); }
+.ed-proj:active { transform: scale(0.992); }
+.home-cta__l { transition: border-bottom-color var(--t-base) var(--ease), transform var(--t-quick) var(--ease-out); }
+.home-cta__l:active { transform: scale(0.97); }
+
+/* ---- Focus. A ring that settles in rather than snapping on.
+        :where() keeps this at zero specificity, so any element
+        with its own focus treatment still wins. ---- */
+:where(a, button, summary, [tabindex]):focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+  border-radius: 3px;
+  animation: focus-settle 0.28s var(--ease-out);
+}
+@keyframes focus-settle { from { outline-offset: 9px; opacity: 0.45; } }
+
+/* ---- Media arriving. Paired with lazy loading: a decoded image
+        fades up instead of popping in. Gated on a flag the script
+        sets, so images stay visible if the script never runs. ---- */
+html[data-fade-media] :is(.ed-media, .ed-proj__media, .ed-portrait, .t-face) img:not(.is-loaded),
+html[data-fade-media] .ed-media video:not(.is-loaded) {
+  opacity: 0;
+}
+:is(.ed-media, .ed-proj__media, .ed-portrait, .t-face) img,
+.ed-media video {
+  transition: opacity var(--t-slow) var(--ease-out);
+}
+.ed-proj__media img { transition: transform .5s var(--ease), opacity var(--t-slow) var(--ease-out); }
+
+/* ---- Reveal. Media lifts and settles from just under size,
+        so a large figure reads as arriving rather than blinking. ---- */
+figure.ed-media.reveal {
+  transform: translateY(30px) scale(0.988);
+  transform-origin: 50% 100%;
+  transition: opacity 0.85s var(--ease-out), transform 0.85s var(--ease-out);
+}
+figure.ed-media.reveal.is-in { transform: none; }
+
+/* Children of a revealed group come in one after another.
+   The script numbers them; --i defaults to 0 so nothing waits
+   on the script to become visible. */
+.reveal.is-in > [style*="--i"] { animation: rise 0.7s var(--ease-out) both; }
+.ed-work__item.reveal { transition-delay: calc(var(--i, 0) * var(--stagger)); }
+/* The rail reveals as one block, so its cards are staggered with an
+   animation rather than a transition delay - a delay here would also
+   lag the hover lift. */
+.t-rail.reveal.is-in > .t-track > .t-item { animation: rise 0.7s var(--ease-out) both; animation-delay: calc(var(--i, 0) * 60ms); }
+@keyframes rise { from { opacity: 0; transform: translateY(14px); } }
+.ed-case__meta.reveal.is-in > div,
+.home-hero__role.reveal.is-in > span { animation: rise 0.7s var(--ease-out) both; }
+.ed-case__meta.reveal.is-in > div { animation-delay: calc(0.1s + var(--i, 0) * 50ms); }
+.home-hero__role.reveal.is-in > span { animation-delay: calc(var(--i, 0) * 60ms); }
+
+/* ---- Work cards. The image swells a touch, the name underlines
+        itself, and the card lifts off the page. ---- */
+.ed-proj__media { transition: box-shadow 0.45s var(--ease); }
+.ed-proj:hover .ed-proj__media { box-shadow: 0 20px 44px -26px rgba(8, 8, 8, 0.5); }
+.ed-proj__name {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 0% 1px;
+  transition: background-size 0.45s var(--ease);
+}
+.ed-proj:hover .ed-proj__name, .ed-proj:focus-visible .ed-proj__name { background-size: 100% 1px; }
+
+/* ---- Next-project tout. The name leans toward the link. ---- */
+.ed-next__n { transition: transform 0.5s var(--ease); }
+.ed-next:hover .ed-next__n, .ed-next:focus-visible .ed-next__n { transform: translateX(10px); }
+
+/* ---- Testimonials. A card rises under the pointer, but not
+        while the rail is being dragged. ---- */
+.t-card { transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease); }
+.t-card:hover { transform: translateY(-5px); box-shadow: 0 22px 46px -30px rgba(8, 8, 8, 0.45); }
+.t-rail.is-dragging .t-card:hover { transform: none; box-shadow: none; }
+
+/* ---- Footer links get the same underline wipe as the nav. ---- */
+.ed-foot a { position: relative; transition: color var(--t-base) var(--ease); }
+.ed-foot a::after {
+  content: ""; position: absolute; left: 0; bottom: -2px;
+  width: 100%; height: 1px; background: currentColor;
+  transform: scaleX(0); transform-origin: right;
+  transition: transform 0.35s var(--ease);
+}
+.ed-foot a:hover::after, .ed-foot a:focus-visible::after { transform: scaleX(1); transform-origin: left; }
+
+/* ---- Copy email confirms with a small pulse. ---- */
+.header__copy.is-done { animation: confirm-pop 0.45s var(--ease-spring); }
+@keyframes confirm-pop { 0% { transform: scale(1); } 38% { transform: scale(1.075); } 100% { transform: scale(1); } }
+
+/* ---- Header lifts off the page once you have scrolled past the top. ---- */
+.ed-head { transition: box-shadow 0.35s var(--ease); }
+.ed-head.is-stuck { box-shadow: 0 10px 30px -22px rgba(8, 8, 8, 0.55); }
+
+/* ---- Reading progress across the long case studies. ---- */
+.read-bar {
+  position: fixed; inset: 0 0 auto 0; height: 2px;
+  background: var(--ink); transform: scaleX(0); transform-origin: 0 50%;
+  z-index: 101; pointer-events: none;
+}
+
+/* ---- Everything above, off. ---- */
+@media (prefers-reduced-motion: reduce) {
+  .header__copy:active, .header__cta:active, .t-more__btn:active,
+  .ed-proj:active, .home-cta__l:active,
+  .t-card:hover, .ed-next:hover .ed-next__n,
+  .ed-proj:hover .ed-proj__media img { transform: none; }
+  .ed-proj:hover .ed-proj__media, .t-card:hover, .ed-head.is-stuck { box-shadow: none; }
+  figure.ed-media.reveal { transform: none; }
+  .ed-case__meta.reveal.is-in > div,
+  .home-hero__role.reveal.is-in > span,
+  .t-rail.reveal.is-in > .t-track > .t-item,
+  .reveal.is-in > [style*="--i"] { animation: none; }
+  .header__copy.is-done { animation: none; }
+  :where(a, button, summary, [tabindex]):focus-visible { animation: none; }
+  html[data-fade-media] :is(.ed-media, .ed-proj__media, .ed-portrait, .t-face) img:not(.is-loaded),
+  html[data-fade-media] .ed-media video:not(.is-loaded) { opacity: 1; }
+  .read-bar { display: none; }
+  .ed-foot a::after { transition: none; }
+}
