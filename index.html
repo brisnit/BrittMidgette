@@ -3,18 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Britt Midgette, Creative Director & Design Technologist</title>
-  <meta name="description" content="Creative direction, experience design, digital products, design systems and AI. Selected work from a career spent between strategy and shipped code." />
+  <title>Britt Midgette, Experience Design Director</title>
+  <meta name="description" content="Experience Design Director in San Diego. Creative leadership, product strategy and AI-powered execution, from enterprise platforms to shipped products. Selected work, and a r&eacute;sum&eacute;." />
   <meta name="theme-color" content="#f7f5f1" />
   <link rel="icon" type="image/png" href="brand-assets/Pics/favicon.png" />
   <link rel="apple-touch-icon" href="brand-assets/Pics/favicon.png" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Britt Midgette, Creative Director & Design Technologist" />
-  <meta property="og:description" content="Creative direction, experience design, digital products, design systems and AI. Selected work from a career spent between strategy and shipped code." />
+  <meta property="og:title" content="Britt Midgette, Experience Design Director" />
+  <meta property="og:description" content="Experience Design Director in San Diego. Creative leadership, product strategy and AI-powered execution, from enterprise platforms to shipped products. Selected work, and a r&eacute;sum&eacute;." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=45" />
+  <link rel="stylesheet" href="styles.css?v=52" />
+    <noscript>
+      <!-- The reveal animation is driven by script; without it the page
+           must still be fully readable rather than blank. -->
+      <style>.reveal{opacity:1!important;transform:none!important}</style>
+    </noscript>
 </head>
 <body class="is-home">
 
@@ -30,6 +35,7 @@
         <a href="index.html#work">Work</a>
         <a href="about.html">About</a>
         <a href="index.html#contact">Contact</a>
+        <a class="ed-nav__res" href="brand-assets/Britt-Midgette-Resume.pdf" download>R&eacute;sum&eacute;</a>
       </nav>
       <button class="header__copy" type="button" data-email="brisnit@gmail.com">
         <span class="header__copy-label">Copy email</span>
@@ -39,24 +45,52 @@
     <main id="main">
       <section class="home-hero">
         <div class="ed-wrap">
-          <h1 class="home-hero__name reveal">Britt Midgette</h1>
-          <p class="home-hero__role reveal">
-            <span>Experience Design Director</span>
-            <span>Creative + Product Design Leader</span>
-            <span>AI-Native Products &amp; Experiences</span>
-            <span>UX Strategy</span>
-            <span>Design Systems</span>
-          </p>
+          <h1 class="home-hero__name">Britt Midgette</h1>
+          <p class="home-hero__title">Experience Design Director</p>
+          <p class="home-hero__line">Creative leadership. Product strategy. AI-powered execution.</p>
+          <p class="home-hero__say">I lead teams from complex business challenges to digital experiences people actually use.</p>
+          <div class="home-hero__cta">
+            <a class="btn btn--solid" href="#work">View selected work</a>
+            <a class="btn btn--ghost" href="brand-assets/Britt-Midgette-Resume.pdf" download>Download r&eacute;sum&eacute;</a>
+          </div>
+          <p class="home-hero__where">San Diego <span aria-hidden="true">&middot;</span> Open to remote and hybrid opportunities</p>
         </div>
       </section>
 
+      <section class="ed-sec home-showcase" aria-labelledby="showcase-h">
+        <div class="ed-wrap">
+          <h2 class="sr-only" id="showcase-h">Three pieces of recent work</h2>
+          <ul class="showcase">
+            <li class="showcase__i reveal">
+              <a class="showcase__l" href="comptia.html">
+                <span class="showcase__media"><img src="brand-assets/COMPTIA-home-v1.jpg" alt="The CompTIA learning platform, headed Unlock your potential in tech" width="1400" height="1050" loading="lazy" decoding="async" /></span>
+                <span class="showcase__k">Enterprise platform</span>
+                <span class="showcase__n">CompTIA</span>
+                <span class="showcase__s">A stalled transformation restarted, and a design system built to carry it.</span>
+              </a>
+            </li>
+            <li class="showcase__i reveal">
+              <a class="showcase__l" href="mac.html">
+                <span class="showcase__media"><img src="brand-assets/MAC-home-v1.jpg" alt="The MAC Cosmetics connected concept store experience" width="1400" height="1050" loading="lazy" decoding="async" /></span>
+                <span class="showcase__k">Connected retail</span>
+                <span class="showcase__n">MAC Cosmetics</span>
+                <span class="showcase__s">A store where picking up a lipstick changed the mirror in front of you.</span>
+              </a>
+            </li>
+            <li class="showcase__i reveal">
+              <a class="showcase__l" href="dropq.html">
+                <span class="showcase__media"><img src="brand-assets/DQ-hero-v1.jpg" alt="The DropQ storefront on a laptop and a phone" width="1600" height="1000" loading="lazy" decoding="async" /></span>
+                <span class="showcase__k">Shipped product</span>
+                <span class="showcase__n">DropQ</span>
+                <span class="showcase__s">Designed, built and launched end to end. Live with seven vendors.</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
       <section class="ed-sec home-intro">
         <div class="ed-wrap">
           <p class="home-intro__p reveal">I lead creative direction, experience strategy and digital product design, along with the design systems, teams and operations that deliver them. I take work from the ambiguous end of a problem through to shipped code, AI and emerging technology included.</p>
-          <div class="home-cta reveal">
-            <a class="home-cta__l" href="#work">See my work <span class="home-cta__a" aria-hidden="true">&#8599;</span></a>
-            <a class="home-cta__l" href="about.html">About me <span class="home-cta__a" aria-hidden="true">&#8599;</span></a>
-          </div>
         </div>
       </section>
 
@@ -91,27 +125,91 @@
         </div>
       </section>
 
-      <section class="ed-sec" id="work">
-        <div class="ed-wide">
-          <div class="ed-cols" style="margin-bottom: clamp(2.5rem,5vw,4rem)">
-            <h2 class="ed-label reveal">Work</h2>
-            <p class="ed-body reveal">Twelve selected projects: enterprise platforms, connected retail, themed entertainment, and products I designed and built myself.</p>
+            <section class="ed-sec" id="work">
+        <div class="ed-wrap">
+          <h2 class="ed-label reveal">Selected work</h2>
+        </div>
+        <div class="ed-wrap">
+          <ul class="fw-list">
+        <li class="fw reveal">
+          <div class="fw__media">
+            <img src="brand-assets/COMPTIA-home-v1.jpg" alt="" width="1400" height="1050" loading="lazy" decoding="async" />
           </div>
-          <ul class="ed-work">
-          <li class="ed-work__item is-wide reveal">
-            <a class="ed-proj" href="dropq.html">
-              <span class="ed-proj__media"><img decoding="async" width="1600" height="1000" src="brand-assets/DQ-hero-v1.jpg" alt="DropQ" loading="lazy" /></span>
-              <span class="ed-proj__row">
-                <span class="ed-proj__name">DropQ</span>
-                <span class="ed-proj__arrow" aria-hidden="true">&#8599;</span>
+          <div class="fw__body">
+            <p class="fw__k">Enterprise learning platform</p>
+            <h3 class="fw__h"><a href="comptia.html">A stalled transformation restarted, and a design system built to carry it.</a></h3>
+            <p class="fw__role">Design Director &middot; 2025</p>
+            <p class="fw__p">CompTIA&rsquo;s CEO had a clear vision that broke with every convention in IT certification, and a transformation that had stalled trying to reach it. We joined as a development partner; as the design problems surfaced I embedded with their team, then we took over the design work entirely and turned the sketches into a direction the whole team could build against.</p>
+            <ul class="fw__ev">
+                  <li><span class="fw__n">22</span><span class="fw__l">components in the design system</span></li>
+                  <li><span class="fw__n">10&ndash;12</span><span class="fw__l">page templates</span></li>
+                  <li><span class="fw__n">Live</span><span class="fw__l">in production</span></li>
+            </ul>
+            <span class="fw__go" aria-hidden="true">Read the CompTIA case study <span class="fw__a">&#8599;</span></span>
+          </div>
+        </li>
+        <li class="fw reveal">
+          <div class="fw__media">
+            <img src="brand-assets/ADM-home-v1.jpg" alt="" width="1400" height="1050" loading="lazy" decoding="async" />
+          </div>
+          <div class="fw__body">
+            <p class="fw__k">Global digital transformation</p>
+            <h3 class="fw__h"><a href="adm.html">A digital estate across 200+ countries, consolidated into one architecture.</a></h3>
+            <p class="fw__role">Design Director &middot; 2022</p>
+            <p class="fw__p">Years of independent growth had left ADM with fragmented content, competing navigation and sprawling child sites. I led the content audit, the future-state information architecture and the atomic design system that let every market share a foundation while keeping local relevance.</p>
+            <ul class="fw__ev">
+                  <li><span class="fw__n">3,000+ &rarr; &lt;1,000</span><span class="fw__l">pages after consolidation</span></li>
+                  <li><span class="fw__n">12</span><span class="fw__l">page templates</span></li>
+                  <li><span class="fw__n">60+</span><span class="fw__l">child sites brought in</span></li>
+            </ul>
+            <span class="fw__go" aria-hidden="true">Read the ADM case study <span class="fw__a">&#8599;</span></span>
+          </div>
+        </li>
+        <li class="fw reveal">
+          <div class="fw__media">
+            <img src="brand-assets/DQ-hero-v1.jpg" alt="" width="1600" height="1000" loading="lazy" decoding="async" />
+          </div>
+          <div class="fw__body">
+            <p class="fw__k">Product, founder-owned</p>
+            <h3 class="fw__h"><a href="dropq.html">A drop platform designed, built and shipped end to end.</a></h3>
+            <p class="fw__role">Founder &middot; Product design &amp; build</p>
+            <p class="fw__p">Independent sellers were running limited drops across a form, a payment app, a spreadsheet and a group text, and it broke exactly when a drop went viral. I set the product strategy, designed the experience and wrote the front-end, working with AI through the build.</p>
+            <ul class="fw__ev">
+                  <li><span class="fw__n">7</span><span class="fw__l">vendors live on the platform</span></li>
+                  <li><span class="fw__n">End to end</span><span class="fw__l">strategy, design and front-end</span></li>
+                  <li><span class="fw__n">Shipped</span><span class="fw__l">timed drops, inventory, messaging</span></li>
+            </ul>
+            <span class="fw__go" aria-hidden="true">Read the DropQ case study <span class="fw__a">&#8599;</span></span>
+          </div>
+        </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="ed-sec home-proof" aria-label="Recommendation">
+        <div class="ed-wrap">
+          <figure class="proof reveal">
+            <blockquote class="proof__q">
+              <p>I had the pleasure of managing Britt at Valtech, where he was an Experience Design leader on my team. Britt was the kind of person I could count on to step into whatever the team needed, whether that meant jumping into a fast-moving pitch on a tight timeline or helping navigate a complex client engagement.</p>
+            </blockquote>
+            <figcaption class="proof__by">
+              <img class="proof__photo" src="brand-assets/testimonials/sarah.png" alt="" width="168" height="168" loading="lazy" decoding="async" />
+              <span class="proof__who">
+                <span class="proof__name">Sarah Swartzendruber</span>
+                <span class="proof__title">VP, Product Design</span>
               </span>
-              <span class="ed-proj__say">Timed product releases with inventory that cannot oversell, ordering that holds under a spike, and a customer list the seller actually owns.</span>
-              <span class="ed-proj__meta"><span>DropQ</span><span>Founder, Product design &amp; build</span></span>
-            </a>
-          </li>
+              <a class="proof__more" href="#testimonials">Read all recommendations <span aria-hidden="true">&#8599;</span></a>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+      <section class="ed-sec home-more" id="more-work">
+        <div class="ed-wrap">
+          <h2 class="ed-label reveal">More selected work</h2>
+          <ul class="ed-work ed-work--compact">
           <li class="ed-work__item reveal">
             <a class="ed-proj" href="nipr.html">
-              <span class="ed-proj__media"><img decoding="async" width="1400" height="1050" src="brand-assets/NIPR-home-v1.jpg" alt="NIPR" loading="lazy" /></span>
+              <span class="ed-proj__media"><img src="brand-assets/NIPR-home-v1.jpg" alt="NIPR" width="1400" height="1050" loading="lazy" decoding="async" /></span>
               <span class="ed-proj__row">
                 <span class="ed-proj__name">NIPR</span>
                 <span class="ed-proj__arrow" aria-hidden="true">&#8599;</span>
@@ -121,19 +219,8 @@
             </a>
           </li>
           <li class="ed-work__item reveal">
-            <a class="ed-proj" href="adm.html">
-              <span class="ed-proj__media"><img decoding="async" width="1400" height="1050" src="brand-assets/ADM-home-v1.jpg" alt="ADM" loading="lazy" /></span>
-              <span class="ed-proj__row">
-                <span class="ed-proj__name">ADM</span>
-                <span class="ed-proj__arrow" aria-hidden="true">&#8599;</span>
-              </span>
-              <span class="ed-proj__say">ADM is a global food and nutrition brand connecting supply chains, products and markets across six continents, operating at massive scale, with a worl</span>
-              <span class="ed-proj__meta"><span>ADM</span><span>Design Director</span><span>2022</span></span>
-            </a>
-          </li>
-          <li class="ed-work__item reveal">
             <a class="ed-proj" href="mac.html">
-              <span class="ed-proj__media"><img decoding="async" width="1400" height="1050" src="brand-assets/MAC-home-v1.jpg" alt="MAC Cosmetics" loading="lazy" /></span>
+              <span class="ed-proj__media"><img src="brand-assets/MAC-home-v1.jpg" alt="MAC Cosmetics" width="1400" height="1050" loading="lazy" decoding="async" /></span>
               <span class="ed-proj__row">
                 <span class="ed-proj__name">MAC Cosmetics</span>
                 <span class="ed-proj__arrow" aria-hidden="true">&#8599;</span>
@@ -143,19 +230,8 @@
             </a>
           </li>
           <li class="ed-work__item reveal">
-            <a class="ed-proj" href="comptia.html">
-              <span class="ed-proj__media"><img decoding="async" width="1400" height="1050" src="brand-assets/COMPTIA-home-v1.jpg" alt="CompTIA" loading="lazy" /></span>
-              <span class="ed-proj__row">
-                <span class="ed-proj__name">CompTIA</span>
-                <span class="ed-proj__arrow" aria-hidden="true">&#8599;</span>
-              </span>
-              <span class="ed-proj__say">CompTIA is a leading online IT training and certification platform helping people build technology careers through certifications and guided learning </span>
-              <span class="ed-proj__meta"><span>CompTIA</span><span>Design Director</span><span>2025</span></span>
-            </a>
-          </li>
-          <li class="ed-work__item reveal">
             <a class="ed-proj" href="tinycrm.html">
-              <span class="ed-proj__media"><img decoding="async" width="1400" height="1050" src="brand-assets/TCRM-home-v1.jpg" alt="Tiny CRM" loading="lazy" /></span>
+              <span class="ed-proj__media"><img src="brand-assets/TCRM-home-v1.jpg" alt="Tiny CRM" width="1400" height="1050" loading="lazy" decoding="async" /></span>
               <span class="ed-proj__row">
                 <span class="ed-proj__name">Tiny CRM</span>
                 <span class="ed-proj__arrow" aria-hidden="true">&#8599;</span>
@@ -166,18 +242,18 @@
           </li>
           <li class="ed-work__item reveal">
             <a class="ed-proj" href="underarmour.html">
-              <span class="ed-proj__media"><img decoding="async" width="1400" height="1050" src="brand-assets/UA-home-v1.jpg" alt="Under Armour" loading="lazy" /></span>
+              <span class="ed-proj__media"><img src="brand-assets/UA-home-v1.jpg" alt="Under Armour" width="1400" height="1050" loading="lazy" decoding="async" /></span>
               <span class="ed-proj__row">
                 <span class="ed-proj__name">Under Armour</span>
                 <span class="ed-proj__arrow" aria-hidden="true">&#8599;</span>
               </span>
-              <span class="ed-proj__say">Experience strategy and concept development for a Human Performance Center, and two pilots (Armour Bar and Map My Run) exploring what a </span>
+              <span class="ed-proj__say">Experience strategy and concept development for a Human Performance Center, and two pilots (Armour Bar and Map My Run) exploring what a</span>
               <span class="ed-proj__meta"><span>Under Armour</span><span>Experience Director</span><span>2018</span></span>
             </a>
           </li>
           <li class="ed-work__item reveal">
             <a class="ed-proj" href="artifactintelligence.html">
-              <span class="ed-proj__media"><img decoding="async" width="1400" height="1050" src="brand-assets/AI-home-v1.jpg" alt="Artifact Intelligence" loading="lazy" /></span>
+              <span class="ed-proj__media"><img src="brand-assets/AI-home-v1.jpg" alt="Artifact Intelligence" width="1400" height="1050" loading="lazy" decoding="async" /></span>
               <span class="ed-proj__row">
                 <span class="ed-proj__name">Artifact Intelligence</span>
                 <span class="ed-proj__arrow" aria-hidden="true">&#8599;</span>
@@ -188,7 +264,7 @@
           </li>
           <li class="ed-work__item reveal">
             <a class="ed-proj" href="bose.html">
-              <span class="ed-proj__media"><img decoding="async" width="1400" height="1050" src="brand-assets/BOSE-home-v1.jpg" alt="Bose" loading="lazy" /></span>
+              <span class="ed-proj__media"><img src="brand-assets/BOSE-home-v1.jpg" alt="Bose" width="1400" height="1050" loading="lazy" decoding="async" /></span>
               <span class="ed-proj__row">
                 <span class="ed-proj__name">Bose</span>
                 <span class="ed-proj__arrow" aria-hidden="true">&#8599;</span>
@@ -199,7 +275,7 @@
           </li>
           <li class="ed-work__item reveal">
             <a class="ed-proj" href="sagaftra.html">
-              <span class="ed-proj__media"><img decoding="async" width="1400" height="1050" src="brand-assets/SAG-home-v1.jpg" alt="SAG-AFTRA" loading="lazy" /></span>
+              <span class="ed-proj__media"><img src="brand-assets/SAG-home-v1.jpg" alt="SAG-AFTRA" width="1400" height="1050" loading="lazy" decoding="async" /></span>
               <span class="ed-proj__row">
                 <span class="ed-proj__name">SAG-AFTRA</span>
                 <span class="ed-proj__arrow" aria-hidden="true">&#8599;</span>
@@ -210,7 +286,7 @@
           </li>
           <li class="ed-work__item reveal">
             <a class="ed-proj" href="legoland.html">
-              <span class="ed-proj__media"><img decoding="async" width="1400" height="1050" src="brand-assets/LEGO-home-v1.jpg" alt="LEGOLAND" loading="lazy" /></span>
+              <span class="ed-proj__media"><img src="brand-assets/LEGO-home-v1.jpg" alt="LEGOLAND" width="1400" height="1050" loading="lazy" decoding="async" /></span>
               <span class="ed-proj__row">
                 <span class="ed-proj__name">LEGOLAND</span>
                 <span class="ed-proj__arrow" aria-hidden="true">&#8599;</span>
@@ -221,7 +297,7 @@
           </li>
           <li class="ed-work__item reveal">
             <a class="ed-proj" href="menswearhouse.html">
-              <span class="ed-proj__media"><img decoding="async" width="1400" height="1050" src="brand-assets/MW-home-v1.jpg" alt="Men&rsquo;s Wearhouse" loading="lazy" /></span>
+              <span class="ed-proj__media"><img src="brand-assets/MW-home-v1.jpg" alt="Men&rsquo;s Wearhouse" width="1400" height="1050" loading="lazy" decoding="async" /></span>
               <span class="ed-proj__row">
                 <span class="ed-proj__name">Men&rsquo;s Wearhouse</span>
                 <span class="ed-proj__arrow" aria-hidden="true">&#8599;</span>
@@ -481,10 +557,11 @@
         <div class="ed-wrap ed-cols">
           <h2 class="ed-label reveal">Contact</h2>
           <div class="reveal">
-            <p class="ed-contact__big">Have a problem that lives between design and engineering?</p>
+            <p class="ed-contact__big">Looking for a design leader who can connect strategy, creative direction, and delivery? Let&rsquo;s talk.</p>
             <a class="ed-mail" href="mailto:brisnit@gmail.com">brisnit@gmail.com</a>
             <div class="ed-links">
-              <a href="brand-assets/britt-midgette-resume3.pdf" download>R&eacute;sum&eacute;</a>
+              <a class="ed-links__strong" href="brand-assets/Britt-Midgette-Resume.pdf" download>Download r&eacute;sum&eacute;</a>
+              <a href="https://www.linkedin.com/in/britt-midgette-24949b3/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">&#8599;</span></a>
               <a href="capabilities.html">Capabilities</a>
               <a href="approach.html">Approach</a>
             </div>
@@ -502,11 +579,12 @@
           <a href="capabilities.html">Capabilities</a>
           <a href="approach.html">Approach</a>
           <a href="index.html#contact">Contact</a>
+          <a href="https://www.linkedin.com/in/britt-midgette-24949b3/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         </nav>
       </div>
     </footer>
   </div>
 
-  <script src="script.js?v=45"></script>
+  <script src="script.js?v=49"></script>
 </body>
 </html>

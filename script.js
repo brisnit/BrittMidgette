@@ -395,6 +395,22 @@
       });
     })();
 
+    /* Anchor links must clear the sticky header. Its height changes when
+       it wraps on a narrow screen, so measure it rather than guessing:
+       the stylesheet's fixed scroll-padding was 12px short on desktop
+       and 55px short once the header wrapped. */
+    (function clearStickyHeader() {
+      var head = document.querySelector(".ed-head");
+      if (!head) return;
+      var sync = function () {
+        var h = Math.round(head.getBoundingClientRect().height);
+        document.documentElement.style.scrollPaddingTop = (h + 16) + "px";
+      };
+      sync();
+      window.addEventListener("resize", sync, { passive: true });
+      if (window.ResizeObserver) new ResizeObserver(sync).observe(head);
+    })();
+
     /* The editorial header lifts off the page once you leave the top. */
     (function stickHeader() {
       var head = document.querySelector(".ed-head");
