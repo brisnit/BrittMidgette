@@ -3,6 +3,22 @@
    Black & white. Editorial. System-minded.
    ============================================================ */
 
+/* A metric-matched stand-in for Schibsted Grotesk, used only in the
+   moment before the web font arrives. Measured against the real font at
+   100px: width 3475.9 vs Arial's 3346.4, ascent 98, descent 26. Matching
+   those stops the text reflowing when the real font swaps in, which was
+   the only layout shift left on the site. Once the web font loads this
+   face is never used, so it cannot change how any page finally looks. */
+@font-face {
+  font-family: "Schibsted Grotesk Fallback";
+  src: local("Arial"), local("Helvetica"), local("Liberation Sans");
+  size-adjust: 103.87%;
+  ascent-override: 94.35%;
+  descent-override: 25.03%;
+  line-gap-override: 0%;
+  font-display: swap;
+}
+
 :root {
   /* ---- ground: white is the default canvas ---- */
   --background:   #ffffff;              /* the canvas */
@@ -52,7 +68,7 @@
   --media-radius: 20px;
 
   /* ---- type: one family, one weight ---- */
-  --sans:    "Schibsted Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --sans:    "Schibsted Grotesk", "Schibsted Grotesk Fallback", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --display: var(--sans);
   --serif:   var(--sans);
   --mono:    var(--sans);
@@ -3019,4 +3035,119 @@ figure.ed-media.reveal.is-in { transform: none; }
   .ed-head { gap: 0.5rem; }
   .ed-nav { gap: 0.7rem; }
   .ed-nav a { font-size: 0.82rem; }
+}
+
+/* ============================================================
+   SELECTED WORK  (/selected-work)
+   An unlisted executive one-pager. Everything here is scoped to
+   body.is-sw or the sw- prefix, so no existing page is affected.
+   ============================================================ */
+
+.is-sw .sw-head .ed-nav { gap: clamp(1rem, 2vw, 1.75rem); }
+
+/* ---- Hero: statement beside the portrait, stacked on a phone. ---- */
+.sw-hero { padding-block: clamp(2.5rem, 6vw, 5rem) clamp(1.5rem, 3vw, 2.5rem); }
+.sw-hero__in { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.65fr); gap: clamp(2rem, 5vw, 4.5rem); align-items: center; }
+.sw-hero__eyebrow { font-size: var(--t-label); letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.sw-hero__roles { margin-top: 0.7rem; display: flex; flex-direction: column; gap: 0.1rem; }
+.sw-hero__roles span { font-size: clamp(0.95rem, 1.5vw, 1.1rem); font-weight: var(--w-med); line-height: 1.35; }
+.sw-hero__h {
+  margin-top: clamp(1.25rem, 2.5vw, 2rem);
+  font-size: clamp(1.8rem, 4.2vw, 3.35rem); font-weight: var(--w-med);
+  line-height: 1.08; letter-spacing: -0.03em; max-width: 20ch; text-wrap: balance;
+}
+.sw-hero__cta { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: clamp(1.4rem, 2.6vw, 2rem); }
+.sw-hero__avail { margin-top: clamp(1rem, 2vw, 1.5rem); font-size: var(--t-label); color: var(--muted); max-width: 46ch; }
+.sw-hero__portrait { margin: 0; border-radius: var(--media-radius); overflow: hidden; background: var(--paper-2); }
+.sw-hero__portrait img { width: 100%; height: auto; display: block; }
+@media (max-width: 860px) {
+  .sw-hero__in { grid-template-columns: 1fr; gap: clamp(1.75rem, 5vw, 2.5rem); }
+  .sw-hero__portrait { order: -1; max-width: 240px; }
+}
+
+.sw-work__note { margin-top: var(--s-2); font-size: var(--t-small); color: var(--muted); max-width: 52ch; }
+
+/* ---- Work: full-width editorial rows, alternating. ---- */
+.sw-list { list-style: none; margin: clamp(2.5rem, 5vw, 4rem) 0 0; padding: 0; display: grid; gap: clamp(3rem, 6.5vw, 6rem); }
+.sw-proj { position: relative; display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: clamp(1.5rem, 3.5vw, 3.5rem); align-items: center; }
+.sw-proj:nth-child(even) .sw-proj__media { order: 2; }
+.sw-proj__media { overflow: hidden; border-radius: var(--media-radius); background: var(--paper-2); aspect-ratio: 4 / 3; transition: box-shadow 0.45s var(--ease); }
+.sw-proj__media img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.6s var(--ease); }
+.sw-proj:hover .sw-proj__media img { transform: scale(1.02); }
+.sw-proj:hover .sw-proj__media { box-shadow: 0 22px 46px -28px rgba(8,8,8,.45); }
+.sw-proj__kind { font-size: var(--t-label); letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+.sw-proj__name { margin-top: 0.45rem; font-size: clamp(1.6rem, 3vw, 2.4rem); font-weight: var(--w-med); letter-spacing: -0.025em; line-height: 1.1; }
+.sw-proj__name a::after { content: ""; position: absolute; inset: 0; }
+.sw-proj__name a {
+  background-image: linear-gradient(currentColor, currentColor); background-repeat: no-repeat;
+  background-position: 0 100%; background-size: 0% 1px; transition: background-size 0.45s var(--ease);
+}
+.sw-proj__name a:hover, .sw-proj__name a:focus-visible { background-size: 100% 1px; }
+.sw-proj__role { margin-top: 0.5rem; font-size: var(--t-label); color: var(--muted); }
+.sw-proj__say { margin-top: var(--s-2); font-size: var(--t-small); line-height: 1.6; color: var(--ink-2); max-width: 52ch; }
+.sw-proj__tags { list-style: none; margin: var(--s-3) 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.45rem; }
+.sw-proj__tags li { font-size: var(--t-label); color: var(--muted); border: 1px solid var(--rule); border-radius: 999px; padding: 0.22rem 0.65rem; }
+.sw-proj__links { margin-top: var(--s-3); display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; font-size: var(--t-small); font-weight: var(--w-med); }
+/* the live link must sit above the card-wide overlay to stay clickable */
+.sw-proj__live { position: relative; z-index: 1; color: var(--muted); font-weight: var(--w-reg, 400);
+  display: inline-flex; align-items: center; min-height: 32px; }
+.sw-proj__live:hover, .sw-proj__live:focus-visible { color: var(--ink); }
+.sw-proj__case { display: inline-flex; align-items: center; min-height: 32px; }
+.sw-contact__list dd a, .sw-foot a { display: inline-flex; align-items: center; min-height: 32px; }
+@media (max-width: 860px) {
+  .sw-proj { grid-template-columns: 1fr; gap: var(--s-3); }
+  .sw-proj:nth-child(even) .sw-proj__media { order: 0; }
+  .sw-proj__media { aspect-ratio: 16 / 10; }
+}
+
+/* ---- Experience timeline ---- */
+.sw-time { list-style: none; margin: clamp(2rem, 4vw, 3rem) 0 0; padding: 0; display: grid; gap: 0; }
+.sw-time li { display: grid; grid-template-columns: minmax(0, 0.32fr) minmax(0, 1fr); gap: clamp(1rem, 3vw, 2.5rem); padding-block: clamp(1.4rem, 2.8vw, 2rem); border-top: 1px solid var(--rule); }
+.sw-time li:last-child { border-bottom: 1px solid var(--rule); }
+.sw-time__when { font-size: var(--t-label); color: var(--muted); }
+.sw-time__role { font-size: clamp(1.05rem, 1.8vw, 1.35rem); font-weight: var(--w-med); letter-spacing: -0.015em; }
+.sw-time__org { margin-top: 0.15rem; font-size: var(--t-small); color: var(--muted); }
+.sw-time__p { margin-top: 0.6rem; font-size: var(--t-small); line-height: 1.6; color: var(--ink-2); max-width: 60ch; }
+@media (max-width: 640px) { .sw-time li { grid-template-columns: 1fr; gap: 0.4rem; } }
+
+/* The logo strip now sits directly under the hero as a quiet band of
+   proof, so it runs tighter than a full section. */
+.sw-trusted { padding-block: clamp(1rem, 2vw, 1.75rem) clamp(1.75rem, 4vw, 3rem); border-top: 0; }
+.sw-logos__k { font-size: var(--t-label); font-weight: var(--w-reg, 400); letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+/* Equal cells rather than flex wrap: the marks range from 36px to 110px
+   wide, so a flex row wraps at an arbitrary point and reads as an
+   accident. A grid gives every brand the same space and keeps the strip
+   on one line. The cell height is fixed because with width and height
+   both auto an unloaded lazy image measures zero, collapsing the strip
+   and shifting the page when it finally arrives. */
+.sw-logos {
+  list-style: none; margin: clamp(1.25rem, 2.5vw, 2rem) 0 0; padding: 0;
+  display: grid; grid-template-columns: repeat(9, minmax(0, 1fr));
+  gap: clamp(0.75rem, 1.6vw, 1.5rem); align-items: center; justify-items: center;
+}
+.sw-logos li { height: 28px; display: flex; align-items: center; justify-content: center; width: 100%; }
+.sw-logos img { max-height: 28px; max-width: 100%; width: auto; height: auto; object-fit: contain; opacity: 0.75; }
+@media (max-width: 980px) { .sw-logos { grid-template-columns: repeat(5, minmax(0, 1fr)); row-gap: clamp(1.25rem, 3vw, 1.75rem); } }
+@media (max-width: 620px) {
+  .sw-logos { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .sw-logos li { height: 22px; }
+  .sw-logos img { max-height: 22px; }
+}
+
+/* ---- Contact ---- */
+.sw-contact__h { font-size: clamp(2rem, 5.5vw, 4rem); font-weight: var(--w-med); letter-spacing: -0.035em; line-height: 1.05; max-width: 16ch; }
+.sw-contact__p { margin-top: clamp(1rem, 2vw, 1.5rem); font-size: var(--t-body); line-height: 1.55; color: var(--ink-2); max-width: 56ch; }
+.sw-contact__cta { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: clamp(1.5rem, 3vw, 2.25rem); }
+.sw-contact__list { margin: clamp(2.25rem, 4.5vw, 3.5rem) 0 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(1.25rem, 3vw, 2.5rem); padding-top: clamp(1.5rem, 3vw, 2.25rem); border-top: 1px solid var(--rule); }
+.sw-contact__list > div { display: flex; flex-direction: column; gap: 0.3rem; }
+.sw-contact__list dt { font-size: var(--t-label); color: var(--muted); }
+.sw-contact__list dd { margin: 0; font-size: var(--t-small); }
+@media (max-width: 760px) { .sw-contact__list { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 420px) { .sw-contact__list { grid-template-columns: 1fr; } }
+
+.is-sw .sw-foot .ed-foot__in { justify-content: space-between; }
+
+@media (prefers-reduced-motion: reduce) {
+  .sw-proj:hover .sw-proj__media img { transform: none; }
+  .sw-proj:hover .sw-proj__media { box-shadow: none; }
 }
